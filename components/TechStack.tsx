@@ -4,7 +4,7 @@ import { TECH_STACK } from '../constants';
 const TechStack: React.FC = () => {
   return (
     <section className="py-24 bg-slate-950 overflow-hidden relative">
-      <div className="absolute inset-0 bg-slate-950/80 z-10 pointer-events-none bg-gradient-to-r from-slate-950 via-transparent to-slate-950" />
+      <div className="absolute inset-0 bg-slate-950/60 z-10 pointer-events-none bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
       
       <div className="container mx-auto px-6 mb-12 relative z-20 text-center">
          <span className="text-cyan-500 font-bold tracking-widest uppercase text-sm">Powering The Future</span>
@@ -17,9 +17,10 @@ const TechStack: React.FC = () => {
                 <div 
                     key={`${tech.name}-${index}`} 
                     className="flex flex-col items-center gap-4 group cursor-default"
+                    style={{ '--stack-color': tech.color } as React.CSSProperties}
                 >
                     <div 
-                        className="w-24 h-24 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center shadow-lg group-hover:border-cyan-500/50 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300 transform group-hover:-translate-y-2"
+                        className="w-24 h-24 rounded-2xl bg-slate-900/70 border border-slate-800/80 flex items-center justify-center shadow-lg transition-all duration-300 ease-out transform group-hover:-translate-y-2 group-hover:bg-slate-900/90 group-hover:border-[var(--stack-color)] group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.35),0_0_30px_var(--stack-color)]"
                     >
                         <span 
                             className="text-2xl font-bold" 
@@ -28,7 +29,7 @@ const TechStack: React.FC = () => {
                            {tech.name.substring(0, 2)}
                         </span>
                     </div>
-                    <span className="text-slate-400 font-medium group-hover:text-white transition-colors">{tech.name}</span>
+                    <span className="text-slate-0 font-medium transition-colors group-hover:text-[var(--stack-color)] group-hover:drop-shadow-[0_0_6px_var(--stack-color)]">{tech.name}</span>
                 </div>
             ))}
         </div>
