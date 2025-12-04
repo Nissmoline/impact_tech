@@ -1,28 +1,46 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer';
 
 describe('Footer Component', () => {
   it('renders company name', () => {
-    render(<Footer />);
-    expect(screen.getByText('VERTEX STUDIO')).toBeInTheDocument();
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('IMPACT TECH')).toBeInTheDocument();
   });
 
   it('displays current year in copyright', () => {
-    render(<Footer />);
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
     const currentYear = new Date().getFullYear();
     expect(screen.getByText(new RegExp(`© ${currentYear}`))).toBeInTheDocument();
   });
 
-  it('renders social media links', () => {
-    render(<Footer />);
-    expect(screen.getByText('Twitter')).toBeInTheDocument();
+  it('renders footer links', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Impressum')).toBeInTheDocument();
+    expect(screen.getByText('Privacy Policy')).toBeInTheDocument();
     expect(screen.getByText('LinkedIn')).toBeInTheDocument();
     expect(screen.getByText('GitHub')).toBeInTheDocument();
   });
 
   it('has correct structure', () => {
-    const { container } = render(<Footer />);
+    const { container } = render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
     const footer = container.querySelector('footer');
     expect(footer).toBeInTheDocument();
     expect(footer).toHaveClass('bg-slate-950');
