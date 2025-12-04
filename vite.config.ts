@@ -18,6 +18,32 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              // React core
+              'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+              // Three.js and 3D libraries
+              'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+              // Animation libraries
+              'animation-vendor': ['framer-motion'],
+              // Icons
+              'icons-vendor': ['lucide-react'],
+              // Sanity CMS
+              'sanity-vendor': ['@sanity/client', '@sanity/image-url'],
+            },
+          },
+        },
+        chunkSizeWarningLimit: 1000, // Увеличить лимит до 1000 kB
+        minify: 'terser',
+        terserOptions: {
+          compress: {
+            drop_console: true, // Убрать console.log в production
+            drop_debugger: true,
+          },
+        },
+      },
     };
 });

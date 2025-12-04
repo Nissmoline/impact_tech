@@ -1,4 +1,4 @@
-# robots.txt for Vertex Studio
+# robots.txt for Impact Tech
 
 User-agent: *
 Allow: /
@@ -8,7 +8,7 @@ Allow: /
 # Disallow: /api/
 
 # Sitemap location
-Sitemap: https://vertex-studio.com/sitemap.xml
+Sitemap: https://impact-tech.com/sitemap.xml
 
 # Crawl-delay (optional, for politeness)
 Crawl-delay: 1

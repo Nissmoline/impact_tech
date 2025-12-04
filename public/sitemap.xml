@@ -5,33 +5,49 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Main Page -->
   <url>
-    <loc>https://vertex-studio.com/</loc>
-    <lastmod>2025-12-03</lastmod>
+    <loc>https://impact-tech.com/</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Services Section -->
   <url>
-    <loc>https://vertex-studio.com/#services</loc>
-    <lastmod>2025-12-03</lastmod>
+    <loc>https://impact-tech.com/#services</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Projects Section -->
   <url>
-    <loc>https://vertex-studio.com/#projects</loc>
-    <lastmod>2025-12-03</lastmod>
+    <loc>https://impact-tech.com/#projects</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Contact Section -->
   <url>
-    <loc>https://vertex-studio.com/#contact</loc>
-    <lastmod>2025-12-03</lastmod>
+    <loc>https://impact-tech.com/#contact</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Impressum Page -->
+  <url>
+    <loc>https://impact-tech.com/impressum</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://impact-tech.com/privacy</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

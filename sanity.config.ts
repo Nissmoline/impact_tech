@@ -5,7 +5,7 @@ import {schemaTypes} from './studio/schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Vertex Studio CMS',
+  title: 'Impact Tech CMS',
 
   projectId: 'YOUR_PROJECT_ID', // Получите после создания проекта на sanity.io
   dataset: 'production',

@@ -58,6 +58,14 @@ coverage
 Thumbs.db
 Desktop.ini
 
+# Windows reserved device names
+nul
+con
+prn
+aux
+com[1-9]
+lpt[1-9]
+
 # Temporary files
 *.tmp
 *.temp

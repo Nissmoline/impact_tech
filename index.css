@@ -4,7 +4,16 @@
 
 @layer base {
   body {
-    @apply font-sans bg-slate-950 text-slate-50 overflow-x-hidden;
+    @apply font-sans overflow-x-hidden transition-colors duration-300;
+    @apply bg-slate-950 text-slate-50;
+  }
+
+  .light body {
+    @apply bg-slate-50 text-slate-950;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -30,20 +39,38 @@
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
+/* Custom Scrollbar - Dark Mode */
+.dark ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background: #0f172a;
 }
 
-::-webkit-scrollbar-thumb {
+.dark ::-webkit-scrollbar-thumb {
   background: #334155;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #475569;
+}
+
+/* Custom Scrollbar - Light Mode */
+.light ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
