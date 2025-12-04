@@ -1,3 +1,22 @@
+# Dependencies
+node_modules
+package-lock.json
+
+#install Files .md
+#SANITY_SETUP.md
+
+# Build outputs
+dist
+dist-ssr
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Logs
 logs
 *.log
@@ -7,18 +26,44 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Testing
+coverage
+*.lcov
+.nyc_output
+
+# Cache directories
+.cache
+.parcel-cache
+.vite
+.turbo
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
+*.sublime-project
+*.sublime-workspace
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Debug files
+*.tsbuildinfo
+.eslintcache

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'lucide-react';
+import Scene3D from './Scene3D';
 
 const THEMES = {
   cyan: {
@@ -116,14 +117,19 @@ const Hero: React.FC = () => {
 
         {/* 3D Scene */}
         <div className="relative h-[500px] w-full flex items-center justify-center perspective-1000 order-1 lg:order-2">
-          <motion.div 
-            style={{ y: y1, rotateY: rotate }} 
-            className="relative w-64 h-64 lg:w-80 lg:h-80 transform-style-3d"
+          {/* WebGL 3D Scene Background */}
+          <div className="absolute inset-0 z-0">
+            <Scene3D />
+          </div>
+
+          <motion.div
+            style={{ y: y1 }}
+            className="relative w-64 h-64 lg:w-80 lg:h-80 transform-style-3d z-10"
           >
-            {/* Center Core */}
-            <motion.div 
+            {/* Center Core Glow */}
+            <motion.div
               whileHover={{ scale: 1.1 }}
-              className={`absolute inset-0 bg-gradient-to-br rounded-3xl opacity-20 blur-3xl animate-pulse cursor-pointer transition-colors duration-500 ${theme.coreGradient}`} 
+              className={`absolute inset-0 bg-gradient-to-br rounded-3xl opacity-20 blur-3xl animate-pulse cursor-pointer transition-colors duration-500 ${theme.coreGradient}`}
             />
             
             {/* Floating Window 1: Code */}

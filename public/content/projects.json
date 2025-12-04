@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "category": "Web Application",
+    "description": "Full-featured e-commerce platform with inventory management",
+    "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80",
+    "tags": ["React", "Node.js", "PostgreSQL", "Stripe"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "order": 1,
+    "featured": true,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Creative Portfolio",
+    "category": "Website",
+    "description": "Modern portfolio website with 3D animations and smooth scrolling",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "tags": ["React", "Three.js", "Framer Motion"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "order": 2,
+    "featured": true,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  },
+  {
+    "id": "crm-system",
+    "title": "CRM System",
+    "category": "SaaS",
+    "description": "Customer relationship management system with analytics dashboard",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    "tags": ["React", "TypeScript", "Firebase", "Charts"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "order": 3,
+    "featured": true,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  },
+  {
+    "id": "mobile-app",
+    "title": "Fitness Tracking App",
+    "category": "Mobile App",
+    "description": "Cross-platform mobile app for tracking workouts and nutrition",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    "tags": ["React Native", "Node.js", "MongoDB"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "order": 4,
+    "featured": false,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  }
+]

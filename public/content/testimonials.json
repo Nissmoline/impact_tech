@@ -1,0 +1,41 @@
+[
+  {
+    "id": "testimonial-1",
+    "name": "Alex Thompson",
+    "role": "CTO",
+    "company": "TechCorp Inc.",
+    "content": "Vertex Studio delivered an exceptional web application that exceeded our expectations. Their expertise in modern technologies and attention to detail made the entire process smooth and efficient.",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+    "rating": 5,
+    "order": 1,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  },
+  {
+    "id": "testimonial-2",
+    "name": "Maria Garcia",
+    "role": "Product Manager",
+    "company": "StartupXYZ",
+    "content": "Working with Vertex Studio was a game-changer for our business. They transformed our outdated website into a modern, high-performance platform that our customers love.",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Maria",
+    "rating": 5,
+    "order": 2,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  },
+  {
+    "id": "testimonial-3",
+    "name": "John Chen",
+    "role": "Founder",
+    "company": "DesignHub",
+    "content": "The team's professionalism and technical skills are outstanding. They delivered our project on time and within budget, with excellent communication throughout the entire process.",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
+    "rating": 5,
+    "order": 3,
+    "published": true,
+    "createdAt": "2025-12-03T00:00:00Z",
+    "updatedAt": "2025-12-03T00:00:00Z"
+  }
+]

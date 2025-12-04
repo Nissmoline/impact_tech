@@ -1,0 +1,14 @@
+# robots.txt for Vertex Studio
+
+User-agent: *
+Allow: /
+
+# Disallow paths (if needed in future)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://vertex-studio.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1

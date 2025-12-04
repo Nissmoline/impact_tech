@@ -1,15 +1,34 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { PROJECTS } from '../constants';
+import { useProjects } from '../hooks/useCMS';
 import { ExternalLink, Github } from 'lucide-react';
+import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
+  const { data: cmsProjects } = useProjects();
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
+
+  // Use CMS data if available, otherwise fallback to constants
+  const projects = cmsProjects || PROJECTS.map(p => ({
+    id: String(p.id),
+    title: p.title,
+    category: p.category,
+    description: '',
+    image: p.image,
+    tags: p.stack,
+    github: 'https://github.com',
+    live: 'https://example.com',
+    order: p.id,
+    featured: true,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  }));
 
   return (
     <section ref={targetRef} className="h-[300vh] bg-slate-950 relative">
@@ -23,16 +42,16 @@ const Projects: React.FC = () => {
         </div>
 
         <motion.div style={{ x }} className="flex gap-10 px-6 sm:px-24">
-          {PROJECTS.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="group relative w-[85vw] md:w-[600px] h-[50vh] md:h-[60vh] flex-shrink-0 perspective-1000">
-              <div 
+              <div
                 className="w-full h-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden relative shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-[1.02] transform-style-3d"
               >
                 {/* Image Background */}
                 <div className="absolute inset-0">
-                    <img 
-                        src={project.image} 
-                        alt={project.title} 
+                    <img
+                        src={project.image}
+                        alt={project.title}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
@@ -44,22 +63,25 @@ const Projects: React.FC = () => {
                     <div>
                         <span className="text-cyan-400 text-sm font-bold uppercase tracking-wider mb-2 block">{project.category}</span>
                         <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
+                        {project.description && (
+                          <p className="text-slate-400 text-sm mb-4 max-w-md">{project.description}</p>
+                        )}
                         <div className="flex flex-wrap gap-2 mb-6">
-                            {project.stack.map(tech => (
+                            {project.tags.map(tech => (
                                 <span key={tech} className="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs text-slate-200 backdrop-blur-md">
                                     {tech}
                                 </span>
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-                        <button className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors">
+                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors">
                             <ExternalLink size={20} />
-                        </button>
-                        <button className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors">
+                        </a>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors">
                             <Github size={20} />
-                        </button>
+                        </a>
                     </div>
                   </div>
                 </div>
