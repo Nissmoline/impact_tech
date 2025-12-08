@@ -5,6 +5,7 @@ import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import NotFound from './components/NotFound';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/impressum" element={<ImpressumPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="*" element={<NotFound />} />

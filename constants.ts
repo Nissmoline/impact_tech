@@ -31,31 +31,40 @@ export const SERVICES: Service[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Neon Finance Dashboard",
-    category: "FinTech",
+    title: "Lumina E-Commerce",
+    category: "E-Commerce",
     image: "https://picsum.photos/600/400?random=1",
-    stack: ["React", "D3.js", "Tailwind"]
+    stack: ["React", "TypeScript", "Tailwind"],
+    github: "https://github.com/Nissmoline/Lumina-E-Commerce-Demo",
+    live: "https://lumina-e-commerce-demo.vercel.app/",
+    demo: "https://lumina-e-commerce-demo.vercel.app/"
   },
   {
     id: 2,
-    title: "Aether E-Commerce",
-    category: "Retail",
+    title: "Neon Finance Dashboard",
+    category: "FinTech",
     image: "https://picsum.photos/600/400?random=2",
-    stack: ["Next.js", "Shopify", "Framer Motion"]
+    stack: ["React", "D3.js", "Tailwind"],
+    github: "https://github.com",
+    live: "https://example.com"
   },
   {
     id: 3,
     title: "Orbit Social Platform",
     category: "Social",
     image: "https://picsum.photos/600/400?random=3",
-    stack: ["TypeScript", "Node.js", "WebSockets"]
+    stack: ["TypeScript", "Node.js", "WebSockets"],
+    github: "https://github.com",
+    live: "https://example.com"
   },
   {
     id: 4,
     title: "Zenith Architecture",
     category: "Portfolio",
     image: "https://picsum.photos/600/400?random=4",
-    stack: ["WebGL", "Three.js", "GSAP"]
+    stack: ["WebGL", "Three.js", "GSAP"],
+    github: "https://github.com",
+    live: "https://example.com"
   }
 ];
 

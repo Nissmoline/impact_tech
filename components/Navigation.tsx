@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Hexagon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +48,14 @@ const Navigation: React.FC = () => {
               {item}
             </a>
           ))}
-          <ThemeToggle />
+          <Link
+            to="/portfolio"
+            className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
+            aria-label="View our portfolio"
+          >
+            Portfolio
+          </Link>
+          {/* <ThemeToggle /> */}
           <button
             className="px-5 py-2 bg-white/10 dark:bg-white/10 light:bg-slate-900/10 hover:bg-white/20 dark:hover:bg-white/20 light:hover:bg-slate-900/20 text-white dark:text-white light:text-slate-900 rounded-full text-sm font-medium transition-colors border border-white/5 dark:border-white/5 light:border-slate-300"
             aria-label="Contact us"
@@ -59,7 +66,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Toggle Button (3D Flip) */}
         <div className="md:hidden flex items-center gap-2 z-50">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <div className="perspective-1000">
             <motion.button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -119,6 +126,21 @@ const Navigation: React.FC = () => {
                                 <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </motion.a>
                         ))}
+
+                        <motion.div
+                            initial={{ x: -20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                        >
+                            <Link
+                                to="/portfolio"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
+                            >
+                                <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">Portfolio</span>
+                                <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </Link>
+                        </motion.div>
                         
                          <motion.button 
                             initial={{ x: -20, opacity: 0 }}

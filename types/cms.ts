@@ -26,8 +26,9 @@ export interface CMSProject {
   description: string;
   image: string;
   tags: string[];
-  github: string;
-  live: string;
+  github?: string;
+  live?: string;
+  demo?: string;
   order: number;
   featured: boolean;
   published: boolean;

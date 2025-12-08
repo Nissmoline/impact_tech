@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'lucide-react';
 import Scene3D from './Scene3D';
@@ -108,10 +109,14 @@ const Hero: React.FC = () => {
               Start Your Project
               <ChevronDown className="rotate-[-90deg]" size={18} />
             </button>
-            <button className="px-8 py-4 bg-transparent border border-slate-700 hover:border-white text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 group">
+            <Link
+              to="/portfolio"
+              className="px-8 py-4 bg-transparent border border-slate-700 hover:border-white text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 group"
+              aria-label="View our portfolio"
+            >
               View Our Work
               <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+            </Link>
           </div>
         </motion.div>
 
