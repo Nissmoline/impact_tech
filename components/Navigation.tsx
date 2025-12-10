@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Hexagon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 // import ThemeToggle from './ThemeToggle';
@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,21 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home page and scroll to top
+      navigate('/');
+      // Use setTimeout to ensure navigation completes before scrolling
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
 
   return (
     <nav
@@ -29,7 +46,8 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center relative">
         <Link
           to="/"
-          className="flex items-center gap-2 text-white dark:text-white light:text-slate-900 font-display font-bold text-xl tracking-tight z-50 hover:opacity-80 transition-opacity"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 text-white dark:text-white light:text-slate-900 font-display font-bold text-xl tracking-tight z-50 hover:opacity-80 transition-opacity cursor-pointer"
           aria-label="Impact Tech - Home"
         >
           <Hexagon className="text-cyan-400 fill-cyan-400/20" size={32} strokeWidth={1.5} aria-hidden="true" />
