@@ -10,7 +10,8 @@
       "Bash(dir:*)",
       "Bash(exit 0)",
       "Bash(git rm:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
