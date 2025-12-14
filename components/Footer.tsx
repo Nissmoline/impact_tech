@@ -14,10 +14,12 @@ const Footer: React.FC = () => {
           © {new Date().getFullYear()} Impact Tech. All rights reserved.
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-slate-500 text-sm text-center md:text-left">
-           <Link to="/impressum" className="hover:text-cyan-400 transition-colors">Impressum</Link>
-           <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-           <a href="#" className="hover:text-cyan-400 transition-colors">LinkedIn</a>
-           <a href="#" className="hover:text-cyan-400 transition-colors">GitHub</a>
+          <Link to="/about" className="hover:text-cyan-400 transition-colors">About Us</Link>
+          <Link to="/careers" className="hover:text-cyan-400 transition-colors">Careers</Link>
+          <Link to="/impressum" className="hover:text-cyan-400 transition-colors">Impressum</Link>
+          <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+          <a href="#" className="hover:text-cyan-400 transition-colors">LinkedIn</a>
+          <a href="#" className="hover:text-cyan-400 transition-colors">GitHub</a>
         </div>
       </div>
     </footer>

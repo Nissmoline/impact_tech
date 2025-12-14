@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import AboutPage from './pages/AboutPage';
+import CareersPage from './pages/CareersPage';
 import NotFound from './components/NotFound';
 
 const App: React.FC = () => {
@@ -22,6 +24,8 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/careers" element={<CareersPage />} />
               <Route path="/impressum" element={<ImpressumPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="*" element={<NotFound />} />

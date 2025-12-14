@@ -11,7 +11,8 @@
       "Bash(exit 0)",
       "Bash(git rm:*)",
       "Bash(cat:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

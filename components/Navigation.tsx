@@ -4,6 +4,13 @@ import { Hexagon, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 // import ThemeToggle from './ThemeToggle';
 
+const navItems = [
+  { label: 'Services', href: '/#services', type: 'anchor' as const },
+  { label: 'Projects', href: '/#projects', type: 'anchor' as const },
+  { label: 'Process', href: '/#process', type: 'anchor' as const },
+  { label: 'About', href: '/about', type: 'route' as const },
+];
+
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,16 +63,27 @@ const Navigation: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {['Services', 'Projects', 'Process', 'About'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
-              aria-label={`Navigate to ${item} section`}
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.type === 'anchor' ? (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
+                aria-label={`Navigate to ${item.label} section`}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href}
+                className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
+                aria-label={`Navigate to ${item.label} page`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
           <Link
             to="/portfolio"
             className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
@@ -74,12 +92,13 @@ const Navigation: React.FC = () => {
             Portfolio
           </Link>
           {/* <ThemeToggle /> */}
-          <button
+          <a
+            href="/#contact"
             className="px-5 py-2 bg-white/10 dark:bg-white/10 light:bg-slate-900/10 hover:bg-white/20 dark:hover:bg-white/20 light:hover:bg-slate-900/20 text-white dark:text-white light:text-slate-900 rounded-full text-sm font-medium transition-colors border border-white/5 dark:border-white/5 light:border-slate-300"
             aria-label="Contact us"
           >
             Contact
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle Button (3D Flip) */}
@@ -130,20 +149,39 @@ const Navigation: React.FC = () => {
                         <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none" />
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl pointer-events-none" />
 
-                        {['Services', 'Projects', 'Process', 'About'].map((item, i) => (
+                        {navItems.map((item, i) => {
+                          const delay = 0.1 + i * 0.1;
+                          return item.type === 'anchor' ? (
                             <motion.a
-                                key={item}
-                                href={`#${item.toLowerCase()}`}
+                                key={item.label}
+                                href={item.href}
                                 initial={{ x: -20, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ delay: 0.1 + i * 0.1 }}
+                                transition={{ delay }}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
                             >
-                                <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">{item}</span>
+                                <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">{item.label}</span>
                                 <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </motion.a>
-                        ))}
+                          ) : (
+                            <motion.div
+                              key={item.label}
+                              initial={{ x: -20, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ delay }}
+                            >
+                              <Link
+                                to={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
+                              >
+                                <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">{item.label}</span>
+                                <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </Link>
+                            </motion.div>
+                          );
+                        })}
 
                         <motion.div
                             initial={{ x: -20, opacity: 0 }}
@@ -160,14 +198,16 @@ const Navigation: React.FC = () => {
                             </Link>
                         </motion.div>
                         
-                         <motion.button 
+                         <motion.a 
                             initial={{ x: -20, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className="w-full py-4 mt-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl font-bold shadow-lg shadow-cyan-500/20 active:scale-95 transition-all"
+                            href="/#contact"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="w-full text-center py-4 mt-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl font-bold shadow-lg shadow-cyan-500/20 active:scale-95 transition-all"
                          >
                             Start Project
-                         </motion.button>
+                         </motion.a>
                     </div>
                 </motion.div>
             )}
