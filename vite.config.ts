@@ -2,9 +2,28 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
+/// <reference types="vitest" />
+
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      test: {
+        environment: 'jsdom',
+        globals: true,
+        setupFiles: ['./tests/setup.ts'],
+        css: true,
+        coverage: {
+          provider: 'v8',
+          reporter: ['text', 'json', 'html'],
+          exclude: [
+            'node_modules/',
+            'tests/',
+            '*.config.ts',
+            '*.config.js',
+            'dist/',
+          ],
+        },
+      },
       server: {
         port: 3000,
         host: '0.0.0.0',

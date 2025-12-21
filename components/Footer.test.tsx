@@ -1,4 +1,3 @@
-import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer';
@@ -29,10 +28,9 @@ describe('Footer Component', () => {
         <Footer />
       </MemoryRouter>
     );
+    expect(screen.getByText('Careers')).toBeInTheDocument();
     expect(screen.getByText('Impressum')).toBeInTheDocument();
     expect(screen.getByText('Privacy Policy')).toBeInTheDocument();
-    expect(screen.getByText('LinkedIn')).toBeInTheDocument();
-    expect(screen.getByText('GitHub')).toBeInTheDocument();
   });
 
   it('has correct structure', () => {
