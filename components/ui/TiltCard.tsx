@@ -1,13 +1,22 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
-interface TiltCardProps {
+type TiltCardProps = React.HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   className?: string;
   rotationFactor?: number;
-}
+};
 
-const TiltCard: React.FC<TiltCardProps> = ({ children, className = "", rotationFactor = 15 }) => {
+const TiltCard: React.FC<TiltCardProps> = ({
+  children,
+  className = "",
+  rotationFactor = 15,
+  onClick,
+  onKeyDown,
+  tabIndex,
+  role,
+  ...rest
+}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -47,12 +56,17 @@ const TiltCard: React.FC<TiltCardProps> = ({ children, className = "", rotationF
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      tabIndex={tabIndex}
+      role={role}
       style={{
         rotateX,
         rotateY,
         transformStyle: "preserve-3d",
       }}
       className={`relative transition-all duration-200 ease-out ${className}`}
+      {...rest}
     >
       <div style={{ transform: "translateZ(50px)" }} className="absolute inset-0 bg-cyan-500/10 blur-xl rounded-xl -z-10 opacity-0 hover:opacity-100 transition-opacity duration-500" />
       {children}

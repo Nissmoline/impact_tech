@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Sparkles,
@@ -13,6 +13,7 @@ import {
   Workflow,
   Handshake,
   Star,
+  X,
 } from 'lucide-react';
 import TiltCard from './ui/TiltCard';
 
@@ -99,7 +100,7 @@ const team = [
     name: 'Kolpaxidis Konstantine',
     role: 'Founder & CEO',
     focus: 'BSc Software Engineer| 10+ years building scalable web platforms and 3D experiences for global brands',
-    photo: 'public/team/K_Kolpaxidis.jpg',
+    photo: '/team/K_Kolpaxidis.jpg',
     accent: 'from-cyan-500 to-blue-500',
     badge: 'Founder',
   },
@@ -107,7 +108,7 @@ const team = [
     name: 'Elena Schiltz',
     role: 'Head of Design & UX',
     focus: 'Award-winning designer specializing in design systems, Figma workflows, and user-centered interfaces. Ex-Adobe.',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+    photo: '/team/e_Schilz.jpg',
     accent: 'from-purple-500 to-pink-500',
     badge: 'Design',
   },
@@ -115,7 +116,7 @@ const team = [
     name: 'Emanuel Zervas',
     role: 'Principal Frontend Architect',
     focus: 'TypeScript ninja with 8+ years in React, Next.js, and performance optimization. Former tech lead at Revolut.',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    photo: '/team/E_Zervas.jpg',
     accent: 'from-emerald-500 to-teal-500',
     badge: 'Engineering',
   },
@@ -123,7 +124,7 @@ const team = [
     name: 'Evheniy Buha',
     role: '3D Specialist',
     focus: '3D expert creating immersive web experiences. 50+ shipped projects with seamless 3D integration.',
-    photo: 'public/team/Evheniy_Buha.jpg',
+    photo: '/team/Evheniy_Buha.jpg',
     accent: 'from-cyan-500 to-purple-500',
     badge: '3D',
   },
@@ -131,15 +132,15 @@ const team = [
     name: 'Melina Chen',
     role: 'Senior Fullstack Engineer',
     focus: 'Node.js, GraphQL, and cloud architecture expert. Building scalable APIs with PostgreSQL, MongoDB & Redis.',
-    photo: 'public/team/Melina_Chen.jpg',
+    photo: '/team/Melina_Chen.jpg',
     accent: 'from-orange-500 to-amber-500',
     badge: 'Backend',
   },
   {
-    name: 'Sofia Martinez',
+    name: 'Sofia König',
     role: 'Motion & Interaction Designer',
     focus: 'Framer Motion and GSAP wizard. Crafting buttery-smooth animations that elevate every user interaction.',
-    photo: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80',
+    photo: '/team/s_koenig.jpg',
     accent: 'from-fuchsia-500 to-pink-500',
     badge: 'Motion',
   },
@@ -147,7 +148,7 @@ const team = [
     name: 'Ivan Alexandrov',
     role: 'DevOps & Cloud Engineer',
     focus: 'AWS certified architect. Docker, Kubernetes, CI/CD pipelines, and infrastructure as code specialist.',
-    photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
+    photo: '/team/i_alexandrov.jpg',
     accent: 'from-lime-500 to-green-500',
     badge: 'DevOps',
   },
@@ -155,21 +156,44 @@ const team = [
     name: 'Keli Paschalidou',
     role: 'Product & Strategy Lead',
     focus: 'MBA + 7 years product management. Translating business goals into roadmaps that ship results.',
-    photo: 'public/team/K_Paschalidou.jpg',
+    photo: '/team/K_Paschalidou.jpg',
     accent: 'from-sky-500 to-indigo-500',
     badge: 'Product',
   },
   {
-    name: 'Heinrich Mueller',
+    name: 'Heinrich Meier',
     role: 'QA & Test Automation Engineer',
     focus: 'Jest, Vitest, and Playwright expert ensuring rock-solid quality with comprehensive test coverage.',
-    photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80',
+    photo: '/team/h_meier.jpg',
     accent: 'from-amber-500 to-yellow-500',
     badge: 'Quality',
   },
 ];
 
 const About: React.FC = () => {
+  const [activeMember, setActiveMember] = useState<(typeof team)[number] | null>(null);
+
+  useEffect(() => {
+    if (!activeMember) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [activeMember]);
+
+  const handleCardKeyDown = (
+    event: React.KeyboardEvent<HTMLDivElement>,
+    member: (typeof team)[number]
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setActiveMember(member);
+    }
+  };
+
   return (
     <section id="about" className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen py-24">
       <div className="container mx-auto px-6 max-w-6xl space-y-16">
@@ -344,7 +368,15 @@ const About: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member) => (
-              <TiltCard key={member.name}>
+              <TiltCard
+                key={member.name}
+                className="cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+                role="button"
+                tabIndex={0}
+                onClick={() => setActiveMember(member)}
+                onKeyDown={(event) => handleCardKeyDown(event, member)}
+                aria-label={`${member.name} - ${member.role}`}
+              >
                 <div className="h-full p-6 rounded-2xl bg-slate-900/60 border border-white/10 flex flex-col gap-4">
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-white/10">
@@ -364,6 +396,48 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+      {activeMember && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-10">
+          <div
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            onClick={() => setActiveMember(null)}
+            aria-hidden="true"
+          />
+          <div className="relative w-full max-w-4xl bg-slate-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setActiveMember(null)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
+              aria-label="Close team member details"
+            >
+              <X size={18} />
+            </button>
+            <div className="grid md:grid-cols-2">
+              <div className="h-full max-h-[500px]">
+                <img
+                  src={activeMember.photo}
+                  alt={activeMember.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-8 space-y-4">
+                <div
+                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${activeMember.accent} text-white`}
+                >
+                  <span className={`h-2 w-2 rounded-full bg-gradient-to-r ${activeMember.accent}`} />
+                  {activeMember.badge}
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm uppercase tracking-[0.16em] text-cyan-300">{activeMember.role}</p>
+                  <h3 className="text-2xl font-semibold text-white">{activeMember.name}</h3>
+                </div>
+                <p className="text-slate-400 leading-relaxed">{activeMember.focus}</p>
+                <div className={`h-1 w-full rounded-full bg-gradient-to-r ${activeMember.accent}`} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
