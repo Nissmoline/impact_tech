@@ -31,40 +31,118 @@ export const SERVICES: Service[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Lumina E-Commerce",
-    category: "E-Commerce",
-    image: "https://picsum.photos/600/400?random=1",
-    stack: ["React", "TypeScript", "Tailwind"],
+    title: "E-Commerce Platform",
+    category: "Web Application",
+    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80",
+    stack: ["React", "Node.js", "PostgreSQL", "Stripe"],
     github: "https://github.com/Nissmoline/Lumina-E-Commerce-Demo",
-    live: "https://lumina-e-commerce-demo.vercel.app/",
-    demo: "https://lumina-e-commerce-demo.vercel.app/"
+    live: "https://lumina-e-commerce-demo.vercel.app/"
   },
   {
     id: 2,
-    title: "Neon Finance Dashboard",
-    category: "FinTech",
-    image: "https://picsum.photos/600/400?random=2",
-    stack: ["React", "D3.js", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com"
+    title: "Creative Portfolio",
+    category: "Website",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
+    stack: ["React", "Three.js", "Framer Motion"],
+    github: "https://github.com/Nissmoline/cosmos-demo",
+    live: "https://cosmos-demo-jade.vercel.app/"
   },
   {
     id: 3,
-    title: "Orbit Social Platform",
-    category: "Social",
-    image: "https://picsum.photos/600/400?random=3",
-    stack: ["TypeScript", "Node.js", "WebSockets"],
-    github: "https://github.com",
-    live: "https://example.com"
+    title: "CRM System",
+    category: "SaaS",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    stack: ["React", "TypeScript", "Firebase", "Charts"],
+    github: "https://github.com/Nissmoline/Rent-Car-CRM",
+    live: "https://rent-car-crm.vercel.app/"
   },
   {
     id: 4,
-    title: "Zenith Architecture",
+    title: "Fitness Tracking App",
+    category: "Mobile App",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+    stack: ["React Native", "Node.js", "MongoDB"],
+    github: "https://github.com/Nissmoline/fittrack-ai",
+    live: "https://fittrack-ai-six.vercel.app/"
+  },
+  {
+    id: 5,
+    title: "ServiceTree",
+    category: "Website",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
+    stack: ["Next.js", "React", "TypeScript", "i18n"],
+    github: "https://github.com/Nissmoline/servicetree",
+    live: "https://www.servicetree.online/"
+  },
+  {
+    id: 6,
+    title: "Milawyer Legal Services",
+    category: "Website",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+    stack: ["React", "PWA", "i18n", "SEO"],
+    github: "https://github.com/Nissmoline/lawmi",
+    live: "https://milawyer.gr/"
+  },
+  {
+    id: 7,
+    title: "Yana Photography Portfolio",
     category: "Portfolio",
-    image: "https://picsum.photos/600/400?random=4",
-    stack: ["WebGL", "Three.js", "GSAP"],
-    github: "https://github.com",
-    live: "https://example.com"
+    image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80",
+    stack: ["Next.js", "Sanity CMS", "React", "Analytics"],
+    github: "https://github.com/aquamarineru/portfolioYana",
+    live: "https://www.yanakorobeinykphoto.com/"
+  },
+  {
+    id: 8,
+    title: "Handyman24 Services",
+    category: "Website",
+    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80",
+    stack: ["Vue.js", "SEO", "i18n", "Analytics"],
+    github: "https://github.com/Nissmoline/handyman",
+    live: "https://www.handyman24.gr/"
+  },
+  {
+    id: 9,
+    title: "Sales Tracker - Deutsche Telekom",
+    category: "Mobile App",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    stack: ["Flutter", "Provider", "Hive", "Mobile"],
+    github: "https://github.com/Nissmoline/sales_tracker"
+  },
+  {
+    id: 10,
+    title: "Modern Login Form",
+    category: "Web Design",
+    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80",
+    stack: ["HTML", "CSS", "JavaScript", "UI Design"],
+    live: "https://codepen.io/Nissmoline/pen/xbVMdqv"
+  },
+  {
+    id: 11,
+    title: "3D Modern Carousel",
+    category: "Web Design",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+    stack: ["React", "Vite 6", "Tailwind CSS", "UI Design"],
+    github: "https://github.com/Nissmoline/orbit-3d",
+    live: "https://orbit-3d-smoky.vercel.app/"
+  },
+  {
+    id: 12,
+    title: "ModernStore - Premium Shop",
+    category: "E-Commerce",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    stack: ["React", "E-Commerce", "Tailwind CSS", "Responsive"],
+    github: "https://github.com/Nissmoline/web-app-store",
+    live: "https://web-app-store-nu.vercel.app/"
+  },
+  {
+    id: 13,
+    title: "Lumina Store",
+    category: "E-Commerce",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=80",
+    stack: ["React", "React Router", "Tailwind CSS", "E-Commerce"],
+    github: "https://github.com/Nissmoline/modern-lifestyle-store",
+    live: "https://modern-lifestyle-store.vercel.app/"
   }
 ];
 

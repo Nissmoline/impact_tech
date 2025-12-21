@@ -1,49 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useProjects } from '../hooks/useCMS';
 import { ExternalLink, Github } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
-  const { data: cmsProjects } = useProjects();
   const targetRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [maxShift, setMaxShift] = useState(0);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
+  useEffect(() => {
+    const calculateShift = () => {
+      if (!containerRef.current || !trackRef.current) return;
+      const containerWidth = containerRef.current.offsetWidth;
+      const trackWidth = trackRef.current.scrollWidth;
+      const shift = Math.max(trackWidth - containerWidth, 0);
+      setMaxShift(shift);
+    };
 
-  // Use CMS data if available, otherwise fallback to constants
-  const projects = cmsProjects || PROJECTS.map(p => ({
-    id: String(p.id),
-    title: p.title,
-    category: p.category,
-    description: '',
-    image: p.image,
-    tags: p.stack,
-    github: p.github,
-    live: p.live,
-    demo: p.demo,
-    order: p.id,
-    featured: true,
-    published: true,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  }));
+    calculateShift();
+    window.addEventListener('resize', calculateShift);
+    return () => window.removeEventListener('resize', calculateShift);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -maxShift]);
 
   return (
     <section ref={targetRef} className="h-[300vh] bg-slate-950 relative">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div ref={containerRef} className="sticky top-0 flex h-screen items-center overflow-hidden">
         
-        <div className="absolute top-10 left-6 z-20">
+        <div className="absolute top-0 left-6 z-20 mb-8">
              <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500">
                Featured Works
              </h2>
-             <p className="text-slate-400 mt-2">Scroll to explore the gallery</p>
+             <p className="text-slate-400 mt-2 mb-4">Scroll to explore the gallery</p>
         </div>
 
-        <motion.div style={{ x }} className="flex gap-10 px-6 sm:px-24">
-          {projects.map((project) => (
+        <motion.div ref={trackRef} style={{ x }} className="flex gap-10 px-6 sm:px-24">
+          {PROJECTS.map((project) => (
             <div key={project.id} className="group relative w-[85vw] md:w-[600px] h-[50vh] md:h-[60vh] flex-shrink-0 perspective-1000">
               <div
                 className="w-full h-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden relative shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-[1.02] transform-style-3d"
@@ -64,11 +61,8 @@ const Projects: React.FC = () => {
                     <div>
                         <span className="text-cyan-400 text-sm font-bold uppercase tracking-wider mb-2 block">{project.category}</span>
                         <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
-                        {project.description && (
-                          <p className="text-slate-400 text-sm mb-4 max-w-md">{project.description}</p>
-                        )}
                         <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map(tech => (
+                            {project.stack.map(tech => (
                                 <span key={tech} className="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs text-slate-200 backdrop-blur-md">
                                     {tech}
                                 </span>
@@ -77,12 +71,16 @@ const Projects: React.FC = () => {
                     </div>
 
                     <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors">
-                            <ExternalLink size={20} />
-                        </a>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors">
-                            <Github size={20} />
-                        </a>
+                        {project.live && (
+                          <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors">
+                              <ExternalLink size={20} />
+                          </a>
+                        )}
+                        {project.github && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors">
+                              <Github size={20} />
+                          </a>
+                        )}
                     </div>
                   </div>
                 </div>

@@ -1,39 +1,19 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useProjects } from '../hooks/useCMS';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Filter, Play } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
 const Portfolio: React.FC = () => {
-  const { data: cmsProjects } = useProjects();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  // Use CMS data if available, otherwise fallback to constants
-  const allProjects = cmsProjects || PROJECTS.map(p => ({
-    id: String(p.id),
-    title: p.title,
-    category: p.category,
-    description: '',
-    image: p.image,
-    tags: p.stack,
-    github: p.github,
-    live: p.live,
-    demo: p.demo,
-    order: p.id,
-    featured: true,
-    published: true,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  }));
-
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(allProjects.map(p => p.category)))];
+  const categories = ['All', ...Array.from(new Set(PROJECTS.map(p => p.category)))];
 
   // Filter projects by category
   const projects = selectedCategory === 'All'
-    ? allProjects
-    : allProjects.filter(p => p.category === selectedCategory);
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category === selectedCategory);
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev + 1) % projects.length);
@@ -175,25 +155,14 @@ const Portfolio: React.FC = () => {
                       {currentProject.title}
                     </motion.h2>
 
-                    {currentProject.description && (
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="text-slate-300 dark:text-slate-300 light:text-slate-700 text-lg mb-6 max-w-2xl"
-                      >
-                        {currentProject.description}
-                      </motion.p>
-                    )}
-
                     {/* Tech Stack */}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 }}
+                      transition={{ delay: 0.4 }}
                       className="flex flex-wrap gap-2 mb-8"
                     >
-                      {currentProject.tags.map((tech) => (
+                      {currentProject.stack.map((tech) => (
                         <span
                           key={tech}
                           className="px-4 py-2 bg-white/10 dark:bg-white/10 light:bg-slate-800/10 border border-white/10 dark:border-white/10 light:border-slate-300 rounded-full text-sm text-slate-200 dark:text-slate-200 light:text-slate-700 backdrop-blur-md font-medium"
@@ -207,7 +176,7 @@ const Portfolio: React.FC = () => {
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6 }}
+                      transition={{ delay: 0.5 }}
                       className="flex flex-wrap gap-3"
                     >
                       {currentProject.demo && (
@@ -307,10 +276,10 @@ const Portfolio: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto"
         >
           {[
-            { label: 'Total Projects', value: allProjects.length },
+            { label: 'Total Projects', value: PROJECTS.length },
             { label: 'Categories', value: categories.length - 1 },
-            { label: 'Technologies', value: new Set(allProjects.flatMap(p => p.tags)).size },
-            { label: 'Happy Clients', value: allProjects.length },
+            { label: 'Technologies', value: new Set(PROJECTS.flatMap(p => p.stack)).size },
+            { label: 'Happy Clients', value: PROJECTS.length },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

@@ -31,8 +31,6 @@ export default defineConfig(({ mode }) => {
               'animation-vendor': ['framer-motion'],
               // Icons
               'icons-vendor': ['lucide-react'],
-              // Sanity CMS
-              'sanity-vendor': ['@sanity/client', '@sanity/image-url'],
             },
           },
         },

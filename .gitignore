@@ -2,9 +2,6 @@
 node_modules
 package-lock.json
 
-#install Files .md
-SANITY_SETUP.md
-
 # Build outputs
 dist
 dist-ssr

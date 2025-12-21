@@ -1,23 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { useTechStack } from '../hooks/useCMS';
 import { TECH_STACK } from '../constants';
 
 const TechStack: React.FC = () => {
-  const { data: cmsTechStack } = useTechStack();
   const marqueeRef = useRef<HTMLDivElement>(null);
   const lampRef = useRef<HTMLDivElement>(null);
-
-  // Use CMS data if available, otherwise fallback to constants
-  const techStack = cmsTechStack || TECH_STACK.map((t, index) => ({
-    id: t.name.toLowerCase(),
-    name: t.name,
-    color: t.color,
-    category: 'frontend' as const,
-    order: index + 1,
-    published: true,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  }));
 
   useEffect(() => {
     const updateSpotlight = () => {
@@ -110,7 +96,7 @@ const TechStack: React.FC = () => {
 
       <div className="relative flex z-20">
         <div ref={marqueeRef} className="py-12 animate-marquee whitespace-nowrap flex gap-12 items-center">
-            {[...techStack, ...techStack, ...techStack].map((tech, index) => (
+            {[...TECH_STACK, ...TECH_STACK, ...TECH_STACK].map((tech, index) => (
                 <div
                     key={`${tech.name}-${index}`}
                     className="flex flex-col items-center gap-4 group cursor-default tech-item relative"
@@ -134,7 +120,7 @@ const TechStack: React.FC = () => {
 
       <style>{`
         .animate-marquee {
-            animation: marquee 30s linear infinite;
+            animation: marquee 65s linear infinite;
         }
         @keyframes marquee {
             0% { transform: translateX(0); }
