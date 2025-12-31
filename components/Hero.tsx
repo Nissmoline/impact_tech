@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-lg lg:text-xl text-slate-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            For developers, software engineers, and designers who want their products to defy gravity. We build immersive interfaces that stand out.
+            We design and build end-to-end digital products—3D web experiences, high-performance websites, SaaS platforms, mobile apps, secure APIs, and cloud/QA pipelines—so your product stands out and scales.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

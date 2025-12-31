@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 
+const PROJECT_TYPE_OPTIONS = [
+  '3D & Interactive Experiences',
+  'Web Development',
+  'UX/UI & Design Systems',
+  'Mobile Apps',
+  'Backend & APIs',
+  'DevOps & Reliability',
+  'QA & Test Automation',
+];
+
 const Contact: React.FC = () => {
-  const [formState, setFormState] = useState({ name: '', email: '', type: 'Website', budget: '', message: '' });
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    type: '',
+    customType: '',
+    budget: '',
+    message: '',
+  });
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleTypeChange = (value: string) => {
+    setFormState((prev) => ({
+      ...prev,
+      type: value,
+      customType: value === 'other' ? prev.customType : '',
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,29 +87,44 @@ const Contact: React.FC = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                          <div className="space-y-2">
                             <label className="text-sm font-medium text-slate-300">Project Type</label>
-                            <select 
+                            <div className="space-y-3">
+                              <select 
+                                required
                                 className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all appearance-none"
                                 value={formState.type}
-                                onChange={e => setFormState({...formState, type: e.target.value})}
-                            >
-                                <option>3D Experience</option>
-                                <option>Web App Development</option>
-                                <option>Design System</option>
-                                <option>Marketing Site</option>
-                            </select>
+                                onChange={e => handleTypeChange(e.target.value)}
+                              >
+                                <option value="">Select a project type</option>
+                                {PROJECT_TYPE_OPTIONS.map((option) => (
+                                  <option key={option} value={option}>{option}</option>
+                                ))}
+                                <option value="other">Other (write below)</option>
+                              </select>
+                              <input
+                                type="text"
+                                placeholder="Custom project type (tell us what you need)"
+                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                value={formState.customType}
+                                onChange={e => setFormState(prev => ({ ...prev, customType: e.target.value }))}
+                                required={formState.type === 'other'}
+                                disabled={formState.type !== 'other'}
+                                aria-label="Custom project type"
+                              />
+                              <p className="text-xs text-slate-500">Choose one of our services or describe yours.</p>
+                            </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-slate-300">Budget Range</label>
+                            <label className="text-sm font-medium text-slate-300">Business Range</label>
                              <select 
                                 className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all appearance-none"
                                 value={formState.budget}
                                 onChange={e => setFormState({...formState, budget: e.target.value})}
                             >
-                                <option>Select a range</option>
-                                <option>$5k - $10k</option>
-                                <option>$10k - $25k</option>
-                                <option>$25k - $50k</option>
-                                <option>$50k+</option>
+                                <option>Select a range of your business</option>
+                                <option>€5k - €10k</option>
+                                <option>€10k - €25k</option>
+                                <option>€25k - €50k</option>
+                                <option>€50k+</option>
                             </select>
                         </div>
                     </div>

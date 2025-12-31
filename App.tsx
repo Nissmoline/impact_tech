@@ -4,6 +4,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollManager from './components/ScrollManager';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
     <ThemeProvider>
       <BrowserRouter>
         <Preloader />
+        <ScrollManager />
         <div className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen text-slate-50 dark:text-slate-50 light:text-slate-950 selection:bg-cyan-500/30 selection:text-cyan-200 transition-colors duration-300">
           <Navigation />
 

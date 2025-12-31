@@ -4,27 +4,51 @@ import { Project, Service, Testimonial, TechItem } from './types';
 export const SERVICES: Service[] = [
   {
     id: 1,
-    title: "3D Web Experiences",
-    description: "Immersive WebGL and Three.js implementations that captivate users and increase dwell time.",
+    title: "3D & Interactive Experiences",
+    description: "WebGL/Three.js product configurators, showrooms, and technical visualizations optimized for Core Web Vitals.",
     icon: Layers
   },
   {
     id: 2,
-    title: "Front-End Engineering",
-    description: "Scalable, performant architectures using React, Next.js and modern state management.",
+    title: "Web Development",
+    description: "High-performance marketing sites, SaaS portals, and dashboards on React/Next.js with SEO and speed baked in.",
     icon: Code2
   },
   {
     id: 3,
-    title: "UX/UI Design",
+    title: "UX/UI & Design Systems",
     description: "User-centric interfaces designed with empathy and precision, focused on conversion.",
     icon: Palette
   },
   {
     id: 4,
-    title: "Design Systems",
-    description: "Comprehensive component libraries that bridge the gap between design and engineering.",
+    title: "Mobile Apps",
+    description: "Cross-platform apps with React Native/Flutter, from build to store publish and ongoing maintenance.",
     icon: Monitor
+  },
+  {
+    id: 5,
+    title: "Backend & APIs",
+    description: "Secure REST/GraphQL services on Node.js/Nest/Express, data models, and integrations with payments/CRM/ERP..",
+    icon: Database
+  },
+  {
+    id: 6,
+    title: "DevOps & Reliability",
+    description: "CI/CD, AWS cloud foundations, observability, security hardening, and cost/performance optimization.",
+    icon: Cpu
+  },
+  {
+    id: 7,
+    title: "QA & Test Automation",
+    description: "Test pyramids with unit/integration/E2E, regression gates in CI, and stable environments.",
+    icon: Zap
+  },
+  {
+    id: 8,
+    title: "SEO - Discovery & Strategy",
+    description: "Outcome-focused workshops, roadmaps, KPIs, and risk framing before we write code.",
+    icon: Globe
   }
 ];
 

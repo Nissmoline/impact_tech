@@ -95,78 +95,241 @@ const capabilities = [
   },
 ];
 
-const team = [
+type TeamMember = {
+  name: string;
+  role: string;
+  focus: string;
+  photo: string;
+  accent: string;
+  badge: string;
+  bio: string[];
+  education?: string[];
+  primaryStack?: string[];
+  tooling?: string[];
+  delivers?: string[];
+};
+
+const team: TeamMember[] = [
   {
     name: 'Kolpaxidis Konstantine',
     role: 'Founder & CEO',
-    focus: 'BSc Software Engineer| 10+ years building scalable web platforms and 3D experiences for global brands',
-    photo: '/team/K_Kolpaxidis.jpg',
+    focus: 'Leads architecture and delivery of complex products with end-to-end accountability.',
+    photo: '/team/k_kolpaxidis.jpg',
     accent: 'from-cyan-500 to-blue-500',
     badge: 'Founder',
+    bio: [
+      'Konstantine leads end-to-end delivery of complex digital products, combining hands-on engineering depth with executive ownership of outcomes.',
+      'He specializes in building scalable web platforms, interactive 3D web experiences, and production-grade software systems where performance, security, and reliability are non-negotiable. As Founder & CEO, he sets technical direction, validates architectures, manages delivery governance, and ensures every engagement ships measurable business results on time, on budget, and with long-term maintainability.',
+    ],
+    education: ['BSc in Software Engineering', '10+ years building scalable platforms and interactive experiences'],
+    primaryStack: [
+      'Frontend: TypeScript, React, Next.js, HTML5, CSS3',
+      'Backend: Node.js (architecture oversight), REST/GraphQL (solution design)',
+      'Cloud/Delivery: AWS-oriented architectures, CI/CD strategy, security-by-design',
+    ],
+    tooling: [
+      'React ecosystem (routing, state, data fetching), component-driven architecture, Storybook',
+      'Performance engineering: Core Web Vitals optimization, SSR/ISR patterns, caching strategies',
+      'Observability and quality gates: logging, monitoring, release governance',
+    ],
+    delivers: [
+      'Technical strategy, system architecture, delivery leadership, audits, scalability plans',
+      'High-performance web platforms, enterprise-grade applications, interactive 3D product experiences',
+    ],
   },
   {
     name: 'Elena Schiltz',
     role: 'Head of Design & UX',
-    focus: 'Award-winning designer specializing in design systems, Figma workflows, and user-centered interfaces. Ex-Adobe.',
+    focus: 'Systems-minded design lead building scalable design systems and UX.',
     photo: '/team/e_Schilz.jpg',
     accent: 'from-purple-500 to-pink-500',
     badge: 'Design',
+    bio: [
+      'Elena leads product design and UX with a systems mindset: she translates business goals into user-centered interfaces that increase conversion, retention, and brand trust.',
+      'Her strength is building and operating design systems at scale, ensuring consistency across products, accelerating development, and reducing design debt. She owns UX workflows from research and prototyping to final UI specs in Figma, supporting engineering teams through implementation with clear standards and governance.',
+    ],
+    education: ['University degree in a computer-related or digital discipline (e.g., Computer Science, HCI, Digital Product Design)'],
+    primaryStack: ['Design & UX: Figma, design systems, UI specifications, user flows, prototyping'],
+    tooling: [
+      'Component libraries alignment (tokens, variants, responsive rules)',
+      'Accessibility-first design guidelines (WCAG-aware patterns)',
+      'Design-to-dev workflows (structured specs, documentation, versioning)',
+    ],
+    delivers: [
+      'UX strategy, design systems, product UI, audit and redesign programs',
+      'Conversion-focused interfaces for SaaS, enterprise dashboards, and high-impact marketing sites',
+    ],
   },
   {
     name: 'Emanuel Zervas',
     role: 'Principal Frontend Architect',
-    focus: 'TypeScript ninja with 8+ years in React, Next.js, and performance optimization. Former tech lead at Revolut.',
+    focus: 'Frontend architect for scalable, performant React and Next.js products.',
     photo: '/team/E_Zervas.jpg',
     accent: 'from-emerald-500 to-teal-500',
     badge: 'Engineering',
+    bio: [
+      'Emanuel is the principal frontend architect focused on building fast, scalable, and maintainable user interfaces for modern products.',
+      'He designs frontend systems as platforms: component libraries, patterns, performance budgets, and engineering standards that keep teams shipping reliably as products grow. He is specialized in TypeScript, React, and Next.js, with emphasis on performance optimization, SSR/ISR strategies, and robust integration with APIs.',
+    ],
+    education: [
+      'Formal degree not specified ',
+      '19+ years experience 8+ years in React/Next.js and performance optimization',
+      'Former tech lead at Revolut',
+    ],
+    primaryStack: [
+      'Frontend: TypeScript, React, Next.js',
+      'Architecture: scalable UI systems, SSR/ISR, caching, edge delivery patterns',
+    ],
+    tooling: [
+      'UI: Tailwind CSS, Radix UI/shadcn/ui (if used), Storybook',
+      'Data: TanStack Query (React Query), SWR, typed API clients',
+      'State: Zustand, Redux Toolkit (project-dependent)',
+      'Quality: ESLint, Prettier, type-safe patterns, performance profiling',
+    ],
+    delivers: [
+      'Enterprise-grade frontend architecture, component libraries, performance hardening',
+      'High-conversion product UIs, dashboards, portals, and multi-tenant SaaS frontends',
+    ],
   },
   {
     name: 'Evheniy Buha',
     role: '3D Specialist',
-    focus: '3D expert creating immersive web experiences. 50+ shipped projects with seamless 3D integration.',
+    focus: 'Builds immersive 3D web experiences optimized for performance.',
     photo: '/team/Evheniy_Buha.jpg',
     accent: 'from-cyan-500 to-purple-500',
     badge: '3D',
+    bio: [
+      'Evheniy creates immersive, production-ready 3D web experiences that are both visually compelling and performant on real devices.',
+      'He builds interactive 3D scenes for product marketing, digital showrooms, configurators, and technical visualization, balancing fidelity with loading speed, frame-rate stability, and accessibility. He integrates 3D into React and Next.js applications without compromising Core Web Vitals.',
+    ],
+    education: ['50+ shipped projects with seamless 3D integration'],
+    primaryStack: [
+      '3D/Web: WebGL, Three.js, real-time rendering pipelines',
+      'Integration: React/Next.js-friendly 3D architecture',
+    ],
+    tooling: [
+      'Three.js ecosystem: React Three Fiber, Drei, loaders, postprocessing',
+      'Asset pipeline: glTF/GLB workflows, optimization/compression, LOD strategies',
+      'Shaders/FX: GLSL-based effects (project-dependent)',
+    ],
+    delivers: [
+      '3D websites, interactive product configurators, technical visualization',
+      'Optimized real-time scenes integrated into modern web applications',
+    ],
   },
   {
     name: 'Melina Chen',
     role: 'Senior Fullstack Engineer',
-    focus: 'Node.js, GraphQL, and cloud architecture expert. Building scalable APIs with PostgreSQL, MongoDB & Redis.',
+    focus: 'Builds scalable backends and APIs with clean architecture and performance focus.',
     photo: '/team/Melina_Chen.jpg',
     accent: 'from-orange-500 to-amber-500',
     badge: 'Backend',
+    bio: [
+      'Melina builds scalable backend systems and fullstack products with a focus on clean architecture, predictable performance, and secure integrations.',
+      'She designs APIs, data models, caching layers, and cloud-ready services that support growth from MVP to enterprise scale, emphasizing stability under load, strong security practices, and maintainable codebases with clear boundaries and testability.',
+    ],
+    education: ['University degree in a computer-related discipline (e.g., Computer Science / Software Engineering)'],
+    primaryStack: [
+      'Backend: Node.js, REST, GraphQL',
+      'Data: PostgreSQL, MongoDB, Redis',
+      'Architecture: scalable APIs, event-driven patterns (when needed), cloud readiness',
+    ],
+    tooling: [
+      'Node.js frameworks: NestJS / Express (project-dependent)',
+      'GraphQL: Apollo Server/Client (project-dependent)',
+      'ORM/DB tooling: Prisma / TypeORM (project-dependent)',
+      'Security: auth flows, RBAC, rate limiting, auditing patterns',
+    ],
+    delivers: [
+      'Production-grade APIs, admin panels, and fullstack applications',
+      'Data architecture, integrations, and performance optimization for high-traffic systems',
+    ],
   },
   {
-    name: 'Sofia König',
+    name: 'Sofia Konig',
     role: 'Motion & Interaction Designer',
-    focus: 'Framer Motion and GSAP wizard. Crafting buttery-smooth animations that elevate every user interaction.',
+    focus: 'Motion and interaction designer creating purposeful animations and storytelling.',
     photo: '/team/s_koenig.jpg',
     accent: 'from-fuchsia-500 to-pink-500',
     badge: 'Motion',
+    bio: [
+      'Sofia crafts motion and interaction design that elevates usability and perception of quality, turning static UIs into fluid, intuitive experiences.',
+      'She builds motion systems that scale with products, ensuring animations remain consistent, purposeful, and performant across devices, with a focus on premium landing pages, product storytelling, and interactive flows.',
+    ],
+    education: ['University degree in a computer-related or digital discipline (e.g., Interactive Media, HCI, Computer Science, Digital Design)'],
+    primaryStack: ['Motion/UI: interaction design, animation systems, UI micro-interactions'],
+    tooling: [
+      'Framer Motion, GSAP',
+      'Scroll-based storytelling, UI transitions, state-driven animations (implementation-aligned)',
+    ],
+    delivers: [
+      'Motion design systems, high-end UI interactions, conversion-driven landing animations',
+      'Performance-aware animation specifications for engineering teams',
+    ],
   },
   {
     name: 'Ivan Alexandrov',
     role: 'DevOps & Cloud Engineer',
-    focus: 'AWS certified architect. Docker, Kubernetes, CI/CD pipelines, and infrastructure as code specialist.',
+    focus: 'Owns cloud infrastructure, CI/CD, security, and reliability.',
     photo: '/team/i_alexandrov.jpg',
     accent: 'from-lime-500 to-green-500',
     badge: 'DevOps',
+    bio: [
+      'Ivan owns cloud infrastructure, deployment automation, and operational reliability, ensuring products are secure, observable, and scalable in production.',
+      'He designs CI/CD pipelines, containerized delivery, infrastructure-as-code, and monitoring that supports fast iteration without compromising uptime, with least-privilege security and robust rollback strategies.',
+    ],
+    education: ['Master of Science degree in a computer-related discipline (e.g., Computer Science / Computer Engineering)'],
+    primaryStack: ['Cloud: AWS', 'Containers: Docker, Kubernetes', 'Delivery: CI/CD, Infrastructure as Code'],
+    tooling: [
+      'IaC: Terraform / CloudFormation (project-dependent)',
+      'Kubernetes tooling: Helm, GitOps patterns (when applicable)',
+      'Observability: metrics, logs, tracing (Prometheus/Grafana/ELK/Sentry depending on stack)',
+    ],
+    delivers: [
+      'Secure cloud foundations, deployment pipelines, scalability and reliability engineering',
+      'Production monitoring, incident readiness, and cost optimization',
+    ],
   },
   {
     name: 'Keli Paschalidou',
     role: 'Product & Strategy Lead',
-    focus: 'MBA + 7 years product management. Translating business goals into roadmaps that ship results.',
+    focus: 'Drives product strategy, roadmaps, and stakeholder alignment.',
     photo: '/team/K_Paschalidou.jpg',
     accent: 'from-sky-500 to-indigo-500',
     badge: 'Product',
+    bio: [
+      'Keli drives product strategy and execution, connecting business objectives to roadmaps that ship real outcomes.',
+      'She leads discovery, requirements definition, prioritization, and cross-functional alignment, coordinating stakeholders, integrations, and compliance constraints without losing speed.',
+    ],
+    education: ['MBA', '7+ years in product management'],
+    primaryStack: ['Discovery, roadmap planning, KPI design, stakeholder management, delivery governance'],
+    tooling: [
+      'Agile delivery and documentation toolchains (Jira/Confluence/Notion/Miro as needed)',
+      'Analytics alignment and experimentation processes (tool choice depends on client ecosystem)',
+    ],
+    delivers: [
+      'Discovery workshops, MVP definition, roadmaps, release planning, and stakeholder alignment',
+      'Product strategy for SaaS, enterprise platforms, and mission-critical engineering workflows',
+    ],
   },
   {
     name: 'Heinrich Meier',
     role: 'QA & Test Automation Engineer',
-    focus: 'Jest, Vitest, and Playwright expert ensuring rock-solid quality with comprehensive test coverage.',
+    focus: 'QA and automation engineer integrating quality gates and regression coverage.',
     photo: '/team/h_meier.jpg',
     accent: 'from-amber-500 to-yellow-500',
     badge: 'Quality',
+    bio: [
+      'Heinrich ensures release confidence through robust QA strategy and test automation.',
+      'He designs test pyramids, builds regression suites, and integrates quality gates into CI/CD so teams ship faster with fewer production issues, focusing on coverage where it matters and deterministic test environments.',
+    ],
+    education: ['Formal degree not specified'],
+    primaryStack: ['Testing: unit, integration, E2E automation, CI quality gates'],
+    tooling: ['Jest, Vitest, Playwright', 'CI integration, reporting, and regression governance'],
+    delivers: [
+      'Automated test suites, release readiness frameworks, stability improvements',
+      'Reduced regressions, stronger user experience, and production-grade reliability',
+    ],
   },
 ];
 
@@ -192,6 +355,28 @@ const About: React.FC = () => {
       event.preventDefault();
       setActiveMember(member);
     }
+  };
+
+  const renderSection = (
+    title: string,
+    items: string[] | undefined,
+    accent: string
+  ) => {
+    if (!items?.length) return null;
+
+    return (
+      <div className="space-y-2">
+        <p className="text-xs uppercase tracking-[0.16em] text-slate-400">{title}</p>
+        <ul className="space-y-2">
+          {items.map((item) => (
+            <li key={item} className="flex gap-3 text-slate-300 leading-relaxed">
+              <span className={`mt-1 h-2 w-2 rounded-full bg-gradient-to-r ${accent}`} />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   return (
@@ -403,7 +588,7 @@ const About: React.FC = () => {
             onClick={() => setActiveMember(null)}
             aria-hidden="true"
           />
-          <div className="relative w-full max-w-4xl bg-slate-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-5xl bg-slate-900 border border-white/10 rounded-3xl shadow-2xl max-h-[90vh] overflow-hidden flex flex-col">
             <button
               type="button"
               onClick={() => setActiveMember(null)}
@@ -412,15 +597,15 @@ const About: React.FC = () => {
             >
               <X size={18} />
             </button>
-            <div className="grid md:grid-cols-2">
-              <div className="h-full max-h-[500px]">
+            <div className="grid md:grid-cols-[1fr,1.2fr] flex-1 overflow-y-auto">
+              <div className="h-full w-full max-h-[320px] md:max-h-[70vh] md:min-h-[420px] md:max-w-[420px] mx-auto bg-slate-900 flex items-center justify-center p-4">
                 <img
                   src={activeMember.photo}
                   alt={activeMember.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <div className="p-8 space-y-4">
+              <div className="p-6 md:p-8 space-y-5 bg-slate-900">
                 <div
                   className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${activeMember.accent} text-white`}
                 >
@@ -431,7 +616,19 @@ const About: React.FC = () => {
                   <p className="text-sm uppercase tracking-[0.16em] text-cyan-300">{activeMember.role}</p>
                   <h3 className="text-2xl font-semibold text-white">{activeMember.name}</h3>
                 </div>
-                <p className="text-slate-400 leading-relaxed">{activeMember.focus}</p>
+                <div className="space-y-3">
+                  {activeMember.bio.map((paragraph, index) => (
+                    <p key={`${activeMember.name}-bio-${index}`} className="text-slate-300 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                <div className="grid sm:grid-cols-2 gap-6 pt-2">
+                  {renderSection('Education & credentials', activeMember.education, activeMember.accent)}
+                  {renderSection('Primary stack', activeMember.primaryStack, activeMember.accent)}
+                  {renderSection('Libraries & tooling', activeMember.tooling, activeMember.accent)}
+                  {renderSection('What they deliver', activeMember.delivers, activeMember.accent)}
+                </div>
                 <div className={`h-1 w-full rounded-full bg-gradient-to-r ${activeMember.accent}`} />
               </div>
             </div>

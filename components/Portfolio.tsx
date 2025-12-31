@@ -276,10 +276,10 @@ const Portfolio: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto"
         >
           {[
-            { label: 'Total Projects', value: PROJECTS.length },
+            { label: 'Total Projects', value: 85/* PROJECTS.length */ },
             { label: 'Categories', value: categories.length - 1 },
             { label: 'Technologies', value: new Set(PROJECTS.flatMap(p => p.stack)).size },
-            { label: 'Happy Clients', value: PROJECTS.length },
+            { label: 'Happy Clients', value: 85/* PROJECTS.length */ },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
