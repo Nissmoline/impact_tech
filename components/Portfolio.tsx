@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
   const currentProject = projects[currentIndex];
 
   return (
-    <section className="min-h-screen bg-slate-950 dark:bg-slate-950 light:bg-slate-50 py-24">
+    <section className="min-h-[100svh] bg-slate-950 dark:bg-slate-950 light:bg-slate-50 py-24">
       <div className="container mx-auto px-6">
 
         {/* Header */}
@@ -105,7 +105,7 @@ const Portfolio: React.FC = () => {
               animate={{ opacity: 1, x: 0, rotateY: 0 }}
               exit={{ opacity: 0, x: -100, rotateY: 20 }}
               transition={{ duration: 0.5, type: 'spring' }}
-              className="group relative w-full h-[70vh] md:h-[75vh] perspective-1000"
+              className="group relative w-full h-[70svh] md:h-[75svh] perspective-1000"
             >
               <div className="w-full h-full bg-slate-900 dark:bg-slate-900 light:bg-white border border-white/10 dark:border-white/10 light:border-slate-200 rounded-3xl overflow-hidden relative shadow-2xl transform-style-3d">
 

@@ -380,7 +380,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen py-24">
+    <section id="about" className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-[100svh] py-24">
       <div className="container mx-auto px-6 max-w-6xl space-y-16">
         {/* Hero */}
         <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -588,7 +588,7 @@ const About: React.FC = () => {
             onClick={() => setActiveMember(null)}
             aria-hidden="true"
           />
-          <div className="relative w-full max-w-5xl bg-slate-900 border border-white/10 rounded-3xl shadow-2xl max-h-[90vh] overflow-hidden flex flex-col">
+          <div className="relative w-full max-w-5xl bg-slate-900 border border-white/10 rounded-3xl shadow-2xl max-h-[90svh] overflow-hidden flex flex-col">
             <button
               type="button"
               onClick={() => setActiveMember(null)}
@@ -598,7 +598,7 @@ const About: React.FC = () => {
               <X size={18} />
             </button>
             <div className="grid md:grid-cols-[1fr,1.2fr] flex-1 overflow-y-auto">
-              <div className="h-full w-full max-h-[320px] md:max-h-[70vh] md:min-h-[420px] md:max-w-[420px] mx-auto bg-slate-900 flex items-center justify-center p-4">
+              <div className="h-full w-full max-h-[320px] md:max-h-[70svh] md:min-h-[420px] md:max-w-[420px] mx-auto bg-slate-900 flex items-center justify-center p-4">
                 <img
                   src={activeMember.photo}
                   alt={activeMember.name}

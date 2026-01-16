@@ -75,12 +75,12 @@ const TechStack: React.FC = () => {
              <img
                src="/light.png"
                alt="Pendant Lamp"
-               className="w-32 h-32 object-contain"
+               className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
              />
            </div>
 
            {/* Single unified light cone */}
-           <div className="absolute top-[75px] left-1/2 -translate-x-1/2 w-[600px] h-[500px] z-20 pointer-events-none">
+           <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:top-[75px] sm:w-[600px] sm:h-[500px] z-20 pointer-events-none">
              <div className="w-full h-full"
                   style={{
                     background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 235, 150, 0.7) 0%, rgba(252, 211, 77, 0.6) 10%, rgba(251, 191, 36, 0.5) 20%, rgba(245, 158, 11, 0.35) 35%, rgba(217, 119, 6, 0.2) 50%, rgba(180, 83, 9, 0.1) 70%, rgba(120, 53, 15, 0.03) 85%, transparent 100%)',

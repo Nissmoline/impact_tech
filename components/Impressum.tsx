@@ -81,7 +81,7 @@ const Impressum: React.FC = () => {
   const ownershipInfo = infoItems.filter(item => item.category === 'ownership');
 
   return (
-    <section className="py-24 bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen">
+    <section className="py-24 bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-[100svh]">
       <div className="container mx-auto px-6 max-w-5xl">
         {/* Header */}
         <motion.div

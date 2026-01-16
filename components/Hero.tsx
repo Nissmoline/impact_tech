@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden perspective-2000">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden perspective-2000">
       {/* Background Mesh */}
       <div className="absolute inset-0 bg-slate-950 z-0 transition-colors duration-700">
         <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_50%)] transition-opacity duration-700 ${activeTheme === 'purple' ? 'opacity-0' : 'opacity-100'}`} />
