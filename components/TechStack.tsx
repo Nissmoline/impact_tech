@@ -61,7 +61,7 @@ const TechStack: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-slate-950 relative">
+    <section className="py-24 bg-slate-950 relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-950/60 z-10 pointer-events-none bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
 
       <div className="container mx-auto px-6 mb-6 relative z-20 text-center">
@@ -94,8 +94,8 @@ const TechStack: React.FC = () => {
       {/* Spotlight zone indicator (invisible) */}
       <div className="absolute left-1/2 -translate-x-1/2 w-[300px] h-full pointer-events-none z-30" id="spotlight-zone"></div>
 
-      <div className="relative flex z-20">
-        <div ref={marqueeRef} className="py-12 animate-marquee whitespace-nowrap flex gap-12 items-center">
+      <div className="relative flex z-20 overflow-hidden w-full">
+        <div ref={marqueeRef} className="py-12 animate-marquee whitespace-nowrap flex gap-12 items-center w-max">
             {[...TECH_STACK, ...TECH_STACK, ...TECH_STACK].map((tech, index) => (
                 <div
                     key={`${tech.name}-${index}`}
