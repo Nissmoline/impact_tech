@@ -29,8 +29,8 @@ const Projects: React.FC = () => {
   const x = useTransform(scrollYProgress, [0, 1], [0, -maxShift]);
 
   return (
-    <section ref={targetRef} className="h-[300vh] bg-slate-950 relative">
-      <div ref={containerRef} className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <section ref={targetRef} className="h-[300svh] bg-slate-950 relative">
+      <div ref={containerRef} className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
         
         <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 mb-8 text-center w-full px-6">
              <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 inline-block">
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
 
         <motion.div ref={trackRef} style={{ x }} className="flex gap-10 px-6 sm:px-24">
           {PROJECTS.map((project) => (
-            <div key={project.id} className="group relative w-[85vw] md:w-[600px] h-[50vh] md:h-[60vh] flex-shrink-0 perspective-1000">
+            <div key={project.id} className="group relative w-[85vw] md:w-[600px] h-[50svh] md:h-[60svh] flex-shrink-0 perspective-1000">
               <div
                 className="w-full h-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden relative shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-[1.02] transform-style-3d"
               >

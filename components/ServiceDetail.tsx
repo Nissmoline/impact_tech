@@ -12,7 +12,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const IconComponent = service.icon;
 
   return (
-    <div className="bg-slate-950 min-h-screen py-24">
+    <div className="bg-slate-950 min-h-[100svh] py-24">
       <div className="container mx-auto px-6 max-w-6xl space-y-20">
 
         {/* Hero Section */}

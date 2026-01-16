@@ -15,7 +15,7 @@ const NotFound: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950 dark:bg-slate-950 light:bg-slate-50 px-6">
+    <div className="min-h-[100svh] flex items-center justify-center bg-slate-950 dark:bg-slate-950 light:bg-slate-50 px-6">
       <div className="text-center">
         {/* 404 Number */}
         <motion.div

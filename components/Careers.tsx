@@ -115,7 +115,7 @@ const openings = [
 
 const Careers: React.FC = () => {
   return (
-    <section className="bg-slate-950 min-h-screen py-24">
+    <section className="bg-slate-950 min-h-[100svh] py-24">
       <div className="container mx-auto px-6 max-w-6xl space-y-16">
         {/* Hero */}
         <div className="text-center space-y-6 max-w-3xl mx-auto">
