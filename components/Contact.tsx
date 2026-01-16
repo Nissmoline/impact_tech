@@ -8,7 +8,7 @@ const PROJECT_TYPE_OPTIONS = [
   'Mobile Apps',
   'Backend & APIs',
   'DevOps & Reliability',
-  'QA & Test Automation',
+  'Custom Business Applications',
 ];
 
 const Contact: React.FC = () => {

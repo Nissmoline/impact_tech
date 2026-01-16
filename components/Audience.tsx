@@ -43,7 +43,7 @@ const Audience: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-slate-950 relative">
+    <section id="projects" className="py-32 bg-slate-950 relative">
       <div className="container mx-auto px-6 space-y-10">
         <div className="space-y-3 text-center">
           <p className="text-cyan-400 font-semibold tracking-[0.16em] uppercase text-xs">

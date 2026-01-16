@@ -19,7 +19,7 @@ import UXUIPage from './pages/services/UXUIPage';
 import MobileAppsPage from './pages/services/MobileAppsPage';
 import BackendAPIsPage from './pages/services/BackendAPIsPage';
 import DevOpsPage from './pages/services/DevOpsPage';
-import QATestingPage from './pages/services/QATestingPage';
+import CustomSoftwarePage from './pages/services/CustomSoftwarePage';
 import SEOStrategyPage from './pages/services/SEOStrategyPage';
 
 const App: React.FC = () => {
@@ -46,7 +46,7 @@ const App: React.FC = () => {
                 <Route path="/services/mobile-apps" element={<MobileAppsPage />} />
                 <Route path="/services/backend-apis" element={<BackendAPIsPage />} />
                 <Route path="/services/devops" element={<DevOpsPage />} />
-                <Route path="/services/qa-testing" element={<QATestingPage />} />
+                <Route path="/services/custom-software" element={<CustomSoftwarePage />} />
                 <Route path="/services/seo-strategy" element={<SEOStrategyPage />} />
 
                 <Route path="/impressum" element={<ImpressumPage />} />

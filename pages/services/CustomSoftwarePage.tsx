@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import ServiceDetail from '../../components/ServiceDetail';
 import { SERVICES } from '../../constants';
 
-const QATestingPage: React.FC = () => {
-  const service = SERVICES.find(s => s.slug === 'qa-testing');
+const CustomSoftwarePage: React.FC = () => {
+  const service = SERVICES.find(s => s.slug === 'custom-software');
 
   if (!service) return null;
 
@@ -30,4 +30,4 @@ const QATestingPage: React.FC = () => {
   );
 };
 
-export default QATestingPage;
+export default CustomSoftwarePage;

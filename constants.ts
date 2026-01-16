@@ -665,111 +665,114 @@ export const SERVICES: Service[] = [
   },
   {
     id: 7,
-    title: "QA & Test Automation",
-    description: "Test pyramids with unit/integration/E2E, regression gates in CI, and stable environments.",
-    icon: Zap,
-    slug: "qa-testing",
+    title: "Custom Business Applications",
+    description: "Tailor-made web, mobile, and internal software that streamlines operations and scales with your business.",
+    icon: Puzzle,
+    slug: "custom-software",
 
     hero: {
-      headline: "Ship With Confidence, Not Bugs",
-      subheadline: "Comprehensive QA strategy and test automation that catches issues before users do, from unit tests to E2E coverage.",
-      cta: "Strengthen Your QA"
+      headline: "Custom Software Built for Your Business",
+      subheadline: "We design and build bespoke applications that digitize workflows, connect your systems, and drive measurable efficiency.",
+      cta: "Plan Your Custom Build"
     },
 
     benefits: [
       {
-        title: "Test Pyramid Strategy",
-        description: "Balanced coverage with fast unit tests, strategic integration tests, and critical E2E flows.",
-        icon: Layers
+        title: "Built Around Your Workflow",
+        description: "We map how your team works and deliver software that fits your real processes.",
+        icon: Puzzle
       },
       {
-        title: "Automated Regression Testing",
-        description: "CI-integrated test suites that run on every commit, preventing regressions before merge.",
+        title: "Process Automation",
+        description: "Automate approvals, notifications, and repetitive tasks to remove manual bottlenecks.",
         icon: Workflow
       },
       {
-        title: "E2E Testing on Real Devices",
-        description: "Playwright/Cypress tests across browsers, plus mobile testing on real iOS/Android devices.",
-        icon: Monitor
+        title: "System Integrations",
+        description: "Connect CRMs, ERPs, payments, and APIs so data flows without spreadsheets.",
+        icon: Link
       },
       {
-        title: "Performance Testing",
-        description: "Load testing, stress testing, and performance profiling to validate scalability.",
-        icon: Zap
+        title: "Scalable Architecture",
+        description: "Modular services and clean APIs that grow as usage and teams expand.",
+        icon: TrendingUp
       },
       {
-        title: "Visual Regression Testing",
-        description: "Automated screenshot comparison to catch unintended UI changes.",
-        icon: Eye
+        title: "Security by Design",
+        description: "Role-based access, audit trails, and secure data handling from day one.",
+        icon: ShieldCheck
       },
       {
-        title: "Test Reporting & Analytics",
-        description: "Dashboards showing coverage, flakiness, and test health trends over time.",
-        icon: BarChart3
+        title: "Maintainable Delivery",
+        description: "Clear documentation, testable code, and clean handover for your internal team.",
+        icon: Wrench
       }
     ],
 
     process: [
       {
         step: 1,
-        title: "QA Strategy & Planning",
-        description: "Define test coverage goals, choose tools, and establish quality gates for CI/CD.",
-        icon: Compass
+        title: "Discovery & Requirements",
+        description: "We capture business goals, user flows, and constraints before any build starts.",
+        icon: Map
       },
       {
         step: 2,
-        title: "Test Automation Setup",
-        description: "Build unit/integration/E2E test suites with clear patterns and reusable utilities.",
-        icon: Code2
+        title: "Solution Design",
+        description: "UX, data models, and technical architecture aligned to your systems.",
+        icon: Layout
       },
       {
         step: 3,
-        title: "CI Integration & Monitoring",
-        description: "Integrate tests into pipelines, set up parallel execution, and monitor for flakiness.",
-        icon: Workflow
+        title: "Build & Integrate",
+        description: "We develop, test, and connect the solution to your existing stack.",
+        icon: Code2
       },
       {
         step: 4,
-        title: "Continuous Improvement",
-        description: "Analyze failures, refactor flaky tests, and expand coverage for new features.",
-        icon: TrendingUp
+        title: "Launch & Iterate",
+        description: "Release confidently, monitor outcomes, and evolve the product with your team.",
+        icon: Rocket
       }
     ],
 
     technologies: [
       {
-        category: "Unit & Integration Testing",
+        category: "Frontend & Mobile",
         items: [
-          { name: "Vitest/Jest", description: "JavaScript testing framework" },
-          { name: "Testing Library", description: "Component testing" },
-          { name: "MSW", description: "API mocking" },
-          { name: "Supertest", description: "HTTP assertions" }
+          { name: "React", description: "Modern web UI" },
+          { name: "Next.js", description: "Production-ready React framework" },
+          { name: "React Native", description: "Cross-platform mobile apps" },
+          { name: "TypeScript", description: "Type-safe application code" },
+          { name: "Tailwind CSS", description: "Design system implementation" }
         ]
       },
       {
-        category: "E2E Testing",
+        category: "Backend & Data",
         items: [
-          { name: "Playwright", description: "Cross-browser E2E testing" },
-          { name: "Cypress", description: "Web E2E testing" },
-          { name: "Detox", description: "React Native E2E" },
-          { name: "Appium", description: "Mobile automation" }
+          { name: "Node.js", description: "API services" },
+          { name: "PostgreSQL", description: "Relational data storage" },
+          { name: "MongoDB", description: "Document databases" },
+          { name: "Redis", description: "Caching and queues" },
+          { name: "GraphQL/REST", description: "Flexible API design" }
         ]
       },
       {
-        category: "Performance & Visual",
+        category: "Integrations & Ops",
         items: [
-          { name: "k6/Artillery", description: "Load testing" },
-          { name: "Lighthouse CI", description: "Performance audits" },
-          { name: "Percy/Chromatic", description: "Visual regression" },
-          { name: "Allure/ReportPortal", description: "Test reporting" }
+          { name: "AWS", description: "Cloud infrastructure" },
+          { name: "Docker", description: "Containerized services" },
+          { name: "CI/CD", description: "Automated delivery pipelines" },
+          { name: "OAuth/SAML", description: "Enterprise authentication" },
+          { name: "Stripe/Payments", description: "Billing integrations" }
         ]
       }
     ],
 
     seo: {
-      metaTitle: "QA & Test Automation Services | Playwright | Impact Tech",
-      metaDescription: "Professional QA and test automation services. Unit, integration, E2E testing, CI/CD integration, and performance testing from Greece.",
-      keywords: ["QA testing", "test automation", "E2E testing", "Playwright", "Cypress", "unit testing", "integration testing", "quality assurance", "software testing"]
+      metaTitle: "Custom Business Software Development | Tailored Apps | Impact Tech",
+      metaDescription: "Custom business software development: web, mobile, and internal applications that streamline operations and integrate with your systems. Greece-based team.",
+      keywords: ["custom software development", "business application development", "bespoke software", "enterprise app development", "workflow automation", "internal tools", "systems integration", "SaaS development", "tailored software", "software development Greece"]
     }
   },
   {
