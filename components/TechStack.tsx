@@ -61,7 +61,7 @@ const TechStack: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-slate-950 relative overflow-hidden">
+    <section className="py-24 bg-slate-950 relative">
       <div className="absolute inset-0 bg-slate-950/60 z-10 pointer-events-none bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
 
       <div className="container mx-auto px-6 mb-6 relative z-20 text-center">
@@ -92,10 +92,10 @@ const TechStack: React.FC = () => {
       </div>
 
       {/* Spotlight zone indicator (invisible) */}
-      <div className="absolute left-1/2 -translate-x-1/2 w-[60vw] sm:w-[300px] h-full pointer-events-none z-30" id="spotlight-zone"></div>
+      <div className="absolute left-1/2 -translate-x-1/2 w-[300px] h-full pointer-events-none z-30" id="spotlight-zone"></div>
 
-      <div className="relative flex z-20 overflow-hidden w-full">
-        <div ref={marqueeRef} className="py-8 sm:py-12 animate-marquee whitespace-nowrap flex gap-6 sm:gap-12 items-center w-max">
+      <div className="relative flex z-20">
+        <div ref={marqueeRef} className="py-12 animate-marquee whitespace-nowrap flex gap-12 items-center">
             {[...TECH_STACK, ...TECH_STACK, ...TECH_STACK].map((tech, index) => (
                 <div
                     key={`${tech.name}-${index}`}
@@ -103,16 +103,16 @@ const TechStack: React.FC = () => {
                     style={{ '--stack-color': tech.color } as React.CSSProperties}
                 >
                     <div
-                        className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl bg-slate-900/70 border border-slate-800/80 flex items-center justify-center shadow-lg transition-all duration-500 ease-out transform group-hover:-translate-y-2 group-hover:bg-slate-900/90 group-hover:border-[var(--stack-color)] group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.35),0_0_30px_var(--stack-color)]"
+                        className="w-24 h-24 rounded-2xl bg-slate-900/70 border border-slate-800/80 flex items-center justify-center shadow-lg transition-all duration-500 ease-out transform group-hover:-translate-y-2 group-hover:bg-slate-900/90 group-hover:border-[var(--stack-color)] group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.35),0_0_30px_var(--stack-color)]"
                     >
                         <span
-                            className="text-xl sm:text-2xl font-bold transition-all duration-500"
+                            className="text-2xl font-bold transition-all duration-500"
                             style={{ color: tech.color }}
                         >
                            {tech.name.substring(0, 2)}
                         </span>
                     </div>
-                    <span className="text-xs sm:text-base text-slate-400 font-medium transition-all duration-500 group-hover:text-[var(--stack-color)] group-hover:drop-shadow-[0_0_6px_var(--stack-color)]">{tech.name}</span>
+                    <span className="text-slate-400 font-medium transition-all duration-500 group-hover:text-[var(--stack-color)] group-hover:drop-shadow-[0_0_6px_var(--stack-color)]">{tech.name}</span>
                 </div>
             ))}
         </div>
