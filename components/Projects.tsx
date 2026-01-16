@@ -32,8 +32,8 @@ const Projects: React.FC = () => {
     <section ref={targetRef} className="h-[300vh] bg-slate-950 relative">
       <div ref={containerRef} className="sticky top-0 flex h-screen items-center overflow-hidden">
         
-        <div className="absolute top-0 left-6 z-20 mb-8">
-             <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 mb-8 text-center w-full px-6">
+             <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 inline-block">
                Featured Works
              </h2>
              <p className="text-slate-400 mt-2 mb-4">Scroll to explore the gallery</p>

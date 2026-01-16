@@ -1,32 +1,34 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Contact from './Contact';
+
+const renderContact = () => render(<Contact />);
 
 describe('Contact Component', () => {
   it('renders contact form with all fields', () => {
-    render(<Contact />);
+    const { getByText, getByPlaceholderText } = renderContact();
 
-    expect(screen.getByText('Start a Project')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('John Doe')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('john@example.com')).toBeInTheDocument();
-    expect(screen.getByText('Launch Project')).toBeInTheDocument();
+    expect(getByText('Start a Project')).toBeInTheDocument();
+    expect(getByPlaceholderText('John Doe')).toBeInTheDocument();
+    expect(getByPlaceholderText('john@example.com')).toBeInTheDocument();
+    expect(getByText('Launch Project')).toBeInTheDocument();
   });
 
   it('has project type selector', () => {
-    render(<Contact />);
+    const { getByText } = renderContact();
 
-    expect(screen.getByText('Project Type')).toBeInTheDocument();
+    expect(getByText('Project Type')).toBeInTheDocument();
   });
 
   it('has budget range selector', () => {
-    render(<Contact />);
+    const { getByText } = renderContact();
 
-    expect(screen.getByText('Budget Range')).toBeInTheDocument();
+    expect(getByText('Business Range')).toBeInTheDocument();
   });
 
   it('renders submit button', () => {
-    render(<Contact />);
+    const { getByRole } = renderContact();
 
-    const button = screen.getByRole('button', { name: /Launch Project/i });
+    const button = getByRole('button', { name: /Launch Project/i });
     expect(button).toBeInTheDocument();
   });
 });

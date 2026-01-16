@@ -1,19 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Hexagon, Menu, X } from 'lucide-react';
+import { Hexagon, Menu, X, ChevronDown, LucideIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SERVICES } from '../constants';
 // import ThemeToggle from './ThemeToggle';
 
-const navItems = [
-  { label: 'Services', href: '/#services', type: 'anchor' as const },
-  { label: 'Projects', href: '/#projects', type: 'anchor' as const },
-  { label: 'Process', href: '/#process', type: 'anchor' as const },
-  { label: 'About', href: '/about', type: 'route' as const },
+type NavItem = {
+  label: string;
+  type: 'anchor' | 'route' | 'dropdown';
+  href?: string;
+  submenu?: {
+    label: string;
+    href: string;
+    description?: string;
+    icon?: LucideIcon;
+  }[];
+};
+
+const navItems: NavItem[] = [
+  {
+    label: 'Services',
+    type: 'dropdown',
+    submenu: SERVICES.map(service => ({
+      label: service.title,
+      href: `/services/${service.slug}`,
+      description: service.description.slice(0, 60) + '...',
+      icon: service.icon
+    }))
+  },
+  { label: 'Projects', href: '/#projects', type: 'anchor' },
+  { label: 'Process', href: '/#process', type: 'anchor' },
+  { label: 'About', href: '/about', type: 'route' },
 ];
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -40,6 +64,59 @@ const Navigation: React.FC = () => {
     }
   };
 
+  // Desktop Dropdown Component
+  const DropdownMenu: React.FC<{ item: NavItem }> = ({ item }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+      <div
+        className="relative"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
+        <button className="text-slate-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1">
+          {item.label}
+          <ChevronDown size={16} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        </button>
+
+        <AnimatePresence>
+          {isOpen && item.submenu && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="fixed left-1/2 top-[72px] w-[1200px] max-w-[calc(100vw-32px)] bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl px-5 py-4 grid grid-cols-2 lg:grid-cols-4 gap-3 z-50"
+              style={{ x: '-50%' }}
+            >
+              {item.submenu.map((subitem) => {
+                const SubIcon = subitem.icon;
+                return (
+                  <Link
+                    key={subitem.href}
+                    to={subitem.href}
+                    className="flex h-full items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    {SubIcon && (
+                      <div className="p-2 bg-cyan-500/10 rounded-lg text-cyan-400 group-hover:bg-cyan-500/20">
+                        <SubIcon size={20} />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <p className="text-white font-medium text-sm group-hover:text-cyan-300">{subitem.label}</p>
+                      {subitem.description && (
+                        <p className="text-slate-400 text-xs mt-1">{subitem.description}</p>
+                      )}
+                    </div>
+                  </Link>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  };
+
   return (
     <nav
       role="navigation"
@@ -63,27 +140,33 @@ const Navigation: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {navItems.map((item) =>
-            item.type === 'anchor' ? (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
-                aria-label={`Navigate to ${item.label} section`}
-              >
-                {item.label}
-              </a>
-            ) : (
+          {navItems.map((item) => {
+            if (item.type === 'dropdown') {
+              return <DropdownMenu key={item.label} item={item} />;
+            }
+            if (item.type === 'anchor') {
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
+                  aria-label={`Navigate to ${item.label} section`}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+            return (
               <Link
                 key={item.label}
-                to={item.href}
+                to={item.href!}
                 className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
                 aria-label={`Navigate to ${item.label} page`}
               >
                 {item.label}
               </Link>
-            )
-          )}
+            );
+          })}
           <Link
             to="/portfolio"
             className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
@@ -151,20 +234,76 @@ const Navigation: React.FC = () => {
 
                         {navItems.map((item, i) => {
                           const delay = 0.1 + i * 0.1;
-                          return item.type === 'anchor' ? (
-                            <motion.a
+
+                          if (item.type === 'dropdown') {
+                            return (
+                              <motion.div
                                 key={item.label}
-                                href={item.href}
                                 initial={{ x: -20, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ delay }}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
-                            >
-                                <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">{item.label}</span>
-                                <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </motion.a>
-                          ) : (
+                              >
+                                <button
+                                  onClick={() => setOpenSubmenu(openSubmenu === item.label ? null : item.label)}
+                                  className="w-full flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5"
+                                >
+                                  <span className="text-lg font-medium text-slate-300">{item.label}</span>
+                                  <ChevronDown
+                                    size={20}
+                                    className={`transition-transform ${openSubmenu === item.label ? 'rotate-180' : ''}`}
+                                  />
+                                </button>
+
+                                <AnimatePresence>
+                                  {openSubmenu === item.label && item.submenu && (
+                                    <motion.div
+                                      initial={{ height: 0, opacity: 0 }}
+                                      animate={{ height: 'auto', opacity: 1 }}
+                                      exit={{ height: 0, opacity: 0 }}
+                                      className="overflow-hidden pl-4"
+                                    >
+                                      {item.submenu.map((subitem) => {
+                                        const SubIcon = subitem.icon;
+                                        return (
+                                          <Link
+                                            key={subitem.href}
+                                            to={subitem.href}
+                                            onClick={() => {
+                                              setIsMobileMenuOpen(false);
+                                              setOpenSubmenu(null);
+                                            }}
+                                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-slate-400 hover:text-white transition-colors"
+                                          >
+                                            {SubIcon && <SubIcon size={18} />}
+                                            <span className="text-sm">{subitem.label}</span>
+                                          </Link>
+                                        );
+                                      })}
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
+                              </motion.div>
+                            );
+                          }
+
+                          if (item.type === 'anchor') {
+                            return (
+                              <motion.a
+                                  key={item.label}
+                                  href={item.href}
+                                  initial={{ x: -20, opacity: 0 }}
+                                  animate={{ x: 0, opacity: 1 }}
+                                  transition={{ delay }}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
+                              >
+                                  <span className="text-lg font-medium text-slate-300 group-hover:text-white transition-colors">{item.label}</span>
+                                  <div className="w-2 h-2 rounded-full bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </motion.a>
+                            );
+                          }
+
+                          return (
                             <motion.div
                               key={item.label}
                               initial={{ x: -20, opacity: 0 }}
@@ -172,7 +311,7 @@ const Navigation: React.FC = () => {
                               transition={{ delay }}
                             >
                               <Link
-                                to={item.href}
+                                to={item.href!}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group"
                               >

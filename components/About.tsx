@@ -148,7 +148,7 @@ const team: TeamMember[] = [
       'Elena leads product design and UX with a systems mindset: she translates business goals into user-centered interfaces that increase conversion, retention, and brand trust.',
       'Her strength is building and operating design systems at scale, ensuring consistency across products, accelerating development, and reducing design debt. She owns UX workflows from research and prototyping to final UI specs in Figma, supporting engineering teams through implementation with clear standards and governance.',
     ],
-    education: ['University degree in a computer-related or digital discipline (e.g., Computer Science, HCI, Digital Product Design)'],
+    education: ['University degree in RCA (Royal College of Art)'],
     primaryStack: ['Design & UX: Figma, design systems, UI specifications, user flows, prototyping'],
     tooling: [
       'Component libraries alignment (tokens, variants, responsive rules)',
@@ -172,8 +172,8 @@ const team: TeamMember[] = [
       'He designs frontend systems as platforms: component libraries, patterns, performance budgets, and engineering standards that keep teams shipping reliably as products grow. He is specialized in TypeScript, React, and Next.js, with emphasis on performance optimization, SSR/ISR strategies, and robust integration with APIs.',
     ],
     education: [
-      'Formal degree not specified ',
-      '19+ years experience 8+ years in React/Next.js and performance optimization',
+      'Formal degree not specified',
+      '19+ years experience, 8+ years in React/Next.js and performance optimization',
       'Former tech lead at Revolut',
     ],
     primaryStack: [
@@ -192,7 +192,7 @@ const team: TeamMember[] = [
     ],
   },
   {
-    name: 'Evheniy Buha',
+    name: 'Evheniy Bugha',
     role: '3D Specialist',
     focus: 'Builds immersive 3D web experiences optimized for performance.',
     photo: '/team/Evheniy_Buha.jpg',
@@ -228,7 +228,7 @@ const team: TeamMember[] = [
       'Melina builds scalable backend systems and fullstack products with a focus on clean architecture, predictable performance, and secure integrations.',
       'She designs APIs, data models, caching layers, and cloud-ready services that support growth from MVP to enterprise scale, emphasizing stability under load, strong security practices, and maintainable codebases with clear boundaries and testability.',
     ],
-    education: ['University degree in a computer-related discipline (e.g., Computer Science / Software Engineering)'],
+    education: ['University degree in a Computer Engineering'],
     primaryStack: [
       'Backend: Node.js, REST, GraphQL',
       'Data: PostgreSQL, MongoDB, Redis',
@@ -256,7 +256,7 @@ const team: TeamMember[] = [
       'Sofia crafts motion and interaction design that elevates usability and perception of quality, turning static UIs into fluid, intuitive experiences.',
       'She builds motion systems that scale with products, ensuring animations remain consistent, purposeful, and performant across devices, with a focus on premium landing pages, product storytelling, and interactive flows.',
     ],
-    education: ['University degree in a computer-related or digital discipline (e.g., Interactive Media, HCI, Computer Science, Digital Design)'],
+    education: ['University degree in a Digital Architect'],
     primaryStack: ['Motion/UI: interaction design, animation systems, UI micro-interactions'],
     tooling: [
       'Framer Motion, GSAP',
@@ -278,7 +278,7 @@ const team: TeamMember[] = [
       'Ivan owns cloud infrastructure, deployment automation, and operational reliability, ensuring products are secure, observable, and scalable in production.',
       'He designs CI/CD pipelines, containerized delivery, infrastructure-as-code, and monitoring that supports fast iteration without compromising uptime, with least-privilege security and robust rollback strategies.',
     ],
-    education: ['Master of Science degree in a computer-related discipline (e.g., Computer Science / Computer Engineering)'],
+    education: ['Master of Science degree in a Computer Science'],
     primaryStack: ['Cloud: AWS', 'Containers: Docker, Kubernetes', 'Delivery: CI/CD, Infrastructure as Code'],
     tooling: [
       'IaC: Terraform / CloudFormation (project-dependent)',

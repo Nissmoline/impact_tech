@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TiltCard from './ui/TiltCard';
 import { SERVICES } from '../constants';
 
@@ -16,17 +17,19 @@ const Services: React.FC = () => {
           {SERVICES.map((service) => {
             const IconComponent = service.icon;
             return (
-              <TiltCard key={service.id} className="h-full">
-                <div className="h-full p-8 bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl group hover:border-cyan-500/30 transition-colors">
-                  <div className="mb-6 p-4 bg-slate-800/50 rounded-xl inline-block group-hover:bg-cyan-500/20 group-hover:text-cyan-400 transition-colors">
-                    <IconComponent size={32} />
+              <Link key={service.id} to={`/services/${service.slug}`} className="h-full block">
+                <TiltCard className="h-full">
+                  <div className="h-full p-8 bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl group hover:border-cyan-500/30 transition-colors cursor-pointer">
+                    <div className="mb-6 p-4 bg-slate-800/50 rounded-xl inline-block group-hover:bg-cyan-500/20 group-hover:text-cyan-400 transition-colors">
+                      <IconComponent size={32} />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">{service.title}</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm mb-4">
+                      {service.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">{service.title}</h3>
-                  <p className="text-slate-400 leading-relaxed text-sm mb-4">
-                    {service.description}
-                  </p>
-                </div>
-              </TiltCard>
+                </TiltCard>
+              </Link>
             );
           })}
         </div>
