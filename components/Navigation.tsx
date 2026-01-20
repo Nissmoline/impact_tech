@@ -131,10 +131,27 @@ const Navigation: React.FC = () => {
         <Link
           to="/"
           onClick={handleLogoClick}
-          className="flex items-center gap-2 text-white dark:text-white light:text-slate-900 font-display font-bold text-xl tracking-tight z-50 hover:opacity-80 transition-opacity cursor-pointer"
+          className="flex items-center gap-3 text-white dark:text-white light:text-slate-900 font-display font-bold text-xl tracking-tight z-50 hover:opacity-80 transition-opacity cursor-pointer"
           aria-label="Impact Tech - Home"
         >
-          <Hexagon className="text-cyan-400 fill-cyan-400/20" size={32} strokeWidth={1.5} aria-hidden="true" />
+          <span className="footer-logo relative flex h-11 w-11 items-center justify-center">
+            <span className="footer-logo-glow absolute inset-0 rounded-full" aria-hidden="true" />
+            <svg
+              className="footer-logo-ring absolute inset-0"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <polygon
+                className="footer-logo-base"
+                points="50,6 92,28 92,72 50,94 8,72 8,28"
+              />
+              <polygon
+                className="footer-logo-trace"
+                points="50,6 92,28 92,72 50,94 8,72 8,28"
+              />
+            </svg>
+            <Hexagon className="relative z-10 text-cyan-300" size={22} />
+          </span>
           IMPACT TECH
         </Link>
 

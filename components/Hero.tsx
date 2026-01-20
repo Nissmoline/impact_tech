@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left order-2 lg:order-1 relative z-30"
         >
-          <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-6 transition-colors duration-300 ${theme.badge}`}>
+          <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-6 transition-colors duration-300 lg:mt-4 ${theme.badge}`}>
             <Zap size={14} className="animate-pulse" />
             <span>Next-Gen Web Engineering</span>
           </div>
