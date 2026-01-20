@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "process": "Process",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "careers": "Careers",
+    "impressum": "Impressum",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "startProject": "Start Project"
+  },
+  "language": {
+    "english": "EN",
+    "greek": "EL"
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Sparkles,
   Cpu,
@@ -16,6 +16,7 @@ import {
   X,
 } from 'lucide-react';
 import TiltCard from './ui/TiltCard';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const stats = [
   { label: 'Projects shipped', value: '75+', detail: 'Web, mobile & 3D experiences' },
@@ -335,6 +336,9 @@ const team: TeamMember[] = [
 
 const About: React.FC = () => {
   const [activeMember, setActiveMember] = useState<(typeof team)[number] | null>(null);
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
 
   useEffect(() => {
     if (!activeMember) return;
@@ -398,13 +402,13 @@ const About: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                to="/portfolio"
+                to={withLocale('/portfolio')}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
               >
                 View our work
               </Link>
               <a
-                href="/#contact"
+                href={withLocale('/#contact')}
                 className="px-6 py-3 rounded-full border border-white/10 dark:border-white/10 light:border-slate-300 text-white dark:text-white light:text-slate-900 hover:border-cyan-500/50 transition-all"
               >
                 Talk to us

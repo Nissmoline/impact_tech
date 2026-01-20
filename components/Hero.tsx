@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'lucide-react';
 import Scene3D from './Scene3D';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const THEMES = {
   cyan: {
@@ -41,6 +42,9 @@ const Hero: React.FC = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const rotate = useTransform(scrollY, [0, 500], [0, 20]);
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
   
   // Interactive States
   const [activeTheme, setActiveTheme] = useState<keyof typeof THEMES>('cyan');
@@ -110,7 +114,7 @@ const Hero: React.FC = () => {
               <ChevronDown className="rotate-[-90deg]" size={18} />
             </button>
             <Link
-              to="/portfolio"
+              to={withLocale('/portfolio')}
               className="px-8 py-4 bg-transparent border border-slate-700 hover:border-white text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 group"
               aria-label="View our portfolio"
             >

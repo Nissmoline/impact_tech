@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Hexagon } from 'lucide-react';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const Footer: React.FC = () => {
+  const location = useLocation();
+  const { t } = useTranslation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
+
   const handleOpenCookies = () => {
     if (typeof window === 'undefined') return;
     window.dispatchEvent(new Event('cookie:open'));
@@ -37,15 +44,15 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-slate-500 text-sm text-center md:text-left">
           {/* <Link to="/about" className="hover:text-cyan-400 transition-colors">About Us</Link> */}
-          <Link to="/careers" className="hover:text-cyan-400 transition-colors">Careers</Link>
-          <Link to="/impressum" className="hover:text-cyan-400 transition-colors">Impressum</Link>
-          <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+          <Link to={withLocale('/careers')} className="hover:text-cyan-400 transition-colors">{t('nav.careers')}</Link>
+          <Link to={withLocale('/impressum')} className="hover:text-cyan-400 transition-colors">{t('nav.impressum')}</Link>
+          <Link to={withLocale('/privacy')} className="hover:text-cyan-400 transition-colors">{t('nav.privacy')}</Link>
           <button
             type="button"
             onClick={handleOpenCookies}
             className="hover:text-cyan-400 transition-colors"
           >
-            Cookies
+            {t('nav.cookies')}
           </button>
           {/* <a href="#" className="hover:text-cyan-400 transition-colors">LinkedIn</a> */}
           {/* <a href="#" className="hover:text-cyan-400 transition-colors">GitHub</a> */}

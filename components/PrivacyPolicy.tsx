@@ -1,8 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Eye, Lock, Server, UserCheck, Mail, Globe, FileText, AlertCircle } from 'lucide-react';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const PrivacyPolicy: React.FC = () => {
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
   const sections = [
     {
       icon: FileText,
@@ -275,7 +280,7 @@ const PrivacyPolicy: React.FC = () => {
           className="mt-8 text-center"
         >
           <p className="text-sm text-slate-500 dark:text-slate-500 light:text-slate-600">
-            This Privacy Policy is governed by Greek and EU law. For the complete legal information about our company, please visit our <a href="/impressum" className="text-cyan-400 hover:underline">Impressum</a> page.
+            This Privacy Policy is governed by Greek and EU law. For the complete legal information about our company, please visit our <a href={withLocale('/impressum')} className="text-cyan-400 hover:underline">Impressum</a> page.
           </p>
         </motion.div>
       </div>

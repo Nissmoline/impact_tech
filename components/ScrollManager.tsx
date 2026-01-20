@@ -13,11 +13,14 @@ const ScrollManager: React.FC = () => {
     const prevPath = previousPath.current;
 
     // Save Home scroll position before navigating away
-    if (prevPath === '/') {
+    const wasHome = prevPath === '/' || prevPath === '/el';
+    const isHome = location.pathname === '/' || location.pathname === '/el';
+
+    if (wasHome) {
       homeScrollY.current = window.scrollY;
     }
 
-    if (location.pathname === '/') {
+    if (isHome) {
       window.scrollTo({ top: homeScrollY.current ?? 0, behavior: 'auto' });
     } else {
       window.scrollTo({ top: 0, behavior: 'auto' });

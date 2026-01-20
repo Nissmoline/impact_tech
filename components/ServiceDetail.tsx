@@ -1,8 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Service } from '../types';
 import TiltCard from './ui/TiltCard';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 interface ServiceDetailProps {
   service: Service;
@@ -10,6 +12,9 @@ interface ServiceDetailProps {
 
 const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const IconComponent = service.icon;
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
 
   return (
     <div className="bg-slate-950 min-h-[100svh] py-24">
@@ -37,7 +42,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
 
             <div className="flex gap-4">
               <a
-                href="/#contact"
+                href={withLocale('/#contact')}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all inline-flex items-center gap-2"
               >
                 {service.hero.cta}
@@ -177,7 +182,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
             Let's discuss how we can help you achieve your goals with {service.title.toLowerCase()}.
           </p>
           <a
-            href="/#contact"
+            href={withLocale('/#contact')}
             className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all inline-flex items-center gap-2"
           >
             Get Started

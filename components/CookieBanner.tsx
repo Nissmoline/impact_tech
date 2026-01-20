@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Cookie } from 'lucide-react';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const STORAGE_KEY = 'impacttech-cookie-consent';
 const OPEN_EVENT = 'cookie:open';
@@ -54,6 +55,9 @@ const CookieBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>(defaultPreferences);
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -160,7 +164,7 @@ const CookieBanner: React.FC = () => {
                   <span className="rounded-full border border-slate-700/70 px-3 py-1 light:border-slate-200">
                     Essential always on
                   </span>
-                  <Link to="/privacy" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+                  <Link to={withLocale('/privacy')} className="text-cyan-300 hover:text-cyan-200 transition-colors">
                     Read our privacy policy
                   </Link>
                 </div>

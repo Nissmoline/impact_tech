@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Rocket,
   Users,
@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import TiltCard from './ui/TiltCard';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const benefits = [
   {
@@ -114,6 +115,10 @@ const openings = [
 ];
 
 const Careers: React.FC = () => {
+  const location = useLocation();
+  const locale = getLocaleFromPath(location.pathname);
+  const withLocale = (href: string) => withLocalePrefix(href, locale);
+
   return (
     <section className="bg-slate-950 min-h-[100svh] py-24">
       <div className="container mx-auto px-6 max-w-6xl space-y-16">
@@ -250,7 +255,7 @@ const Careers: React.FC = () => {
                 Get in touch
               </a>
               <Link
-                to="/about"
+                to={withLocale('/about')}
                 className="px-6 py-3 rounded-full border border-white/10 text-white hover:border-cyan-500/50 transition-all"
               >
                 Meet the team

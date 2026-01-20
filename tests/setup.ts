@@ -1,4 +1,15 @@
 import '@testing-library/jest-dom';
+import { vi } from 'vitest';
+
+vi.mock(
+  'html-parse-stringify',
+  () => ({
+    default: {
+      parse: () => [],
+      stringify: () => '',
+    },
+  })
+);
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {

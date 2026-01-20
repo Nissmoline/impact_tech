@@ -12,6 +12,13 @@ export default defineConfig(({ mode }) => {
         globals: true,
         setupFiles: ['./tests/setup.ts'],
         css: true,
+        alias: {
+          'html-parse-stringify': path.resolve(__dirname, 'utils/html-parse-stringify.ts'),
+          'react-i18next': path.resolve(__dirname, 'tests/mocks/react-i18next.ts'),
+        },
+        deps: {
+          inline: ['react-i18next'],
+        },
         coverage: {
           provider: 'v8',
           reporter: ['text', 'json', 'html'],
@@ -32,6 +39,7 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+          'html-parse-stringify': path.resolve(__dirname, 'utils/html-parse-stringify.ts'),
         }
       },
       build: {
