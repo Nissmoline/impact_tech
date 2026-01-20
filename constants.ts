@@ -1001,6 +1001,14 @@ export const PROJECTS: Project[] = [
     stack: ["React", "React Router", "Tailwind CSS", "E-Commerce"],
     github: "https://github.com/Nissmoline/modern-lifestyle-store",
     live: "https://modern-lifestyle-store.vercel.app/"
+  },
+  {
+    id: 14,
+    title: "Cult Crew",
+    category: "Brand Website",
+    image: "https://cdn.sanity.io/images/2e8w1pu4/production/80b09cfc9f64bc565447a81f18e79a29514b9cc1-4000x3000.jpg",
+    stack: ["Branding", "UI Design", "Responsive", "Performance"],
+    live: "https://www.cult-crew.com/"
   }
 ];
 

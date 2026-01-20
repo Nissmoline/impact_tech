@@ -4,6 +4,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 import ScrollManager from './components/ScrollManager';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
@@ -54,6 +55,7 @@ const App: React.FC = () => {
           </main>
 
           <Footer />
+          <CookieBanner />
         </div>
       </BrowserRouter>
     </ThemeProvider>
