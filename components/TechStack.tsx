@@ -6,6 +6,13 @@ const TechStack: React.FC = () => {
   const lampRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let rafId: number | null = null;
+
+    const clearLegacyShadows = () => {
+      if (!marqueeRef.current) return;
+      marqueeRef.current.querySelectorAll('.item-shadow').forEach((shadow) => shadow.remove());
+    };
+
     const updateSpotlight = () => {
       if (!marqueeRef.current || !lampRef.current) return;
 
@@ -19,15 +26,6 @@ const TechStack: React.FC = () => {
         const itemCenter = rect.left + rect.width / 2;
         const distanceFromCenter = Math.abs(itemCenter - lampCenter);
 
-        // Find or create shadow element
-        let shadow = item.querySelector('.item-shadow') as HTMLElement;
-        if (!shadow) {
-          shadow = document.createElement('div');
-          shadow.className = 'item-shadow absolute bottom-[-25px] left-1/2 -translate-x-1/2 w-32 h-10 rounded-full pointer-events-none transition-all duration-400';
-          shadow.style.zIndex = '100';
-          item.appendChild(shadow);
-        }
-
         if (distanceFromCenter < spotlightRange) {
           // Calculate brightness based on distance from center
           const brightness = 1 - (distanceFromCenter / spotlightRange);
@@ -36,32 +34,25 @@ const TechStack: React.FC = () => {
 
           (item as HTMLElement).style.filter = `brightness(${1 + brightness * 0.6}) drop-shadow(0 4px ${glowIntensity}px rgba(251, 191, 36, ${brightness * 0.6}))`;
           (item as HTMLElement).style.transform = `scale(${scale})`;
-
-          // Shadow: visible immediately when entering light, intensifies toward center
-          const shadowOpacity = 0.7 + (brightness * 0.3); // Start at 0.7, go up to 1.0
-          const shadowScale = 1.5 + (brightness * 0.8); // Larger shadow range
-
-          shadow.style.background = `radial-gradient(ellipse, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.05) 80%, transparent 100%)`;
-          shadow.style.opacity = String(shadowOpacity);
-          shadow.style.transform = `translateX(-50%) scaleX(${shadowScale})`;
-          shadow.style.filter = 'blur(22px)';
         } else {
           (item as HTMLElement).style.filter = 'brightness(0.7)';
           (item as HTMLElement).style.transform = 'scale(1)';
-
-          // Hide shadow completely when not in spotlight
-          shadow.style.opacity = '0';
         }
       });
 
-      requestAnimationFrame(updateSpotlight);
+      rafId = requestAnimationFrame(updateSpotlight);
     };
 
+    clearLegacyShadows();
     updateSpotlight();
+
+    return () => {
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
-    <section className="py-24 bg-slate-950 relative overflow-hidden">
+    <section className="py-24 bg-slate-950 relative">
       <div className="absolute inset-0 bg-slate-950/60 z-10 pointer-events-none bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
 
       <div className="container mx-auto px-6 mb-6 relative z-20 text-center">
@@ -80,13 +71,15 @@ const TechStack: React.FC = () => {
            </div>
 
            {/* Single unified light cone */}
-           <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:top-[75px] sm:w-[600px] sm:h-[500px] z-20 pointer-events-none">
-             <div className="w-full h-full"
-                  style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 235, 150, 0.7) 0%, rgba(252, 211, 77, 0.6) 10%, rgba(251, 191, 36, 0.5) 20%, rgba(245, 158, 11, 0.35) 35%, rgba(217, 119, 6, 0.2) 50%, rgba(180, 83, 9, 0.1) 70%, rgba(120, 53, 15, 0.03) 85%, transparent 100%)',
-                    filter: 'blur(60px)'
-                  }}>
-             </div>
+           <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:top-[75px] sm:w-[600px] sm:h-[500px] z-20 pointer-events-none overflow-visible">
+             <div
+               className="w-full h-full"
+               style={{
+                 background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 235, 150, 0.7) 0%, rgba(252, 211, 77, 0.6) 10%, rgba(251, 191, 36, 0.5) 20%, rgba(245, 158, 11, 0.35) 35%, rgba(217, 119, 6, 0.2) 50%, rgba(180, 83, 9, 0.1) 70%, rgba(120, 53, 15, 0.03) 85%, transparent 120%)',
+                 filter: 'blur(60px)',
+                 transform: 'translateZ(0)'
+               }}
+             />
            </div>
          </div>
       </div>
@@ -94,7 +87,7 @@ const TechStack: React.FC = () => {
       {/* Spotlight zone indicator (invisible) */}
       <div className="absolute left-1/2 -translate-x-1/2 w-[300px] h-full pointer-events-none z-30" id="spotlight-zone"></div>
 
-      <div className="relative flex z-20 overflow-hidden w-full">
+      <div className="relative flex z-20 overflow-x-hidden overflow-y-hidden w-full">
         <div ref={marqueeRef} className="py-12 animate-marquee whitespace-nowrap flex gap-12 items-center w-max">
             {[...TECH_STACK, ...TECH_STACK, ...TECH_STACK].map((tech, index) => (
                 <div
@@ -136,6 +129,10 @@ const TechStack: React.FC = () => {
         /* Smooth text transitions */
         .tech-item span {
             transition: all 0.3s ease-out;
+        }
+
+        .item-shadow {
+            display: none !important;
         }
       `}</style>
     </section>
