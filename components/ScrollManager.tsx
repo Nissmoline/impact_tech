@@ -1,33 +1,29 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-/**
- * Restores scroll to last position on Home ("/") and scrolls other pages to top.
- */
 const ScrollManager: React.FC = () => {
   const location = useLocation();
-  const previousPath = useRef(location.pathname);
-  const homeScrollY = useRef(0);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   useLayoutEffect(() => {
-    const prevPath = previousPath.current;
+    const { hash } = location;
+    const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
-    // Save Home scroll position before navigating away
-    const wasHome = prevPath === '/' || prevPath === '/el';
-    const isHome = location.pathname === '/' || location.pathname === '/el';
-
-    if (wasHome) {
-      homeScrollY.current = window.scrollY;
+    if (hash) {
+      const target = document.getElementById(hash.replace('#', ''));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
     }
 
-    if (isHome) {
-      window.scrollTo({ top: homeScrollY.current ?? 0, behavior: 'auto' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }
-
-    previousPath.current = location.pathname;
-  }, [location.pathname]);
+    scrollToTop();
+  }, [location.pathname, location.search, location.hash]);
 
   return null;
 };

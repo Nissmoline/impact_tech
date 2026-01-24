@@ -569,7 +569,13 @@ const About: React.FC = () => {
                 <div className="h-full p-6 rounded-2xl bg-slate-900/60 border border-white/10 flex flex-col gap-4">
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-white/10">
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.14em] text-cyan-300">{member.badge}</p>
@@ -606,6 +612,8 @@ const About: React.FC = () => {
                 <img
                   src={activeMember.photo}
                   alt={activeMember.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain"
                 />
               </div>

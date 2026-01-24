@@ -9,6 +9,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://impact-tech.com/sitemap.xml
-
-# Crawl-delay (optional, for politeness)
-Crawl-delay: 1

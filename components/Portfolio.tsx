@@ -114,6 +114,7 @@ const Portfolio: React.FC = () => {
                   <img
                     src={currentProject.image}
                     alt={currentProject.title}
+                    decoding="async"
                     className="w-full h-full object-cover opacity-70 dark:opacity-70 light:opacity-50 group-hover:scale-110 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 dark:from-slate-950 dark:via-slate-950/80 dark:to-slate-950/20 light:from-slate-100 light:via-slate-100/80 light:to-slate-100/20" />
@@ -257,6 +258,8 @@ const Portfolio: React.FC = () => {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className={`absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent flex items-end p-2 ${

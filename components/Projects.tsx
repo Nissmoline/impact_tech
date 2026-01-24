@@ -51,11 +51,7 @@ const Projects: React.FC = () => {
   const totalLabel = String(totalSlides).padStart(2, '0');
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 md:py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),transparent_55%)]" />
-      <div className="absolute -left-40 top-16 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
-      <div className="absolute -right-40 bottom-0 h-72 w-72 rounded-full bg-slate-700/20 blur-3xl" />
-
+    <section className="relative overflow-hidden bg-transparent py-24 md:py-32">
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div className="max-w-xl">
@@ -98,9 +94,6 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="relative mt-12">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent" />
-
           <div
             ref={carouselRef}
             className="flex gap-6 sm:gap-8 lg:gap-10 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -118,6 +111,8 @@ const Projects: React.FC = () => {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-50"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-900/10" />

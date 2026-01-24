@@ -63,11 +63,13 @@ const TechStack: React.FC = () => {
          <div className="relative mt-8 flex justify-center">
            {/* Lamp Image */}
            <div ref={lampRef} className="relative z-30">
-             <img
-               src="/light.png"
-               alt="Pendant Lamp"
-               className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
-             />
+              <img
+                src="/light.png"
+                alt="Pendant Lamp"
+                loading="lazy"
+                decoding="async"
+                className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+              />
            </div>
 
            {/* Single unified light cone */}
