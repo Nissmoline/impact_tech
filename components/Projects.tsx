@@ -1,95 +1,208 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink, Github } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [maxShift, setMaxShift] = useState(0);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = PROJECTS.length;
+
+  const scrollToSlide = (index: number) => {
+    const clampedIndex = Math.max(0, Math.min(index, totalSlides - 1));
+    const targetSlide = slideRefs.current[clampedIndex];
+    if (!targetSlide) return;
+    setActiveIndex(clampedIndex);
+    targetSlide.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest',
+    });
+  };
 
   useEffect(() => {
-    const calculateShift = () => {
-      if (!containerRef.current || !trackRef.current) return;
-      const containerWidth = containerRef.current.offsetWidth;
-      const trackWidth = trackRef.current.scrollWidth;
-      const shift = Math.max(trackWidth - containerWidth, 0);
-      setMaxShift(shift);
-    };
+    const carousel = carouselRef.current;
+    const slides = slideRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (!carousel || slides.length === 0) return undefined;
 
-    calculateShift();
-    window.addEventListener('resize', calculateShift);
-    return () => window.removeEventListener('resize', calculateShift);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = slides.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) setActiveIndex(index);
+          }
+        });
+      },
+      {
+        root: carousel,
+        threshold: 0.6,
+      }
+    );
+
+    slides.forEach((slide) => observer.observe(slide));
+    return () => observer.disconnect();
   }, []);
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, -maxShift]);
+  const canGoPrev = activeIndex > 0;
+  const canGoNext = activeIndex < totalSlides - 1;
+  const progress = totalSlides > 1 ? (activeIndex / (totalSlides - 1)) * 100 : 100;
+  const currentLabel = String(activeIndex + 1).padStart(2, '0');
+  const totalLabel = String(totalSlides).padStart(2, '0');
 
   return (
-    <section ref={targetRef} className="h-[300svh] bg-slate-950 relative">
-      <div ref={containerRef} className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
-        
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 mb-8 text-center w-full px-6">
-             <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 inline-block">
-               Featured Works
-             </h2>
-             <p className="text-slate-400 mt-2 mb-4">Scroll to explore the gallery</p>
+    <section className="relative overflow-hidden bg-slate-950 py-24 md:py-32">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),transparent_55%)]" />
+      <div className="absolute -left-40 top-16 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute -right-40 bottom-0 h-72 w-72 rounded-full bg-slate-700/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl px-6">
+        <div className="flex flex-wrap items-end justify-between gap-8">
+          <div className="max-w-xl">
+            <span className="text-xs uppercase tracking-[0.35em] text-cyan-300">Featured Works</span>
+            <h2 className="mt-4 text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
+              Featured Works
+            </h2>
+            <p className="text-slate-400 mt-4">
+              Swipe through the gallery or use the arrows to jump between projects.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="text-sm text-slate-400">
+              <span className="text-white font-semibold">{currentLabel}</span>
+              <span className="mx-2 text-slate-500">/</span>
+              <span>{totalLabel}</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => scrollToSlide(activeIndex - 1)}
+                disabled={!canGoPrev}
+                className="p-3 rounded-full border border-white/10 text-slate-200 hover:bg-white/10 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="View previous project"
+              >
+                <ArrowLeft size={20} />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToSlide(activeIndex + 1)}
+                disabled={!canGoNext}
+                className="p-3 rounded-full border border-white/10 text-slate-200 hover:bg-white/10 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="View next project"
+              >
+                <ArrowRight size={20} />
+              </button>
+            </div>
+          </div>
         </div>
 
-        <motion.div ref={trackRef} style={{ x }} className="flex gap-10 px-6 sm:px-24">
-          {PROJECTS.map((project) => (
-            <div key={project.id} className="group relative w-[85vw] md:w-[600px] h-[50svh] md:h-[60svh] flex-shrink-0 perspective-1000">
+        <div className="relative mt-12">
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent" />
+
+          <div
+            ref={carouselRef}
+            className="flex gap-6 sm:gap-8 lg:gap-10 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {PROJECTS.map((project, index) => (
               <div
-                className="w-full h-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden relative shadow-2xl transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-[1.02] transform-style-3d"
+                key={project.id}
+                ref={(element) => {
+                  slideRefs.current[index] = element;
+                }}
+                className="snap-center shrink-0 w-[85vw] sm:w-[70vw] lg:w-[60vw]"
               >
-                {/* Image Background */}
-                <div className="absolute inset-0">
+                <div className="group relative h-[52vh] min-h-[360px] sm:h-[56vh] lg:h-[520px] w-full overflow-hidden rounded-[32px] border border-white/10 bg-slate-900/60 shadow-[0_30px_80px_-40px_rgba(8,15,30,0.8)]">
+                  <div className="absolute inset-0">
                     <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-50"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
-                </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-900/10" />
+                  </div>
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 w-full p-8 translate-z-20">
-                  <div className="flex justify-between items-end">
-                    <div>
-                        <span className="text-cyan-400 text-sm font-bold uppercase tracking-wider mb-2 block">{project.category}</span>
-                        <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                            {project.stack.map(tech => (
-                                <span key={tech} className="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs text-slate-200 backdrop-blur-md">
-                                    {tech}
-                                </span>
+                  <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                    <div className="rounded-2xl border border-white/10 bg-slate-950/70 p-6 backdrop-blur-xl">
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <span className="text-cyan-300 text-xs font-semibold uppercase tracking-[0.3em]">
+                            {project.category}
+                          </span>
+                          <h3 className="text-2xl sm:text-3xl font-bold text-white mt-3">
+                            {project.title}
+                          </h3>
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {project.stack.map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs text-slate-200"
+                              >
+                                {tech}
+                              </span>
                             ))}
+                          </div>
                         </div>
-                    </div>
 
-                    <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-                        {project.live && (
-                          <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors">
+                        <div className="flex gap-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                          {project.live && (
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-3 bg-white text-slate-950 rounded-full hover:bg-cyan-400 transition-colors"
+                            >
                               <ExternalLink size={20} />
-                          </a>
-                        )}
-                        {project.github && (
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors">
+                            </a>
+                          )}
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-3 bg-slate-800 text-white border border-white/10 rounded-full hover:bg-slate-700 transition-colors"
+                            >
                               <Github size={20} />
-                          </a>
-                        )}
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center gap-2">
+            {PROJECTS.map((_, index) => (
+              <button
+                key={`project-dot-${index}`}
+                type="button"
+                onClick={() => scrollToSlide(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === activeIndex
+                    ? 'w-8 bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.6)]'
+                    : 'w-3 bg-white/20 hover:bg-white/40'
+                }`}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-slate-500">
+            <span>Progress</span>
+            <div className="h-1 w-32 rounded-full bg-white/10">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-sky-500"
+                style={{ width: `${progress}%` }}
+              />
             </div>
-          ))}
-          {/* Spacer */}
-          <div className="w-[10vw]"></div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
