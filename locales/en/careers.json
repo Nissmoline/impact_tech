@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Join our team",
+    "title": "Build the future of web experiences",
+    "description": "We're looking for talented engineers, designers, and creators who want to push the boundaries of what's possible on the web. Join our remote-first team and ship work that matters."
+  },
+  "benefits": {
+    "title": "Why Impact Tech?",
+    "items": {
+      "remoteFirst": {
+        "title": "Remote-first culture",
+        "description": "Work from anywhere. We value output over attendance."
+      },
+      "compensation": {
+        "title": "Competitive compensation",
+        "description": "Market-rate salaries plus performance bonuses."
+      },
+      "growth": {
+        "title": "Growth & learning",
+        "description": "Annual budget for courses, conferences, and books."
+      },
+      "balance": {
+        "title": "Work-life balance",
+        "description": "Flexible hours and generous vacation policy."
+      },
+      "techStack": {
+        "title": "Modern tech stack",
+        "description": "Work with cutting-edge tools and technologies."
+      },
+      "team": {
+        "title": "Collaborative team",
+        "description": "Small, focused teams shipping impactful work."
+      }
+    }
+  },
+  "openings": {
+    "title": "Open positions",
+    "intro": "We're actively hiring for these roles. If you don't see a perfect fit, send us your portfolio anyway - we're always looking for exceptional talent.",
+    "items": {
+      "seniorReact": {
+        "title": "Senior React Developer",
+        "department": "Engineering",
+        "location": "Remote (EU)",
+        "type": "Full-time",
+        "description": "Build high-performance web applications with React, TypeScript, and Next.js. Lead frontend architecture decisions.",
+        "skills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL"]
+      },
+      "threeDDeveloper": {
+        "title": "3D Web Developer",
+        "department": "3D & Immersive",
+        "location": "Remote (Worldwide)",
+        "type": "Full-time",
+        "description": "Create stunning WebGL experiences using Three.js. Optimize performance for immersive web applications.",
+        "skills": ["Three.js", "WebGL", "GSAP", "React", "TypeScript"]
+      },
+      "uiUxDesigner": {
+        "title": "UI/UX Designer",
+        "department": "Design",
+        "location": "Remote (EU)",
+        "type": "Full-time",
+        "description": "Design beautiful, user-centered interfaces. Work closely with engineers to build design systems that scale.",
+        "skills": ["Figma", "Design Systems", "Prototyping", "Accessibility", "Motion Design"]
+      },
+      "fullstackEngineer": {
+        "title": "Fullstack Engineer",
+        "department": "Engineering",
+        "location": "Remote (EU)",
+        "type": "Full-time",
+        "description": "Build scalable APIs and cloud infrastructure. Work across the entire stack from database to UI.",
+        "skills": ["Node.js", "GraphQL", "PostgreSQL", "AWS", "Docker"]
+      },
+      "motionDesigner": {
+        "title": "Motion Designer",
+        "department": "Design",
+        "location": "Remote (Worldwide)",
+        "type": "Contract",
+        "description": "Craft delightful animations and micro-interactions. Bring interfaces to life with purposeful motion.",
+        "skills": ["Framer Motion", "GSAP", "After Effects", "Figma", "CSS Animations"]
+      },
+      "devopsEngineer": {
+        "title": "DevOps Engineer",
+        "department": "Infrastructure",
+        "location": "Remote (EU)",
+        "type": "Full-time",
+        "description": "Build reliable CI/CD pipelines and cloud infrastructure. Ensure our deployments are fast and secure.",
+        "skills": ["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]
+      }
+    },
+    "buttons": {
+      "apply": "Apply now",
+      "learnMore": "Learn more"
+    },
+    "mailSubject": "Application for {{role}}"
+  },
+  "cta": {
+    "title": "Don't see the right role?",
+    "description": "We're always open to connecting with talented individuals. Send us your portfolio and let's chat about future opportunities.",
+    "primary": "Get in touch",
+    "secondary": "Meet the team"
+  }
+}

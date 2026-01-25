@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Το Portfolio μας",
+    "subtitle": "Ανακαλύψτε τη συλλογή μας από καινοτόμα έργα και επιτυχημένες συνεργασίες με πελάτες"
+  },
+  "filters": {
+    "label": "Φίλτρο:",
+    "all": "Όλα"
+  },
+  "carousel": {
+    "previous": "Προηγούμενο έργο",
+    "next": "Επόμενο έργο",
+    "progress": "Πρόοδος",
+    "goTo": "Μετάβαση στο έργο {{index}}"
+  },
+  "actions": {
+    "viewDemo": "Δείτε Demo",
+    "viewLive": "Δείτε Live",
+    "sourceCode": "Πηγαίος Κώδικας"
+  },
+  "stats": {
+    "totalProjects": "Σύνολο έργων",
+    "categories": "Κατηγορίες",
+    "technologies": "Τεχνολογίες",
+    "happyClients": "Ικανοποιημένοι πελάτες"
+  },
+  "categories": {
+    "Web Application": "Εφαρμογή Web",
+    "Website": "Ιστότοπος",
+    "SaaS": "SaaS",
+    "Mobile App": "Εφαρμογή για κινητά",
+    "Portfolio": "Portfolio",
+    "Web Design": "Σχεδιασμός Web",
+    "E-Commerce": "E-Commerce",
+    "Brand Website": "Ιστότοπος Brand"
+  },
+  "projects": {
+    "1": {
+      "title": "Πλατφόρμα E-Commerce"
+    },
+    "2": {
+      "title": "Δημιουργικό Portfolio"
+    },
+    "3": {
+      "title": "Σύστημα CRM"
+    },
+    "4": {
+      "title": "Εφαρμογή Παρακολούθησης Fitness"
+    },
+    "5": {
+      "title": "ServiceTree"
+    },
+    "6": {
+      "title": "Milawyer Legal Services"
+    },
+    "7": {
+      "title": "Portfolio Φωτογραφίας Yana"
+    },
+    "8": {
+      "title": "Υπηρεσίες Handyman24"
+    },
+    "9": {
+      "title": "Sales Tracker - Deutsche Telekom"
+    },
+    "10": {
+      "title": "Μοντέρνα φόρμα Login"
+    },
+    "11": {
+      "title": "Μοντέρνο 3D Carousel"
+    },
+    "12": {
+      "title": "ModernStore - Premium Shop"
+    },
+    "13": {
+      "title": "Lumina Store"
+    },
+    "14": {
+      "title": "Cult Crew"
+    }
+  }
+}

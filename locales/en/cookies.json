@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Cookie settings",
+  "title": "Choose which cookies you are comfortable with.",
+  "description": "Essential cookies keep the site running. Optional cookies help us improve and personalize your experience.",
+  "essentialBadge": "Essential always on",
+  "privacyLink": "Read our privacy policy",
+  "customize": "Customize cookies",
+  "requiredLabel": "Required",
+  "options": {
+    "essential": {
+      "title": "Essential",
+      "description": "Required for core functionality, security, and page navigation."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "Helps us understand traffic and improve performance."
+    },
+    "personalization": {
+      "title": "Personalization",
+      "description": "Remembers your preferences to keep the experience consistent."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Used for campaign measurement and relevant messaging."
+    }
+  },
+  "buttons": {
+    "essential": "Essential only",
+    "save": "Save preferences",
+    "accept": "Accept all cookies"
+  }
+}

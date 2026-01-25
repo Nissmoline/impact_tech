@@ -1,80 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, User, Hash, FileText, Phone, Globe, Clock, MapPin, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
+const infoItemMeta = [
+  { key: 'tradingName', icon: Building2, category: 'business' },
+  { key: 'legalForm', icon: FileText, category: 'business' },
+  { key: 'registeredOffice', icon: MapPin, category: 'contact', multiline: true },
+  { key: 'telephone', icon: Phone, category: 'contact', link: 'tel:+306949214461' },
+  { key: 'website', icon: Globe, category: 'contact', link: 'https://impact-tech.com' },
+  { key: 'serviceHours', icon: Clock, category: 'contact' },
+  { key: 'owner', icon: User, category: 'ownership' },
+  { key: 'vatNumber', icon: Hash, category: 'ownership' },
+  { key: 'dunsNumber', icon: Hash, category: 'ownership' },
+  { key: 'gemiNumber', icon: Hash, category: 'ownership' },
+  { key: 'chamberRegistration', icon: Building2, category: 'ownership', multiline: true },
+];
 
 const Impressum: React.FC = () => {
-  const infoItems = [
-    {
-      icon: Building2,
-      label: 'Trading Name',
-      value: 'IMPACT TECH',
-      category: 'business'
-    },
-    {
-      icon: FileText,
-      label: 'Legal Form',
-      value: 'Sole Proprietorship',
-      category: 'business'
-    },
-    {
-      icon: MapPin,
-      label: 'Registered Office',
-      value: 'Pl. Ippodameias 8, Office D8\n18531 Piraeus, Attica, Greece',
-      multiline: true,
-      category: 'contact'
-    },
-    {
-      icon: Phone,
-      label: 'Telephone',
-      value: '+30 694 921 4461',
-      link: 'tel:+306949214461',
-      category: 'contact'
-    },
-    {
-      icon: Globe,
-      label: 'Website',
-      value: 'www.impact-tech.com',
-      link: 'https://impact-tech.com',
-      category: 'contact'
-    },
-    {
-      icon: Clock,
-      label: 'Service Hours',
-      value: '24/7 Available',
-      category: 'contact'
-    },
-    {
-      icon: User,
-      label: 'Owner / Legal Representative',
-      value: 'Konstantinos Kolpaxidis',
-      category: 'ownership'
-    },
-    {
-      icon: Hash,
-      label: 'VAT Number (Α.Φ.Μ.)',
-      value: '146264597',
-      category: 'ownership'
-    },
-    {
-      icon: Hash,
-      label: 'D-U-N-S Number',
-      value: '674794807',
-      category: 'ownership'
-    },
-    {
-      icon: Hash,
-      label: 'GEMI Number',
-      value: '188182109000',
-      category: 'ownership'
-    },
-    {
-      icon: Building2,
-      label: 'Chamber Registration',
-      value: 'Piraeus Chamber of Trades\nReg. No. 135274 – Services Department',
-      multiline: true,
-      category: 'ownership'
-    }
-  ];
+  const { t } = useTranslation('impressum');
+  const infoItems = infoItemMeta.map((item) => ({
+    ...item,
+    label: t(`infoItems.${item.key}.label`),
+    value: t(`infoItems.${item.key}.value`),
+  }));
+  const disclaimerItems = t('disclaimer.items', { returnObjects: true }) as Array<{
+    label: string;
+    text: string;
+  }>;
 
   const businessInfo = infoItems.filter(item => item.category === 'business');
   const contactInfo = infoItems.filter(item => item.category === 'contact');
@@ -90,10 +43,10 @@ const Impressum: React.FC = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white dark:text-white light:text-slate-900 mb-4">
-            Impressum
+            {t('title')}
           </h1>
           <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 text-lg">
-            Legal Information & Company Details
+            {t('subtitle')}
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mt-6" />
         </motion.div>
@@ -108,7 +61,7 @@ const Impressum: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 dark:bg-cyan-500/10 light:bg-cyan-500/20 border border-cyan-500/20 dark:border-cyan-500/20 light:border-cyan-500/30 rounded-full">
             <Shield className="text-cyan-400 dark:text-cyan-400 light:text-cyan-600" size={16} />
             <span className="text-sm text-cyan-400 dark:text-cyan-400 light:text-cyan-700 font-medium">
-              Last updated: 11 August 2025
+              {t('lastUpdated')}
             </span>
           </div>
         </motion.div>
@@ -122,7 +75,7 @@ const Impressum: React.FC = () => {
         >
           <h2 className="text-2xl font-display font-bold text-white dark:text-white light:text-slate-900 mb-6 flex items-center gap-3">
             <Building2 className="text-cyan-400" size={28} />
-            Business Information
+            {t('sections.business')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {businessInfo.map((item, index) => (
@@ -158,7 +111,7 @@ const Impressum: React.FC = () => {
         >
           <h2 className="text-2xl font-display font-bold text-white dark:text-white light:text-slate-900 mb-6 flex items-center gap-3">
             <Phone className="text-cyan-400" size={28} />
-            Contact Information
+            {t('sections.contact')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {contactInfo.map((item, index) => (
@@ -205,7 +158,7 @@ const Impressum: React.FC = () => {
         >
           <h2 className="text-2xl font-display font-bold text-white dark:text-white light:text-slate-900 mb-6 flex items-center gap-3">
             <FileText className="text-cyan-400" size={28} />
-            Ownership & Registers
+            {t('sections.ownership')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {ownershipInfo.map((item, index) => (
@@ -240,20 +193,16 @@ const Impressum: React.FC = () => {
           className="p-8 bg-slate-900/30 dark:bg-slate-900/30 light:bg-slate-100/50 border border-slate-800/50 dark:border-slate-800/50 light:border-slate-200 rounded-xl"
         >
           <h3 className="text-lg font-bold text-white dark:text-white light:text-slate-900 mb-4">
-            Legal Disclaimer
+            {t('disclaimer.title')}
           </h3>
           <div className="space-y-3 text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">
-            <p>
-              <strong className="text-slate-300 dark:text-slate-300 light:text-slate-800">Liability for Content:</strong> The contents of our pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content.
-            </p>
-            <p>
-              <strong className="text-slate-300 dark:text-slate-300 light:text-slate-800">Liability for Links:</strong> Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot accept any liability for this third-party content.
-            </p>
-            <p>
-              <strong className="text-slate-300 dark:text-slate-300 light:text-slate-800">Copyright:</strong> The content and works created by the site operators on these pages are subject to Greek copyright law. Duplication, processing, distribution, or any form of commercialization requires the prior written consent of Impact Tech.
-            </p>
+            {disclaimerItems.map((item) => (
+              <p key={item.label}>
+                <strong className="text-slate-300 dark:text-slate-300 light:text-slate-800">{item.label}</strong> {item.text}
+              </p>
+            ))}
             <p className="text-xs text-slate-500 dark:text-slate-500 light:text-slate-500 pt-4 border-t border-slate-800/50 dark:border-slate-800/50 light:border-slate-200">
-              Registry information is updated whenever licenses or listings change. This impressum complies with Greek and EU legal requirements.
+              {t('disclaimer.note')}
             </p>
           </div>
         </motion.div>

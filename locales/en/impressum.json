@@ -1,0 +1,74 @@
+{
+  "title": "Impressum",
+  "subtitle": "Legal Information & Company Details",
+  "lastUpdated": "Last updated: 11 August 2025",
+  "sections": {
+    "business": "Business Information",
+    "contact": "Contact Information",
+    "ownership": "Ownership & Registers"
+  },
+  "infoItems": {
+    "tradingName": {
+      "label": "Trading Name",
+      "value": "IMPACT TECH"
+    },
+    "legalForm": {
+      "label": "Legal Form",
+      "value": "Sole Proprietorship"
+    },
+    "registeredOffice": {
+      "label": "Registered Office",
+      "value": "Pl. Ippodameias 8, Office D8\n18531 Piraeus, Attica, Greece"
+    },
+    "telephone": {
+      "label": "Telephone",
+      "value": "+30 694 921 4461"
+    },
+    "website": {
+      "label": "Website",
+      "value": "www.impact-tech.com"
+    },
+    "serviceHours": {
+      "label": "Service Hours",
+      "value": "24/7 Available"
+    },
+    "owner": {
+      "label": "Owner / Legal Representative",
+      "value": "Konstantinos Kolpaxidis"
+    },
+    "vatNumber": {
+      "label": "VAT Number (Α.Φ.Μ.)",
+      "value": "146264597"
+    },
+    "dunsNumber": {
+      "label": "D-U-N-S Number",
+      "value": "674794807"
+    },
+    "gemiNumber": {
+      "label": "GEMI Number",
+      "value": "188182109000"
+    },
+    "chamberRegistration": {
+      "label": "Chamber Registration",
+      "value": "Piraeus Chamber of Trades\nReg. No. 135274 - Services Department"
+    }
+  },
+  "disclaimer": {
+    "title": "Legal Disclaimer",
+    "items": [
+      {
+        "label": "Liability for Content:",
+        "text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content."
+      },
+      {
+        "label": "Liability for Links:",
+        "text": "Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot accept any liability for this third-party content."
+      },
+      {
+        "label": "Copyright:",
+        "text": "The content and works created by the site operators on these pages are subject to Greek copyright law. Duplication, processing, distribution, or any form of commercialization requires the prior written consent of Impact Tech."
+      }
+    ],
+    "note": "Registry information is updated whenever licenses or listings change. This impressum complies with Greek and EU legal requirements."
+  }
+}

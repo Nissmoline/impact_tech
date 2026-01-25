@@ -36,12 +36,20 @@ const Navigation: React.FC = () => {
     {
       label: t('nav.services'),
       type: 'dropdown',
-      submenu: SERVICES.map(service => ({
-        label: service.title,
-        href: `/services/${service.slug}`,
-        description: service.description.slice(0, 60) + '...',
-        icon: service.icon
-      }))
+      submenu: SERVICES.map(service => {
+        const serviceTitle = t(`home.services.items.${service.slug}.title`, {
+          defaultValue: service.title,
+        });
+        const serviceDescription = t(`home.services.items.${service.slug}.description`, {
+          defaultValue: service.description,
+        });
+        return {
+          label: serviceTitle,
+          href: `/services/${service.slug}`,
+          description: serviceDescription.slice(0, 60) + '...',
+          icon: service.icon,
+        };
+      })
     },
     { label: t('nav.projects'), href: '/#projects', type: 'anchor' },
     { label: t('nav.process'), href: '/#process', type: 'anchor' },

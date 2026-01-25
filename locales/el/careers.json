@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Γίνε μέλος της ομάδας μας",
+    "title": "Χτίσε το μέλλον των web εμπειριών",
+    "description": "Αναζητούμε ταλαντούχους μηχανικούς, σχεδιαστές και δημιουργούς που θέλουν να ξεπεράσουν τα όρια του web. Γίνε μέρος της remote-first ομάδας μας και υλοποίησε έργα με πραγματικό αντίκτυπο."
+  },
+  "benefits": {
+    "title": "Γιατί η Impact Tech;",
+    "items": {
+      "remoteFirst": {
+        "title": "Remote-first κουλτούρα",
+        "description": "Δούλεψε από όπου θέλεις. Μετράμε το αποτέλεσμα, όχι την παρουσία."
+      },
+      "compensation": {
+        "title": "Ανταγωνιστικές αποδοχές",
+        "description": "Αμοιβές αγοράς με bonus απόδοσης."
+      },
+      "growth": {
+        "title": "Ανάπτυξη & μάθηση",
+        "description": "Ετήσιο budget για courses, συνέδρια και βιβλία."
+      },
+      "balance": {
+        "title": "Ισορροπία ζωής-εργασίας",
+        "description": "Ευέλικτο ωράριο και γενναιόδωρη πολιτική αδειών."
+      },
+      "techStack": {
+        "title": "Σύγχρονο tech stack",
+        "description": "Δούλεψε με cutting-edge εργαλεία και τεχνολογίες."
+      },
+      "team": {
+        "title": "Συνεργατική ομάδα",
+        "description": "Μικρές, εστιασμένες ομάδες που παραδίδουν ουσιαστικό έργο."
+      }
+    }
+  },
+  "openings": {
+    "title": "Ανοιχτές θέσεις",
+    "intro": "Αυτή τη στιγμή προσλαμβάνουμε για τους παρακάτω ρόλους. Αν δεν βλέπεις κάτι που σου ταιριάζει, στείλε μας το portfolio σου - πάντα αναζητούμε εξαιρετικά ταλέντα.",
+    "items": {
+      "seniorReact": {
+        "title": "Senior React Developer",
+        "department": "Engineering",
+        "location": "Απομακρυσμένα (ΕΕ)",
+        "type": "Πλήρης απασχόληση",
+        "description": "Ανάπτυξε high-performance web εφαρμογές με React, TypeScript και Next.js. Ηγήσου αποφάσεων αρχιτεκτονικής frontend.",
+        "skills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL"]
+      },
+      "threeDDeveloper": {
+        "title": "3D Web Developer",
+        "department": "3D & Immersive",
+        "location": "Απομακρυσμένα (Παγκοσμίως)",
+        "type": "Πλήρης απασχόληση",
+        "description": "Δημιούργησε εντυπωσιακές WebGL εμπειρίες με Three.js. Βελτιστοποίησε την απόδοση για immersive web εφαρμογές.",
+        "skills": ["Three.js", "WebGL", "GSAP", "React", "TypeScript"]
+      },
+      "uiUxDesigner": {
+        "title": "UI/UX Designer",
+        "department": "Design",
+        "location": "Απομακρυσμένα (ΕΕ)",
+        "type": "Πλήρης απασχόληση",
+        "description": "Σχεδίασε όμορφες, user-centered διεπαφές. Συνεργάσου στενά με μηχανικούς για design systems που κλιμακώνονται.",
+        "skills": ["Figma", "Design Systems", "Prototyping", "Accessibility", "Motion Design"]
+      },
+      "fullstackEngineer": {
+        "title": "Fullstack Engineer",
+        "department": "Engineering",
+        "location": "Απομακρυσμένα (ΕΕ)",
+        "type": "Πλήρης απασχόληση",
+        "description": "Ανάπτυξε scalable APIs και cloud υποδομές. Δούλεψε σε όλο το stack από τη βάση δεδομένων έως το UI.",
+        "skills": ["Node.js", "GraphQL", "PostgreSQL", "AWS", "Docker"]
+      },
+      "motionDesigner": {
+        "title": "Motion Designer",
+        "department": "Design",
+        "location": "Απομακρυσμένα (Παγκοσμίως)",
+        "type": "Σύμβαση",
+        "description": "Δημιούργησε απολαυστικά animations και micro-interactions. Δώσε ζωή στα interfaces με ουσιαστική κίνηση.",
+        "skills": ["Framer Motion", "GSAP", "After Effects", "Figma", "CSS Animations"]
+      },
+      "devopsEngineer": {
+        "title": "DevOps Engineer",
+        "department": "Infrastructure",
+        "location": "Απομακρυσμένα (ΕΕ)",
+        "type": "Πλήρης απασχόληση",
+        "description": "Υλοποίησε αξιόπιστα CI/CD pipelines και cloud υποδομές. Διασφάλισε ότι τα deployments είναι γρήγορα και ασφαλή.",
+        "skills": ["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]
+      }
+    },
+    "buttons": {
+      "apply": "Κάνε αίτηση",
+      "learnMore": "Μάθε περισσότερα"
+    },
+    "mailSubject": "Αίτηση για {{role}}"
+  },
+  "cta": {
+    "title": "Δεν βλέπεις τον κατάλληλο ρόλο;",
+    "description": "Είμαστε πάντα ανοιχτοί σε συζητήσεις με ταλαντούχους ανθρώπους. Στείλε μας το portfolio σου και ας μιλήσουμε για μελλοντικές ευκαιρίες.",
+    "primary": "Επικοινώνησε μαζί μας",
+    "secondary": "Γνώρισε την ομάδα"
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Cookie } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const STORAGE_KEY = 'impacttech-cookie-consent';
@@ -58,6 +59,7 @@ const CookieBanner: React.FC = () => {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
+  const { t } = useTranslation('cookies');
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -118,24 +120,24 @@ const CookieBanner: React.FC = () => {
   }> = [
     {
       key: 'essential',
-      title: 'Essential',
-      description: 'Required for core functionality, security, and page navigation.',
+      title: t('options.essential.title'),
+      description: t('options.essential.description'),
       required: true,
     },
     {
       key: 'analytics',
-      title: 'Analytics',
-      description: 'Helps us understand traffic and improve performance.',
+      title: t('options.analytics.title'),
+      description: t('options.analytics.description'),
     },
     {
       key: 'personalization',
-      title: 'Personalization',
-      description: 'Remembers your preferences to keep the experience consistent.',
+      title: t('options.personalization.title'),
+      description: t('options.personalization.description'),
     },
     {
       key: 'marketing',
-      title: 'Marketing',
-      description: 'Used for campaign measurement and relevant messaging.',
+      title: t('options.marketing.title'),
+      description: t('options.marketing.description'),
     },
   ];
 
@@ -151,21 +153,20 @@ const CookieBanner: React.FC = () => {
               </div>
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">
-                  Cookie settings
+                  {t('eyebrow')}
                 </p>
                 <h3 className="text-lg font-display font-semibold text-white light:text-slate-900">
-                  Choose which cookies you are comfortable with.
+                  {t('title')}
                 </h3>
                 <p className="text-sm text-slate-300 light:text-slate-600">
-                  Essential cookies keep the site running. Optional cookies help us improve and personalize
-                  your experience.
+                  {t('description')}
                 </p>
                 <div className="flex flex-wrap items-center gap-3 text-xs text-slate-400 light:text-slate-500">
                   <span className="rounded-full border border-slate-700/70 px-3 py-1 light:border-slate-200">
-                    Essential always on
+                    {t('essentialBadge')}
                   </span>
                   <Link to={withLocale('/privacy')} className="text-cyan-300 hover:text-cyan-200 transition-colors">
-                    Read our privacy policy
+                    {t('privacyLink')}
                   </Link>
                 </div>
               </div>
@@ -179,7 +180,7 @@ const CookieBanner: React.FC = () => {
                 aria-controls="cookie-options"
                 className="flex w-full items-center justify-between rounded-xl border border-slate-800/70 bg-slate-900/40 px-4 py-3 text-left text-sm font-semibold text-white transition-colors hover:border-cyan-500/40 light:border-slate-200 light:bg-white/70 light:text-slate-900"
               >
-                <span>Customize cookies</span>
+                <span>{t('customize')}</span>
                 <ChevronDown
                   size={18}
                   className={`transition-transform ${isExpanded ? 'rotate-180' : ''}`}
@@ -207,7 +208,7 @@ const CookieBanner: React.FC = () => {
                           {option.title}
                           {option.required ? (
                             <span className="ml-2 text-[10px] uppercase tracking-[0.2em] text-cyan-300">
-                              Required
+                              {t('requiredLabel')}
                             </span>
                           ) : null}
                         </p>
@@ -243,21 +244,21 @@ const CookieBanner: React.FC = () => {
                 onClick={handleEssentialOnly}
                 className="rounded-full border border-slate-700/80 px-5 py-3 text-sm font-semibold text-slate-100 transition-colors hover:border-cyan-500/60 hover:text-white light:border-slate-200 light:text-slate-900 light:hover:border-cyan-500/60"
               >
-                Essential only
+                {t('buttons.essential')}
               </button>
               <button
                 type="button"
                 onClick={handleSave}
                 className="rounded-full border border-cyan-500/40 px-5 py-3 text-sm font-semibold text-cyan-100 transition-colors hover:border-cyan-400/70 hover:text-white light:text-cyan-700"
               >
-                Save preferences
+                {t('buttons.save')}
               </button>
               <button
                 type="button"
                 onClick={handleAcceptAll}
                 className="rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30 transition-transform hover:-translate-y-0.5"
               >
-                Accept all cookies
+                {t('buttons.accept')}
               </button>
             </div>
           </div>

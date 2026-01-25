@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "title": "Our Portfolio",
+    "subtitle": "Explore our collection of innovative projects and successful client collaborations"
+  },
+  "filters": {
+    "label": "Filter:",
+    "all": "All"
+  },
+  "carousel": {
+    "previous": "Previous project",
+    "next": "Next project",
+    "progress": "Progress",
+    "goTo": "Go to project {{index}}"
+  },
+  "actions": {
+    "viewDemo": "View Demo",
+    "viewLive": "View Live",
+    "sourceCode": "Source Code"
+  },
+  "stats": {
+    "totalProjects": "Total Projects",
+    "categories": "Categories",
+    "technologies": "Technologies",
+    "happyClients": "Happy Clients"
+  },
+  "categories": {
+    "Web Application": "Web Application",
+    "Website": "Website",
+    "SaaS": "SaaS",
+    "Mobile App": "Mobile App",
+    "Portfolio": "Portfolio",
+    "Web Design": "Web Design",
+    "E-Commerce": "E-Commerce",
+    "Brand Website": "Brand Website"
+  },
+  "projects": {
+    "1": {
+      "title": "E-Commerce Platform"
+    },
+    "2": {
+      "title": "Creative Portfolio"
+    },
+    "3": {
+      "title": "CRM System"
+    },
+    "4": {
+      "title": "Fitness Tracking App"
+    },
+    "5": {
+      "title": "ServiceTree"
+    },
+    "6": {
+      "title": "Milawyer Legal Services"
+    },
+    "7": {
+      "title": "Yana Photography Portfolio"
+    },
+    "8": {
+      "title": "Handyman24 Services"
+    },
+    "9": {
+      "title": "Sales Tracker - Deutsche Telekom"
+    },
+    "10": {
+      "title": "Modern Login Form"
+    },
+    "11": {
+      "title": "3D Modern Carousel"
+    },
+    "12": {
+      "title": "ModernStore - Premium Shop"
+    },
+    "13": {
+      "title": "Lumina Store"
+    },
+    "14": {
+      "title": "Cult Crew"
+    }
+  }
+}
