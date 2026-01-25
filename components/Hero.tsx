@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'lucide-react';
+import { Trans, useTranslation } from 'react-i18next';
 import Scene3D from './Scene3D';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
@@ -43,6 +44,7 @@ const Hero: React.FC = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const rotate = useTransform(scrollY, [0, 500], [0, 20]);
   const location = useLocation();
+  const { t } = useTranslation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
   
@@ -97,28 +99,33 @@ const Hero: React.FC = () => {
         >
           <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-6 transition-colors duration-300 lg:mt-4 ${theme.badge}`}>
             <Zap size={14} className="animate-pulse" />
-            <span>Next-Gen Web Engineering</span>
+            <span>{t('home.hero.badge')}</span>
           </div>
           
           <h1 className={`text-5xl lg:text-7xl font-display font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-6 transition-all duration-500 ${theme.glow}`}>
-            We Craft Bold Web Experiences in <span className={`transition-colors duration-500 ${theme.accent}`}>3D</span>.
+            <Trans
+              i18nKey="home.hero.title"
+              components={{
+                highlight: <span className={`transition-colors duration-500 ${theme.accent}`} />,
+              }}
+            />
           </h1>
           
           <p className="text-lg lg:text-xl text-slate-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            We design and build end-to-end digital products—3D web experiences, high-performance websites, SaaS platforms, mobile apps, secure APIs, and cloud/QA pipelines—so your product stands out and scales.
+            {t('home.hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className={`px-8 py-4 text-slate-950 font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 ${theme.button}`}>
-              Start Your Project
+              {t('home.hero.ctaPrimary')}
               <ChevronDown className="rotate-[-90deg]" size={18} />
             </button>
             <Link
               to={withLocale('/portfolio')}
               className="px-8 py-4 bg-transparent border border-slate-700 hover:border-white text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 group"
-              aria-label="View our portfolio"
+              aria-label={t('home.hero.portfolioAria')}
             >
-              View Our Work
+              {t('home.hero.ctaSecondary')}
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
@@ -179,12 +186,12 @@ const Hero: React.FC = () => {
                 <div className="space-y-2 font-mono text-xs">
                   {codeStatus === 'running' ? (
                       <div className="py-4 text-slate-400 animate-pulse">
-                          Compiling shaders...
+                          {t('home.hero.code.compiling')}
                       </div>
                   ) : codeStatus === 'success' ? (
                        <div className="py-4 text-green-400">
-                          Build successful! <br/>
-                          <span className="text-slate-500">Time: 12ms</span>
+                          {t('home.hero.code.success')} <br/>
+                          <span className="text-slate-500">{t('home.hero.code.time', { time: '12ms' })}</span>
                        </div>
                   ) : (
                     <>
@@ -194,7 +201,7 @@ const Hero: React.FC = () => {
                             <span className="text-white">=</span>
                         </div>
                         <div className={`pl-4 transition-colors duration-300 ${theme.codeHighlight}`}>new Dimension(3);</div>
-                        <div className="pl-4 text-slate-400">// Ready to launch</div>
+                        <div className="pl-4 text-slate-400">{t('home.hero.code.ready')}</div>
                     </>
                   )}
                 </div>
@@ -219,7 +226,9 @@ const Hero: React.FC = () => {
                 className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-52 select-none"
               >
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs text-slate-400 font-sans font-bold uppercase tracking-wider">Components</span>
+                  <span className="text-xs text-slate-400 font-sans font-bold uppercase tracking-wider">
+                    {t('home.hero.componentsLabel')}
+                  </span>
                   {/* Interactive Toggle */}
                   <div 
                     onPointerDown={handleUiToggle}
@@ -328,7 +337,7 @@ const Hero: React.FC = () => {
         style={{ opacity: useTransform(scrollY, [0, 200], [1, 0]) }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 pointer-events-none"
       >
-        <span className="text-xs uppercase tracking-widest">Scroll to Explore</span>
+        <span className="text-xs uppercase tracking-widest">{t('home.hero.scrollHint')}</span>
         <ChevronDown className="animate-bounce" />
       </motion.div>
     </section>

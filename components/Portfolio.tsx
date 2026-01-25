@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Filter, Play } from 'lucide-react';
 import { PROJECTS } from '../constants';
 
 const Portfolio: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   // Get unique categories
@@ -15,19 +17,57 @@ const Portfolio: React.FC = () => {
     ? PROJECTS
     : PROJECTS.filter(p => p.category === selectedCategory);
 
-  const nextProject = () => {
-    setCurrentIndex((prev) => (prev + 1) % projects.length);
+  const totalSlides = projects.length;
+
+  const scrollToSlide = (index: number) => {
+    const clampedIndex = Math.max(0, Math.min(index, totalSlides - 1));
+    const targetSlide = slideRefs.current[clampedIndex];
+    if (!targetSlide) return;
+    setActiveIndex(clampedIndex);
+    targetSlide.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest',
+    });
   };
 
-  const prevProject = () => {
-    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-  };
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    const slides = slideRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (!carousel || slides.length === 0) return undefined;
 
-  const goToProject = (index: number) => {
-    setCurrentIndex(index);
-  };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = slides.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) setActiveIndex(index);
+          }
+        });
+      },
+      {
+        root: carousel,
+        threshold: 0.6,
+      }
+    );
 
-  const currentProject = projects[currentIndex];
+    slides.forEach((slide) => observer.observe(slide));
+    return () => observer.disconnect();
+  }, [projects.length, selectedCategory]);
+
+  useEffect(() => {
+    setActiveIndex(0);
+    if (!carouselRef.current) return;
+    requestAnimationFrame(() => {
+      carouselRef.current?.scrollTo({ left: 0, behavior: 'auto' });
+    });
+  }, [selectedCategory]);
+
+  const canGoPrev = activeIndex > 0;
+  const canGoNext = activeIndex < totalSlides - 1;
+  const progress = totalSlides > 1 ? (activeIndex / (totalSlides - 1)) * 100 : 100;
+  const currentLabel = String(activeIndex + 1).padStart(2, '0');
+  const totalLabel = String(totalSlides).padStart(2, '0');
 
   return (
     <section className="min-h-[100svh] bg-slate-950 dark:bg-slate-950 light:bg-slate-50 py-24">
@@ -64,7 +104,7 @@ const Portfolio: React.FC = () => {
               key={category}
               onClick={() => {
                 setSelectedCategory(category);
-                setCurrentIndex(0);
+                setActiveIndex(0);
               }}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
@@ -79,161 +119,175 @@ const Portfolio: React.FC = () => {
 
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
+          <div className="flex flex-wrap items-center justify-between gap-6 mb-8">
+            <div className="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">
+              <span className="text-white dark:text-white light:text-slate-900 font-semibold">{currentLabel}</span>
+              <span className="mx-2 text-slate-500 dark:text-slate-500 light:text-slate-400">/</span>
+              <span>{totalLabel}</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => scrollToSlide(activeIndex - 1)}
+                disabled={!canGoPrev}
+                className="p-3 rounded-full border border-white/10 dark:border-white/10 light:border-slate-300 text-slate-200 dark:text-slate-200 light:text-slate-900 hover:bg-white/10 light:hover:bg-slate-200/70 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Previous project"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => scrollToSlide(activeIndex + 1)}
+                disabled={!canGoNext}
+                className="p-3 rounded-full border border-white/10 dark:border-white/10 light:border-slate-300 text-slate-200 dark:text-slate-200 light:text-slate-900 hover:bg-white/10 light:hover:bg-slate-200/70 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Next project"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevProject}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-30 p-4 bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-200/90 backdrop-blur-md border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full text-white dark:text-white light:text-slate-900 hover:bg-cyan-500 dark:hover:bg-cyan-500 light:hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-xl"
-            aria-label="Previous project"
+          <div
+            ref={carouselRef}
+            className="flex gap-6 sm:gap-8 lg:gap-10 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            <ChevronLeft size={28} />
-          </button>
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                ref={(element) => {
+                  slideRefs.current[index] = element;
+                }}
+                className="snap-center shrink-0 w-[85vw] sm:w-[70vw] lg:w-[60vw]"
+              >
+                <div className="group relative w-full h-[62vh] min-h-[420px] sm:h-[68vh] lg:h-[520px] perspective-1000">
+                  <div className="w-full h-full bg-slate-900 dark:bg-slate-900 light:bg-white border border-white/10 dark:border-white/10 light:border-slate-200 rounded-[32px] overflow-hidden relative shadow-[0_30px_80px_-40px_rgba(8,15,30,0.8)] transform-style-3d">
+                    <div className="absolute inset-0 pointer-events-none">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        decoding="async"
+                        className="w-full h-full object-cover opacity-70 dark:opacity-70 light:opacity-50 group-hover:scale-105 transition-all duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 dark:from-slate-950 dark:via-slate-950/80 dark:to-slate-950/20 light:from-slate-100 light:via-slate-100/80 light:to-slate-100/20" />
+                    </div>
 
-          <button
-            onClick={nextProject}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-30 p-4 bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-200/90 backdrop-blur-md border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full text-white dark:text-white light:text-slate-900 hover:bg-cyan-500 dark:hover:bg-cyan-500 light:hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-110 shadow-xl"
-            aria-label="Next project"
-          >
-            <ChevronRight size={28} />
-          </button>
-
-          {/* Project Card */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentProject.id}
-              initial={{ opacity: 0, x: 100, rotateY: -20 }}
-              animate={{ opacity: 1, x: 0, rotateY: 0 }}
-              exit={{ opacity: 0, x: -100, rotateY: 20 }}
-              transition={{ duration: 0.5, type: 'spring' }}
-              className="group relative w-full h-[70svh] md:h-[75svh] perspective-1000"
-            >
-              <div className="w-full h-full bg-slate-900 dark:bg-slate-900 light:bg-white border border-white/10 dark:border-white/10 light:border-slate-200 rounded-3xl overflow-hidden relative shadow-2xl transform-style-3d">
-
-                {/* Image Background */}
-                <div className="absolute inset-0">
-                  <img
-                    src={currentProject.image}
-                    alt={currentProject.title}
-                    decoding="async"
-                    className="w-full h-full object-cover opacity-70 dark:opacity-70 light:opacity-50 group-hover:scale-110 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 dark:from-slate-950 dark:via-slate-950/80 dark:to-slate-950/20 light:from-slate-100 light:via-slate-100/80 light:to-slate-100/20" />
-                </div>
-
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-12">
-
-                  {/* Top: Category Badge */}
-                  <div className="flex justify-between items-start">
-                    <motion.span
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                      className="px-4 py-2 bg-cyan-500/20 dark:bg-cyan-500/20 light:bg-cyan-500/30 backdrop-blur-md border border-cyan-500/30 dark:border-cyan-500/30 light:border-cyan-500/50 rounded-full text-cyan-400 dark:text-cyan-400 light:text-cyan-600 text-sm font-bold uppercase tracking-wider"
-                    >
-                      {currentProject.category}
-                    </motion.span>
-
-                    {/* Project Counter */}
-                    <motion.div
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="px-4 py-2 bg-slate-800/50 dark:bg-slate-800/50 light:bg-slate-200/80 backdrop-blur-md border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm font-medium"
-                    >
-                      {currentIndex + 1} / {projects.length}
-                    </motion.div>
-                  </div>
-
-                  {/* Bottom: Project Info */}
-                  <div>
-                    <motion.h2
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-slate-900 mb-4"
-                    >
-                      {currentProject.title}
-                    </motion.h2>
-
-                    {/* Tech Stack */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 }}
-                      className="flex flex-wrap gap-2 mb-8"
-                    >
-                      {currentProject.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-4 py-2 bg-white/10 dark:bg-white/10 light:bg-slate-800/10 border border-white/10 dark:border-white/10 light:border-slate-300 rounded-full text-sm text-slate-200 dark:text-slate-200 light:text-slate-700 backdrop-blur-md font-medium"
+                    <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 lg:p-12">
+                      <div className="flex justify-between items-start">
+                        <motion.span
+                          initial={{ opacity: 0, y: -20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 }}
+                          className="px-4 py-2 bg-cyan-500/20 dark:bg-cyan-500/20 light:bg-cyan-500/30 backdrop-blur-md border border-cyan-500/30 dark:border-cyan-500/30 light:border-cyan-500/50 rounded-full text-cyan-400 dark:text-cyan-400 light:text-cyan-600 text-sm font-bold uppercase tracking-wider"
                         >
-                          {tech}
-                        </span>
-                      ))}
-                    </motion.div>
+                          {project.category}
+                        </motion.span>
 
-                    {/* Action Buttons */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 }}
-                      className="flex flex-wrap gap-3"
-                    >
-                      {currentProject.demo && (
-                        <a
-                          href={currentProject.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/btn px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                        <motion.div
+                          initial={{ opacity: 0, y: -20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 }}
+                          className="px-4 py-2 bg-slate-800/50 dark:bg-slate-800/50 light:bg-slate-200/80 backdrop-blur-md border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm font-medium"
                         >
-                          <Play size={18} className="group-hover/btn:scale-110 transition-transform" />
-                          <span>View Demo</span>
-                        </a>
-                      )}
-                      {currentProject.live && (
-                        <a
-                          href={currentProject.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/btn px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                          {index + 1} / {projects.length}
+                        </motion.div>
+                      </div>
+
+                      <div>
+                        <motion.h2
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 }}
+                          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white dark:text-white light:text-slate-900 mb-4"
                         >
-                          <span>View Live</span>
-                          <ExternalLink size={18} className="group-hover/btn:translate-x-1 transition-transform" />
-                        </a>
-                      )}
-                      {currentProject.github && (
-                        <a
-                          href={currentProject.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-8 py-3 bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-200/90 border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full font-semibold text-white dark:text-white light:text-slate-900 hover:bg-slate-700 dark:hover:bg-slate-700 light:hover:bg-slate-300 transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:scale-105"
+                          {project.title}
+                        </motion.h2>
+
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.4 }}
+                          className="flex flex-wrap gap-2 mb-8"
                         >
-                          <Github size={18} />
-                          <span>Source Code</span>
-                        </a>
-                      )}
-                    </motion.div>
+                          {project.stack.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-4 py-2 bg-white/10 dark:bg-white/10 light:bg-slate-800/10 border border-white/10 dark:border-white/10 light:border-slate-300 rounded-full text-sm text-slate-200 dark:text-slate-200 light:text-slate-700 backdrop-blur-md font-medium"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </motion.div>
+
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.5 }}
+                          className="flex flex-wrap gap-3"
+                        >
+                          {project.demo && (
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group/btn px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                            >
+                              <Play size={18} className="group-hover/btn:scale-110 transition-transform" />
+                              <span>View Demo</span>
+                            </a>
+                          )}
+                          {project.live && (
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group/btn px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                            >
+                              <span>View Live</span>
+                              <ExternalLink size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                            </a>
+                          )}
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-8 py-3 bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-200/90 border border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 rounded-full font-semibold text-white dark:text-white light:text-slate-900 hover:bg-slate-700 dark:hover:bg-slate-700 light:hover:bg-slate-300 transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:scale-105"
+                            >
+                              <Github size={18} />
+                              <span>Source Code</span>
+                            </a>
+                          )}
+                        </motion.div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center gap-3 mt-8">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToProject(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? 'w-12 h-3 bg-gradient-to-r from-cyan-500 to-purple-500'
-                    : 'w-3 h-3 bg-slate-700 dark:bg-slate-700 light:bg-slate-300 hover:bg-slate-600 dark:hover:bg-slate-600 light:hover:bg-slate-400'
-                }`}
-                aria-label={`Go to project ${index + 1}`}
-              />
             ))}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-wrap items-center gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSlide(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === activeIndex
+                      ? 'w-8 bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.6)]'
+                      : 'w-3 bg-white/20 hover:bg-white/40'
+                  }`}
+                  aria-label={`Go to project ${index + 1}`}
+                />
+              ))}
+            </div>
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-slate-500">
+              <span>Progress</span>
+              <div className="h-1 w-32 rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-sky-500"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -247,10 +301,10 @@ const Portfolio: React.FC = () => {
           {projects.map((project, index) => (
             <motion.button
               key={project.id}
-              onClick={() => goToProject(index)}
+              onClick={() => scrollToSlide(index)}
               whileHover={{ scale: 1.05, y: -5 }}
               className={`relative aspect-video rounded-xl overflow-hidden border-2 transition-all duration-300 ${
-                index === currentIndex
+                index === activeIndex
                   ? 'border-cyan-500 shadow-lg shadow-cyan-500/50'
                   : 'border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 hover:border-cyan-500/50 dark:hover:border-cyan-500/50 light:hover:border-cyan-500'
               }`}
@@ -263,7 +317,7 @@ const Portfolio: React.FC = () => {
                 className="w-full h-full object-cover"
               />
               <div className={`absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent flex items-end p-2 ${
-                index === currentIndex ? 'opacity-100' : 'opacity-60 hover:opacity-100'
+                index === activeIndex ? 'opacity-100' : 'opacity-60 hover:opacity-100'
               } transition-opacity`}>
                 <span className="text-white text-xs font-semibold truncate">{project.title}</span>
               </div>

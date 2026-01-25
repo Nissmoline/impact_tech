@@ -19,12 +19,6 @@ describe('Contact Component', () => {
     expect(getByText('Project Type')).toBeInTheDocument();
   });
 
-  it('has budget range selector', () => {
-    const { getByText } = renderContact();
-
-    expect(getByText('Business Range')).toBeInTheDocument();
-  });
-
   it('renders submit button', () => {
     const { getByRole } = renderContact();
 

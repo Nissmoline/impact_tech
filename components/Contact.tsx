@@ -1,26 +1,21 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
-
-const PROJECT_TYPE_OPTIONS = [
-  '3D & Interactive Experiences',
-  'Web Development',
-  'UX/UI & Design Systems',
-  'Mobile Apps',
-  'Backend & APIs',
-  'DevOps & Reliability',
-  'Custom Business Applications',
-];
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     type: '',
     customType: '',
-    budget: '',
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const projectTypeOptions = t('home.contact.projectTypes', { returnObjects: true }) as string[];
+  const inputClass =
+    'w-full rounded-xl bg-slate-800/60 border border-slate-700/70 p-4 text-white placeholder:text-slate-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/40 outline-none transition';
+  const selectClass = `${inputClass} appearance-none`;
 
   const handleTypeChange = (value: string) => {
     setFormState((prev) => ({
@@ -47,103 +42,91 @@ const Contact: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500" />
             
             <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">Start a Project</h2>
-                <p className="text-slate-400">Tell us about your vision. We'll build the reality.</p>
+                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+                  {t('home.contact.title')}
+                </h2>
+                <p className="text-slate-400">{t('home.contact.subtitle')}</p>
             </div>
 
             {isSubmitted ? (
                 <div className="min-h-[400px] flex flex-col items-center justify-center text-center animate-fadeIn">
                     <CheckCircle className="text-green-500 w-20 h-20 mb-6" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Message Received</h3>
-                    <p className="text-slate-400">We'll analyze your request and orbit back to you shortly.</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{t('home.contact.successTitle')}</h3>
+                    <p className="text-slate-400">{t('home.contact.successDescription')}</p>
                 </div>
             ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-7">
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-slate-300">Your Name</label>
+                            <label className="text-sm font-medium text-slate-300">{t('home.contact.labels.name')}</label>
                             <input 
                                 required
                                 type="text" 
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                                placeholder="John Doe"
+                                autoComplete="name"
+                                className={inputClass}
+                                placeholder={t('home.contact.placeholders.name')}
                                 value={formState.name}
                                 onChange={e => setFormState({...formState, name: e.target.value})}
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-slate-300">Email Address</label>
+                            <label className="text-sm font-medium text-slate-300">{t('home.contact.labels.email')}</label>
                             <input 
                                 required
                                 type="email" 
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                                placeholder="john@example.com"
+                                autoComplete="email"
+                                className={inputClass}
+                                placeholder={t('home.contact.placeholders.email')}
                                 value={formState.email}
                                 onChange={e => setFormState({...formState, email: e.target.value})}
                             />
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-slate-300">Project Type</label>
-                            <div className="space-y-3">
-                              <select 
-                                required
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all appearance-none"
-                                value={formState.type}
-                                onChange={e => handleTypeChange(e.target.value)}
-                              >
-                                <option value="">Select a project type</option>
-                                {PROJECT_TYPE_OPTIONS.map((option) => (
-                                  <option key={option} value={option}>{option}</option>
-                                ))}
-                                <option value="other">Other (write below)</option>
-                              </select>
-                              <input
-                                type="text"
-                                placeholder="Custom project type (tell us what you need)"
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                                value={formState.customType}
-                                onChange={e => setFormState(prev => ({ ...prev, customType: e.target.value }))}
-                                required={formState.type === 'other'}
-                                disabled={formState.type !== 'other'}
-                                aria-label="Custom project type"
-                              />
-                              <p className="text-xs text-slate-500">Choose one of our services or describe yours.</p>
-                            </div>
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium text-slate-300">Business Range</label>
-                             <select 
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all appearance-none"
-                                value={formState.budget}
-                                onChange={e => setFormState({...formState, budget: e.target.value})}
-                            >
-                                <option>Select a range of your business</option>
-                                <option>€5k - €10k</option>
-                                <option>€10k - €25k</option>
-                                <option>€25k - €50k</option>
-                                <option>€50k+</option>
-                            </select>
+                    <div className="space-y-2">
+                        <label className="text-sm font-medium text-slate-300">{t('home.contact.labels.projectType')}</label>
+                        <div className="space-y-3">
+                          <select 
+                            required
+                            className={selectClass}
+                            value={formState.type}
+                            onChange={e => handleTypeChange(e.target.value)}
+                          >
+                            <option value="">{t('home.contact.placeholders.projectType')}</option>
+                            {projectTypeOptions.map((option) => (
+                              <option key={option} value={option}>{option}</option>
+                            ))}
+                            <option value="other">{t('home.contact.projectTypeOther')}</option>
+                          </select>
+                          <input
+                            type="text"
+                            placeholder={t('home.contact.placeholders.customType')}
+                            className={`${inputClass} disabled:opacity-60 disabled:cursor-not-allowed`}
+                            value={formState.customType}
+                            onChange={e => setFormState(prev => ({ ...prev, customType: e.target.value }))}
+                            required={formState.type === 'other'}
+                            disabled={formState.type !== 'other'}
+                            aria-label={t('home.contact.customTypeAria')}
+                          />
+                          <p className="text-xs text-slate-500">{t('home.contact.projectTypeHint')}</p>
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-slate-300">Project Brief</label>
+                        <label className="text-sm font-medium text-slate-300">{t('home.contact.labels.brief')}</label>
                         <textarea 
                             required
                             rows={4}
-                            className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all"
-                            placeholder="Tell us about the goals, timeline, and tech requirements..."
+                            className={`${inputClass} resize-y`}
+                            placeholder={t('home.contact.placeholders.brief')}
                             value={formState.message}
                             onChange={e => setFormState({...formState, message: e.target.value})}
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all flex items-center justify-center gap-2">
+                    <button type="submit" className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl text-white font-bold text-lg hover:shadow-[0_0_24px_rgba(6,182,212,0.45)] transition-all flex items-center justify-center gap-2">
                         <Send size={20} />
-                        Launch Project
+                        {t('home.contact.submit')}
                     </button>
                 </form>
             )}

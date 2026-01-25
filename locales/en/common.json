@@ -15,5 +15,169 @@
   "language": {
     "english": "EN",
     "greek": "EL"
+  },
+  "home": {
+    "hero": {
+      "badge": "Next-Gen Web Engineering",
+      "title": "We Craft Bold Web Experiences in <highlight>3D</highlight>.",
+      "description": "We design and build end-to-end digital products: 3D web experiences, high-performance websites, SaaS platforms, mobile apps, secure APIs, and cloud/QA pipelines, so your product stands out and scales.",
+      "ctaPrimary": "Start Your Project",
+      "ctaSecondary": "View Our Work",
+      "portfolioAria": "View our portfolio",
+      "scrollHint": "Scroll to Explore",
+      "componentsLabel": "Components",
+      "code": {
+        "compiling": "Compiling shaders...",
+        "success": "Build successful!",
+        "time": "Time: {{time}}",
+        "ready": "// Ready to launch"
+      }
+    },
+    "services": {
+      "title": "Services",
+      "items": {
+        "3d-interactive": {
+          "title": "3D & Interactive Experiences",
+          "description": "WebGL/Three.js product configurators, showrooms, and technical visualizations optimized for Core Web Vitals."
+        },
+        "web-development": {
+          "title": "Web Development",
+          "description": "High-performance marketing sites, SaaS portals, and dashboards on React/Next.js with SEO and speed baked in."
+        },
+        "ux-ui-design": {
+          "title": "UX/UI & Design Systems",
+          "description": "User-centric interfaces designed with empathy and precision, focused on conversion."
+        },
+        "mobile-apps": {
+          "title": "Mobile Apps",
+          "description": "Cross-platform apps with React Native/Flutter, from build to store publish and ongoing maintenance."
+        },
+        "backend-apis": {
+          "title": "Backend & APIs",
+          "description": "Secure REST/GraphQL services on Node.js/Nest/Express, data models, and integrations with payments/CRM/ERP."
+        },
+        "devops": {
+          "title": "DevOps & Reliability",
+          "description": "CI/CD, AWS cloud foundations, observability, security hardening, and cost/performance optimization."
+        },
+        "custom-software": {
+          "title": "Custom Business Applications",
+          "description": "Tailor-made web, mobile, and internal software that streamlines operations and scales with your business."
+        },
+        "seo-strategy": {
+          "title": "SEO - Discovery & Strategy",
+          "description": "Outcome-focused workshops, roadmaps, KPIs, and risk framing before we write code."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Featured Works",
+      "title": "Featured Works",
+      "description": "Swipe through the gallery or use the arrows to jump between projects.",
+      "progress": "Progress",
+      "aria": {
+        "previous": "View previous project",
+        "next": "View next project",
+        "goTo": "Go to project {{index}}"
+      }
+    },
+    "audience": {
+      "badge": "Current Focus",
+      "title": "Competencies & Large-Scale Projects",
+      "description": "We focus on AI, Big Data, and products that run in real production environments and government systems.",
+      "cards": {
+        "aiGames": {
+          "title": "AI for Games",
+          "description": "Intelligent agents, adaptive gameplay, and procedural worlds for major game productions.",
+          "points": [
+            "NPC behavior and RL simulations for live-ops",
+            "Dynamic balance and real-time difficulty tuning",
+            "Content generation pipelines and player telemetry"
+          ]
+        },
+        "enterpriseSecurity": {
+          "title": "Enterprise AI Security",
+          "description": "Our product: video analytics and monitoring for industrial sites. Automating access control and preventing incidents.",
+          "points": [
+            "Computer vision for perimeter and access control",
+            "Anomaly detection and alert playbooks",
+            "Integration with infrastructure and SOC reporting"
+          ]
+        },
+        "govBigData": {
+          "title": "Gov Big Data (Greece)",
+          "description": "National-scale datasets for Greek governmental inspectorates: ingestion, cleansing, and analytics.",
+          "points": [
+            "ETL/ELT pipelines and data quality",
+            "Risk scoring and analytical data marts",
+            "Security, audit, and regulatory compliance"
+          ]
+        }
+      }
+    },
+    "techStack": {
+      "badge": "Powering The Future",
+      "title": "Our Tech Stack",
+      "lampAlt": "Pendant Lamp"
+    },
+    "process": {
+      "badge": "Delivery System",
+      "title": "How We Work",
+      "description": "Clear alignment, rapid iteration, and measurable checkpoints keep every engagement moving fast without sacrificing quality.",
+      "steps": {
+        "discover": {
+          "kicker": "Step 01",
+          "title": "Discover",
+          "description": "Align on goals, constraints, and success metrics before design and development begin."
+        },
+        "design": {
+          "kicker": "Step 02",
+          "title": "Design",
+          "description": "Prototype fast, validate early, and lock a system that scales across every screen."
+        },
+        "build": {
+          "kicker": "Step 03",
+          "title": "Build",
+          "description": "Ship production-grade code with weekly demos, QA checks, and performance budgets."
+        },
+        "launch": {
+          "kicker": "Step 04",
+          "title": "Launch",
+          "description": "Harden, monitor, and optimize after release so results keep compounding."
+        }
+      }
+    },
+    "contact": {
+      "title": "Start a Project",
+      "subtitle": "Tell us about your vision. We'll build the reality.",
+      "successTitle": "Message Received",
+      "successDescription": "We'll analyze your request and orbit back to you shortly.",
+      "labels": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "projectType": "Project Type",
+        "brief": "Project Brief"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "projectType": "Select a project type",
+        "customType": "Custom project type (tell us what you need)",
+        "brief": "Tell us about the goals, timeline, and tech requirements..."
+      },
+      "projectTypes": [
+        "3D & Interactive Experiences",
+        "Web Development",
+        "UX/UI & Design Systems",
+        "Mobile Apps",
+        "Backend & APIs",
+        "DevOps & Reliability",
+        "Custom Business Applications"
+      ],
+      "projectTypeOther": "Other (write below)",
+      "projectTypeHint": "Choose one of our services or describe yours.",
+      "submit": "Launch Project",
+      "customTypeAria": "Custom project type"
+    }
   }
 }

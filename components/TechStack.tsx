@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { TECH_STACK } from '../constants';
 
 const TechStack: React.FC = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
   const lampRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     let rafId: number | null = null;
@@ -56,8 +58,10 @@ const TechStack: React.FC = () => {
       <div className="absolute inset-0 bg-slate-950/60 z-10 pointer-events-none bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/80" />
 
       <div className="container mx-auto px-6 mb-6 relative z-20 text-center">
-         <span className="text-cyan-500 font-bold tracking-widest uppercase text-sm">Powering The Future</span>
-         <h2 className="text-3xl font-display font-bold text-white mt-2">Our Tech Stack</h2>
+         <span className="text-cyan-500 font-bold tracking-widest uppercase text-sm">
+           {t('home.techStack.badge')}
+         </span>
+         <h2 className="text-3xl font-display font-bold text-white mt-2">{t('home.techStack.title')}</h2>
 
          {/* Chandelier with spotlight effect */}
          <div className="relative mt-8 flex justify-center">
@@ -65,7 +69,7 @@ const TechStack: React.FC = () => {
            <div ref={lampRef} className="relative z-30">
               <img
                 src="/light.png"
-                alt="Pendant Lamp"
+                alt={t('home.techStack.lampAlt')}
                 loading="lazy"
                 decoding="async"
                 className="w-24 h-24 sm:w-32 sm:h-32 object-contain"

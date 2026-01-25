@@ -1,19 +1,183 @@
 {
   "nav": {
-    "services": "Services",
-    "projects": "Projects",
-    "process": "Process",
-    "about": "About",
+    "services": "Υπηρεσίες",
+    "projects": "Έργα",
+    "process": "Διαδικασία",
+    "about": "Σχετικά",
     "portfolio": "Portfolio",
-    "contact": "Contact",
-    "careers": "Careers",
+    "contact": "Επικοινωνία",
+    "careers": "Καριέρα",
     "impressum": "Impressum",
-    "privacy": "Privacy Policy",
+    "privacy": "Πολιτική Απορρήτου",
     "cookies": "Cookies",
-    "startProject": "Start Project"
+    "startProject": "Ξεκινήστε έργο"
   },
   "language": {
     "english": "EN",
     "greek": "EL"
+  },
+  "home": {
+    "hero": {
+      "badge": "Web Engineering Επόμενης Γενιάς",
+      "title": "Δημιουργούμε τολμηρές web εμπειρίες σε <highlight>3D</highlight>.",
+      "description": "Σχεδιάζουμε και υλοποιούμε ολοκληρωμένα ψηφιακά προϊόντα: 3D web εμπειρίες, high-performance ιστοσελίδες, SaaS πλατφόρμες, mobile apps, ασφαλή APIs και cloud/QA, ώστε το προϊόν σας να ξεχωρίζει και να κλιμακώνεται.",
+      "ctaPrimary": "Ξεκινήστε το έργο σας",
+      "ctaSecondary": "Δείτε τη δουλειά μας",
+      "portfolioAria": "Δείτε το portfolio μας",
+      "scrollHint": "Κάντε scroll για εξερεύνηση",
+      "componentsLabel": "Στοιχεία",
+      "code": {
+        "compiling": "Μεταγλώττιση shaders...",
+        "success": "Το build ολοκληρώθηκε!",
+        "time": "Χρόνος: {{time}}",
+        "ready": "// Έτοιμο για εκτόξευση"
+      }
+    },
+    "services": {
+      "title": "Υπηρεσίες",
+      "items": {
+        "3d-interactive": {
+          "title": "3D & Διαδραστικές Εμπειρίες",
+          "description": "WebGL/Three.js configurators, virtual showrooms και τεχνικές 3D οπτικοποιήσεις με βελτιστοποίηση για Core Web Vitals."
+        },
+        "web-development": {
+          "title": "Ανάπτυξη Web",
+          "description": "Ιστοσελίδες υψηλής απόδοσης για marketing, SaaS πλατφόρμες (dashboards) με React/Next.js, με έμφαση στο SEO και την ταχύτητα από την αρχή."
+        },
+        "ux-ui-design": {
+          "title": "UX/UI & Design Systems",
+          "description": "User-centric διεπαφές σχεδιασμένες με ακρίβεια και έμφαση στη μετατροπή."
+        },
+        "mobile-apps": {
+          "title": "Mobile Apps",
+          "description": "Cross-platform εφαρμογές με React Native/Flutter, από την ανάπτυξη έως τη δημοσίευση στα app stores και τη συνεχή υποστήριξη."
+        },
+        "backend-apis": {
+          "title": "Backend & APIs",
+          "description": "Ασφαλείς υπηρεσίες REST/GraphQL με Node.js, Nest και Express, μοντέλα δεδομένων και διασυνδέσεις με συστήματα πληρωμών, CRM και ERP."
+        },
+        "devops": {
+          "title": "DevOps & Αξιοπιστία",
+          "description": "CI/CD, υποδομές AWS cloud, παρατηρησιμότητα (observability), ενίσχυση ασφάλειας και βελτιστοποίηση κόστους/απόδοσης."
+        },
+        "custom-software": {
+          "title": "Εξατομικευμένες Επιχειρησιακές Εφαρμογές",
+          "description": "Εξατομικευμένο λογισμικό για web, mobile και εσωτερικά συστήματα, που απλοποιεί τις διαδικασίες και κλιμακώνεται μαζί με την επιχείρησή σας."
+        },
+        "seo-strategy": {
+          "title": "SEO - Έρευνα & Στρατηγική",
+          "description": "Workshops στρατηγικής, roadmaps, KPIs και αξιολόγηση ρίσκου πριν ξεκινήσουμε τον κώδικα."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Επιλεγμένα έργα",
+      "title": "Επιλεγμένα έργα",
+      "description": "Κάντε swipe στη συλλογή ή χρησιμοποιήστε τα βέλη για να μεταβείτε στα έργα.",
+      "progress": "Πρόοδος",
+      "aria": {
+        "previous": "Προβολή προηγούμενου έργου",
+        "next": "Προβολή επόμενου έργου",
+        "goTo": "Μετάβαση στο έργο {{index}}"
+      }
+    },
+    "audience": {
+      "badge": "Τρέχουσα εστίαση",
+      "title": "Ικανότητες & Έργα Μεγάλης Κλίμακας",
+      "description": "Εστιάζουμε σε λύσεις AI, Big Data και προϊόντα που λειτουργούν σε πραγματικά περιβάλλοντα παραγωγής (production) και κυβερνητικά συστήματα",
+      "cards": {
+        "aiGames": {
+          "title": "AI για Games",
+          "description": "Έξυπνοι πράκτορες, προσαρμοστικό gameplay και διαδικαστικά παραγόμενοι κόσμοι για μεγάλες παραγωγές παιχνιδιών.",
+          "points": [
+            "Συμπεριφορά NPC και RL simulations για live-ops",
+            "Δυναμική ισορροπία και ρύθμιση δυσκολίας σε πραγματικό χρόνο",
+            "Pipelines παραγωγής περιεχομένου και telemetry παικτών"
+          ]
+        },
+        "enterpriseSecurity": {
+          "title": "Ασφάλεια AI για Enterprise",
+          "description": "Το προϊόν μας: video analytics και monitoring για βιομηχανικούς χώρους, με αυτοματοποίηση πρόσβασης και αποτροπή συμβάντων.",
+          "points": [
+            "Computer vision για περίμετρο και έλεγχο πρόσβασης",
+            "Anomaly detection και playbooks ειδοποιήσεων",
+            "Διασύνδεση με υποδομές και SOC reporting"
+          ]
+        },
+        "govBigData": {
+          "title": "Gov Big Data (Ελλάδα)",
+          "description": "Δεδομένα εθνικής κλίμακας για ελληνικούς κρατικούς φορείς: ingestion, cleansing και analytics.",
+          "points": [
+            "ETL/ELT pipelines και ποιότητα δεδομένων (data quality)",
+            "Risk scoring και αναλυτικά data marts",
+            "Ασφάλεια, έλεγχος (audit) και κανονιστική συμμόρφωση"
+          ]
+        }
+      }
+    },
+    "techStack": {
+      "badge": "Τροφοδοτούμε το Μέλλον",
+      "title": "Το Τεχνολογικό μας Stack",
+      "lampAlt": "Κρεμαστό φωτιστικό"
+    },
+    "process": {
+      "badge": "Σύστημα Παράδοσης",
+      "title": "Πώς δουλεύουμε",
+      "description": "Σαφής ευθυγράμμιση, γρήγορη επανάληψη και μετρήσιμα checkpoints κρατούν κάθε συνεργασία γρήγορη χωρίς να χάνεται η ποιότητα.",
+      "steps": {
+        "discover": {
+          "kicker": "Βήμα 01",
+          "title": "Ανακάλυψη",
+          "description": "Ευθυγραμμίζουμε στόχους, περιορισμούς και KPIs πριν ξεκινήσουν ο σχεδιασμός και η ανάπτυξη."
+        },
+        "design": {
+          "kicker": "Βήμα 02",
+          "title": "Σχεδιασμός",
+          "description": "Κάνουμε prototypes γρήγορα, validate νωρίς και κλειδώνουμε ένα σύστημα που κλιμακώνεται σε κάθε οθόνη."
+        },
+        "build": {
+          "kicker": "Βήμα 03",
+          "title": "Υλοποίηση",
+          "description": "Παραδίδουμε production-grade κώδικα με εβδομαδιαία demos, QA checks και performance budgets."
+        },
+        "launch": {
+          "kicker": "Βήμα 04",
+          "title": "Λανσάρισμα",
+          "description": "Σκληραίνουμε, παρακολουθούμε και βελτιστοποιούμε μετά το release ώστε τα αποτελέσματα να πολλαπλασιάζονται."
+        }
+      }
+    },
+    "contact": {
+      "title": "Ξεκινήστε ένα έργο",
+      "subtitle": "Πείτε μας το όραμά σας. Θα το κάνουμε πραγματικότητα.",
+      "successTitle": "Το μήνυμα ελήφθη",
+      "successDescription": "Θα αναλύσουμε το αίτημά σας και θα επανέλθουμε σύντομα.",
+      "labels": {
+        "name": "Ονοματεπώνυμο",
+        "email": "Email",
+        "projectType": "Είδος έργου",
+        "brief": "Περιγραφή έργου"
+      },
+      "placeholders": {
+        "name": "Γιάννης Παπαδόπουλος",
+        "email": "giannis@example.com",
+        "projectType": "Επιλέξτε είδος έργου",
+        "customType": "Προσαρμοσμένο είδος έργου (πείτε μας τι χρειάζεστε)",
+        "brief": "Πείτε μας για τους στόχους, το χρονοδιάγραμμα και τις τεχνικές απαιτήσεις..."
+      },
+      "projectTypes": [
+        "3D & Διαδραστικές Εμπειρίες",
+        "Ανάπτυξη Web",
+        "UX/UI & Design Systems",
+        "Mobile Apps",
+        "Backend & APIs",
+        "DevOps & Αξιοπιστία",
+        "Εξατομικευμένες Επιχειρησιακές Εφαρμογές"
+      ],
+      "projectTypeOther": "Άλλο (γράψτε παρακάτω)",
+      "projectTypeHint": "Επιλέξτε μια υπηρεσία ή περιγράψτε τη δική σας.",
+      "submit": "Εκκίνηση έργου",
+      "customTypeAria": "Προσαρμοσμένο είδος έργου"
+    }
   }
 }

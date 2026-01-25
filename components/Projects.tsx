@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
@@ -7,6 +8,7 @@ const Projects: React.FC = () => {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalSlides = PROJECTS.length;
+  const { t } = useTranslation();
 
   const scrollToSlide = (index: number) => {
     const clampedIndex = Math.max(0, Math.min(index, totalSlides - 1));
@@ -55,12 +57,12 @@ const Projects: React.FC = () => {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div className="max-w-xl">
-            <span className="text-xs uppercase tracking-[0.35em] text-cyan-300">Featured Works</span>
+            <span className="text-xs uppercase tracking-[0.35em] text-cyan-300">{t('home.projects.badge')}</span>
             <h2 className="mt-4 text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
-              Featured Works
+              {t('home.projects.title')}
             </h2>
             <p className="text-slate-400 mt-4">
-              Swipe through the gallery or use the arrows to jump between projects.
+              {t('home.projects.description')}
             </p>
           </div>
 
@@ -76,7 +78,7 @@ const Projects: React.FC = () => {
                 onClick={() => scrollToSlide(activeIndex - 1)}
                 disabled={!canGoPrev}
                 className="p-3 rounded-full border border-white/10 text-slate-200 hover:bg-white/10 transition disabled:opacity-40 disabled:cursor-not-allowed"
-                aria-label="View previous project"
+                aria-label={t('home.projects.aria.previous')}
               >
                 <ArrowLeft size={20} />
               </button>
@@ -85,7 +87,7 @@ const Projects: React.FC = () => {
                 onClick={() => scrollToSlide(activeIndex + 1)}
                 disabled={!canGoNext}
                 className="p-3 rounded-full border border-white/10 text-slate-200 hover:bg-white/10 transition disabled:opacity-40 disabled:cursor-not-allowed"
-                aria-label="View next project"
+                aria-label={t('home.projects.aria.next')}
               >
                 <ArrowRight size={20} />
               </button>
@@ -183,13 +185,13 @@ const Projects: React.FC = () => {
                     ? 'w-8 bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.6)]'
                     : 'w-3 bg-white/20 hover:bg-white/40'
                 }`}
-                aria-label={`Go to project ${index + 1}`}
+                aria-label={t('home.projects.aria.goTo', { index: index + 1 })}
               />
             ))}
           </div>
 
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-slate-500">
-            <span>Progress</span>
+            <span>{t('home.projects.progress')}</span>
             <div className="h-1 w-32 rounded-full bg-white/10">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-sky-500"
