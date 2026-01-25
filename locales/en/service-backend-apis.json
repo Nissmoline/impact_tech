@@ -1,0 +1,91 @@
+{
+  "title": "Backend & APIs",
+  "description": "Secure REST/GraphQL services on Node.js/Nest/Express, data models, and integrations with payments/CRM/ERP.",
+  "hero": {
+    "headline": "Scalable APIs That Power Growth",
+    "subheadline": "Production-grade backend systems, REST/GraphQL APIs, and secure integrations built on Node.js, PostgreSQL, and modern cloud infrastructure.",
+    "cta": "Build Your Backend"
+  },
+  "benefits": [
+    {
+      "title": "RESTful & GraphQL APIs",
+      "description": "Well-documented, versioned APIs with strong typing, validation, and error handling."
+    },
+    {
+      "title": "Database Design & Optimization",
+      "description": "Normalized schemas, indexing strategies, and query optimization for PostgreSQL/MongoDB."
+    },
+    {
+      "title": "Authentication & Authorization",
+      "description": "JWT, OAuth2, RBAC, and multi-tenant security patterns that scale with your product."
+    },
+    {
+      "title": "Third-Party Integrations",
+      "description": "Payment gateways (Stripe, PayPal), CRMs (Salesforce), ERPs, and custom API connectors."
+    },
+    {
+      "title": "Caching & Performance",
+      "description": "Redis caching, CDN integration, and database read replicas to handle high traffic."
+    },
+    {
+      "title": "Observability & Monitoring",
+      "description": "Structured logging, metrics, alerting, and distributed tracing for production confidence."
+    }
+  ],
+  "process": [
+    {
+      "title": "API Design & Data Modeling",
+      "description": "Define endpoints, schemas, and access patterns based on frontend needs and business logic."
+    },
+    {
+      "title": "Development & Testing",
+      "description": "Type-safe Node.js development with automated unit/integration tests and API contract testing."
+    },
+    {
+      "title": "Security & Compliance",
+      "description": "Penetration testing, encryption at rest/in-transit, and compliance prep (GDPR, SOC 2)."
+    },
+    {
+      "title": "Deployment & Scaling",
+      "description": "Containerized deployments, auto-scaling, and zero-downtime releases on AWS/GCP."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Backend Frameworks",
+      "items": [
+        { "name": "Node.js", "description": "JavaScript runtime" },
+        { "name": "NestJS", "description": "Enterprise Node framework" },
+        { "name": "Express", "description": "Minimal web framework" },
+        { "name": "TypeScript", "description": "Type-safe backend code" }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        { "name": "PostgreSQL", "description": "Relational database" },
+        { "name": "MongoDB", "description": "Document database" },
+        { "name": "Redis", "description": "In-memory cache" },
+        { "name": "Prisma/TypeORM", "description": "ORM/query builder" }
+      ]
+    },
+    {
+      "category": "APIs & Integration",
+      "items": [
+        { "name": "GraphQL (Apollo)", "description": "Query language" },
+        { "name": "REST", "description": "HTTP APIs" },
+        { "name": "WebSockets", "description": "Real-time communication" },
+        { "name": "Message Queues", "description": "Bull/RabbitMQ" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

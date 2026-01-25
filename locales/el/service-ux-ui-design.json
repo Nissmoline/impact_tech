@@ -1,0 +1,90 @@
+{
+  "title": "UX/UI & Συστήματα Σχεδίασης",
+  "description": "Διεπαφές με επίκεντρο τον χρήστη, σχεδιασμένες με ακρίβεια και έμφαση στη μετατροπή.",
+  "hero": {
+    "headline": "Σχεδιασμός που μετατρέπει και κλιμακώνεται",
+    "subheadline": "Διεπαφές και design systems με επίκεντρο τον χρήστη που ισορροπούν αισθητική και χρηστικότητα, σχεδιασμένα για ανάπτυξη και συνέπεια.",
+    "cta": "Αναβαθμίστε τον σχεδιασμό σας"
+  },
+  "benefits": [
+    {
+      "title": "Έρευνα με επίκεντρο τον χρήστη",
+      "description": "Συνεντεύξεις, personas, journey maps και usability testing για αποφάσεις σχεδιασμού βασισμένες σε πραγματικές ανάγκες."
+    },
+    {
+      "title": "UI με στόχο τη μετατροπή",
+      "description": "Κάθε στοιχείο βελτιστοποιημένο για σαφήνεια, εμπιστοσύνη και action, με βάση αρχές UX και A/B testing."
+    },
+    {
+      "title": "Κλιμακούμενα design systems",
+      "description": "Component libraries, design tokens και τεκμηρίωση που κρατούν τις ομάδες ευθυγραμμισμένες και παραδίδουν πιο γρήγορα."
+    },
+    {
+      "title": "Προσβασιμότητα από προεπιλογή",
+      "description": "Patterns συμβατά με WCAG, πλοήγηση με πληκτρολόγιο και συμπεριληπτικός σχεδιασμός από τα wireframes έως το production."
+    },
+    {
+      "title": "Κίνηση & απόλαυση",
+      "description": "Στοχευμένα animations και micro-interactions που κατευθύνουν την προσοχή χωρίς περισπασμούς."
+    },
+    {
+      "title": "Handoff από design σε dev",
+      "description": "Δομημένα Figma specs, component variants και responsive κανόνες που η ομάδα engineering μπορεί να υλοποιήσει άμεσα."
+    }
+  ],
+  "process": [
+    {
+      "title": "Έρευνα & στρατηγική",
+      "description": "Συνεντεύξεις χρηστών, ανταγωνιστική ανάλυση και UX audits για εντοπισμό ευκαιριών και περιορισμών."
+    },
+    {
+      "title": "Wireframes & ροές",
+      "description": "Low-fidelity wireframes και user flows που επικυρώνονται με stakeholders πριν τον visual σχεδιασμό."
+    },
+    {
+      "title": "Visual design & prototyping",
+      "description": "High-fidelity mockups στο Figma με interactive prototypes για usability testing."
+    },
+    {
+      "title": "Design system & handoff",
+      "description": "Component library, design tokens και developer-friendly specs για απρόσκοπτη υλοποίηση."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Εργαλεία σχεδίασης",
+      "items": [
+        { "name": "Figma", "description": "UI design & prototyping" },
+        { "name": "FigJam", "description": "Συνεργατικό whiteboarding" },
+        { "name": "Maze", "description": "Πλατφόρμα user testing" },
+        { "name": "Optimal Workshop", "description": "IA και tree testing" }
+      ]
+    },
+    {
+      "category": "Design systems",
+      "items": [
+        { "name": "Design Tokens", "description": "Κλιμακούμενες μεταβλητές σχεδίασης" },
+        { "name": "Storybook", "description": "Τεκμηρίωση components" },
+        { "name": "Radix UI", "description": "Accessible primitives" },
+        { "name": "shadcn/ui", "description": "Component library" }
+      ]
+    },
+    {
+      "category": "Συνεργασία",
+      "items": [
+        { "name": "Figma Dev Mode", "description": "Design-to-code ροή" },
+        { "name": "Zeplin/Zeroheight", "description": "Handoff προς developers" },
+        { "name": "Notion/Miro", "description": "Τεκμηρίωση & workshops" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

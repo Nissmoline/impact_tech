@@ -1,0 +1,91 @@
+{
+  "title": "SEO - Discovery & Strategy",
+  "description": "Outcome-focused workshops, roadmaps, KPIs, and risk framing before we write code.",
+  "hero": {
+    "headline": "SEO Strategy That Drives Organic Growth",
+    "subheadline": "Technical SEO audits, content strategy, and Core Web Vitals optimization to rank higher and convert better.",
+    "cta": "Boost Your SEO"
+  },
+  "benefits": [
+    {
+      "title": "Technical SEO Audits",
+      "description": "Crawl analysis, site architecture review, and structured data validation to fix foundational issues."
+    },
+    {
+      "title": "Core Web Vitals Optimization",
+      "description": "LCP, FID, CLS improvements through performance engineering and rendering strategies."
+    },
+    {
+      "title": "Content Strategy & Mapping",
+      "description": "Keyword research, topic clustering, and content roadmaps aligned with search intent."
+    },
+    {
+      "title": "On-Page SEO",
+      "description": "Meta tags, semantic HTML, internal linking, and schema markup for better indexing."
+    },
+    {
+      "title": "Link Building & Outreach",
+      "description": "White-hat backlink strategies, digital PR, and partnership opportunities to build authority."
+    },
+    {
+      "title": "Analytics & Reporting",
+      "description": "GA4/Search Console dashboards, rank tracking, and ROI measurement for continuous optimization."
+    }
+  ],
+  "process": [
+    {
+      "title": "SEO Audit & Discovery",
+      "description": "Crawl site, analyze competitors, review analytics, and identify quick wins + long-term opportunities."
+    },
+    {
+      "title": "Strategy & Roadmap",
+      "description": "Prioritize fixes, define KPIs, and build quarterly SEO roadmap aligned with business goals."
+    },
+    {
+      "title": "Implementation & Optimization",
+      "description": "Fix technical issues, optimize content, improve Core Web Vitals, and implement tracking."
+    },
+    {
+      "title": "Monitoring & Iteration",
+      "description": "Track rankings, organic traffic, and conversions; adjust strategy based on performance data."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "SEO Tools",
+      "items": [
+        { "name": "Google Search Console", "description": "Site performance monitoring" },
+        { "name": "Screaming Frog", "description": "Technical SEO crawler" },
+        { "name": "Ahrefs/SEMrush", "description": "Competitive analysis" },
+        { "name": "Google Analytics 4", "description": "Behavior & conversion tracking" }
+      ]
+    },
+    {
+      "category": "Technical SEO",
+      "items": [
+        { "name": "Schema Markup", "description": "Structured data (JSON-LD)" },
+        { "name": "Core Web Vitals", "description": "Performance metrics" },
+        { "name": "Robots.txt/Sitemaps", "description": "Crawl optimization" },
+        { "name": "Canonical Tags", "description": "Duplicate content handling" }
+      ]
+    },
+    {
+      "category": "Content & Analysis",
+      "items": [
+        { "name": "Surfer SEO", "description": "Content optimization" },
+        { "name": "Google Trends", "description": "Search trends analysis" },
+        { "name": "AnswerThePublic", "description": "Question research" },
+        { "name": "Hotjar/Clarity", "description": "User behavior insights" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "title": "DevOps & Αξιοπιστία",
+  "description": "CI/CD, cloud υποδομές AWS, observability, σκλήρυνση ασφάλειας και βελτιστοποίηση κόστους/απόδοσης.",
+  "hero": {
+    "headline": "Παραδώστε πιο γρήγορα, κοιμηθείτε καλύτερα",
+    "subheadline": "DevOps επιπέδου production: CI/CD pipelines, cloud υποδομή, monitoring και ασφάλεια που κλιμακώνονται με την ομάδα σας.",
+    "cta": "Βελτιστοποιήστε την υποδομή σας"
+  },
+  "benefits": [
+    {
+      "title": "Αυτοματοποιημένα CI/CD pipelines",
+      "description": "Workflows σε GitHub Actions, GitLab CI ή CircleCI που δοκιμάζουν, χτίζουν και κάνουν deploy με κάθε commit."
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Templates σε Terraform/CloudFormation για αναπαραγώγιμα, version-controlled cloud περιβάλλοντα."
+    },
+    {
+      "title": "Ορχήστρωση containers",
+      "description": "Deployments σε Docker + Kubernetes με auto-scaling, health checks και rolling updates."
+    },
+    {
+      "title": "Observability & alerting",
+      "description": "Prometheus, Grafana και ELK stack για metrics, logs και distributed tracing."
+    },
+    {
+      "title": "Σκλήρυνση ασφάλειας",
+      "description": "Least-privilege IAM, secrets management, network segmentation και vulnerability scanning."
+    },
+    {
+      "title": "Βελτιστοποίηση κόστους",
+      "description": "Right-sizing instances, reserved capacity και πολιτικές auto-scaling για μείωση κόστους cloud."
+    }
+  ],
+  "process": [
+    {
+      "title": "Audit υποδομών",
+      "description": "Αξιολογούμε το υπάρχον setup, εντοπίζουμε bottlenecks, κενά ασφάλειας και σπατάλες κόστους."
+    },
+    {
+      "title": "Αρχιτεκτονική & σχεδιασμός",
+      "description": "Σχεδιάζουμε cloud αρχιτεκτονική, επιλέγουμε managed services και ορίζουμε δομή IaC."
+    },
+    {
+      "title": "Υλοποίηση & μετάβαση",
+      "description": "Υλοποιούμε pipelines, κάνουμε provision υποδομών και μεταφέρουμε workloads χωρίς downtime."
+    },
+    {
+      "title": "Monitoring & iteration",
+      "description": "Στήνουμε dashboards, alerts και runbooks για συνεχή βελτίωση και απόκριση σε incidents."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Cloud platforms",
+      "items": [
+        { "name": "AWS", "description": "Amazon Web Services" },
+        { "name": "Google Cloud", "description": "Υποδομή GCP" },
+        { "name": "Azure", "description": "Cloud της Microsoft" },
+        { "name": "Vercel/Netlify", "description": "Frontend hosting" }
+      ]
+    },
+    {
+      "category": "IaC & containers",
+      "items": [
+        { "name": "Terraform", "description": "Infrastructure as Code" },
+        { "name": "Docker", "description": "Containerization" },
+        { "name": "Kubernetes", "description": "Container orchestration" },
+        { "name": "Helm", "description": "Kubernetes package manager" }
+      ]
+    },
+    {
+      "category": "CI/CD & monitoring",
+      "items": [
+        { "name": "GitHub Actions", "description": "CI/CD automation" },
+        { "name": "GitLab CI", "description": "GitLab pipelines" },
+        { "name": "Prometheus/Grafana", "description": "Metrics & dashboards" },
+        { "name": "Sentry/DataDog", "description": "Error & performance tracking" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

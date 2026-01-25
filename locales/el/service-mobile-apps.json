@@ -1,0 +1,91 @@
+{
+  "title": "Εφαρμογές για Κινητά",
+  "description": "Cross-platform εφαρμογές με React Native/Flutter, από την ανάπτυξη έως τη δημοσίευση στα stores και τη συνεχή υποστήριξη.",
+  "hero": {
+    "headline": "Mobile apps με ποιότητα native και ταχύτητα cross-platform",
+    "subheadline": "Apps σε React Native και Flutter που μοιάζουν native, παραδίδονται γρηγορότερα και μοιράζονται κώδικα σε iOS και Android.",
+    "cta": "Χτίστε την mobile εφαρμογή σας"
+  },
+  "benefits": [
+    {
+      "title": "Αποδοτικότητα cross-platform",
+      "description": "Ένας κώδικας για iOS και Android, μειώνοντας τον χρόνο ανάπτυξης και το κόστος συντήρησης έως και 60%."
+    },
+    {
+      "title": "Native απόδοση",
+      "description": "Animations 60 FPS, UI patterns ειδικά ανά πλατφόρμα και βελτιστοποιημένα builds που μοιάζουν πραγματικά native."
+    },
+    {
+      "title": "Offline-first αρχιτεκτονική",
+      "description": "Τοπικές βάσεις, στρατηγικές συγχρονισμού και ανθεκτικό UX που λειτουργεί ακόμη και όταν πέφτει η σύνδεση."
+    },
+    {
+      "title": "Push notifications & deep linking",
+      "description": "Πλήρης ενσωμάτωση με FCM/APNs, δυναμικά links και attribution tracking για επανενεργοποίηση χρηστών."
+    },
+    {
+      "title": "Βελτιστοποίηση store",
+      "description": "Βελτιστοποίηση καταχωρίσεων σε App Store/Play Store, διαχείριση reviews και καθοδήγηση συμμόρφωσης."
+    },
+    {
+      "title": "CI/CD & testing",
+      "description": "Αυτοματοποιημένα builds, E2E testing σε πραγματικές συσκευές και OTA updates για γρήγορο iteration."
+    }
+  ],
+  "process": [
+    {
+      "title": "Απαιτήσεις & επιλογή πλατφόρμας",
+      "description": "Ορίζουμε λειτουργίες, επιλέγουμε React Native/Flutter βάσει περιορισμών και σχεδιάζουμε την αρχιτεκτονική."
+    },
+    {
+      "title": "Σχεδιασμός & πρωτοτυποποίηση",
+      "description": "UI/UX patterns ανά πλατφόρμα, interactive prototypes και design system προσαρμοσμένο για mobile."
+    },
+    {
+      "title": "Ανάπτυξη & testing",
+      "description": "Cross-platform ανάπτυξη με δοκιμές σε πραγματικές συσκευές, profiling απόδοσης και code reviews."
+    },
+    {
+      "title": "Υποβολή στο store & υποστήριξη",
+      "description": "Υποβολή σε App Store/Play Store, έλεγχος συμμόρφωσης και συνεχή συντήρηση + updates."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frameworks",
+      "items": [
+        { "name": "React Native", "description": "JavaScript framework για mobile" },
+        { "name": "Flutter", "description": "Dart framework για mobile" },
+        { "name": "Expo", "description": "Toolchain για React Native" },
+        { "name": "TypeScript", "description": "Type-safe ανάπτυξη" }
+      ]
+    },
+    {
+      "category": "Κατάσταση & αποθήκευση",
+      "items": [
+        { "name": "Redux/Zustand", "description": "Διαχείριση κατάστασης" },
+        { "name": "React Query", "description": "Server state" },
+        { "name": "Realm/SQLite", "description": "Τοπικές βάσεις δεδομένων" },
+        { "name": "AsyncStorage", "description": "Αποθήκευση key-value" }
+      ]
+    },
+    {
+      "category": "DevOps & testing",
+      "items": [
+        { "name": "Fastlane", "description": "CI/CD αυτοματοποίηση" },
+        { "name": "Detox", "description": "E2E testing" },
+        { "name": "Firebase", "description": "Analytics & Crashlytics" },
+        { "name": "CodePush", "description": "OTA updates" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

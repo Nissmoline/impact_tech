@@ -1,0 +1,90 @@
+{
+  "title": "UX/UI & Design Systems",
+  "description": "User-centric interfaces designed with empathy and precision, focused on conversion.",
+  "hero": {
+    "headline": "Design That Converts & Scales",
+    "subheadline": "User-centric interfaces and design systems that balance aesthetics with usability, all built for growth and consistency.",
+    "cta": "Transform Your Design"
+  },
+  "benefits": [
+    {
+      "title": "User-Centered Research",
+      "description": "Interviews, personas, journey maps, and usability testing to ground design decisions in real user needs."
+    },
+    {
+      "title": "Conversion-Driven UI",
+      "description": "Every element optimized for clarity, trust, and action based on UX principles and A/B testing."
+    },
+    {
+      "title": "Scalable Design Systems",
+      "description": "Component libraries, design tokens, and documentation that keep teams aligned and shipping faster."
+    },
+    {
+      "title": "Accessibility by Default",
+      "description": "WCAG-compliant patterns, keyboard navigation, and inclusive design from wireframes to production."
+    },
+    {
+      "title": "Motion & Delight",
+      "description": "Purposeful animations and micro-interactions that guide attention without distraction."
+    },
+    {
+      "title": "Design-to-Dev Handoff",
+      "description": "Structured Figma specs, component variants, and responsive rules that engineering can implement directly."
+    }
+  ],
+  "process": [
+    {
+      "title": "Research & Strategy",
+      "description": "User interviews, competitive analysis, and UX audits to identify opportunities and constraints."
+    },
+    {
+      "title": "Wireframes & Flows",
+      "description": "Low-fidelity wireframes and user flows validated with stakeholders before visual design."
+    },
+    {
+      "title": "Visual Design & Prototyping",
+      "description": "High-fidelity mockups in Figma with interactive prototypes for usability testing."
+    },
+    {
+      "title": "Design System & Handoff",
+      "description": "Component library, design tokens, and developer-friendly specs for seamless implementation."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Design Tools",
+      "items": [
+        { "name": "Figma", "description": "UI design & prototyping" },
+        { "name": "FigJam", "description": "Collaborative whiteboarding" },
+        { "name": "Maze", "description": "User testing platform" },
+        { "name": "Optimal Workshop", "description": "IA and tree testing" }
+      ]
+    },
+    {
+      "category": "Design Systems",
+      "items": [
+        { "name": "Design Tokens", "description": "Scalable design variables" },
+        { "name": "Storybook", "description": "Component documentation" },
+        { "name": "Radix UI", "description": "Accessible primitives" },
+        { "name": "shadcn/ui", "description": "Component library" }
+      ]
+    },
+    {
+      "category": "Collaboration",
+      "items": [
+        { "name": "Figma Dev Mode", "description": "Design-to-code workflow" },
+        { "name": "Zeplin/Zeroheight", "description": "Developer handoff" },
+        { "name": "Notion/Miro", "description": "Documentation & workshops" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

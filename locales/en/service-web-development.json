@@ -1,0 +1,92 @@
+{
+  "title": "Web Development",
+  "description": "High-performance marketing sites, SaaS portals, and dashboards on React/Next.js with SEO and speed baked in.",
+  "hero": {
+    "headline": "Fast, Scalable Web Applications",
+    "subheadline": "High-performance marketing sites, SaaS portals, and dashboards built with React/Next.js, TypeScript, and modern best practices.",
+    "cta": "Build Your Web App"
+  },
+  "benefits": [
+    {
+      "title": "Performance-First Architecture",
+      "description": "SSR, ISR, and edge delivery strategies that keep pages loading under 2 seconds."
+    },
+    {
+      "title": "SEO Built-In",
+      "description": "Server-side rendering, semantic HTML, structured data, and Core Web Vitals optimization from day one."
+    },
+    {
+      "title": "Scalable Codebase",
+      "description": "Component-driven architecture with TypeScript, clear patterns, and design system integration."
+    },
+    {
+      "title": "Conversion-Focused UI",
+      "description": "Data-driven UX decisions, A/B testing ready, and micro-interactions that guide users to action."
+    },
+    {
+      "title": "Mobile-First Design",
+      "description": "Responsive layouts tested on real devices, progressive enhancement, and touch-optimized interfaces."
+    },
+    {
+      "title": "Analytics & Observability",
+      "description": "Built-in tracking, error monitoring, and performance metrics for continuous improvement."
+    }
+  ],
+  "process": [
+    {
+      "title": "Discovery & Planning",
+      "description": "Define requirements, user flows, technical architecture, and success metrics before any code."
+    },
+    {
+      "title": "Design & Prototyping",
+      "description": "High-fidelity mockups, interactive prototypes, and design system foundations validated with stakeholders."
+    },
+    {
+      "title": "Development & Testing",
+      "description": "Type-safe React/Next.js development with automated testing, code reviews, and CI/CD pipelines."
+    },
+    {
+      "title": "Launch & Optimization",
+      "description": "Deployment to production, performance monitoring, and iterative improvements based on real user data."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frontend",
+      "items": [
+        { "name": "React", "description": "UI library" },
+        { "name": "Next.js", "description": "React framework with SSR" },
+        { "name": "TypeScript", "description": "Type-safe JavaScript" },
+        { "name": "Tailwind CSS", "description": "Utility-first CSS" },
+        { "name": "Framer Motion", "description": "Animation library" }
+      ]
+    },
+    {
+      "category": "State & Data",
+      "items": [
+        { "name": "Zustand/Redux", "description": "State management" },
+        { "name": "TanStack Query", "description": "Server state management" },
+        { "name": "SWR", "description": "Data fetching" },
+        { "name": "GraphQL/REST", "description": "API integration" }
+      ]
+    },
+    {
+      "category": "Quality & Deployment",
+      "items": [
+        { "name": "Vitest/Jest", "description": "Testing framework" },
+        { "name": "Playwright", "description": "E2E testing" },
+        { "name": "ESLint/Prettier", "description": "Code quality" },
+        { "name": "Vercel/AWS", "description": "Deployment platforms" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

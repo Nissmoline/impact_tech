@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import Seo from '../../components/Seo';
 import ServiceDetail from '../../components/ServiceDetail';
@@ -15,10 +16,14 @@ import {
 
 const SEOStrategyPage: React.FC = () => {
   const { pathname } = useLocation();
-  const service = SERVICES.find(s => s.slug === 'seo-strategy');
+  const serviceSlug = 'seo-strategy';
+  const namespace = `service-${serviceSlug}`;
+  const { t } = useTranslation(namespace);
+  const service = SERVICES.find(s => s.slug === serviceSlug);
 
   if (!service) return null;
 
+  const serviceTitle = t('title', { defaultValue: service.title });
   const locale = getLocaleFromPath(pathname);
   const localizedSeo = SERVICE_SEO_EL[service.slug];
   const seo = locale === 'el' && localizedSeo
@@ -39,14 +44,14 @@ const SEOStrategyPage: React.FC = () => {
       locale,
     }),
     buildServiceSchema({
-      name: service.title,
+      name: serviceTitle,
       description: seo.description,
       url: canonicalUrl,
       locale,
     }),
     buildBreadcrumbSchema([
       { name: labels.home, url: homeUrl },
-      { name: service.title, url: canonicalUrl },
+      { name: serviceTitle, url: canonicalUrl },
     ]),
   ];
 

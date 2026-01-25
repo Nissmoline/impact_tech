@@ -1,0 +1,94 @@
+{
+  "title": "Εξατομικευμένες Επιχειρησιακές Εφαρμογές",
+  "description": "Εξατομικευμένο web, mobile και εσωτερικό λογισμικό που απλοποιεί λειτουργίες και κλιμακώνεται με την επιχείρησή σας.",
+  "hero": {
+    "headline": "Custom λογισμικό φτιαγμένο για την επιχείρησή σας",
+    "subheadline": "Σχεδιάζουμε και υλοποιούμε bespoke εφαρμογές που ψηφιοποιούν ροές εργασίας, συνδέουν τα συστήματά σας και προσφέρουν μετρήσιμη αποδοτικότητα.",
+    "cta": "Σχεδιάστε το custom έργο σας"
+  },
+  "benefits": [
+    {
+      "title": "Χτισμένο γύρω από το workflow σας",
+      "description": "Χαρτογραφούμε τον τρόπο που δουλεύει η ομάδα σας και παραδίδουμε λογισμικό που ταιριάζει στις πραγματικές διαδικασίες."
+    },
+    {
+      "title": "Αυτοματοποίηση διαδικασιών",
+      "description": "Αυτοματοποιούμε εγκρίσεις, ειδοποιήσεις και επαναλαμβανόμενες εργασίες για να αφαιρέσουμε bottlenecks."
+    },
+    {
+      "title": "Διασύνδεση συστημάτων",
+      "description": "Συνδέουμε CRMs, ERPs, payments και APIs ώστε τα δεδομένα να ρέουν χωρίς spreadsheets."
+    },
+    {
+      "title": "Κλιμακούμενη αρχιτεκτονική",
+      "description": "Modular υπηρεσίες και καθαρά APIs που μεγαλώνουν όσο αυξάνονται οι χρήσεις και οι ομάδες."
+    },
+    {
+      "title": "Ασφάλεια από τον σχεδιασμό",
+      "description": "Role-based πρόσβαση, audit trails και ασφαλής διαχείριση δεδομένων από την πρώτη μέρα."
+    },
+    {
+      "title": "Εύκολη συντήρηση",
+      "description": "Καθαρή τεκμηρίωση, testable κώδικας και σωστό handover για την εσωτερική σας ομάδα."
+    }
+  ],
+  "process": [
+    {
+      "title": "Ανακάλυψη & απαιτήσεις",
+      "description": "Καταγράφουμε επιχειρηματικούς στόχους, user flows και περιορισμούς πριν ξεκινήσει το build."
+    },
+    {
+      "title": "Σχεδιασμός λύσης",
+      "description": "UX, data models και τεχνική αρχιτεκτονική ευθυγραμμισμένα με τα συστήματά σας."
+    },
+    {
+      "title": "Υλοποίηση & διασύνδεση",
+      "description": "Αναπτύσσουμε, δοκιμάζουμε και συνδέουμε τη λύση με το υπάρχον stack σας."
+    },
+    {
+      "title": "Λανσάρισμα & βελτιστοποίηση",
+      "description": "Κάνουμε release με ασφάλεια, παρακολουθούμε αποτελέσματα και εξελίσσουμε το προϊόν μαζί με την ομάδα σας."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frontend & mobile",
+      "items": [
+        { "name": "React", "description": "Modern web UI" },
+        { "name": "Next.js", "description": "React framework έτοιμο για production" },
+        { "name": "React Native", "description": "Cross-platform mobile apps" },
+        { "name": "TypeScript", "description": "Type-safe application code" },
+        { "name": "Tailwind CSS", "description": "Υλοποίηση design system" }
+      ]
+    },
+    {
+      "category": "Backend & data",
+      "items": [
+        { "name": "Node.js", "description": "Υπηρεσίες API" },
+        { "name": "PostgreSQL", "description": "Σχεσιακή αποθήκευση δεδομένων" },
+        { "name": "MongoDB", "description": "Document databases" },
+        { "name": "Redis", "description": "Caching και queues" },
+        { "name": "GraphQL/REST", "description": "Ευέλικτος σχεδιασμός API" }
+      ]
+    },
+    {
+      "category": "Integrations & ops",
+      "items": [
+        { "name": "AWS", "description": "Cloud υποδομή" },
+        { "name": "Docker", "description": "Containerized services" },
+        { "name": "CI/CD", "description": "Αυτοματοποιημένα pipelines παράδοσης" },
+        { "name": "OAuth/SAML", "description": "Enterprise authentication" },
+        { "name": "Stripe/Payments", "description": "Billing integrations" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "title": "Custom Business Applications",
+  "description": "Tailor-made web, mobile, and internal software that streamlines operations and scales with your business.",
+  "hero": {
+    "headline": "Custom Software Built for Your Business",
+    "subheadline": "We design and build bespoke applications that digitize workflows, connect your systems, and drive measurable efficiency.",
+    "cta": "Plan Your Custom Build"
+  },
+  "benefits": [
+    {
+      "title": "Built Around Your Workflow",
+      "description": "We map how your team works and deliver software that fits your real processes."
+    },
+    {
+      "title": "Process Automation",
+      "description": "Automate approvals, notifications, and repetitive tasks to remove manual bottlenecks."
+    },
+    {
+      "title": "System Integrations",
+      "description": "Connect CRMs, ERPs, payments, and APIs so data flows without spreadsheets."
+    },
+    {
+      "title": "Scalable Architecture",
+      "description": "Modular services and clean APIs that grow as usage and teams expand."
+    },
+    {
+      "title": "Security by Design",
+      "description": "Role-based access, audit trails, and secure data handling from day one."
+    },
+    {
+      "title": "Maintainable Delivery",
+      "description": "Clear documentation, testable code, and clean handover for your internal team."
+    }
+  ],
+  "process": [
+    {
+      "title": "Discovery & Requirements",
+      "description": "We capture business goals, user flows, and constraints before any build starts."
+    },
+    {
+      "title": "Solution Design",
+      "description": "UX, data models, and technical architecture aligned to your systems."
+    },
+    {
+      "title": "Build & Integrate",
+      "description": "We develop, test, and connect the solution to your existing stack."
+    },
+    {
+      "title": "Launch & Iterate",
+      "description": "Release confidently, monitor outcomes, and evolve the product with your team."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frontend & Mobile",
+      "items": [
+        { "name": "React", "description": "Modern web UI" },
+        { "name": "Next.js", "description": "Production-ready React framework" },
+        { "name": "React Native", "description": "Cross-platform mobile apps" },
+        { "name": "TypeScript", "description": "Type-safe application code" },
+        { "name": "Tailwind CSS", "description": "Design system implementation" }
+      ]
+    },
+    {
+      "category": "Backend & Data",
+      "items": [
+        { "name": "Node.js", "description": "API services" },
+        { "name": "PostgreSQL", "description": "Relational data storage" },
+        { "name": "MongoDB", "description": "Document databases" },
+        { "name": "Redis", "description": "Caching and queues" },
+        { "name": "GraphQL/REST", "description": "Flexible API design" }
+      ]
+    },
+    {
+      "category": "Integrations & Ops",
+      "items": [
+        { "name": "AWS", "description": "Cloud infrastructure" },
+        { "name": "Docker", "description": "Containerized services" },
+        { "name": "CI/CD", "description": "Automated delivery pipelines" },
+        { "name": "OAuth/SAML", "description": "Enterprise authentication" },
+        { "name": "Stripe/Payments", "description": "Billing integrations" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "title": "SEO - Έρευνα & Στρατηγική",
+  "description": "Workshops με έμφαση στο αποτέλεσμα, οδικοί χάρτες, KPIs και αποτίμηση ρίσκου πριν γράψουμε κώδικα.",
+  "hero": {
+    "headline": "SEO στρατηγική που οδηγεί οργανική ανάπτυξη",
+    "subheadline": "Τεχνικά SEO audits, στρατηγική περιεχομένου και βελτιστοποίηση Core Web Vitals για καλύτερες θέσεις και μετατροπή.",
+    "cta": "Ανεβάστε το SEO σας"
+  },
+  "benefits": [
+    {
+      "title": "Τεχνικά SEO audits",
+      "description": "Ανάλυση crawl, αξιολόγηση αρχιτεκτονικής site και έλεγχος structured data για διόρθωση βασικών ζητημάτων."
+    },
+    {
+      "title": "Βελτιστοποίηση Core Web Vitals",
+      "description": "Βελτιώσεις σε LCP, FID, CLS μέσω performance engineering και rendering strategies."
+    },
+    {
+      "title": "Στρατηγική περιεχομένου & χαρτογράφηση",
+      "description": "Έρευνα λέξεων-κλειδιών, topic clustering και roadmaps περιεχομένου ευθυγραμμισμένα με το search intent."
+    },
+    {
+      "title": "On-Page SEO",
+      "description": "Meta tags, semantic HTML, εσωτερικές συνδέσεις και schema markup για καλύτερο indexing."
+    },
+    {
+      "title": "Link building & outreach",
+      "description": "White-hat στρατηγικές backlinks, digital PR και ευκαιρίες συνεργασιών για αύξηση authority."
+    },
+    {
+      "title": "Analytics & reporting",
+      "description": "Dashboards GA4/Search Console, rank tracking και μέτρηση ROI για συνεχή βελτιστοποίηση."
+    }
+  ],
+  "process": [
+    {
+      "title": "SEO audit & έρευνα",
+      "description": "Crawl του site, ανάλυση ανταγωνισμού, έλεγχος analytics και εντοπισμός quick wins και long-term ευκαιριών."
+    },
+    {
+      "title": "Στρατηγική & roadmap",
+      "description": "Ιεράρχηση ενεργειών, ορισμός KPIs και δημιουργία τριμηνιαίου SEO roadmap ευθυγραμμισμένου με επιχειρηματικούς στόχους."
+    },
+    {
+      "title": "Υλοποίηση & βελτιστοποίηση",
+      "description": "Διόρθωση τεχνικών θεμάτων, βελτιστοποίηση περιεχομένου, βελτίωση Core Web Vitals και υλοποίηση tracking."
+    },
+    {
+      "title": "Monitoring & iteration",
+      "description": "Παρακολούθηση rankings, οργανικής επισκεψιμότητας και μετατροπών· προσαρμογή στρατηγικής βάσει δεδομένων απόδοσης."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Εργαλεία SEO",
+      "items": [
+        { "name": "Google Search Console", "description": "Παρακολούθηση απόδοσης site" },
+        { "name": "Screaming Frog", "description": "Technical SEO crawler" },
+        { "name": "Ahrefs/SEMrush", "description": "Ανάλυση ανταγωνισμού" },
+        { "name": "Google Analytics 4", "description": "Παρακολούθηση συμπεριφοράς & μετατροπών" }
+      ]
+    },
+    {
+      "category": "Τεχνικό SEO",
+      "items": [
+        { "name": "Schema Markup", "description": "Structured data (JSON-LD)" },
+        { "name": "Core Web Vitals", "description": "Metrics απόδοσης" },
+        { "name": "Robots.txt/Sitemaps", "description": "Βελτιστοποίηση crawl" },
+        { "name": "Canonical Tags", "description": "Διαχείριση διπλού περιεχομένου" }
+      ]
+    },
+    {
+      "category": "Περιεχόμενο & ανάλυση",
+      "items": [
+        { "name": "Surfer SEO", "description": "Βελτιστοποίηση περιεχομένου" },
+        { "name": "Google Trends", "description": "Ανάλυση τάσεων αναζήτησης" },
+        { "name": "AnswerThePublic", "description": "Έρευνα ερωτήσεων" },
+        { "name": "Hotjar/Clarity", "description": "Insights συμπεριφοράς χρηστών" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

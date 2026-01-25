@@ -1,0 +1,91 @@
+{
+  "title": "DevOps & Reliability",
+  "description": "CI/CD, AWS cloud foundations, observability, security hardening, and cost/performance optimization.",
+  "hero": {
+    "headline": "Ship Faster, Sleep Better",
+    "subheadline": "Production-grade DevOps: CI/CD pipelines, cloud infrastructure, monitoring, and security that scales with your team.",
+    "cta": "Optimize Your Infrastructure"
+  },
+  "benefits": [
+    {
+      "title": "Automated CI/CD Pipelines",
+      "description": "GitHub Actions, GitLab CI, or CircleCI workflows that test, build, and deploy code with every commit."
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Terraform/CloudFormation templates for reproducible, version-controlled cloud environments."
+    },
+    {
+      "title": "Container Orchestration",
+      "description": "Docker + Kubernetes deployments with auto-scaling, health checks, and rolling updates."
+    },
+    {
+      "title": "Observability & Alerting",
+      "description": "Prometheus, Grafana, and ELK stack for metrics, logs, and distributed tracing."
+    },
+    {
+      "title": "Security Hardening",
+      "description": "Least-privilege IAM, secrets management, network segmentation, and vulnerability scanning."
+    },
+    {
+      "title": "Cost Optimization",
+      "description": "Right-sizing instances, reserved capacity, and auto-scaling policies to reduce cloud spend."
+    }
+  ],
+  "process": [
+    {
+      "title": "Infrastructure Audit",
+      "description": "Assess current setup, identify bottlenecks, security gaps, and cost inefficiencies."
+    },
+    {
+      "title": "Architecture & Planning",
+      "description": "Design cloud architecture, choose managed services, and define IaC structure."
+    },
+    {
+      "title": "Implementation & Migration",
+      "description": "Build pipelines, provision infrastructure, and migrate workloads with zero downtime."
+    },
+    {
+      "title": "Monitoring & Iteration",
+      "description": "Set up dashboards, alerts, and runbooks for continuous improvement and incident response."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Cloud Platforms",
+      "items": [
+        { "name": "AWS", "description": "Amazon Web Services" },
+        { "name": "Google Cloud", "description": "GCP infrastructure" },
+        { "name": "Azure", "description": "Microsoft cloud" },
+        { "name": "Vercel/Netlify", "description": "Frontend hosting" }
+      ]
+    },
+    {
+      "category": "IaC & Containers",
+      "items": [
+        { "name": "Terraform", "description": "Infrastructure as Code" },
+        { "name": "Docker", "description": "Containerization" },
+        { "name": "Kubernetes", "description": "Container orchestration" },
+        { "name": "Helm", "description": "Kubernetes package manager" }
+      ]
+    },
+    {
+      "category": "CI/CD & Monitoring",
+      "items": [
+        { "name": "GitHub Actions", "description": "CI/CD automation" },
+        { "name": "GitLab CI", "description": "GitLab pipelines" },
+        { "name": "Prometheus/Grafana", "description": "Metrics & dashboards" },
+        { "name": "Sentry/DataDog", "description": "Error & performance tracking" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

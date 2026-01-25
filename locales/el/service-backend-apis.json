@@ -1,0 +1,91 @@
+{
+  "title": "Backend & APIs",
+  "description": "Ασφαλείς υπηρεσίες REST/GraphQL σε Node.js/Nest/Express, data models και integrations με payments/CRM/ERP.",
+  "hero": {
+    "headline": "Κλιμακούμενα APIs που τροφοδοτούν την ανάπτυξη",
+    "subheadline": "Production-grade backend συστήματα, REST/GraphQL APIs και ασφαλείς διασυνδέσεις σε Node.js, PostgreSQL και σύγχρονη cloud υποδομή.",
+    "cta": "Χτίστε το backend σας"
+  },
+  "benefits": [
+    {
+      "title": "RESTful & GraphQL APIs",
+      "description": "Καλά τεκμηριωμένα, versioned APIs με strong typing, validation και error handling."
+    },
+    {
+      "title": "Σχεδιασμός & βελτιστοποίηση βάσεων",
+      "description": "Normalized schemas, στρατηγικές indexing και βελτιστοποίηση queries για PostgreSQL/MongoDB."
+    },
+    {
+      "title": "Authentication & authorization",
+      "description": "JWT, OAuth2, RBAC και multi-tenant security patterns που κλιμακώνονται με το προϊόν σας."
+    },
+    {
+      "title": "Ενσωματώσεις τρίτων",
+      "description": "Payment gateways (Stripe, PayPal), CRMs (Salesforce), ERPs και custom API connectors."
+    },
+    {
+      "title": "Caching & απόδοση",
+      "description": "Redis caching, CDN integration και read replicas βάσης για υψηλό traffic."
+    },
+    {
+      "title": "Observability & monitoring",
+      "description": "Structured logging, metrics, alerting και distributed tracing για αξιοπιστία σε production."
+    }
+  ],
+  "process": [
+    {
+      "title": "Σχεδιασμός API & μοντελοποίηση δεδομένων",
+      "description": "Ορίζουμε endpoints, schemas και access patterns βάσει αναγκών frontend και business logic."
+    },
+    {
+      "title": "Ανάπτυξη & testing",
+      "description": "Type-safe ανάπτυξη Node.js με αυτοματοποιημένα unit/integration tests και API contract testing."
+    },
+    {
+      "title": "Ασφάλεια & συμμόρφωση",
+      "description": "Penetration testing, κρυπτογράφηση at rest/in-transit και προετοιμασία συμμόρφωσης (GDPR, SOC 2)."
+    },
+    {
+      "title": "Deployment & κλιμάκωση",
+      "description": "Containerized deployments, auto-scaling και releases χωρίς downtime σε AWS/GCP."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Backend frameworks",
+      "items": [
+        { "name": "Node.js", "description": "JavaScript runtime" },
+        { "name": "NestJS", "description": "Enterprise Node framework" },
+        { "name": "Express", "description": "Minimal web framework" },
+        { "name": "TypeScript", "description": "Type-safe backend κώδικας" }
+      ]
+    },
+    {
+      "category": "Βάσεις δεδομένων",
+      "items": [
+        { "name": "PostgreSQL", "description": "Σχεσιακή βάση δεδομένων" },
+        { "name": "MongoDB", "description": "Document database" },
+        { "name": "Redis", "description": "In-memory cache" },
+        { "name": "Prisma/TypeORM", "description": "ORM/query builder" }
+      ]
+    },
+    {
+      "category": "APIs & integrations",
+      "items": [
+        { "name": "GraphQL (Apollo)", "description": "Γλώσσα ερωτημάτων" },
+        { "name": "REST", "description": "HTTP APIs" },
+        { "name": "WebSockets", "description": "Real-time επικοινωνία" },
+        { "name": "Message Queues", "description": "Bull/RabbitMQ" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

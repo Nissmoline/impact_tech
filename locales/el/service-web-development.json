@@ -1,0 +1,92 @@
+{
+  "title": "Ανάπτυξη Web",
+  "description": "Marketing sites υψηλής απόδοσης, SaaS portals και dashboards σε React/Next.js με ενσωματωμένο SEO και ταχύτητα.",
+  "hero": {
+    "headline": "Γρήγορες, κλιμακούμενες web εφαρμογές",
+    "subheadline": "Marketing sites υψηλής απόδοσης, SaaS portals και dashboards χτισμένα με React/Next.js, TypeScript και σύγχρονες βέλτιστες πρακτικές.",
+    "cta": "Χτίστε τη web εφαρμογή σας"
+  },
+  "benefits": [
+    {
+      "title": "Αρχιτεκτονική με έμφαση στην απόδοση",
+      "description": "SSR, ISR και edge delivery στρατηγικές που κρατούν τις σελίδες κάτω από 2 δευτερόλεπτα."
+    },
+    {
+      "title": "Ενσωματωμένο SEO",
+      "description": "Server-side rendering, semantic HTML, structured data και βελτιστοποίηση Core Web Vitals από την πρώτη μέρα."
+    },
+    {
+      "title": "Κλιμακούμενος κώδικας",
+      "description": "Component-driven αρχιτεκτονική με TypeScript, καθαρά patterns και ενσωμάτωση design system."
+    },
+    {
+      "title": "UI με στόχο τη μετατροπή",
+      "description": "UX αποφάσεις βασισμένες σε δεδομένα, έτοιμο για A/B testing και micro-interactions που οδηγούν σε action."
+    },
+    {
+      "title": "Mobile-first σχεδιασμός",
+      "description": "Responsive layouts δοκιμασμένα σε πραγματικές συσκευές, progressive enhancement και touch-optimized διεπαφές."
+    },
+    {
+      "title": "Analytics & observability",
+      "description": "Ενσωματωμένο tracking, παρακολούθηση σφαλμάτων και metrics απόδοσης για συνεχή βελτίωση."
+    }
+  ],
+  "process": [
+    {
+      "title": "Ανακάλυψη & σχεδιασμός",
+      "description": "Ορίζουμε απαιτήσεις, user flows, τεχνική αρχιτεκτονική και success metrics πριν ξεκινήσει ο κώδικας."
+    },
+    {
+      "title": "Σχεδιασμός & πρωτοτυποποίηση",
+      "description": "High-fidelity mockups, interactive prototypes και foundations του design system, επικυρωμένα με stakeholders."
+    },
+    {
+      "title": "Ανάπτυξη & testing",
+      "description": "Type-safe ανάπτυξη με React/Next.js, αυτοματοποιημένα tests, code reviews και CI/CD pipelines."
+    },
+    {
+      "title": "Λανσάρισμα & βελτιστοποίηση",
+      "description": "Deployment σε production, παρακολούθηση απόδοσης και βελτιώσεις με βάση πραγματικά δεδομένα χρηστών."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frontend",
+      "items": [
+        { "name": "React", "description": "Βιβλιοθήκη UI" },
+        { "name": "Next.js", "description": "React framework με SSR" },
+        { "name": "TypeScript", "description": "Type-safe JavaScript" },
+        { "name": "Tailwind CSS", "description": "Utility-first CSS" },
+        { "name": "Framer Motion", "description": "Βιβλιοθήκη animations" }
+      ]
+    },
+    {
+      "category": "Κατάσταση & δεδομένα",
+      "items": [
+        { "name": "Zustand/Redux", "description": "Διαχείριση κατάστασης" },
+        { "name": "TanStack Query", "description": "Διαχείριση server state" },
+        { "name": "SWR", "description": "Data fetching" },
+        { "name": "GraphQL/REST", "description": "Ενσωμάτωση APIs" }
+      ]
+    },
+    {
+      "category": "Ποιότητα & deployment",
+      "items": [
+        { "name": "Vitest/Jest", "description": "Framework testing" },
+        { "name": "Playwright", "description": "E2E testing" },
+        { "name": "ESLint/Prettier", "description": "Ποιότητα κώδικα" },
+        { "name": "Vercel/AWS", "description": "Πλατφόρμες deployment" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "title": "3D & Διαδραστικές Εμπειρίες",
+  "description": "WebGL/Three.js διαμορφωτές προϊόντων, εικονικά showrooms και τεχνικές 3D οπτικοποιήσεις με βελτιστοποίηση για Core Web Vitals.",
+  "hero": {
+    "headline": "Εμβυθιστικές 3D εμπειρίες που αποδίδουν",
+    "subheadline": "WebGL/Three.js διαμορφωτές προϊόντων, εικονικά showrooms και τεχνικές 3D οπτικοποιήσεις που δεν θυσιάζουν την ταχύτητα ή την προσβασιμότητα.",
+    "cta": "Ξεκινήστε το 3D έργο σας"
+  },
+  "benefits": [
+    {
+      "title": "3D με έμφαση στην απόδοση",
+      "description": "Βελτιστοποιημένη φόρτωση, στρατηγικές LOD και συμμόρφωση με Core Web Vitals χωρίς απώλεια οπτικής πιστότητας."
+    },
+    {
+      "title": "Διαμορφωτές προϊόντων",
+      "description": "Real-time 3D παραμετροποίηση με αλλαγές υλικών/χρωμάτων, ζωντανή τιμολόγηση και ενσωματωμένες ροές checkout."
+    },
+    {
+      "title": "Εικονικά showrooms",
+      "description": "Διαδραστικοί χώροι που επιτρέπουν στους πελάτες να εξερευνούν προϊόντα από κάθε συσκευή με διαισθητικούς ελέγχους κάμερας."
+    },
+    {
+      "title": "Τεχνική οπτικοποίηση",
+      "description": "3D επιπέδου μηχανικής για demos προϊόντων, εκπαιδευτικές προσομοιώσεις και σύνθετη οπτικοποίηση δεδομένων."
+    },
+    {
+      "title": "Έτοιμο για κάθε συσκευή",
+      "description": "Responsive 3D εμπειρίες βελτιστοποιημένες για desktop, tablet και mobile με υποστήριξη αφής και gestures."
+    },
+    {
+      "title": "SEO & προσβασιμότητα",
+      "description": "Progressive enhancement, fallbacks και semantic markup ώστε το 3D να μην επηρεάζει την ανακαλυψιμότητα."
+    }
+  ],
+  "process": [
+    {
+      "title": "Σύλληψη & scope",
+      "description": "Ορίζουμε use cases, performance budgets, πολυπλοκότητα assets και σημεία ενσωμάτωσης με το stack σας."
+    },
+    {
+      "title": "Πρωτότυπο & επικύρωση",
+      "description": "Ένα early WebGL proof-of-concept δοκιμάζεται σε πραγματικές συσκευές για να επιβεβαιώσουμε frame rates και χρόνους φόρτωσης."
+    },
+    {
+      "title": "Pipeline assets",
+      "description": "Βελτιστοποίηση 3D μοντέλων, συμπίεση υφών, δημιουργία LOD και ροές εργασίας glTF/GLB για web."
+    },
+    {
+      "title": "Ενσωμάτωση & τελικές βελτιώσεις",
+      "description": "Ενσωμάτωση σε React/Next.js, προσθήκη UI controls, analytics hooks και παράδοση με observability."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "3D & Γραφικά",
+      "items": [
+        { "name": "Three.js", "description": "Μηχανή απόδοσης WebGL" },
+        { "name": "React Three Fiber", "description": "React renderer για το Three.js" },
+        { "name": "Drei", "description": "Βοηθητικά components & utilities" },
+        { "name": "GLSL Shaders", "description": "Εξατομικευμένα οπτικά εφέ" },
+        { "name": "glTF/GLB", "description": "Βελτιστοποιημένο format 3D assets" }
+      ]
+    },
+    {
+      "category": "Απόδοση",
+      "items": [
+        { "name": "Draco Compression", "description": "Συμπίεση mesh" },
+        { "name": "KTX2 Textures", "description": "Υφές βελτιστοποιημένες για GPU" },
+        { "name": "LOD Strategies", "description": "Βελτιστοποίηση level-of-detail" },
+        { "name": "Lazy Loading", "description": "Προοδευτική φόρτωση assets" }
+      ]
+    },
+    {
+      "category": "Ενσωμάτωση",
+      "items": [
+        { "name": "React/Next.js", "description": "Ενσωμάτωση framework" },
+        { "name": "TypeScript", "description": "Type-safe 3D κώδικας" },
+        { "name": "Zustand/Redux", "description": "Διαχείριση κατάστασης 3D" },
+        { "name": "Analytics", "description": "Παρακολούθηση αλληλεπίδρασης χρηστών" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "Δείτε το Tech Stack",
+    "benefitsTitle": "Γιατί να επιλέξετε αυτή την υπηρεσία",
+    "processTitle": "Η διαδικασία μας",
+    "technologiesTitle": "Τεχνολογίες που χρησιμοποιούμε",
+    "ctaTitle": "Έτοιμοι να ξεκινήσουμε το έργο σας;",
+    "ctaDescription": "Ας συζητήσουμε πώς μπορούμε να σας βοηθήσουμε να πετύχετε τους στόχους σας με {{service}}.",
+    "ctaButton": "Ξεκινήστε"
+  }
+}

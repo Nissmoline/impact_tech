@@ -1,0 +1,92 @@
+{
+  "title": "3D & Interactive Experiences",
+  "description": "WebGL/Three.js product configurators, showrooms, and technical visualizations optimized for Core Web Vitals.",
+  "hero": {
+    "headline": "Immersive 3D Experiences That Perform",
+    "subheadline": "WebGL/Three.js product configurators, virtual showrooms, and technical visualizations that don't compromise on speed or accessibility.",
+    "cta": "Start Your 3D Project"
+  },
+  "benefits": [
+    {
+      "title": "Performance-First 3D",
+      "description": "Optimized loading, LOD strategies, and Core Web Vitals compliance without sacrificing visual fidelity."
+    },
+    {
+      "title": "Product Configurators",
+      "description": "Real-time 3D customization with material/color swaps, live pricing, and integrated checkout flows."
+    },
+    {
+      "title": "Virtual Showrooms",
+      "description": "Interactive spaces that let customers explore products from any device with intuitive camera controls."
+    },
+    {
+      "title": "Technical Visualization",
+      "description": "Engineering-grade 3D for product demos, training simulations, and complex data visualization."
+    },
+    {
+      "title": "Cross-Device Ready",
+      "description": "Responsive 3D experiences optimized for desktop, tablet, and mobile with touch and gesture support."
+    },
+    {
+      "title": "SEO & Accessibility",
+      "description": "Progressive enhancement, fallbacks, and semantic markup so 3D doesn't hurt discoverability."
+    }
+  ],
+  "process": [
+    {
+      "title": "Concept & Scope",
+      "description": "We define use cases, performance budgets, asset complexity, and integration points with your stack."
+    },
+    {
+      "title": "Prototype & Validate",
+      "description": "Early WebGL proof-of-concept tested on real devices to validate frame rates and loading times."
+    },
+    {
+      "title": "Asset Pipeline",
+      "description": "3D model optimization, texture compression, LOD generation, and glTF/GLB workflows for web."
+    },
+    {
+      "title": "Integration & Polish",
+      "description": "Embed into React/Next.js, add UI controls, analytics hooks, and ship with observability."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "3D & Graphics",
+      "items": [
+        { "name": "Three.js", "description": "WebGL rendering engine" },
+        { "name": "React Three Fiber", "description": "React renderer for Three.js" },
+        { "name": "Drei", "description": "Helper components & utilities" },
+        { "name": "GLSL Shaders", "description": "Custom visual effects" },
+        { "name": "glTF/GLB", "description": "Optimized 3D asset format" }
+      ]
+    },
+    {
+      "category": "Performance",
+      "items": [
+        { "name": "Draco Compression", "description": "Mesh compression" },
+        { "name": "KTX2 Textures", "description": "GPU-optimized textures" },
+        { "name": "LOD Strategies", "description": "Level-of-detail optimization" },
+        { "name": "Lazy Loading", "description": "Progressive asset loading" }
+      ]
+    },
+    {
+      "category": "Integration",
+      "items": [
+        { "name": "React/Next.js", "description": "Framework integration" },
+        { "name": "TypeScript", "description": "Type-safe 3D code" },
+        { "name": "Zustand/Redux", "description": "3D state management" },
+        { "name": "Analytics", "description": "User interaction tracking" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}

@@ -4,6 +4,7 @@ import { Service } from '../types';
 import TiltCard from './ui/TiltCard';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 interface ServiceDetailProps {
@@ -15,6 +16,83 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
+  const namespace = `service-${service.slug}`;
+  const { t } = useTranslation(namespace);
+  const localizedTitle = t('title', { defaultValue: service.title });
+  const localizedDescription = t('description', { defaultValue: service.description });
+  const localizedHero = {
+    headline: t('hero.headline', { defaultValue: service.hero.headline }),
+    subheadline: t('hero.subheadline', { defaultValue: service.hero.subheadline }),
+    cta: t('hero.cta', { defaultValue: service.hero.cta }),
+  };
+  const translatedBenefits = t('benefits', {
+    returnObjects: true,
+    defaultValue: service.benefits,
+  }) as Array<{ title: string; description: string }>;
+  const benefits = service.benefits.map((benefit, index) => {
+    const translated = translatedBenefits?.[index];
+    return {
+      ...benefit,
+      title: translated?.title ?? benefit.title,
+      description: translated?.description ?? benefit.description,
+    };
+  });
+  const translatedProcess = t('process', {
+    returnObjects: true,
+    defaultValue: service.process,
+  }) as Array<{ title: string; description: string }>;
+  const process = service.process.map((step, index) => {
+    const translated = translatedProcess?.[index];
+    return {
+      ...step,
+      title: translated?.title ?? step.title,
+      description: translated?.description ?? step.description,
+    };
+  });
+  const translatedTechnologies = t('technologies', {
+    returnObjects: true,
+    defaultValue: service.technologies,
+  }) as Array<{
+    category: string;
+    items: Array<{ name: string; description?: string }>;
+  }>;
+  const technologies = service.technologies.map((techCategory, index) => {
+    const translatedCategory = translatedTechnologies?.[index];
+    return {
+      ...techCategory,
+      category: translatedCategory?.category ?? techCategory.category,
+      items: techCategory.items.map((tech, techIndex) => {
+        const translatedTech = translatedCategory?.items?.[techIndex];
+        return {
+          ...tech,
+          name: translatedTech?.name ?? tech.name,
+          description: translatedTech?.description ?? tech.description,
+        };
+      }),
+    };
+  });
+  const viewTechStackLabel = t('ui.viewTechStack', {
+    defaultValue: 'View Tech Stack',
+  });
+  const benefitsTitle = t('ui.benefitsTitle', {
+    defaultValue: 'Why Choose This Service',
+  });
+  const processTitle = t('ui.processTitle', {
+    defaultValue: 'Our Process',
+  });
+  const technologiesTitle = t('ui.technologiesTitle', {
+    defaultValue: 'Technologies We Use',
+  });
+  const ctaTitle = t('ui.ctaTitle', {
+    defaultValue: 'Ready to Start Your Project?',
+  });
+  const ctaDescription = t('ui.ctaDescription', {
+    service: localizedTitle,
+    defaultValue: "Let's discuss how we can help you achieve your goals with {{service}}.",
+  });
+  const ctaButton = t('ui.ctaButton', {
+    defaultValue: 'Get Started',
+  });
 
   return (
     <div className="bg-slate-950 min-h-[100svh] py-24">
@@ -29,15 +107,15 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-sm font-semibold">
               <IconComponent size={16} />
-              {service.title}
+              {localizedTitle}
             </div>
 
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white leading-tight">
-              {service.hero.headline}
+              {localizedHero.headline}
             </h1>
 
             <p className="text-xl text-slate-400 leading-relaxed">
-              {service.hero.subheadline}
+              {localizedHero.subheadline}
             </p>
 
             <div className="flex gap-4">
@@ -45,14 +123,14 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
                 href={withLocale('/#contact')}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all inline-flex items-center gap-2"
               >
-                {service.hero.cta}
+                {localizedHero.cta}
                 <ArrowRight size={18} />
               </a>
               <a
                 href="#technologies"
                 className="px-6 py-3 rounded-full border border-white/10 text-white hover:border-cyan-500/50 transition-all"
               >
-                View Tech Stack
+                {viewTechStackLabel}
               </a>
             </div>
           </motion.div>
@@ -67,8 +145,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
                   <IconComponent size={80} strokeWidth={1} />
                 </div>
                 <div className="space-y-4 text-center">
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                  <p className="text-slate-400">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white">{localizedTitle}</h3>
+                  <p className="text-slate-400">{localizedDescription}</p>
                 </div>
               </div>
             </TiltCard>
@@ -79,13 +157,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-4xl font-display font-bold text-white mb-4">
-              Why Choose This Service
+              {benefitsTitle}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {service.benefits.map((benefit, index) => {
+            {benefits.map((benefit, index) => {
               const BenefitIcon = benefit.icon;
               return (
                 <TiltCard key={index}>
@@ -106,13 +184,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-4xl font-display font-bold text-white mb-4">
-              Our Process
+              {processTitle}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
           </div>
 
           <div className="grid lg:grid-cols-4 gap-6">
-            {service.process.map((step, index) => {
+            {process.map((step, index) => {
               const StepIcon = step.icon;
               return (
                 <div
@@ -140,13 +218,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
         <section id="technologies" className="space-y-8">
           <div className="text-center">
             <h2 className="text-4xl font-display font-bold text-white mb-4">
-              Technologies We Use
+              {technologiesTitle}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
           </div>
 
           <div className="space-y-8">
-            {service.technologies.map((techCategory, index) => (
+            {technologies.map((techCategory, index) => (
               <div key={index} className="space-y-4">
                 <h3 className="text-2xl font-bold text-white">{techCategory.category}</h3>
                 <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -176,16 +254,16 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
         {/* CTA Section */}
         <section className="text-center p-12 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
           <h2 className="text-3xl font-display font-bold text-white mb-4">
-            Ready to Start Your Project?
+            {ctaTitle}
           </h2>
           <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve your goals with {service.title.toLowerCase()}.
+            {ctaDescription}
           </p>
           <a
             href={withLocale('/#contact')}
             className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all inline-flex items-center gap-2"
           >
-            Get Started
+            {ctaButton}
             <ArrowRight size={20} />
           </a>
         </section>

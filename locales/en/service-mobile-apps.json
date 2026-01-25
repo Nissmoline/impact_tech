@@ -1,0 +1,91 @@
+{
+  "title": "Mobile Apps",
+  "description": "Cross-platform apps with React Native/Flutter, from build to store publish and ongoing maintenance.",
+  "hero": {
+    "headline": "Native-Quality Mobile Apps, Cross-Platform Speed",
+    "subheadline": "React Native and Flutter apps that feel native, ship faster, and share code across iOS and Android.",
+    "cta": "Build Your Mobile App"
+  },
+  "benefits": [
+    {
+      "title": "Cross-Platform Efficiency",
+      "description": "One codebase for iOS and Android, reducing development time and maintenance costs by up to 60%."
+    },
+    {
+      "title": "Native Performance",
+      "description": "60 FPS animations, platform-specific UI patterns, and optimized builds that feel truly native."
+    },
+    {
+      "title": "Offline-First Architecture",
+      "description": "Local databases, sync strategies, and resilient UX that works even when connectivity drops."
+    },
+    {
+      "title": "Push Notifications & Deep Linking",
+      "description": "Full integration with FCM/APNs, dynamic links, and attribution tracking for user re-engagement."
+    },
+    {
+      "title": "Store Optimization",
+      "description": "App Store/Play Store listing optimization, review management, and compliance guidance."
+    },
+    {
+      "title": "CI/CD & Testing",
+      "description": "Automated builds, E2E testing on real devices, and over-the-air updates for rapid iteration."
+    }
+  ],
+  "process": [
+    {
+      "title": "Requirements & Platform Choice",
+      "description": "Define features, choose between React Native/Flutter based on constraints, and plan architecture."
+    },
+    {
+      "title": "Design & Prototyping",
+      "description": "Platform-specific UI/UX patterns, interactive prototypes, and design system adapted for mobile."
+    },
+    {
+      "title": "Development & Testing",
+      "description": "Cross-platform development with real device testing, performance profiling, and code reviews."
+    },
+    {
+      "title": "Store Submission & Support",
+      "description": "App Store/Play Store submission, compliance review, and ongoing maintenance + updates."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Frameworks",
+      "items": [
+        { "name": "React Native", "description": "JavaScript mobile framework" },
+        { "name": "Flutter", "description": "Dart mobile framework" },
+        { "name": "Expo", "description": "React Native toolchain" },
+        { "name": "TypeScript", "description": "Type-safe development" }
+      ]
+    },
+    {
+      "category": "State & Storage",
+      "items": [
+        { "name": "Redux/Zustand", "description": "State management" },
+        { "name": "React Query", "description": "Server state" },
+        { "name": "Realm/SQLite", "description": "Local databases" },
+        { "name": "AsyncStorage", "description": "Key-value storage" }
+      ]
+    },
+    {
+      "category": "DevOps & Testing",
+      "items": [
+        { "name": "Fastlane", "description": "CI/CD automation" },
+        { "name": "Detox", "description": "E2E testing" },
+        { "name": "Firebase", "description": "Analytics & Crashlytics" },
+        { "name": "CodePush", "description": "OTA updates" }
+      ]
+    }
+  ],
+  "ui": {
+    "viewTechStack": "View Tech Stack",
+    "benefitsTitle": "Why Choose This Service",
+    "processTitle": "Our Process",
+    "technologiesTitle": "Technologies We Use",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDescription": "Let's discuss how we can help you achieve your goals with {{service}}.",
+    "ctaButton": "Get Started"
+  }
+}
