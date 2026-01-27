@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { getLocaleFromPath, getPreferredLocale } from './utils/locale';
 import enCommon from './locales/en/common.json';
 import enCareers from './locales/en/careers.json';
 import enImpressum from './locales/en/impressum.json';
@@ -31,6 +32,11 @@ import elServiceSeoStrategy from './locales/el/service-seo-strategy.json';
 
 export const SUPPORTED_LOCALES = ['en', 'el'] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
+
+const initialLocale =
+  typeof window === 'undefined'
+    ? getPreferredLocale()
+    : getLocaleFromPath(window.location.pathname);
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -67,7 +73,7 @@ i18n.use(initReactI18next).init({
       'service-seo-strategy': elServiceSeoStrategy,
     },
   },
-  lng: 'en',
+  lng: initialLocale,
   fallbackLng: 'en',
   supportedLngs: SUPPORTED_LOCALES,
   defaultNS: 'common',

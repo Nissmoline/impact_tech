@@ -1,10 +1,30 @@
 export type Locale = 'en' | 'el';
 
+export const getPreferredLocale = (): Locale => {
+  if (typeof window !== 'undefined') {
+    try {
+      const storedLocale = window.localStorage.getItem('preferredLocale');
+      if (storedLocale === 'en' || storedLocale === 'el') {
+        return storedLocale;
+      }
+    } catch {
+      // Ignore storage access errors
+    }
+  }
+
+  if (typeof navigator === 'undefined') return 'en';
+  const languageList = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language];
+  const prefersGreek = languageList.some((language) => language.toLowerCase().startsWith('el'));
+  return prefersGreek ? 'el' : 'en';
+};
+
 export const getLocaleFromPath = (pathname: string): Locale => {
   if (pathname === '/el' || pathname.startsWith('/el/')) {
     return 'el';
   }
-  return 'en';
+  return getPreferredLocale();
 };
 
 export const stripLocalePrefix = (pathname: string): string => {

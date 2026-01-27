@@ -15,8 +15,18 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
   const activeLocale: Locale = i18n.language.startsWith('el') ? 'el' : 'en';
   const reduceMotion = useReducedMotion();
 
+  const persistLocale = (locale: Locale) => {
+    if (typeof window === 'undefined') return;
+    try {
+      window.localStorage.setItem('preferredLocale', locale);
+    } catch {
+      // Ignore storage access errors
+    }
+  };
+
   const handleChange = (locale: Locale) => {
     if (locale === activeLocale) return;
+    persistLocale(locale);
     const nextPath = buildLocalizedPath(location.pathname, locale);
     navigate(`${nextPath}${location.search}${location.hash}`, { replace: true });
     i18n.changeLanguage(locale);
