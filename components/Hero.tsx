@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden perspective-2000">
+    <section className="hero-floating-shifts relative min-h-[100svh] flex items-center justify-center overflow-hidden perspective-2000">
       {/* Background Mesh */}
       <div className="absolute inset-0 bg-slate-950 z-0 transition-colors duration-700">
         <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_50%)] transition-opacity duration-700 ${activeTheme === 'purple' ? 'opacity-0' : 'opacity-100'}`} />
@@ -157,62 +157,64 @@ const Hero: React.FC = () => {
               whileDrag={{ scale: 1.15, cursor: "grabbing", zIndex: 50 }}
               className="absolute -top-10 -left-10 lg:-left-20 z-20"
             >
-              <motion.div 
-                animate={{ y: [0, -20, 0], rotateZ: [0, 2, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-60 select-none group"
-              >
-                <div className="flex justify-between items-center mb-3">
-                    <div className="flex gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                    </div>
-                    {/* Run Button */}
-                    <button 
-                        onPointerDown={handleRunCode}
-                        className={`p-1.5 rounded-md transition-colors ${codeStatus === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'}`}
-                    >
-                        {codeStatus === 'running' ? (
-                             <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        ) : codeStatus === 'success' ? (
-                             <Check size={12} />
-                        ) : (
-                             <Play size={12} fill="currentColor" />
-                        )}
-                    </button>
-                </div>
-                
-                <div className="space-y-2 font-mono text-xs">
-                  {codeStatus === 'running' ? (
-                      <div className="py-4 text-slate-400 animate-pulse">
-                          {t('home.hero.code.compiling')}
+              <div className="hero-code-window-mobile-m">
+                <motion.div 
+                  animate={{ y: [0, -20, 0], rotateZ: [0, 2, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-60 select-none group"
+                >
+                  <div className="flex justify-between items-center mb-3">
+                      <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
                       </div>
-                  ) : codeStatus === 'success' ? (
-                       <div className="py-4 text-green-400">
-                          {t('home.hero.code.success')} <br/>
-                          <span className="text-slate-500">{t('home.hero.code.time', { time: '12ms' })}</span>
-                       </div>
-                  ) : (
-                    <>
-                        <div className="flex gap-2">
-                            <span className="text-purple-400">const</span>
-                            <span className="text-yellow-200">experience</span>
-                            <span className="text-white">=</span>
+                      {/* Run Button */}
+                      <button 
+                          onPointerDown={handleRunCode}
+                          className={`p-1.5 rounded-md transition-colors ${codeStatus === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'}`}
+                      >
+                          {codeStatus === 'running' ? (
+                               <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          ) : codeStatus === 'success' ? (
+                               <Check size={12} />
+                          ) : (
+                               <Play size={12} fill="currentColor" />
+                          )}
+                      </button>
+                  </div>
+                  
+                  <div className="space-y-2 font-mono text-xs">
+                    {codeStatus === 'running' ? (
+                        <div className="py-4 text-slate-400 animate-pulse">
+                            {t('home.hero.code.compiling')}
                         </div>
-                        <div className={`pl-4 transition-colors duration-300 ${theme.codeHighlight}`}>new Dimension(3);</div>
-                        <div className="pl-4 text-slate-400">{t('home.hero.code.ready')}</div>
-                    </>
-                  )}
-                </div>
-                <div className={`absolute -right-3 -bottom-3 p-2 rounded-lg text-slate-950 shadow-lg transition-colors duration-300 ${theme.accentBg}`}>
-                   <Code size={16} />
-                </div>
-              </motion.div>
+                    ) : codeStatus === 'success' ? (
+                         <div className="py-4 text-green-400">
+                             {t('home.hero.code.success')} <br/>
+                             <span className="text-slate-500">{t('home.hero.code.time', { time: '12ms' })}</span>
+                         </div>
+                    ) : (
+                      <>
+                          <div className="flex gap-2">
+                              <span className="text-purple-400">const</span>
+                              <span className="text-yellow-200">experience</span>
+                              <span className="text-white">=</span>
+                          </div>
+                          <div className={`pl-4 transition-colors duration-300 ${theme.codeHighlight}`}>new Dimension(3);</div>
+                          <div className="pl-4 text-slate-400">{t('home.hero.code.ready')}</div>
+                      </>
+                    )}
+                  </div>
+                  <div className={`absolute -right-3 -bottom-3 p-2 rounded-lg text-slate-950 shadow-lg transition-colors duration-300 ${theme.accentBg}`}>
+                     <Code size={16} />
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Floating Window 2: Design */}
-            <motion.div 
+            <motion.div
               drag
               dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
               dragElastic={0.2}
@@ -220,68 +222,75 @@ const Hero: React.FC = () => {
               whileDrag={{ scale: 1.15, cursor: "grabbing", zIndex: 50 }}
               className="absolute -bottom-16 -right-5 lg:-right-24 z-20"
             >
-              <motion.div 
-                animate={{ y: [0, 30, 0], rotateZ: [0, -3, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-52 select-none"
-              >
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs text-slate-400 font-sans font-bold uppercase tracking-wider">
-                    {t('home.hero.componentsLabel')}
-                  </span>
-                  {/* Interactive Toggle */}
-                  <div 
-                    onPointerDown={handleUiToggle}
-                    className={`w-8 h-4 rounded-full p-0.5 cursor-pointer transition-colors duration-300 ${uiToggled ? theme.accentBg : 'bg-slate-700'}`}
-                  >
-                      <motion.div 
+              <div className="hero-ui-window-mobile-m">
+                <motion.div
+                  animate={{ y: [0, 30, 0], rotateZ: [0, -3, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-52 select-none"
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-xs text-slate-400 font-sans font-bold uppercase tracking-wider">
+                      {t('home.hero.componentsLabel')}
+                    </span>
+                    {/* Interactive Toggle */}
+                    <div
+                      onPointerDown={handleUiToggle}
+                      className={`w-8 h-4 rounded-full p-0.5 cursor-pointer transition-colors duration-300 ${uiToggled ? theme.accentBg : 'bg-slate-700'}`}
+                    >
+                      <motion.div
                         initial={false}
                         animate={{ x: uiToggled ? 16 : 0 }}
-                        className="w-3 h-3 bg-white rounded-full shadow-sm" 
+                        className="w-3 h-3 bg-white rounded-full shadow-sm"
                       />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-2">
-                  <motion.div 
-                    animate={{ opacity: uiToggled ? 1 : 0.5 }}
-                    className="h-10 bg-slate-800 rounded flex items-center justify-center"
-                  >
-                      <Layout size={14} className="text-slate-600" />
-                  </motion.div>
-                  <motion.div 
-                    animate={{ 
-                        opacity: uiToggled ? 1 : 1,
-                        backgroundColor: uiToggled ? (activeTheme === 'cyan' ? 'rgba(6,182,212,0.2)' : activeTheme === 'purple' ? 'rgba(168,85,247,0.2)' : 'rgba(16,185,129,0.2)') : 'rgba(15,23,42,0.5)'
-                    }}
-                    className={`h-10 border rounded transition-colors duration-300 ${uiToggled ? theme.badge.replace('bg-', 'border-') : 'border-cyan-500/30 bg-cyan-900/10'}`} 
-                  />
-                  <div className="col-span-2 h-8 bg-slate-800 rounded opacity-50 relative overflow-hidden">
-                      {uiToggled && (
-                          <motion.div 
-                            initial={{ x: '-100%' }}
-                            animate={{ x: '100%' }}
-                            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-                          />
-                      )}
-                  </div>
-                </div>
-                
-                {/* Cursor Hint */}
-                <motion.div 
-                   animate={{ 
-                       x: uiToggled ? 140 : 160, 
-                       y: uiToggled ? -40 : -30,
-                       opacity: [0, 1, 0]
-                   }}
-                   transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                   className="absolute top-0 left-0 pointer-events-none text-white drop-shadow-md"
-                >
-                    <MousePointer2 size={16} fill="white" />
-                </motion.div>
 
-              </motion.div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <motion.div
+                      animate={{ opacity: uiToggled ? 1 : 0.5 }}
+                      className="h-10 bg-slate-800 rounded flex items-center justify-center"
+                    >
+                      <Layout size={14} className="text-slate-600" />
+                    </motion.div>
+                    <motion.div
+                      animate={{
+                        opacity: uiToggled ? 1 : 1,
+                        backgroundColor: uiToggled
+                          ? (activeTheme === 'cyan'
+                              ? 'rgba(6,182,212,0.2)'
+                              : activeTheme === 'purple'
+                                ? 'rgba(168,85,247,0.2)'
+                                : 'rgba(16,185,129,0.2)')
+                          : 'rgba(15,23,42,0.5)'
+                      }}
+                      className={`h-10 border rounded transition-colors duration-300 ${uiToggled ? theme.badge.replace('bg-', 'border-') : 'border-cyan-500/30 bg-cyan-900/10'}`}
+                    />
+                    <div className="col-span-2 h-8 bg-slate-800 rounded opacity-50 relative overflow-hidden">
+                      {uiToggled && (
+                        <motion.div
+                          initial={{ x: '-100%' }}
+                          animate={{ x: '100%' }}
+                          transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Cursor Hint */}
+                  <motion.div
+                    animate={{
+                      x: uiToggled ? 140 : 160,
+                      y: uiToggled ? -40 : -30,
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                    className="absolute top-0 left-0 pointer-events-none text-white drop-shadow-md"
+                  >
+                    <MousePointer2 size={16} fill="white" />
+                  </motion.div>
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Floating Element 3: Palette (Theme Switcher) */}
@@ -293,24 +302,26 @@ const Hero: React.FC = () => {
               whileDrag={{ scale: 1.15, cursor: "grabbing", zIndex: 50 }}
               className="absolute top-1/2 -right-20 lg:-right-32 z-20"
             >
-              <motion.div 
-                animate={{ x: [0, 15, 0], y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="bg-slate-800/80 backdrop-blur-md p-3 rounded-2xl border border-white/5 flex flex-col gap-3 select-none"
-              >
-                 <div 
-                    onPointerDown={(e) => handleThemeChange(e, 'cyan')}
-                    className={`w-8 h-8 rounded-full bg-cyan-400 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(34,211,238,0.5)] ring-2 ${activeTheme === 'cyan' ? 'ring-white' : 'ring-transparent'}`} 
-                 />
-                 <div 
-                    onPointerDown={(e) => handleThemeChange(e, 'purple')}
-                    className={`w-8 h-8 rounded-full bg-purple-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(168,85,247,0.5)] ring-2 ${activeTheme === 'purple' ? 'ring-white' : 'ring-transparent'}`} 
-                 />
-                 <div 
-                    onPointerDown={(e) => handleThemeChange(e, 'emerald')}
-                    className={`w-8 h-8 rounded-full bg-emerald-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(16,185,129,0.5)] ring-2 ${activeTheme === 'emerald' ? 'ring-white' : 'ring-transparent'}`} 
-                 />
-              </motion.div>
+              <div className="hero-palette-mobile-m">
+                <motion.div 
+                  animate={{ x: [0, 15, 0], y: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="bg-slate-800/80 backdrop-blur-md p-3 rounded-2xl border border-white/5 flex flex-col gap-3 select-none"
+                >
+                   <div 
+                      onPointerDown={(e) => handleThemeChange(e, 'cyan')}
+                      className={`w-8 h-8 rounded-full bg-cyan-400 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(34,211,238,0.5)] ring-2 ${activeTheme === 'cyan' ? 'ring-white' : 'ring-transparent'}`} 
+                   />
+                   <div 
+                      onPointerDown={(e) => handleThemeChange(e, 'purple')}
+                      className={`w-8 h-8 rounded-full bg-purple-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(168,85,247,0.5)] ring-2 ${activeTheme === 'purple' ? 'ring-white' : 'ring-transparent'}`} 
+                   />
+                   <div 
+                      onPointerDown={(e) => handleThemeChange(e, 'emerald')}
+                      className={`w-8 h-8 rounded-full bg-emerald-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(16,185,129,0.5)] ring-2 ${activeTheme === 'emerald' ? 'ring-white' : 'ring-transparent'}`} 
+                   />
+                </motion.div>
+              </div>
             </motion.div>
 
              {/* Central Logo Abstract */}

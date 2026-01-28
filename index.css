@@ -37,6 +37,56 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+
+  .hero-floating-shifts {
+    --hero-palette-x: 50px;
+    --hero-ui-x: -10px;
+    --hero-code-x: 0px;
+    --hero-code-y: 5px;
+  }
+
+  .hero-floating-shifts .hero-palette-mobile-m {
+    transform: translateX(var(--hero-palette-x));
+  }
+
+  .hero-floating-shifts .hero-ui-window-mobile-m {
+    transform: translateX(var(--hero-ui-x));
+  }
+
+  .hero-floating-shifts .hero-code-window-mobile-m {
+    transform: translateX(var(--hero-code-x)) translateY(var(--hero-code-y));
+  }
+
+  @media (max-width: 1024px) {
+    .hero-floating-shifts {
+      --hero-palette-x: -55px;
+      --hero-ui-x: -95px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .hero-floating-shifts {
+      --hero-palette-x: -25px;
+      --hero-ui-x: calc(-20% - 15px);
+      --hero-code-y: 25px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .hero-floating-shifts {
+      --hero-palette-x: -45px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .hero-floating-shifts {
+      --hero-palette-x: calc(-20% - 80px);
+      --hero-ui-x: calc(-20% - 40px);
+      --hero-code-x: 15px;
+      --hero-code-y: 35px;
+    }
+  }
+  
 }
 
 /* Custom Scrollbar - Dark Mode */
