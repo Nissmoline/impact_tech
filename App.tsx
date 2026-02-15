@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { AccentThemeProvider } from './contexts/AccentThemeContext';
 import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -73,24 +74,26 @@ const LocaleSync: React.FC = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <BrowserRouter>
-        <LocaleSync />
-        <Preloader />
-        <ScrollManager />
-        <div className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen text-slate-50 dark:text-slate-50 light:text-slate-950 selection:bg-cyan-500/30 selection:text-cyan-200 transition-colors duration-300">
-          <Navigation />
+      <AccentThemeProvider>
+        <BrowserRouter>
+          <LocaleSync />
+          <Preloader />
+          <ScrollManager />
+          <div className="bg-slate-950 dark:bg-slate-950 light:bg-slate-50 min-h-screen text-slate-50 dark:text-slate-50 light:text-slate-950 selection:bg-cyan-500/30 selection:text-cyan-200 transition-colors duration-300">
+            <Navigation />
 
-          <main>
-            <Routes>
-              {renderRoutes('')}
-              {renderRoutes('el')}
-            </Routes>
-          </main>
+            <main>
+              <Routes>
+                {renderRoutes('')}
+                {renderRoutes('el')}
+              </Routes>
+            </main>
 
-          <Footer />
-          <CookieBanner />
-        </div>
-      </BrowserRouter>
+            <Footer />
+            <CookieBanner />
+          </div>
+        </BrowserRouter>
+      </AccentThemeProvider>
     </ThemeProvider>
   );
 };

@@ -148,36 +148,18 @@
       }
     },
     "contact": {
-      "title": "Start a Project",
-      "subtitle": "Tell us about your vision. We'll build the reality.",
-      "successTitle": "Message Received",
-      "successDescription": "We'll analyze your request and orbit back to you shortly.",
-      "labels": {
-        "name": "Your Name",
-        "email": "Email Address",
-        "projectType": "Project Type",
-        "brief": "Project Brief"
-      },
-      "placeholders": {
-        "name": "John Doe",
-        "email": "john@example.com",
-        "projectType": "Select a project type",
-        "customType": "Custom project type (tell us what you need)",
-        "brief": "Tell us about the goals, timeline, and tech requirements..."
-      },
-      "projectTypes": [
-        "3D & Interactive Experiences",
-        "Web Development",
-        "UX/UI & Design Systems",
-        "Mobile Apps",
-        "Backend & APIs",
-        "DevOps & Reliability",
-        "Custom Business Applications"
-      ],
-      "projectTypeOther": "Other (write below)",
-      "projectTypeHint": "Choose one of our services or describe yours.",
-      "submit": "Launch Project",
-      "customTypeAria": "Custom project type"
+      "title": "Let's Talk",
+      "subtitle": "Reach us directly for new projects, partnerships, or questions.",
+      "details": {
+        "addressLabel": "Address",
+        "addressValue": "Pl. Ippodameias 8, Office D8\n18531 Piraeus, Attica, Greece",
+        "landlineLabel": "Landline",
+        "landlineValue": "+30 211 006 8114",
+        "mobileLabel": "Mobile",
+        "mobileValue": "+30 697 385 8321",
+        "emailLabel": "Email",
+        "emailValue": "info@impact-tech.gr"
+      }
     }
   }
 }

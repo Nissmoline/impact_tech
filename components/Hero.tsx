@@ -5,8 +5,18 @@ import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'luci
 import { Trans, useTranslation } from 'react-i18next';
 import Scene3D from './Scene3D';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
+import { AccentTheme, useAccentTheme } from '../contexts/AccentThemeContext';
 
-const THEMES = {
+const THEMES: Record<AccentTheme, {
+  id: AccentTheme;
+  accent: string;
+  accentBg: string;
+  button: string;
+  badge: string;
+  coreGradient: string;
+  glow: string;
+  codeHighlight: string;
+}> = {
   cyan: {
     id: 'cyan',
     accent: 'text-cyan-400',
@@ -49,7 +59,7 @@ const Hero: React.FC = () => {
   const withLocale = (href: string) => withLocalePrefix(href, locale);
   
   // Interactive States
-  const [activeTheme, setActiveTheme] = useState<keyof typeof THEMES>('cyan');
+  const { accentTheme: activeTheme, setAccentTheme } = useAccentTheme();
   const [codeStatus, setCodeStatus] = useState<'idle' | 'running' | 'success'>('idle');
   const [uiToggled, setUiToggled] = useState(false);
 
@@ -67,9 +77,9 @@ const Hero: React.FC = () => {
     }, 1500);
   };
 
-  const handleThemeChange = (e: React.MouseEvent, newTheme: keyof typeof THEMES) => {
+  const handleThemeChange = (e: React.MouseEvent, newTheme: AccentTheme) => {
     e.stopPropagation();
-    setActiveTheme(newTheme);
+    setAccentTheme(newTheme);
   };
 
   const handleUiToggle = (e: React.MouseEvent) => {
@@ -116,10 +126,14 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className={`px-8 py-4 text-slate-950 font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 ${theme.button}`}>
+            <Link
+              to={withLocale('/#contact')}
+              className={`px-8 py-4 text-slate-950 font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 ${theme.button}`}
+              aria-label={t('nav.contact')}
+            >
               {t('home.hero.ctaPrimary')}
               <ChevronDown className="rotate-[-90deg]" size={18} />
-            </button>
+            </Link>
             <Link
               to={withLocale('/portfolio')}
               className="px-8 py-4 bg-transparent border border-slate-700 hover:border-white text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 group"

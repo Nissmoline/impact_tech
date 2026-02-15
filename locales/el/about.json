@@ -2,8 +2,8 @@
   "hero": {
     "badge": "Σχετικά με την Impact Tech",
     "title": "Χτίζουμε καθηλωτικά προϊόντα που μοιάζουν αναπόφευκτα.",
-    "description": "Από σύνθετες web εφαρμογές έως κινηματογραφικές 3D εμπειρίες, η ομάδα μας συνδυάζει μηχανική αυστηρότητα με σχεδιαστική ακρίβεια. Είμαστε ο συνεργάτης που καλούν οι ομάδες όταν χρειάζονται αξιοπιστία, ταχύτητα και λίγη δόση θαυμασμού.",
-    "primaryCta": "Δείτε τη δουλειά μας",
+    "description": "Από σύνθετες web εφαρμογές μέχρι κινηματογραφικές 3D εμπειρίες, η ομάδα μας συνδυάζει μηχανική αυστηρότητα με σχεδιαστική ακρίβεια. Είμαστε ο συνεργάτης που καλούν οι ομάδες όταν χρειάζονται αξιοπιστία, ταχύτητα και μια δόση δέους.",
+    "primaryCta": "Δείτε το έργο μας",
     "secondaryCta": "Μιλήστε μαζί μας"
   },
   "dna": {
@@ -11,7 +11,7 @@
     "title": "Engineering x Design x 3D",
     "cards": {
       "drive": {
-        "label": "Τι μας καθοδηγεί",
+        "label": "Τι μας κινεί",
         "value": "Χρήσιμο. Όμορφο. Αποδοτικό."
       },
       "ship": {
@@ -27,11 +27,11 @@
         "value": "Μετρήσιμα αποτελέσματα."
       }
     },
-    "footer": "Remote-first studio με φυσική παρουσία στην Ελλάδα, που εξυπηρετεί ομάδες παγκοσμίως."
+    "footer": "Remote-first studio με βάση την Ελλάδα, εξυπηρετούμε ομάδες παγκοσμίως."
   },
   "stats": [
     {
-      "label": "Παραδομένα έργα",
+      "label": "Έργα που παραδώσαμε",
       "value": "75+",
       "detail": "Web, mobile & 3D εμπειρίες"
     },
@@ -55,16 +55,16 @@
     "title": "Αυτό που πρεσβεύουμε",
     "items": [
       {
-        "title": "Μηχανική πρώτα",
-        "description": "Stacks με type-safety, αυστηρά reviews και performance budgets ενσωματωμένα σε κάθε build."
+        "title": "Μηχανική πριν απ' όλα",
+        "description": "Type-safe stacks, αυστηρά reviews και performance budgets ενσωματωμένα σε κάθε build."
       },
       {
         "title": "Design με πρόθεση",
         "description": "Μεταφέρουμε τα Figma systems pixel-for-pixel, προσθέτοντας κίνηση και βάθος όπου έχει σημασία."
       },
       {
-        "title": "Καθηλωτικό από προεπιλογή",
-        "description": "3D, WebGL και micro-interactions που παραμένουν ελαφριά, responsive και προσβάσιμα."
+        "title": "Καθηλωτικό εξ ορισμού",
+        "description": "3D, WebGL και micro-interactions που παραμένουν ελαφριές, responsive και προσβάσιμες."
       }
     ]
   },
@@ -77,7 +77,7 @@
       },
       {
         "title": "Design & πρωτοτυποποίηση",
-        "description": "High-fidelity ροές με motion cues και 3D concepts επικυρώνονται νωρίς με τους stakeholders."
+        "description": "High-fidelity flows με motion cues και 3D concepts επικυρώνονται νωρίς με τους stakeholders."
       },
       {
         "title": "Υλοποίηση & θωράκιση",
@@ -85,12 +85,12 @@
       },
       {
         "title": "Λανσάρισμα & εξέλιξη",
-        "description": "Observability, A/Bs και tuning απόδοσης κρατούν τις εμπειρίες μας κοφτερές μετά την πρώτη μέρα."
+        "description": "Observability, A/B tests και βελτιστοποίηση απόδοσης κρατούν τις εμπειρίες κοφτερές μετά την πρώτη μέρα."
       }
     ]
   },
   "capabilities": {
-    "title": "Συνεργασίες όπου διαπρέπουμε",
+    "title": "Συνεργασίες στις οποίες ξεχωρίζουμε",
     "items": [
       {
         "title": "Συνεργασίες προϊόντος",
@@ -103,15 +103,15 @@
       {
         "title": "Design systems & UX",
         "points": [
-          "Systemized components που κλιμακώνονται σε ομάδες",
+          "Components που κλιμακώνονται σε ομάδες",
           "Αρχές motion για ουσιαστικό delight",
           "Προσβασιμότητα ενσωματωμένη σε κάθε interaction"
         ]
       },
       {
-        "title": "3D & νέα UI",
+        "title": "3D & νέο UI",
         "points": [
-          "Three.js και WebGL scenes βελτιστοποιημένα για web",
+          "Three.js και WebGL scenes βελτιστοποιημένα για το web",
           "Υβριδική αφήγηση 2D/3D χωρίς performance tax",
           "Πρωτοτυποποίηση χειροπιαστών εμπειριών πριν το build"
         ]
@@ -119,7 +119,7 @@
     ]
   },
   "team": {
-    "title": "Η ομάδα πίσω από τη δουλειά",
+    "title": "Η ομάδα πίσω από το έργο",
     "modal": {
       "closeAria": "Κλείσιμο στοιχείων μέλους ομάδας",
       "education": "Εκπαίδευση & διαπιστεύσεις",
@@ -131,10 +131,10 @@
       "konstantineKolpaxidis": {
         "badge": "Ιδρυτής",
         "role": "Ιδρυτής & CEO",
-        "focus": "Ηγείται της αρχιτεκτονικής και της παράδοσης σύνθετων προϊόντων με end-to-end λογοδοσία.",
+        "focus": "Ηγείται της αρχιτεκτονικής και της παράδοσης σύνθετων προϊόντων με end-to-end ευθύνη.",
         "bio": [
-          "Ο Konstantine ηγείται της end-to-end παράδοσης σύνθετων ψηφιακών προϊόντων, συνδυάζοντας hands-on τεχνικό βάθος με εκτελεστική ευθύνη των outcomes.",
-          "Εξειδικεύεται σε scalable web πλατφόρμες, διαδραστικές 3D web εμπειρίες και production-grade συστήματα λογισμικού όπου η απόδοση, η ασφάλεια και η αξιοπιστία είναι αδιαπραγμάτευτες. Ως Ιδρυτής & CEO, θέτει την τεχνική κατεύθυνση, επικυρώνει αρχιτεκτονικές, διαχειρίζεται την delivery governance και διασφαλίζει ότι κάθε συνεργασία παραδίδει μετρήσιμα επιχειρησιακά αποτελέσματα στην ώρα της, εντός budget και με μακροχρόνια συντηρησιμότητα."
+          "Ο Konstantine ηγείται της end-to-end παράδοσης σύνθετων ψηφιακών προϊόντων, συνδυάζοντας hands-on τεχνικό βάθος με εκτελεστική ευθύνη για τα αποτελέσματα.",
+          "Εξειδικεύεται στο χτίσιμο scalable web πλατφορμών, διαδραστικών 3D εμπειριών στο web και production-grade συστημάτων λογισμικού, όπου performance, ασφάλεια και αξιοπιστία είναι αδιαπραγμάτευτα. Ως Ιδρυτής & CEO καθορίζει την τεχνική κατεύθυνση, επικυρώνει αρχιτεκτονικές, διαχειρίζεται το delivery governance και διασφαλίζει ότι κάθε συνεργασία παραδίδει μετρήσιμα επιχειρησιακά αποτελέσματα έγκαιρα, εντός budget και με μακροχρόνια συντηρησιμότητα."
         ],
         "education": [
           "BSc στη Μηχανική Λογισμικού",
@@ -156,12 +156,12 @@
         ]
       },
       "elenaSchiltz": {
-        "badge": "Σχεδίαση",
+        "badge": "Design",
         "role": "Επικεφαλής Design & UX",
-        "focus": "Επικεφαλής design με systems mindset που χτίζει κλιμακούμενα design systems και UX.",
+        "focus": "Επικεφαλής design με systems mindset που χτίζει scalable design systems και UX.",
         "bio": [
-          "Η Elena ηγείται του product design και του UX με systems mindset: μεταφράζει τους business στόχους σε user-centered διεπαφές που αυξάνουν τη μετατροπή, τη διατήρηση και την εμπιστοσύνη στο brand.",
-          "Η δύναμή της είναι η δημιουργία και λειτουργία design systems σε κλίμακα, εξασφαλίζοντας συνέπεια σε προϊόντα, επιταχύνοντας την ανάπτυξη και μειώνοντας design debt. Οδηγεί τα UX workflows από την έρευνα και το prototyping έως τα τελικά UI specs στο Figma, υποστηρίζοντας τις ομάδες engineering με καθαρά standards και governance."
+          "Η Elena ηγείται του product design και του UX με systems mindset: μεταφράζει τους επιχειρησιακούς στόχους σε user-centered διεπαφές που αυξάνουν τη μετατροπή, τη διατήρηση και την εμπιστοσύνη στο brand.",
+          "Δυνατό της σημείο είναι η δημιουργία και λειτουργία design systems σε κλίμακα, εξασφαλίζοντας συνέπεια στα προϊόντα, επιταχύνοντας την ανάπτυξη και μειώνοντας το design debt. Οδηγεί τα UX workflows από την έρευνα και το prototyping μέχρι τα τελικά UI specs στο Figma, υποστηρίζοντας τις ομάδες engineering με καθαρά standards και governance."
         ],
         "education": [
           "Πτυχίο από RCA (Royal College of Art)"
@@ -171,7 +171,7 @@
         ],
         "tooling": [
           "Ευθυγράμμιση component libraries (tokens, variants, responsive rules)",
-          "Accessibility-first guidelines (WCAG-aware patterns)",
+          "Accessibility-first οδηγίες (WCAG-aware patterns)",
           "Design-to-dev workflows (structured specs, documentation, versioning)"
         ],
         "delivers": [
@@ -180,12 +180,12 @@
         ]
       },
       "emanuelZervas": {
-        "badge": "Μηχανική",
-        "role": "Κύριος Frontend Architect",
-        "focus": "Frontend architect για κλιμακούμενα, υψηλής απόδοσης προϊόντα React και Next.js.",
+        "badge": "Engineering",
+        "role": "Principal Frontend Architect",
+        "focus": "Frontend architect για scalable, performant προϊόντα σε React και Next.js.",
         "bio": [
-          "Ο Emanuel είναι ο κύριος frontend architect που εστιάζει στο χτίσιμο γρήγορων, κλιμακούμενων και συντηρήσιμων διεπαφών για σύγχρονα προϊόντα.",
-          "Σχεδιάζει frontend συστήματα ως πλατφόρμες: component libraries, patterns, performance budgets και engineering standards που κρατούν τις ομάδες να παραδίδουν αξιόπιστα καθώς τα προϊόντα μεγαλώνουν. Εξειδικεύεται σε TypeScript, React και Next.js, με έμφαση σε performance optimization, στρατηγικές SSR/ISR και στιβαρή ενσωμάτωση με APIs."
+          "Ο Emanuel είναι principal frontend architect, εστιασμένος στο χτίσιμο γρήγορων, κλιμακούμενων και συντηρήσιμων διεπαφών για σύγχρονα προϊόντα.",
+          "Σχεδιάζει frontend συστήματα ως πλατφόρμες: component libraries, patterns, performance budgets και engineering standards που κρατούν τις ομάδες αξιόπιστες καθώς τα προϊόντα μεγαλώνουν. Εξειδικεύεται σε TypeScript, React και Next.js, με έμφαση στη βελτιστοποίηση απόδοσης, στρατηγικές SSR/ISR και στιβαρή ενσωμάτωση με APIs."
         ],
         "education": [
           "Δεν έχει οριστεί επίσημος τίτλος σπουδών",
@@ -197,9 +197,9 @@
           "Architecture: scalable UI systems, SSR/ISR, caching, edge delivery patterns"
         ],
         "tooling": [
-          "UI: Tailwind CSS, Radix UI/shadcn/ui (αν χρησιμοποιούνται), Storybook",
+          "UI: Tailwind CSS, Radix UI/shadcn/ui (όπου χρησιμοποιούνται), Storybook",
           "Data: TanStack Query (React Query), SWR, typed API clients",
-          "State: Zustand, Redux Toolkit (ανάλογα το project)",
+          "State: Zustand, Redux Toolkit (ανάλογα με το project)",
           "Quality: ESLint, Prettier, type-safe patterns, performance profiling"
         ],
         "delivers": [
@@ -209,10 +209,10 @@
       },
       "evheniyBugha": {
         "badge": "3D",
-        "role": "Ειδικός 3D",
-        "focus": "Δημιουργεί καθηλωτικές 3D web εμπειρίες βελτιστοποιημένες για απόδοση.",
+        "role": "3D Specialist",
+        "focus": "Χτίζει καθηλωτικές 3D web εμπειρίες βελτιστοποιημένες για απόδοση.",
         "bio": [
-          "Ο Evheniy δημιουργεί immersive, production-ready 3D web εμπειρίες που είναι ταυτόχρονα οπτικά εντυπωσιακές και αποδοτικές σε πραγματικές συσκευές.",
+          "Ο Evheniy δημιουργεί immersive, production-ready 3D εμπειρίες στο web που είναι ταυτόχρονα οπτικά εντυπωσιακές και αποδοτικές σε πραγματικές συσκευές.",
           "Χτίζει διαδραστικές 3D σκηνές για product marketing, digital showrooms, configurators και τεχνική οπτικοποίηση, ισορροπώντας πιστότητα με ταχύτητα φόρτωσης, σταθερό frame-rate και προσβασιμότητα. Ενσωματώνει 3D σε εφαρμογές React και Next.js χωρίς να θυσιάζει τα Core Web Vitals."
         ],
         "education": [
@@ -225,7 +225,7 @@
         "tooling": [
           "Three.js ecosystem: React Three Fiber, Drei, loaders, postprocessing",
           "Asset pipeline: ροές glTF/GLB, optimization/compression, LOD strategies",
-          "Shaders/FX: εφέ βασισμένα σε GLSL (ανάλογα το project)"
+          "Shaders/FX: εφέ βασισμένα σε GLSL (ανάλογα με το project)"
         ],
         "delivers": [
           "3D websites, interactive product configurators, τεχνική οπτικοποίηση",
@@ -235,10 +235,10 @@
       "melinaChen": {
         "badge": "Backend",
         "role": "Senior Fullstack Engineer",
-        "focus": "Χτίζει κλιμακούμενα backends και APIs με καθαρή αρχιτεκτονική και έμφαση στην απόδοση.",
+        "focus": "Χτίζει scalable backends και APIs με καθαρή αρχιτεκτονική και έμφαση στην απόδοση.",
         "bio": [
-          "Η Melina χτίζει κλιμακούμενα backend συστήματα και fullstack προϊόντα με έμφαση σε καθαρή αρχιτεκτονική, προβλέψιμη απόδοση και ασφαλείς διασυνδέσεις.",
-          "Σχεδιάζει APIs, data models, caching layers και cloud-ready services που υποστηρίζουν ανάπτυξη από MVP έως enterprise scale, δίνοντας έμφαση σε σταθερότητα υπό φόρτο, ισχυρές πρακτικές ασφάλειας και συντηρήσιμες codebases με καθαρά όρια και testability."
+          "Η Melina χτίζει scalable backend συστήματα και fullstack προϊόντα με έμφαση σε καθαρή αρχιτεκτονική, προβλέψιμη απόδοση και ασφαλείς διασυνδέσεις.",
+          "Σχεδιάζει APIs, data models, caching layers και cloud-ready services που υποστηρίζουν ανάπτυξη από MVP μέχρι enterprise scale, δίνοντας έμφαση στη σταθερότητα υπό φόρτο, στις ισχυρές πρακτικές ασφάλειας και σε συντηρήσιμες codebases με καθαρά όρια και testability."
         ],
         "education": [
           "Πτυχίο Μηχανικής Υπολογιστών"
@@ -249,9 +249,9 @@
           "Architecture: scalable APIs, event-driven patterns (όταν χρειάζεται), cloud readiness"
         ],
         "tooling": [
-          "Node.js frameworks: NestJS / Express (ανάλογα το project)",
-          "GraphQL: Apollo Server/Client (ανάλογα το project)",
-          "ORM/DB tooling: Prisma / TypeORM (ανάλογα το project)",
+          "Node.js frameworks: NestJS / Express (ανάλογα με το project)",
+          "GraphQL: Apollo Server/Client (ανάλογα με το project)",
+          "ORM/DB tooling: Prisma / TypeORM (ανάλογα με το project)",
           "Security: auth flows, RBAC, rate limiting, auditing patterns"
         ],
         "delivers": [
@@ -260,11 +260,11 @@
         ]
       },
       "sofiaKonig": {
-        "badge": "Κίνηση",
+        "badge": "Motion",
         "role": "Motion & Interaction Designer",
-        "focus": "Motion & interaction designer που δημιουργεί purposeful animations και storytelling.",
+        "focus": "Motion & interaction designer που φτιάχνει στοχευμένες κινήσεις και storytelling.",
         "bio": [
-          "Η Sofia σχεδιάζει motion και interaction που αναβαθμίζουν τη χρηστικότητα και την αντίληψη ποιότητας, μετατρέποντας στατικά UIs σε ρευστές, διαισθητικές εμπειρίες.",
+          "Η Sofia σχεδιάζει motion και interactions που αναβαθμίζουν τη χρηστικότητα και την αντίληψη ποιότητας, μετατρέποντας στατικά UIs σε ρευστές, διαισθητικές εμπειρίες.",
           "Χτίζει motion systems που κλιμακώνονται μαζί με τα προϊόντα, εξασφαλίζοντας ότι τα animations παραμένουν συνεπή, purposeful και performant σε όλες τις συσκευές, με έμφαση σε premium landing pages, product storytelling και interactive flows."
         ],
         "education": [
@@ -278,14 +278,14 @@
           "Scroll-based storytelling, UI transitions, state-driven animations (implementation-aligned)"
         ],
         "delivers": [
-          "Motion design systems, υψηλού επιπέδου UI interactions, conversion-driven landing animations",
+          "Motion design systems, high-end UI interactions, conversion-driven landing animations",
           "Performance-aware animation specifications για engineering teams"
         ]
       },
       "ivanAlexandrov": {
         "badge": "DevOps",
-        "role": "Μηχανικός DevOps & Cloud",
-        "focus": "Έχει την ευθύνη για υποδομές cloud, CI/CD, ασφάλεια και αξιοπιστία.",
+        "role": "DevOps & Cloud Engineer",
+        "focus": "Έχει την ευθύνη για cloud υποδομές, CI/CD, ασφάλεια και αξιοπιστία.",
         "bio": [
           "Ο Ivan έχει την ευθύνη για cloud υποδομές, αυτοματοποίηση deployments και επιχειρησιακή αξιοπιστία, διασφαλίζοντας ότι τα προϊόντα είναι ασφαλή, observable και κλιμακώσιμα στην παραγωγή.",
           "Σχεδιάζει CI/CD pipelines, containerized delivery, infrastructure-as-code και monitoring που υποστηρίζουν γρήγορη εξέλιξη χωρίς συμβιβασμούς στο uptime, με least-privilege security και robust rollback strategies."
@@ -299,21 +299,21 @@
           "Delivery: CI/CD, Infrastructure as Code"
         ],
         "tooling": [
-          "IaC: Terraform / CloudFormation (ανάλογα το project)",
+          "IaC: Terraform / CloudFormation (ανάλογα με το project)",
           "Kubernetes tooling: Helm, GitOps patterns (όταν εφαρμόζεται)",
           "Observability: metrics, logs, tracing (Prometheus/Grafana/ELK/Sentry ανά stack)"
         ],
         "delivers": [
-          "Ασφαλή cloud foundations, deployment pipelines, scalability και reliability engineering",
-          "Production monitoring, incident readiness και βελτιστοποίηση κόστους"
+          "Ασφαλείς cloud βάσεις, pipelines παράδοσης, scalability και reliability engineering",
+          "Production monitoring, ετοιμότητα για incidents και βελτιστοποίηση κόστους"
         ]
       },
       "keliPaschalidou": {
         "badge": "Product",
-        "role": "Επικεφαλής Product & Strategy",
+        "role": "Product & Strategy Lead",
         "focus": "Καθοδηγεί product στρατηγική, roadmaps και ευθυγράμμιση stakeholders.",
         "bio": [
-          "Η Keli καθοδηγεί τη product στρατηγική και εκτέλεση, συνδέοντας τους επιχειρησιακούς στόχους με roadmaps που παραδίδουν πραγματικά outcomes.",
+          "Η Keli καθοδηγεί την product στρατηγική και εκτέλεση, συνδέοντας τους επιχειρησιακούς στόχους με roadmaps που παραδίδουν πραγματικά outcomes.",
           "Ηγείται discovery, ορισμού απαιτήσεων, προτεραιοποίησης και cross-functional alignment, συντονίζοντας stakeholders, integrations και compliance constraints χωρίς να χάνει ταχύτητα."
         ],
         "education": [
@@ -333,12 +333,12 @@
         ]
       },
       "heinrichMeier": {
-        "badge": "Ποιότητα",
-        "role": "Μηχανικός QA & Test Automation",
-        "focus": "Μηχανικός QA και αυτοματοποίησης που ενσωματώνει quality gates και regression coverage.",
+        "badge": "Quality",
+        "role": "QA & Test Automation Engineer",
+        "focus": "QA και automation engineer που ενσωματώνει quality gates και regression coverage.",
         "bio": [
-          "Ο Heinrich διασφαλίζει την εμπιστοσύνη στο release μέσω ισχυρής QA στρατηγικής και test automation.",
-          "Σχεδιάζει test pyramids, χτίζει regression suites και ενσωματώνει quality gates στο CI/CD ώστε οι ομάδες να παραδίδουν πιο γρήγορα με λιγότερα production issues, εστιάζοντας την κάλυψη εκεί που έχει σημασία και σε deterministic test environments."
+          "Ο Heinrich διασφαλίζει την εμπιστοσύνη στα releases μέσω ισχυρής QA στρατηγικής και test automation.",
+          "Σχεδιάζει test pyramids, χτίζει regression suites και ενσωματώνει quality gates στο CI/CD ώστε οι ομάδες να παραδίδουν γρηγορότερα με λιγότερα production issues, εστιάζοντας την κάλυψη εκεί που έχει σημασία και σε deterministic test environments."
         ],
         "education": [
           "Δεν έχει οριστεί επίσημος τίτλος σπουδών"
