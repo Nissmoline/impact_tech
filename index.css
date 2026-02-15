@@ -38,6 +38,7 @@
     backface-visibility: hidden;
   }
 
+
   .hero-floating-shifts {
     --hero-palette-x: 50px;
     --hero-ui-x: -10px;

@@ -119,7 +119,7 @@ const TechStack: React.FC = () => {
 
       <style>{`
         .animate-marquee {
-            animation: marquee 65s linear infinite;
+            animation: marquee 87s linear infinite;
         }
         @keyframes marquee {
             0% { transform: translateX(0); }

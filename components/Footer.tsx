@@ -1,14 +1,29 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Hexagon } from 'lucide-react';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 const Footer: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
+  const homePath = locale === 'el' ? '/el' : '/';
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const isHome = location.pathname === '/' || location.pathname === '/el';
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate(homePath);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
 
   const handleOpenCookies = () => {
     if (typeof window === 'undefined') return;
@@ -18,7 +33,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 border-t border-slate-900 py-12">
       <div className="container mx-auto px-6 flex flex-col md:flex-row md:relative md:justify-between items-center gap-6">
-        <div className="flex items-center gap-3 text-white font-display font-bold text-lg">
+        <Link
+          to={homePath}
+          onClick={handleLogoClick}
+          className="flex items-center gap-3 text-white font-display font-bold text-lg hover:opacity-80 transition-opacity"
+          aria-label="Impact Tech - Home"
+        >
           <span className="footer-logo relative flex h-11 w-11 items-center justify-center">
             <span className="footer-logo-glow absolute inset-0 rounded-full" aria-hidden="true" />
             <svg
@@ -38,7 +58,7 @@ const Footer: React.FC = () => {
             <Hexagon className="relative z-10 text-cyan-300" size={22} />
           </span>
           <span className="text-slate-500">IMPACT TECH</span>
-        </div>
+        </Link>
         <div className="text-slate-600 text-sm text-center md:absolute md:left-1/2 md:-translate-x-1/2">
           © {new Date().getFullYear()} Impact Tech. All rights reserved.
         </div>

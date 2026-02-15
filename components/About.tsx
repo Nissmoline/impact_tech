@@ -15,93 +15,24 @@ import {
   Star,
   X,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import TiltCard from './ui/TiltCard';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
-const stats = [
-  { label: 'Projects shipped', value: '75+', detail: 'Web, mobile & 3D experiences' },
-  { label: 'Avg ROI uplift', value: '38%', detail: 'Post-launch conversion improvement' },
-  { label: 'Core specialists', value: '12', detail: 'Engineers, designers, 3D artists' },
-  { label: 'Client NPS', value: '71', detail: 'Long-term partnerships we keep' },
-];
+const pillarIcons = [Cpu, Figma, Orbit];
+const journeyIcons = [Compass, Sparkles, ShieldCheck, Timer];
+const capabilityIcons = [Handshake, Workflow, Brain];
 
-const pillars = [
-  {
-    title: 'Engineering-first craft',
-    description: 'Type-safe stacks, rigorous reviews, and performance budgets baked into every build.',
-    icon: Cpu,
-  },
-  {
-    title: 'Design with intention',
-    description: 'We translate Figma systems pixel-for-pixel, layering motion and depth where it matters.',
-    icon: Figma,
-  },
-  {
-    title: 'Immersive by default',
-    description: '3D, WebGL, and micro-interactions that stay light, responsive, and accessible.',
-    icon: Orbit,
-  },
-];
-
-const journey = [
-  {
-    title: 'Discover & align',
-    description: 'We frame the problem, map constraints, and align on outcomes before a single line of code.',
-    icon: Compass,
-  },
-  {
-    title: 'Design & prototype',
-    description: 'High-fidelity flows with motion cues and 3D concepts validated early with stakeholders.',
-    icon: Sparkles,
-  },
-  {
-    title: 'Build & harden',
-    description: 'TypeScript, automated checks, and iterative releases keep quality high and timelines honest.',
-    icon: ShieldCheck,
-  },
-  {
-    title: 'Launch & evolve',
-    description: 'Observability, A/Bs, and performance tuning to keep experiences sharp after day one.',
-    icon: Timer,
-  },
-];
-
-const capabilities = [
-  {
-    title: 'Product partnerships',
-    points: [
-      'Roadmapping with founders and product leads',
-      'Workshops that turn ambiguity into sprints',
-      'Outcome-focused delivery with clear KPIs',
-    ],
-    icon: Handshake,
-  },
-  {
-    title: 'Design systems & UX',
-    points: [
-      'Systemized components that scale across squads',
-      'Motion principles for purposeful delight',
-      'Accessibility baked into every interaction',
-    ],
-    icon: Workflow,
-  },
-  {
-    title: '3D & emerging UI',
-    points: [
-      'Three.js and WebGL scenes optimized for web',
-      'Hybrid 2D/3D storytelling without performance tax',
-      'Prototyping tangible experiences before build',
-    ],
-    icon: Brain,
-  },
-];
-
-type TeamMember = {
+type TeamMemberMeta = {
+  key: string;
   name: string;
-  role: string;
-  focus: string;
   photo: string;
   accent: string;
+};
+
+type TeamMember = TeamMemberMeta & {
+  role: string;
+  focus: string;
   badge: string;
   bio: string[];
   education?: string[];
@@ -110,235 +41,114 @@ type TeamMember = {
   delivers?: string[];
 };
 
-const team: TeamMember[] = [
+const teamMeta: TeamMemberMeta[] = [
   {
+    key: 'konstantineKolpaxidis',
     name: 'Kolpaxidis Konstantine',
-    role: 'Founder & CEO',
-    focus: 'Leads architecture and delivery of complex products with end-to-end accountability.',
     photo: '/team/k_kolpaxidis.jpg',
     accent: 'from-cyan-500 to-blue-500',
-    badge: 'Founder',
-    bio: [
-      'Konstantine leads end-to-end delivery of complex digital products, combining hands-on engineering depth with executive ownership of outcomes.',
-      'He specializes in building scalable web platforms, interactive 3D web experiences, and production-grade software systems where performance, security, and reliability are non-negotiable. As Founder & CEO, he sets technical direction, validates architectures, manages delivery governance, and ensures every engagement ships measurable business results on time, on budget, and with long-term maintainability.',
-    ],
-    education: ['BSc in Software Engineering', '10+ years building scalable platforms and interactive experiences'],
-    primaryStack: [
-      'Frontend: TypeScript, React, Next.js, HTML5, CSS3',
-      'Backend: Node.js (architecture oversight), REST/GraphQL (solution design)',
-      'Cloud/Delivery: AWS-oriented architectures, CI/CD strategy, security-by-design',
-    ],
-    tooling: [
-      'React ecosystem (routing, state, data fetching), component-driven architecture, Storybook',
-      'Performance engineering: Core Web Vitals optimization, SSR/ISR patterns, caching strategies',
-      'Observability and quality gates: logging, monitoring, release governance',
-    ],
-    delivers: [
-      'Technical strategy, system architecture, delivery leadership, audits, scalability plans',
-      'High-performance web platforms, enterprise-grade applications, interactive 3D product experiences',
-    ],
   },
   {
+    key: 'elenaSchiltz',
     name: 'Elena Schiltz',
-    role: 'Head of Design & UX',
-    focus: 'Systems-minded design lead building scalable design systems and UX.',
     photo: '/team/e_Schilz.jpg',
     accent: 'from-purple-500 to-pink-500',
-    badge: 'Design',
-    bio: [
-      'Elena leads product design and UX with a systems mindset: she translates business goals into user-centered interfaces that increase conversion, retention, and brand trust.',
-      'Her strength is building and operating design systems at scale, ensuring consistency across products, accelerating development, and reducing design debt. She owns UX workflows from research and prototyping to final UI specs in Figma, supporting engineering teams through implementation with clear standards and governance.',
-    ],
-    education: ['University degree in RCA (Royal College of Art)'],
-    primaryStack: ['Design & UX: Figma, design systems, UI specifications, user flows, prototyping'],
-    tooling: [
-      'Component libraries alignment (tokens, variants, responsive rules)',
-      'Accessibility-first design guidelines (WCAG-aware patterns)',
-      'Design-to-dev workflows (structured specs, documentation, versioning)',
-    ],
-    delivers: [
-      'UX strategy, design systems, product UI, audit and redesign programs',
-      'Conversion-focused interfaces for SaaS, enterprise dashboards, and high-impact marketing sites',
-    ],
   },
   {
+    key: 'emanuelZervas',
     name: 'Emanuel Zervas',
-    role: 'Principal Frontend Architect',
-    focus: 'Frontend architect for scalable, performant React and Next.js products.',
     photo: '/team/E_Zervas.jpg',
     accent: 'from-emerald-500 to-teal-500',
-    badge: 'Engineering',
-    bio: [
-      'Emanuel is the principal frontend architect focused on building fast, scalable, and maintainable user interfaces for modern products.',
-      'He designs frontend systems as platforms: component libraries, patterns, performance budgets, and engineering standards that keep teams shipping reliably as products grow. He is specialized in TypeScript, React, and Next.js, with emphasis on performance optimization, SSR/ISR strategies, and robust integration with APIs.',
-    ],
-    education: [
-      'Formal degree not specified',
-      '19+ years experience, 8+ years in React/Next.js and performance optimization',
-      'Former tech lead at Revolut',
-    ],
-    primaryStack: [
-      'Frontend: TypeScript, React, Next.js',
-      'Architecture: scalable UI systems, SSR/ISR, caching, edge delivery patterns',
-    ],
-    tooling: [
-      'UI: Tailwind CSS, Radix UI/shadcn/ui (if used), Storybook',
-      'Data: TanStack Query (React Query), SWR, typed API clients',
-      'State: Zustand, Redux Toolkit (project-dependent)',
-      'Quality: ESLint, Prettier, type-safe patterns, performance profiling',
-    ],
-    delivers: [
-      'Enterprise-grade frontend architecture, component libraries, performance hardening',
-      'High-conversion product UIs, dashboards, portals, and multi-tenant SaaS frontends',
-    ],
   },
   {
+    key: 'evheniyBugha',
     name: 'Evheniy Bugha',
-    role: '3D Specialist',
-    focus: 'Builds immersive 3D web experiences optimized for performance.',
     photo: '/team/Evheniy_Buha.jpg',
     accent: 'from-cyan-500 to-purple-500',
-    badge: '3D',
-    bio: [
-      'Evheniy creates immersive, production-ready 3D web experiences that are both visually compelling and performant on real devices.',
-      'He builds interactive 3D scenes for product marketing, digital showrooms, configurators, and technical visualization, balancing fidelity with loading speed, frame-rate stability, and accessibility. He integrates 3D into React and Next.js applications without compromising Core Web Vitals.',
-    ],
-    education: ['50+ shipped projects with seamless 3D integration'],
-    primaryStack: [
-      '3D/Web: WebGL, Three.js, real-time rendering pipelines',
-      'Integration: React/Next.js-friendly 3D architecture',
-    ],
-    tooling: [
-      'Three.js ecosystem: React Three Fiber, Drei, loaders, postprocessing',
-      'Asset pipeline: glTF/GLB workflows, optimization/compression, LOD strategies',
-      'Shaders/FX: GLSL-based effects (project-dependent)',
-    ],
-    delivers: [
-      '3D websites, interactive product configurators, technical visualization',
-      'Optimized real-time scenes integrated into modern web applications',
-    ],
   },
   {
+    key: 'melinaChen',
     name: 'Melina Chen',
-    role: 'Senior Fullstack Engineer',
-    focus: 'Builds scalable backends and APIs with clean architecture and performance focus.',
     photo: '/team/Melina_Chen.jpg',
     accent: 'from-orange-500 to-amber-500',
-    badge: 'Backend',
-    bio: [
-      'Melina builds scalable backend systems and fullstack products with a focus on clean architecture, predictable performance, and secure integrations.',
-      'She designs APIs, data models, caching layers, and cloud-ready services that support growth from MVP to enterprise scale, emphasizing stability under load, strong security practices, and maintainable codebases with clear boundaries and testability.',
-    ],
-    education: ['University degree in a Computer Engineering'],
-    primaryStack: [
-      'Backend: Node.js, REST, GraphQL',
-      'Data: PostgreSQL, MongoDB, Redis',
-      'Architecture: scalable APIs, event-driven patterns (when needed), cloud readiness',
-    ],
-    tooling: [
-      'Node.js frameworks: NestJS / Express (project-dependent)',
-      'GraphQL: Apollo Server/Client (project-dependent)',
-      'ORM/DB tooling: Prisma / TypeORM (project-dependent)',
-      'Security: auth flows, RBAC, rate limiting, auditing patterns',
-    ],
-    delivers: [
-      'Production-grade APIs, admin panels, and fullstack applications',
-      'Data architecture, integrations, and performance optimization for high-traffic systems',
-    ],
   },
   {
+    key: 'sofiaKonig',
     name: 'Sofia Konig',
-    role: 'Motion & Interaction Designer',
-    focus: 'Motion and interaction designer creating purposeful animations and storytelling.',
     photo: '/team/s_koenig.jpg',
     accent: 'from-fuchsia-500 to-pink-500',
-    badge: 'Motion',
-    bio: [
-      'Sofia crafts motion and interaction design that elevates usability and perception of quality, turning static UIs into fluid, intuitive experiences.',
-      'She builds motion systems that scale with products, ensuring animations remain consistent, purposeful, and performant across devices, with a focus on premium landing pages, product storytelling, and interactive flows.',
-    ],
-    education: ['University degree in a Digital Architect'],
-    primaryStack: ['Motion/UI: interaction design, animation systems, UI micro-interactions'],
-    tooling: [
-      'Framer Motion, GSAP',
-      'Scroll-based storytelling, UI transitions, state-driven animations (implementation-aligned)',
-    ],
-    delivers: [
-      'Motion design systems, high-end UI interactions, conversion-driven landing animations',
-      'Performance-aware animation specifications for engineering teams',
-    ],
   },
   {
+    key: 'ivanAlexandrov',
     name: 'Ivan Alexandrov',
-    role: 'DevOps & Cloud Engineer',
-    focus: 'Owns cloud infrastructure, CI/CD, security, and reliability.',
     photo: '/team/i_alexandrov.jpg',
     accent: 'from-lime-500 to-green-500',
-    badge: 'DevOps',
-    bio: [
-      'Ivan owns cloud infrastructure, deployment automation, and operational reliability, ensuring products are secure, observable, and scalable in production.',
-      'He designs CI/CD pipelines, containerized delivery, infrastructure-as-code, and monitoring that supports fast iteration without compromising uptime, with least-privilege security and robust rollback strategies.',
-    ],
-    education: ['Master of Science degree in a Computer Science'],
-    primaryStack: ['Cloud: AWS', 'Containers: Docker, Kubernetes', 'Delivery: CI/CD, Infrastructure as Code'],
-    tooling: [
-      'IaC: Terraform / CloudFormation (project-dependent)',
-      'Kubernetes tooling: Helm, GitOps patterns (when applicable)',
-      'Observability: metrics, logs, tracing (Prometheus/Grafana/ELK/Sentry depending on stack)',
-    ],
-    delivers: [
-      'Secure cloud foundations, deployment pipelines, scalability and reliability engineering',
-      'Production monitoring, incident readiness, and cost optimization',
-    ],
   },
   {
+    key: 'keliPaschalidou',
     name: 'Keli Paschalidou',
-    role: 'Product & Strategy Lead',
-    focus: 'Drives product strategy, roadmaps, and stakeholder alignment.',
     photo: '/team/K_Paschalidou.jpg',
     accent: 'from-sky-500 to-indigo-500',
-    badge: 'Product',
-    bio: [
-      'Keli drives product strategy and execution, connecting business objectives to roadmaps that ship real outcomes.',
-      'She leads discovery, requirements definition, prioritization, and cross-functional alignment, coordinating stakeholders, integrations, and compliance constraints without losing speed.',
-    ],
-    education: ['MBA', '7+ years in product management'],
-    primaryStack: ['Discovery, roadmap planning, KPI design, stakeholder management, delivery governance'],
-    tooling: [
-      'Agile delivery and documentation toolchains (Jira/Confluence/Notion/Miro as needed)',
-      'Analytics alignment and experimentation processes (tool choice depends on client ecosystem)',
-    ],
-    delivers: [
-      'Discovery workshops, MVP definition, roadmaps, release planning, and stakeholder alignment',
-      'Product strategy for SaaS, enterprise platforms, and mission-critical engineering workflows',
-    ],
   },
   {
+    key: 'heinrichMeier',
     name: 'Heinrich Meier',
-    role: 'QA & Test Automation Engineer',
-    focus: 'QA and automation engineer integrating quality gates and regression coverage.',
     photo: '/team/h_meier.jpg',
     accent: 'from-amber-500 to-yellow-500',
-    badge: 'Quality',
-    bio: [
-      'Heinrich ensures release confidence through robust QA strategy and test automation.',
-      'He designs test pyramids, builds regression suites, and integrates quality gates into CI/CD so teams ship faster with fewer production issues, focusing on coverage where it matters and deterministic test environments.',
-    ],
-    education: ['Formal degree not specified'],
-    primaryStack: ['Testing: unit, integration, E2E automation, CI quality gates'],
-    tooling: ['Jest, Vitest, Playwright', 'CI integration, reporting, and regression governance'],
-    delivers: [
-      'Automated test suites, release readiness frameworks, stability improvements',
-      'Reduced regressions, stronger user experience, and production-grade reliability',
-    ],
   },
 ];
 
 const About: React.FC = () => {
-  const [activeMember, setActiveMember] = useState<(typeof team)[number] | null>(null);
+  const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
+  const { t } = useTranslation('about');
+
+  const stats = t('stats', { returnObjects: true }) as Array<{
+    label: string;
+    value: string;
+    detail: string;
+  }>;
+
+  const pillarItems = t('pillars.items', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const pillars = pillarItems.map((pillar, index) => ({
+    ...pillar,
+    icon: pillarIcons[index] ?? Cpu,
+  }));
+
+  const journeyItems = t('journey.items', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
+  const journey = journeyItems.map((stage, index) => ({
+    ...stage,
+    icon: journeyIcons[index] ?? Compass,
+  }));
+
+  const capabilityItems = t('capabilities.items', { returnObjects: true }) as Array<{
+    title: string;
+    points: string[];
+  }>;
+  const capabilities = capabilityItems.map((capability, index) => ({
+    ...capability,
+    icon: capabilityIcons[index] ?? Handshake,
+  }));
+
+  const team = teamMeta.map((member) => {
+    const details = t(`team.members.${member.key}`, { returnObjects: true }) as Omit<
+      TeamMember,
+      keyof TeamMemberMeta
+    >;
+
+    return {
+      ...member,
+      ...details,
+    };
+  });
 
   useEffect(() => {
     if (!activeMember) return;
@@ -353,7 +163,7 @@ const About: React.FC = () => {
 
   const handleCardKeyDown = (
     event: React.KeyboardEvent<HTMLDivElement>,
-    member: (typeof team)[number]
+    member: TeamMember
   ) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
@@ -391,27 +201,26 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-sm font-semibold">
               <Sparkles size={16} />
-              About Impact Tech
+              {t('hero.badge')}
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white dark:text-white light:text-slate-900 leading-tight">
-              We build immersive products that feel inevitable.
+              {t('hero.title')}
             </h1>
             <p className="text-lg text-slate-400 dark:text-slate-400 light:text-slate-600 max-w-2xl leading-relaxed">
-              From complex web apps to cinematic 3D experiences, our team blends engineering rigor with design
-              precision. We’re the partner teams call when they need reliability, speed, and a little bit of awe.
+              {t('hero.description')}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 to={withLocale('/portfolio')}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
               >
-                View our work
+                {t('hero.primaryCta')}
               </Link>
               <a
                 href={withLocale('/#contact')}
                 className="px-6 py-3 rounded-full border border-white/10 dark:border-white/10 light:border-slate-300 text-white dark:text-white light:text-slate-900 hover:border-cyan-500/50 transition-all"
               >
-                Talk to us
+                {t('hero.secondaryCta')}
               </a>
             </div>
           </div>
@@ -424,31 +233,31 @@ const About: React.FC = () => {
                     <Orbit size={24} />
                   </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.18em] text-slate-400">Our DNA</p>
-                    <p className="text-white font-semibold">Engineering × Design × 3D</p>
+                    <p className="text-sm uppercase tracking-[0.18em] text-slate-400">{t('dna.eyebrow')}</p>
+                    <p className="text-white font-semibold">{t('dna.title')}</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 text-sm text-slate-300">
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <p className="text-xs text-slate-400 mb-1">What drives us</p>
-                    <p className="text-white font-semibold">Useful. Beautiful. Performant.</p>
+                    <p className="text-xs text-slate-400 mb-1">{t('dna.cards.drive.label')}</p>
+                    <p className="text-white font-semibold">{t('dna.cards.drive.value')}</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <p className="text-xs text-slate-400 mb-1">How we ship</p>
-                    <p className="text-white font-semibold">Small teams, clear rituals.</p>
+                    <p className="text-xs text-slate-400 mb-1">{t('dna.cards.ship.label')}</p>
+                    <p className="text-white font-semibold">{t('dna.cards.ship.value')}</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <p className="text-xs text-slate-400 mb-1">Where we excel</p>
-                    <p className="text-white font-semibold">Web, mobile, and 3D surfaces.</p>
+                    <p className="text-xs text-slate-400 mb-1">{t('dna.cards.excel.label')}</p>
+                    <p className="text-white font-semibold">{t('dna.cards.excel.value')}</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <p className="text-xs text-slate-400 mb-1">Why clients stay</p>
-                    <p className="text-white font-semibold">Results you can measure.</p>
+                    <p className="text-xs text-slate-400 mb-1">{t('dna.cards.stay.label')}</p>
+                    <p className="text-white font-semibold">{t('dna.cards.stay.value')}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-slate-300">
                   <Users className="text-cyan-300" size={20} />
-                  <p>Remote-first studio with boots on the ground in Greece, serving teams worldwide.</p>
+                  <p>{t('dna.footer')}</p>
                 </div>
               </div>
             </div>
@@ -472,7 +281,7 @@ const About: React.FC = () => {
         {/* Pillars */}
         <div className="space-y-6">
           <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
-            What we stand for
+            {t('pillars.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map((pillar) => (
@@ -494,7 +303,7 @@ const About: React.FC = () => {
           <div className="flex items-center gap-3">
             <ShieldCheck className="text-cyan-400" size={24} />
             <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
-              How we work
+              {t('journey.title')}
             </h2>
           </div>
           <div className="grid lg:grid-cols-4 gap-4">
@@ -522,7 +331,7 @@ const About: React.FC = () => {
           <div className="flex items-center gap-3">
             <Cpu className="text-cyan-400" size={24} />
             <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
-              Partnerships we thrive in
+              {t('capabilities.title')}
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -552,13 +361,13 @@ const About: React.FC = () => {
           <div className="flex items-center gap-3">
             <Star className="text-cyan-400" size={24} />
             <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
-              The team behind the work
+              {t('team.title')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member) => (
               <TiltCard
-                key={member.name}
+                key={member.key}
                 className="cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                 role="button"
                 tabIndex={0}
@@ -603,7 +412,7 @@ const About: React.FC = () => {
               type="button"
               onClick={() => setActiveMember(null)}
               className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
-              aria-label="Close team member details"
+              aria-label={t('team.modal.closeAria')}
             >
               <X size={18} />
             </button>
@@ -636,10 +445,10 @@ const About: React.FC = () => {
                   ))}
                 </div>
                 <div className="grid sm:grid-cols-2 gap-6 pt-2">
-                  {renderSection('Education & credentials', activeMember.education, activeMember.accent)}
-                  {renderSection('Primary stack', activeMember.primaryStack, activeMember.accent)}
-                  {renderSection('Libraries & tooling', activeMember.tooling, activeMember.accent)}
-                  {renderSection('What they deliver', activeMember.delivers, activeMember.accent)}
+                  {renderSection(t('team.modal.education'), activeMember.education, activeMember.accent)}
+                  {renderSection(t('team.modal.primaryStack'), activeMember.primaryStack, activeMember.accent)}
+                  {renderSection(t('team.modal.tooling'), activeMember.tooling, activeMember.accent)}
+                  {renderSection(t('team.modal.delivers'), activeMember.delivers, activeMember.accent)}
                 </div>
                 <div className={`h-1 w-full rounded-full bg-gradient-to-r ${activeMember.accent}`} />
               </div>

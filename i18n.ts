@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { getLocaleFromPath, getPreferredLocale } from './utils/locale';
 import enCommon from './locales/en/common.json';
+import enAbout from './locales/en/about.json';
 import enCareers from './locales/en/careers.json';
 import enImpressum from './locales/en/impressum.json';
 import enPrivacy from './locales/en/privacy.json';
@@ -16,6 +17,7 @@ import enServiceDevops from './locales/en/service-devops.json';
 import enServiceCustomSoftware from './locales/en/service-custom-software.json';
 import enServiceSeoStrategy from './locales/en/service-seo-strategy.json';
 import elCommon from './locales/el/common.json';
+import elAbout from './locales/el/about.json';
 import elCareers from './locales/el/careers.json';
 import elImpressum from './locales/el/impressum.json';
 import elPrivacy from './locales/el/privacy.json';
@@ -42,6 +44,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       common: enCommon,
+      about: enAbout,
       careers: enCareers,
       impressum: enImpressum,
       privacy: enPrivacy,
@@ -58,6 +61,7 @@ i18n.use(initReactI18next).init({
     },
     el: {
       common: elCommon,
+      about: elAbout,
       careers: elCareers,
       impressum: elImpressum,
       privacy: elPrivacy,
@@ -79,6 +83,7 @@ i18n.use(initReactI18next).init({
   defaultNS: 'common',
   ns: [
     'common',
+    'about',
     'careers',
     'impressum',
     'privacy',

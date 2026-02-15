@@ -1,0 +1,360 @@
+{
+  "hero": {
+    "badge": "About Impact Tech",
+    "title": "We build immersive products that feel inevitable.",
+    "description": "From complex web apps to cinematic 3D experiences, our team blends engineering rigor with design precision. We're the partner teams call when they need reliability, speed, and a little bit of awe.",
+    "primaryCta": "View our work",
+    "secondaryCta": "Talk to us"
+  },
+  "dna": {
+    "eyebrow": "Our DNA",
+    "title": "Engineering x Design x 3D",
+    "cards": {
+      "drive": {
+        "label": "What drives us",
+        "value": "Useful. Beautiful. Performant."
+      },
+      "ship": {
+        "label": "How we ship",
+        "value": "Small teams, clear rituals."
+      },
+      "excel": {
+        "label": "Where we excel",
+        "value": "Web, mobile, and 3D surfaces."
+      },
+      "stay": {
+        "label": "Why clients stay",
+        "value": "Results you can measure."
+      }
+    },
+    "footer": "Remote-first studio with boots on the ground in Greece, serving teams worldwide."
+  },
+  "stats": [
+    {
+      "label": "Projects shipped",
+      "value": "75+",
+      "detail": "Web, mobile & 3D experiences"
+    },
+    {
+      "label": "Avg ROI uplift",
+      "value": "38%",
+      "detail": "Post-launch conversion improvement"
+    },
+    {
+      "label": "Core specialists",
+      "value": "12",
+      "detail": "Engineers, designers, 3D artists"
+    },
+    {
+      "label": "Client NPS",
+      "value": "71",
+      "detail": "Long-term partnerships we keep"
+    }
+  ],
+  "pillars": {
+    "title": "What we stand for",
+    "items": [
+      {
+        "title": "Engineering-first craft",
+        "description": "Type-safe stacks, rigorous reviews, and performance budgets baked into every build."
+      },
+      {
+        "title": "Design with intention",
+        "description": "We translate Figma systems pixel-for-pixel, layering motion and depth where it matters."
+      },
+      {
+        "title": "Immersive by default",
+        "description": "3D, WebGL, and micro-interactions that stay light, responsive, and accessible."
+      }
+    ]
+  },
+  "journey": {
+    "title": "How we work",
+    "items": [
+      {
+        "title": "Discover & align",
+        "description": "We frame the problem, map constraints, and align on outcomes before a single line of code."
+      },
+      {
+        "title": "Design & prototype",
+        "description": "High-fidelity flows with motion cues and 3D concepts validated early with stakeholders."
+      },
+      {
+        "title": "Build & harden",
+        "description": "TypeScript, automated checks, and iterative releases keep quality high and timelines honest."
+      },
+      {
+        "title": "Launch & evolve",
+        "description": "Observability, A/Bs, and performance tuning to keep experiences sharp after day one."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Partnerships we thrive in",
+    "items": [
+      {
+        "title": "Product partnerships",
+        "points": [
+          "Roadmapping with founders and product leads",
+          "Workshops that turn ambiguity into sprints",
+          "Outcome-focused delivery with clear KPIs"
+        ]
+      },
+      {
+        "title": "Design systems & UX",
+        "points": [
+          "Systemized components that scale across squads",
+          "Motion principles for purposeful delight",
+          "Accessibility baked into every interaction"
+        ]
+      },
+      {
+        "title": "3D & emerging UI",
+        "points": [
+          "Three.js and WebGL scenes optimized for web",
+          "Hybrid 2D/3D storytelling without performance tax",
+          "Prototyping tangible experiences before build"
+        ]
+      }
+    ]
+  },
+  "team": {
+    "title": "The team behind the work",
+    "modal": {
+      "closeAria": "Close team member details",
+      "education": "Education & credentials",
+      "primaryStack": "Primary stack",
+      "tooling": "Libraries & tooling",
+      "delivers": "What they deliver"
+    },
+    "members": {
+      "konstantineKolpaxidis": {
+        "badge": "Founder",
+        "role": "Founder & CEO",
+        "focus": "Leads architecture and delivery of complex products with end-to-end accountability.",
+        "bio": [
+          "Konstantine leads end-to-end delivery of complex digital products, combining hands-on engineering depth with executive ownership of outcomes.",
+          "He specializes in building scalable web platforms, interactive 3D web experiences, and production-grade software systems where performance, security, and reliability are non-negotiable. As Founder & CEO, he sets technical direction, validates architectures, manages delivery governance, and ensures every engagement ships measurable business results on time, on budget, and with long-term maintainability."
+        ],
+        "education": [
+          "BSc in Software Engineering",
+          "10+ years building scalable platforms and interactive experiences"
+        ],
+        "primaryStack": [
+          "Frontend: TypeScript, React, Next.js, HTML5, CSS3",
+          "Backend: Node.js (architecture oversight), REST/GraphQL (solution design)",
+          "Cloud/Delivery: AWS-oriented architectures, CI/CD strategy, security-by-design"
+        ],
+        "tooling": [
+          "React ecosystem (routing, state, data fetching), component-driven architecture, Storybook",
+          "Performance engineering: Core Web Vitals optimization, SSR/ISR patterns, caching strategies",
+          "Observability and quality gates: logging, monitoring, release governance"
+        ],
+        "delivers": [
+          "Technical strategy, system architecture, delivery leadership, audits, scalability plans",
+          "High-performance web platforms, enterprise-grade applications, interactive 3D product experiences"
+        ]
+      },
+      "elenaSchiltz": {
+        "badge": "Design",
+        "role": "Head of Design & UX",
+        "focus": "Systems-minded design lead building scalable design systems and UX.",
+        "bio": [
+          "Elena leads product design and UX with a systems mindset: she translates business goals into user-centered interfaces that increase conversion, retention, and brand trust.",
+          "Her strength is building and operating design systems at scale, ensuring consistency across products, accelerating development, and reducing design debt. She owns UX workflows from research and prototyping to final UI specs in Figma, supporting engineering teams through implementation with clear standards and governance."
+        ],
+        "education": [
+          "University degree in RCA (Royal College of Art)"
+        ],
+        "primaryStack": [
+          "Design & UX: Figma, design systems, UI specifications, user flows, prototyping"
+        ],
+        "tooling": [
+          "Component libraries alignment (tokens, variants, responsive rules)",
+          "Accessibility-first design guidelines (WCAG-aware patterns)",
+          "Design-to-dev workflows (structured specs, documentation, versioning)"
+        ],
+        "delivers": [
+          "UX strategy, design systems, product UI, audit and redesign programs",
+          "Conversion-focused interfaces for SaaS, enterprise dashboards, and high-impact marketing sites"
+        ]
+      },
+      "emanuelZervas": {
+        "badge": "Engineering",
+        "role": "Principal Frontend Architect",
+        "focus": "Frontend architect for scalable, performant React and Next.js products.",
+        "bio": [
+          "Emanuel is the principal frontend architect focused on building fast, scalable, and maintainable user interfaces for modern products.",
+          "He designs frontend systems as platforms: component libraries, patterns, performance budgets, and engineering standards that keep teams shipping reliably as products grow. He is specialized in TypeScript, React, and Next.js, with emphasis on performance optimization, SSR/ISR strategies, and robust integration with APIs."
+        ],
+        "education": [
+          "Formal degree not specified",
+          "19+ years experience, 8+ years in React/Next.js and performance optimization",
+          "Former tech lead at Revolut"
+        ],
+        "primaryStack": [
+          "Frontend: TypeScript, React, Next.js",
+          "Architecture: scalable UI systems, SSR/ISR, caching, edge delivery patterns"
+        ],
+        "tooling": [
+          "UI: Tailwind CSS, Radix UI/shadcn/ui (if used), Storybook",
+          "Data: TanStack Query (React Query), SWR, typed API clients",
+          "State: Zustand, Redux Toolkit (project-dependent)",
+          "Quality: ESLint, Prettier, type-safe patterns, performance profiling"
+        ],
+        "delivers": [
+          "Enterprise-grade frontend architecture, component libraries, performance hardening",
+          "High-conversion product UIs, dashboards, portals, and multi-tenant SaaS frontends"
+        ]
+      },
+      "evheniyBugha": {
+        "badge": "3D",
+        "role": "3D Specialist",
+        "focus": "Builds immersive 3D web experiences optimized for performance.",
+        "bio": [
+          "Evheniy creates immersive, production-ready 3D web experiences that are both visually compelling and performant on real devices.",
+          "He builds interactive 3D scenes for product marketing, digital showrooms, configurators, and technical visualization, balancing fidelity with loading speed, frame-rate stability, and accessibility. He integrates 3D into React and Next.js applications without compromising Core Web Vitals."
+        ],
+        "education": [
+          "50+ shipped projects with seamless 3D integration"
+        ],
+        "primaryStack": [
+          "3D/Web: WebGL, Three.js, real-time rendering pipelines",
+          "Integration: React/Next.js-friendly 3D architecture"
+        ],
+        "tooling": [
+          "Three.js ecosystem: React Three Fiber, Drei, loaders, postprocessing",
+          "Asset pipeline: glTF/GLB workflows, optimization/compression, LOD strategies",
+          "Shaders/FX: GLSL-based effects (project-dependent)"
+        ],
+        "delivers": [
+          "3D websites, interactive product configurators, technical visualization",
+          "Optimized real-time scenes integrated into modern web applications"
+        ]
+      },
+      "melinaChen": {
+        "badge": "Backend",
+        "role": "Senior Fullstack Engineer",
+        "focus": "Builds scalable backends and APIs with clean architecture and performance focus.",
+        "bio": [
+          "Melina builds scalable backend systems and fullstack products with a focus on clean architecture, predictable performance, and secure integrations.",
+          "She designs APIs, data models, caching layers, and cloud-ready services that support growth from MVP to enterprise scale, emphasizing stability under load, strong security practices, and maintainable codebases with clear boundaries and testability."
+        ],
+        "education": [
+          "University degree in a Computer Engineering"
+        ],
+        "primaryStack": [
+          "Backend: Node.js, REST, GraphQL",
+          "Data: PostgreSQL, MongoDB, Redis",
+          "Architecture: scalable APIs, event-driven patterns (when needed), cloud readiness"
+        ],
+        "tooling": [
+          "Node.js frameworks: NestJS / Express (project-dependent)",
+          "GraphQL: Apollo Server/Client (project-dependent)",
+          "ORM/DB tooling: Prisma / TypeORM (project-dependent)",
+          "Security: auth flows, RBAC, rate limiting, auditing patterns"
+        ],
+        "delivers": [
+          "Production-grade APIs, admin panels, and fullstack applications",
+          "Data architecture, integrations, and performance optimization for high-traffic systems"
+        ]
+      },
+      "sofiaKonig": {
+        "badge": "Motion",
+        "role": "Motion & Interaction Designer",
+        "focus": "Motion and interaction designer creating purposeful animations and storytelling.",
+        "bio": [
+          "Sofia crafts motion and interaction design that elevates usability and perception of quality, turning static UIs into fluid, intuitive experiences.",
+          "She builds motion systems that scale with products, ensuring animations remain consistent, purposeful, and performant across devices, with a focus on premium landing pages, product storytelling, and interactive flows."
+        ],
+        "education": [
+          "University degree in a Digital Architect"
+        ],
+        "primaryStack": [
+          "Motion/UI: interaction design, animation systems, UI micro-interactions"
+        ],
+        "tooling": [
+          "Framer Motion, GSAP",
+          "Scroll-based storytelling, UI transitions, state-driven animations (implementation-aligned)"
+        ],
+        "delivers": [
+          "Motion design systems, high-end UI interactions, conversion-driven landing animations",
+          "Performance-aware animation specifications for engineering teams"
+        ]
+      },
+      "ivanAlexandrov": {
+        "badge": "DevOps",
+        "role": "DevOps & Cloud Engineer",
+        "focus": "Owns cloud infrastructure, CI/CD, security, and reliability.",
+        "bio": [
+          "Ivan owns cloud infrastructure, deployment automation, and operational reliability, ensuring products are secure, observable, and scalable in production.",
+          "He designs CI/CD pipelines, containerized delivery, infrastructure-as-code, and monitoring that supports fast iteration without compromising uptime, with least-privilege security and robust rollback strategies."
+        ],
+        "education": [
+          "Master of Science degree in a Computer Science"
+        ],
+        "primaryStack": [
+          "Cloud: AWS",
+          "Containers: Docker, Kubernetes",
+          "Delivery: CI/CD, Infrastructure as Code"
+        ],
+        "tooling": [
+          "IaC: Terraform / CloudFormation (project-dependent)",
+          "Kubernetes tooling: Helm, GitOps patterns (when applicable)",
+          "Observability: metrics, logs, tracing (Prometheus/Grafana/ELK/Sentry depending on stack)"
+        ],
+        "delivers": [
+          "Secure cloud foundations, deployment pipelines, scalability and reliability engineering",
+          "Production monitoring, incident readiness, and cost optimization"
+        ]
+      },
+      "keliPaschalidou": {
+        "badge": "Product",
+        "role": "Product & Strategy Lead",
+        "focus": "Drives product strategy, roadmaps, and stakeholder alignment.",
+        "bio": [
+          "Keli drives product strategy and execution, connecting business objectives to roadmaps that ship real outcomes.",
+          "She leads discovery, requirements definition, prioritization, and cross-functional alignment, coordinating stakeholders, integrations, and compliance constraints without losing speed."
+        ],
+        "education": [
+          "MBA",
+          "7+ years in product management"
+        ],
+        "primaryStack": [
+          "Discovery, roadmap planning, KPI design, stakeholder management, delivery governance"
+        ],
+        "tooling": [
+          "Agile delivery and documentation toolchains (Jira/Confluence/Notion/Miro as needed)",
+          "Analytics alignment and experimentation processes (tool choice depends on client ecosystem)"
+        ],
+        "delivers": [
+          "Discovery workshops, MVP definition, roadmaps, release planning, and stakeholder alignment",
+          "Product strategy for SaaS, enterprise platforms, and mission-critical engineering workflows"
+        ]
+      },
+      "heinrichMeier": {
+        "badge": "Quality",
+        "role": "QA & Test Automation Engineer",
+        "focus": "QA and automation engineer integrating quality gates and regression coverage.",
+        "bio": [
+          "Heinrich ensures release confidence through robust QA strategy and test automation.",
+          "He designs test pyramids, builds regression suites, and integrates quality gates into CI/CD so teams ship faster with fewer production issues, focusing on coverage where it matters and deterministic test environments."
+        ],
+        "education": [
+          "Formal degree not specified"
+        ],
+        "primaryStack": [
+          "Testing: unit, integration, E2E automation, CI quality gates"
+        ],
+        "tooling": [
+          "Jest, Vitest, Playwright",
+          "CI integration, reporting, and regression governance"
+        ],
+        "delivers": [
+          "Automated test suites, release readiness frameworks, stability improvements",
+          "Reduced regressions, stronger user experience, and production-grade reliability"
+        ]
+      }
+    }
+  }
+}

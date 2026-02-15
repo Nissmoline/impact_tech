@@ -36,8 +36,9 @@ export const stripLocalePrefix = (pathname: string): string => {
 export const withLocalePrefix = (path: string, locale: Locale): string => {
   if (locale === 'en') return path;
   if (path.startsWith('/el')) return path;
+  if (path.startsWith('/#')) return `/el${path.slice(1)}`;
+  if (path.startsWith('#')) return `/el${path}`;
   if (path.startsWith('/')) return `/el${path}`;
-  if (path.startsWith('#')) return `/el/${path}`;
   return `/el/${path}`;
 };
 
