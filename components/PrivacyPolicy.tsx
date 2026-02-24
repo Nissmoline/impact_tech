@@ -151,7 +151,7 @@ const PrivacyPolicy: React.FC = () => {
               </p>
               <p>
                 <strong className="text-white dark:text-white light:text-slate-900">{contactInfo.labels.website}:</strong>{' '}
-                <a href="https://impact-tech.com" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">{contactInfo.websiteValue}</a>
+                <a href="https://impacttech.gr" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">{contactInfo.websiteValue}</a>
               </p>
             </div>
             <p className="mt-4 pt-4 border-t border-slate-700/50 dark:border-slate-700/50 light:border-slate-300 text-sm">

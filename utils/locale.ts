@@ -24,7 +24,7 @@ export const getLocaleFromPath = (pathname: string): Locale => {
   if (pathname === '/el' || pathname.startsWith('/el/')) {
     return 'el';
   }
-  return getPreferredLocale();
+  return 'en';
 };
 
 export const stripLocalePrefix = (pathname: string): string => {

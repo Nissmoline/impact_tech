@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
       icon: Mail,
       label: t('home.contact.details.emailLabel'),
       value: t('home.contact.details.emailValue'),
-      href: 'mailto:info@impact-tech.gr',
+      href: 'mailto:info@impacttech.gr',
     },
   ];
 

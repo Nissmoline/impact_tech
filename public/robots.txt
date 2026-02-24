@@ -8,4 +8,5 @@ Allow: /
 # Disallow: /api/
 
 # Sitemap location
-Sitemap: https://impact-tech.com/sitemap.xml
+Sitemap: https://impacttech.gr/sitemap.xml
+Host: impacttech.gr

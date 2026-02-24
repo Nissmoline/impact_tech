@@ -8,7 +8,7 @@ const infoItemMeta = [
   { key: 'legalForm', icon: FileText, category: 'business' },
   { key: 'registeredOffice', icon: MapPin, category: 'contact', multiline: true },
   { key: 'telephone', icon: Phone, category: 'contact', link: 'tel:+306949214461' },
-  { key: 'website', icon: Globe, category: 'contact', link: 'https://impact-tech.com' },
+  { key: 'website', icon: Globe, category: 'contact', link: 'https://impacttech.gr' },
   { key: 'serviceHours', icon: Clock, category: 'contact' },
   { key: 'owner', icon: User, category: 'ownership' },
   { key: 'vatNumber', icon: Hash, category: 'ownership' },

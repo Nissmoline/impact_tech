@@ -18,10 +18,10 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://impact-tech.com/" />
+    <meta property="og:url" content="https://impacttech.gr/" />
     <meta property="og:title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
     <meta property="og:description" content="Impact Tech builds high-performance web platforms, 3D experiences, mobile apps, and custom software for ambitious teams worldwide." />
-    <meta property="og:image" content="https://impact-tech.com/og-image.jpg" />
+    <meta property="og:image" content="https://impacttech.gr/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_US" />
@@ -30,18 +30,18 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://impact-tech.com/" />
+    <meta name="twitter:url" content="https://impacttech.gr/" />
     <meta name="twitter:title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
     <meta name="twitter:description" content="Impact Tech builds high-performance web platforms, 3D experiences, mobile apps, and custom software for ambitious teams worldwide." />
-    <meta name="twitter:image" content="https://impact-tech.com/twitter-image.jpg" />
+    <meta name="twitter:image" content="https://impacttech.gr/twitter-image.jpg" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://impact-tech.com/" />
+    <link rel="canonical" href="https://impacttech.gr/" />
 
     <!-- Alternate Languages (hreflang) -->
-    <link rel="alternate" hreflang="en" href="https://impact-tech.com/" />
-    <link rel="alternate" hreflang="el" href="https://impact-tech.com/el" />
-    <link rel="alternate" hreflang="x-default" href="https://impact-tech.com/" />
+    <link rel="alternate" hreflang="en" href="https://impacttech.gr/" />
+    <link rel="alternate" hreflang="el" href="https://impacttech.gr/el" />
+    <link rel="alternate" hreflang="x-default" href="https://impacttech.gr/" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -60,11 +60,12 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "ProfessionalService",
+      "@id": "https://impacttech.gr/#organization",
       "name": "Impact Tech",
       "alternateName": "Impact Tech - Web Development Agency",
-      "url": "https://impact-tech.com",
-      "logo": "https://impact-tech.com/logo.png",
+      "url": "https://impacttech.gr",
+      "logo": "https://impacttech.gr/logo.png",
       "description": "Professional web development agency specializing in websites, web applications, mobile apps and custom software solutions",
       "address": {
         "@type": "PostalAddress",
@@ -81,13 +82,30 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Service",
-        "availableLanguage": ["English", "Greek", "Russian"],
-        "areaServed": ["GR", "EU", "US", "AS"]
+        "email": "info@impacttech.gr",
+        "telephone": "+30 697 385 8321",
+        "availableLanguage": ["English", "Greek"],
+        "areaServed": ["GR", "EU"]
       },
-      "sameAs": [
-        "https://github.com/impact-tech",
-        "https://linkedin.com/company/impact-tech",
-        "https://twitter.com/impact-tech"
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
       ],
       "offers": {
         "@type": "AggregateOffer",

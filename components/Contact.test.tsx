@@ -18,6 +18,6 @@ describe('Contact Component', () => {
     expect(getByText(/18531 Piraeus, Attica, Greece/i)).toBeInTheDocument();
     expect(getByText('+30 211 006 8114')).toBeInTheDocument();
     expect(getByText('+30 697 385 8321')).toBeInTheDocument();
-    expect(getByText('info@impact-tech.gr')).toBeInTheDocument();
+    expect(getByText('info@impacttech.gr')).toBeInTheDocument();
   });
 });

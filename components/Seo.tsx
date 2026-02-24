@@ -1,7 +1,14 @@
 import React, { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { buildLocalizedPath, getLocaleFromPath } from '../utils/locale';
-import { DEFAULT_OG_IMAGE, DEFAULT_TWITTER_IMAGE, SITE_NAME, SITE_URL } from '../utils/seo';
+import {
+  DEFAULT_OG_IMAGE,
+  DEFAULT_TWITTER_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+} from '../utils/seo';
 
 type StructuredData = Record<string, unknown> | Array<Record<string, unknown>>;
 
@@ -67,9 +74,12 @@ const Seo: React.FC<SeoProps> = ({
   const ogAlternateLocale = locale === 'el' ? 'en_US' : 'el_GR';
   const robots = noIndex ? 'noindex, follow' : 'index, follow';
   const structuredDataArray = useMemo(() => {
-    if (!structuredData) return [];
-    return Array.isArray(structuredData) ? structuredData : [structuredData];
-  }, [structuredData]);
+    const pageData = !structuredData
+      ? []
+      : (Array.isArray(structuredData) ? structuredData : [structuredData]);
+    const defaultData = noIndex ? [] : [buildOrganizationSchema(locale), buildWebsiteSchema(locale)];
+    return [...defaultData, ...pageData];
+  }, [structuredData, locale, noIndex]);
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
@@ -98,6 +108,7 @@ const Seo: React.FC<SeoProps> = ({
     upsertMeta('property', 'og:site_name', SITE_NAME);
     upsertMeta('property', 'og:type', 'website');
     upsertMeta('property', 'og:image', ogImage);
+    upsertMeta('property', 'og:image:secure_url', ogImage);
     upsertMeta('property', 'og:image:width', '1200');
     upsertMeta('property', 'og:image:height', '630');
     upsertMeta('property', 'og:image:alt', title);
@@ -109,6 +120,7 @@ const Seo: React.FC<SeoProps> = ({
     upsertMeta('property', 'og:locale:alternate', ogAlternateLocale);
 
     upsertMeta('name', 'twitter:card', 'summary_large_image');
+    upsertMeta('name', 'twitter:url', canonicalUrl);
     upsertMeta('name', 'twitter:image', twitterImage);
     upsertMeta('name', 'robots', robots);
     upsertMeta('name', 'googlebot', robots);

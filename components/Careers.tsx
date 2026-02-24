@@ -10,7 +10,6 @@ import {
   Globe,
   Code2,
   Palette,
-  Cpu,
   MapPin,
   Briefcase,
   Clock,
@@ -29,12 +28,7 @@ const benefits = [
 ];
 
 const openings = [
-  { key: 'seniorReact', icon: Code2, color: 'from-cyan-500 to-blue-500' },
-  { key: 'threeDDeveloper', icon: Cpu, color: 'from-purple-500 to-pink-500' },
   { key: 'uiUxDesigner', icon: Palette, color: 'from-emerald-500 to-teal-500' },
-  { key: 'fullstackEngineer', icon: Code2, color: 'from-orange-500 to-amber-500' },
-  { key: 'motionDesigner', icon: Zap, color: 'from-fuchsia-500 to-pink-500' },
-  { key: 'devopsEngineer', icon: Cpu, color: 'from-lime-500 to-green-500' },
 ];
 
 const Careers: React.FC = () => {
@@ -155,7 +149,7 @@ const Careers: React.FC = () => {
 
                     <div className="flex lg:flex-col gap-3">
                       <a
-                        href={`mailto:careers@impacttech.com?subject=${subject}`}
+                        href={`mailto:careers@impacttech.gr?subject=${subject}`}
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all flex items-center gap-2 justify-center whitespace-nowrap"
                       >
                         {t('openings.buttons.apply')}
@@ -186,7 +180,7 @@ const Careers: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="mailto:careers@impacttech.com"
+                href="mailto:careers@impacttech.gr"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
               >
                 {t('cta.primary')}

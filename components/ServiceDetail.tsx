@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Service } from '../types';
 import TiltCard from './ui/TiltCard';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { SERVICES } from '../constants';
 import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
 
 interface ServiceDetailProps {
@@ -18,6 +19,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const withLocale = (href: string) => withLocalePrefix(href, locale);
   const namespace = `service-${service.slug}`;
   const { t } = useTranslation(namespace);
+  const { t: tCommon } = useTranslation('common');
   const localizedTitle = t('title', { defaultValue: service.title });
   const localizedDescription = t('description', { defaultValue: service.description });
   const localizedHero = {
@@ -93,6 +95,16 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const ctaButton = t('ui.ctaButton', {
     defaultValue: 'Get Started',
   });
+  const relatedServicesTitle = t('ui.relatedServicesTitle', {
+    defaultValue: locale === 'el' ? 'Σχετικές Υπηρεσίες' : 'Related Services',
+  });
+  const relatedServicesDescription = t('ui.relatedServicesDescription', {
+    defaultValue:
+      locale === 'el'
+        ? 'Εξερευνήστε και τις υπόλοιπες υπηρεσίες μας για ολοκληρωμένη στρατηγική ανάπτυξης.'
+        : 'Explore our full service stack to build a complete growth strategy.',
+  });
+  const relatedServices = SERVICES.filter((item) => item.slug !== service.slug);
 
   return (
     <div className="bg-slate-950 min-h-[100svh] py-24">
@@ -248,6 +260,47 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Related Services */}
+        <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-display font-bold text-white mb-4">
+              {relatedServicesTitle}
+            </h2>
+            <p className="text-slate-400 max-w-3xl mx-auto">
+              {relatedServicesDescription}
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mt-4" />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {relatedServices.map((relatedService) => {
+              const RelatedIcon = relatedService.icon;
+              const relatedTitle = tCommon(`home.services.items.${relatedService.slug}.title`, {
+                defaultValue: relatedService.title,
+              });
+              const relatedDescription = tCommon(`home.services.items.${relatedService.slug}.description`, {
+                defaultValue: relatedService.description,
+              });
+
+              return (
+                <Link
+                  key={relatedService.slug}
+                  to={withLocale(`/services/${relatedService.slug}`)}
+                  className="p-4 rounded-xl bg-slate-900/50 border border-white/10 hover:border-cyan-500/30 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-300 flex items-center justify-center mb-3">
+                    <RelatedIcon size={20} />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2 text-sm">{relatedTitle}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed">
+                    {relatedDescription}
+                  </p>
+                </Link>
+              );
+            })}
           </div>
         </section>
 

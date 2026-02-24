@@ -1,186 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://impact-tech.com/</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://impact-tech.com/portfolio</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/portfolio" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/portfolio</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/portfolio" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://impact-tech.com/about</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/about" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/about" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/about</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/about" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/about" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://impact-tech.com/careers</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/careers" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/careers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/careers" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/careers</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/careers" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/careers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/careers" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://impact-tech.com/impressum</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/impressum" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/impressum" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/impressum</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/privacy</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/impressum" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/impressum" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/privacy</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/privacy" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/privacy" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
-    <loc>https://impact-tech.com/services/3d-interactive</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/privacy" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/privacy" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/services/3d-interactive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/3d-interactive" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/3d-interactive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/3d-interactive" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/3d-interactive</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/web-development</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/services/3d-interactive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/3d-interactive" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/3d-interactive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/3d-interactive" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/web-development</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/ux-ui-design</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/web-development" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/web-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/web-development" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/ux-ui-design</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/mobile-apps</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/web-development" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/web-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/web-development" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/mobile-apps</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/backend-apis</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/services/ux-ui-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/ux-ui-design" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/ux-ui-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/ux-ui-design" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/backend-apis</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/devops</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/services/ux-ui-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/ux-ui-design" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/ux-ui-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/ux-ui-design" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/devops</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/custom-software</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/services/mobile-apps</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/mobile-apps" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/mobile-apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/mobile-apps" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/custom-software</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://impact-tech.com/services/seo-strategy</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/el/services/mobile-apps</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/mobile-apps" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/mobile-apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/mobile-apps" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://impact-tech.com/el/services/seo-strategy</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://impacttech.gr/services/backend-apis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/backend-apis" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/backend-apis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/backend-apis" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/el/services/backend-apis</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/backend-apis" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/backend-apis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/backend-apis" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/services/devops</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/devops" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/devops" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/devops" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/el/services/devops</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/devops" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/devops" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/devops" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/services/custom-software</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/custom-software" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/custom-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/custom-software" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/el/services/custom-software</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/custom-software" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/custom-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/custom-software" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/services/seo-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/seo-strategy" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/seo-strategy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/seo-strategy" />
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impacttech.gr/el/services/seo-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/seo-strategy" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/seo-strategy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/seo-strategy" />
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

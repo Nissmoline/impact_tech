@@ -113,9 +113,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "3D & Interactive Web Experiences | WebGL Development | Impact Tech",
-      metaDescription: "Professional WebGL/Three.js product configurators, virtual showrooms, and technical visualizations optimized for performance and Core Web Vitals. Greece-based 3D development studio.",
-      keywords: ["3D web development", "WebGL development", "Three.js development", "product configurator", "virtual showroom", "3D visualization", "React Three Fiber", "interactive 3D", "3D web experiences"]
+      metaTitle: "3D Web Experiences & WebGL Development | Impact Tech",
+      metaDescription: "WebGL/Three.js configurators, virtual showrooms, and 3D visualizations built for speed. Serving teams in Greece, the EU, and worldwide.",
+      keywords: ["3D web development", "WebGL development", "Three.js development", "product configurator", "virtual showroom", "3D visualization", "React Three Fiber", "interactive 3D", "3D web experiences", "Greece 3D studio", "EU 3D agency"]
     }
   },
   {
@@ -223,9 +223,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "Web Development Services | React & Next.js | Impact Tech Greece",
-      metaDescription: "Professional web development: marketing sites, SaaS portals, and dashboards built with React, Next.js, and TypeScript. SEO-optimized, high-performance solutions from Greece.",
-      keywords: ["web development", "React development", "Next.js development", "TypeScript", "SaaS development", "web applications", "frontend development", "Greece web development"]
+      metaTitle: "Web Development & SaaS Builds | React/Next.js | Impact Tech",
+      metaDescription: "High-performance marketing sites, SaaS portals, and dashboards built with React/Next.js for teams in Greece, the EU, and worldwide.",
+      keywords: ["web development", "React development", "Next.js development", "TypeScript", "SaaS development", "web applications", "frontend development", "SEO web development", "Greece web development", "EU web agency"]
     }
   },
   {
@@ -331,9 +331,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "UX/UI Design & Design Systems | Impact Tech Greece",
-      metaDescription: "Professional UX/UI design services and scalable design systems. User research, conversion-focused interfaces, and accessibility-first design from Greece.",
-      keywords: ["UX design", "UI design", "design systems", "user experience", "user interface", "Figma design", "UX research", "conversion optimization", "accessibility design"]
+      metaTitle: "UX/UI Design & Design Systems | Impact Tech",
+      metaDescription: "User research, conversion-focused interfaces, and scalable design systems for products in Greece, the EU, and global markets.",
+      keywords: ["UX design", "UI design", "design systems", "user experience", "user interface", "Figma design", "UX research", "conversion optimization", "accessibility design", "UI UX agency Greece", "EU design studio"]
     }
   },
   {
@@ -441,8 +441,8 @@ export const SERVICES: Service[] = [
 
     seo: {
       metaTitle: "Mobile App Development | React Native & Flutter | Impact Tech",
-      metaDescription: "Professional cross-platform mobile app development with React Native and Flutter. iOS and Android apps from Greece. App Store optimization and ongoing maintenance.",
-      keywords: ["mobile app development", "React Native", "Flutter", "iOS development", "Android development", "cross-platform apps", "mobile development Greece"]
+      metaDescription: "Cross-platform iOS/Android apps with React Native or Flutter. Product design, build, and launch for Greece, the EU, and global teams.",
+      keywords: ["mobile app development", "React Native", "Flutter", "iOS development", "Android development", "cross-platform apps", "mobile product design", "app development Greece", "EU mobile agency"]
     }
   },
   {
@@ -549,9 +549,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "Backend Development & API Services | Node.js | Impact Tech",
-      metaDescription: "Professional backend development and API services. REST, GraphQL, Node.js, PostgreSQL, secure integrations. Backend development from Greece for global clients.",
-      keywords: ["backend development", "API development", "Node.js", "REST API", "GraphQL", "database design", "PostgreSQL", "backend services", "server-side development"]
+      metaTitle: "Backend & API Development | Node.js & GraphQL | Impact Tech",
+      metaDescription: "Secure REST/GraphQL APIs, Node.js services, and scalable data platforms for teams in Greece, the EU, and worldwide.",
+      keywords: ["backend development", "API development", "Node.js", "REST API", "GraphQL", "database design", "PostgreSQL", "backend services", "server-side development", "Greece backend", "EU software team"]
     }
   },
   {
@@ -658,9 +658,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "DevOps & Cloud Infrastructure Services | AWS | Impact Tech",
-      metaDescription: "Professional DevOps services: CI/CD, AWS cloud infrastructure, Kubernetes, monitoring, and security. DevOps consulting from Greece.",
-      keywords: ["DevOps", "CI/CD", "AWS", "cloud infrastructure", "Kubernetes", "Docker", "infrastructure as code", "Terraform", "DevOps services", "cloud consulting"]
+      metaTitle: "DevOps & Cloud Infrastructure | AWS & Kubernetes | Impact Tech",
+      metaDescription: "CI/CD, cloud architecture, monitoring, and security hardening for reliable delivery across Greece, the EU, and global teams.",
+      keywords: ["DevOps", "CI/CD", "AWS", "cloud infrastructure", "Kubernetes", "Docker", "infrastructure as code", "Terraform", "DevOps services", "cloud consulting", "EU DevOps"]
     }
   },
   {
@@ -770,9 +770,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "Custom Business Software Development | Tailored Apps | Impact Tech",
-      metaDescription: "Custom business software development: web, mobile, and internal applications that streamline operations and integrate with your systems. Greece-based team.",
-      keywords: ["custom software development", "business application development", "bespoke software", "enterprise app development", "workflow automation", "internal tools", "systems integration", "SaaS development", "tailored software", "software development Greece"]
+      metaTitle: "Custom Software & Business Apps | Impact Tech",
+      metaDescription: "Bespoke web, mobile, and internal software that streamlines operations for teams in Greece, the EU, and worldwide.",
+      keywords: ["custom software development", "business application development", "bespoke software", "enterprise app development", "workflow automation", "internal tools", "systems integration", "SaaS development", "tailored software", "Greece software team", "EU software agency"]
     }
   },
   {
@@ -879,9 +879,9 @@ export const SERVICES: Service[] = [
     ],
 
     seo: {
-      metaTitle: "SEO Strategy & Consulting Services | Technical SEO | Impact Tech",
-      metaDescription: "Professional SEO services: technical audits, Core Web Vitals optimization, content strategy, and link building. SEO consulting from Greece for global clients.",
-      keywords: ["SEO services", "technical SEO", "SEO strategy", "Core Web Vitals", "SEO audit", "content strategy", "SEO consulting", "search engine optimization", "organic growth"]
+      metaTitle: "SEO Strategy & Technical SEO | Impact Tech",
+      metaDescription: "Technical audits, Core Web Vitals optimization, and content strategy for higher rankings in Greece, the EU, and global markets.",
+      keywords: ["SEO services", "technical SEO", "SEO strategy", "Core Web Vitals", "SEO audit", "content strategy", "SEO consulting", "search engine optimization", "organic growth", "SEO Greece", "EU SEO agency"]
     }
   }
 ];

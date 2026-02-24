@@ -1,13 +1,20 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft } from 'lucide-react';
+import Seo from './Seo';
+import { buildLocalizedPath, getLocaleFromPath } from '../utils/locale';
+import { SITE_URL } from '../utils/seo';
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const locale = getLocaleFromPath(pathname);
+  const canonicalUrl = `${SITE_URL}${buildLocalizedPath(pathname, locale)}`;
+  const homePath = locale === 'el' ? '/el' : '/';
 
   const handleGoHome = () => {
-    navigate('/');
+    navigate(homePath);
   };
 
   const handleGoBack = () => {
@@ -15,8 +22,15 @@ const NotFound: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[100svh] flex items-center justify-center bg-slate-950 dark:bg-slate-950 light:bg-slate-50 px-6">
-      <div className="text-center">
+    <>
+      <Seo
+        title="404 | Impact Tech"
+        description="The requested page could not be found."
+        canonical={canonicalUrl}
+        noIndex
+      />
+      <div className="min-h-[100svh] flex items-center justify-center bg-slate-950 dark:bg-slate-950 light:bg-slate-50 px-6">
+        <div className="text-center">
         {/* 404 Number */}
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
@@ -97,8 +111,9 @@ const NotFound: React.FC = () => {
             <span>Go Back</span>
           </button>
         </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

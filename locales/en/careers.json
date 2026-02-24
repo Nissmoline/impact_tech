@@ -37,22 +37,6 @@
     "title": "Open positions",
     "intro": "We're actively hiring for these roles. If you don't see a perfect fit, send us your portfolio anyway - we're always looking for exceptional talent.",
     "items": {
-      "seniorReact": {
-        "title": "Senior React Developer",
-        "department": "Engineering",
-        "location": "Remote (EU)",
-        "type": "Full-time",
-        "description": "Build high-performance web applications with React, TypeScript, and Next.js. Lead frontend architecture decisions.",
-        "skills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL"]
-      },
-      "threeDDeveloper": {
-        "title": "3D Web Developer",
-        "department": "3D & Immersive",
-        "location": "Remote (Worldwide)",
-        "type": "Full-time",
-        "description": "Create stunning WebGL experiences using Three.js. Optimize performance for immersive web applications.",
-        "skills": ["Three.js", "WebGL", "GSAP", "React", "TypeScript"]
-      },
       "uiUxDesigner": {
         "title": "UI/UX Designer",
         "department": "Design",
@@ -60,30 +44,6 @@
         "type": "Full-time",
         "description": "Design beautiful, user-centered interfaces. Work closely with engineers to build design systems that scale.",
         "skills": ["Figma", "Design Systems", "Prototyping", "Accessibility", "Motion Design"]
-      },
-      "fullstackEngineer": {
-        "title": "Fullstack Engineer",
-        "department": "Engineering",
-        "location": "Remote (EU)",
-        "type": "Full-time",
-        "description": "Build scalable APIs and cloud infrastructure. Work across the entire stack from database to UI.",
-        "skills": ["Node.js", "GraphQL", "PostgreSQL", "AWS", "Docker"]
-      },
-      "motionDesigner": {
-        "title": "Motion Designer",
-        "department": "Design",
-        "location": "Remote (Worldwide)",
-        "type": "Contract",
-        "description": "Craft delightful animations and micro-interactions. Bring interfaces to life with purposeful motion.",
-        "skills": ["Framer Motion", "GSAP", "After Effects", "Figma", "CSS Animations"]
-      },
-      "devopsEngineer": {
-        "title": "DevOps Engineer",
-        "department": "Infrastructure",
-        "location": "Remote (EU)",
-        "type": "Full-time",
-        "description": "Build reliable CI/CD pipelines and cloud infrastructure. Ensure our deployments are fast and secure.",
-        "skills": ["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]
       }
     },
     "buttons": {

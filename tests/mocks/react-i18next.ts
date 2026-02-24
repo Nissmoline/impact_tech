@@ -16,7 +16,7 @@ const translations: Record<string, TranslationValue> = {
   'home.contact.details.mobileLabel': 'Mobile',
   'home.contact.details.mobileValue': '+30 697 385 8321',
   'home.contact.details.emailLabel': 'Email',
-  'home.contact.details.emailValue': 'info@impact-tech.gr',
+  'home.contact.details.emailValue': 'info@impacttech.gr',
   'home.techStack.badge': 'Powering The Future',
   'home.techStack.title': 'Our Tech Stack',
   'home.techStack.lampAlt': 'Pendant Lamp',
