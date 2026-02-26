@@ -73,3 +73,9 @@ temp/
 # Debug files
 *.tsbuildinfo
 .eslintcache
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
