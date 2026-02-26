@@ -11,7 +11,6 @@ const infoItemMeta = [
   { key: 'website', icon: Globe, category: 'contact', link: 'https://impacttech.gr' },
   { key: 'serviceHours', icon: Clock, category: 'contact' },
   { key: 'owner', icon: User, category: 'ownership' },
-  { key: 'vatNumber', icon: Hash, category: 'ownership' },
   { key: 'dunsNumber', icon: Hash, category: 'ownership' },
   { key: 'gemiNumber', icon: Hash, category: 'ownership' },
   { key: 'chamberRegistration', icon: Building2, category: 'ownership', multiline: true },
