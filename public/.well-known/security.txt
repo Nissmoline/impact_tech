@@ -1,0 +1,5 @@
+Contact: mailto:info@impacttech.gr
+Canonical: https://impacttech.gr/.well-known/security.txt
+Policy: https://impacttech.gr/privacy
+Preferred-Languages: en, el
+Expires: 2027-03-05T00:00:00.000Z
