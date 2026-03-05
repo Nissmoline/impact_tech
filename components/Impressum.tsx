@@ -7,7 +7,7 @@ const infoItemMeta = [
   { key: 'tradingName', icon: Building2, category: 'business' },
   { key: 'legalForm', icon: FileText, category: 'business' },
   { key: 'registeredOffice', icon: MapPin, category: 'contact', multiline: true },
-  { key: 'telephone', icon: Phone, category: 'contact', link: 'tel:+306949214461' },
+  { key: 'telephone', icon: Phone, category: 'contact', link: 'tel:+306973858321' },
   { key: 'website', icon: Globe, category: 'contact', link: 'https://impacttech.gr' },
   { key: 'serviceHours', icon: Clock, category: 'contact' },
   { key: 'owner', icon: User, category: 'ownership' },

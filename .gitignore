@@ -1,6 +1,5 @@
 # Dependencies
 node_modules
-package-lock.json
 
 # Build outputs
 dist
@@ -33,6 +32,7 @@ coverage
 .parcel-cache
 .vite
 .turbo
+.vercel
 
 # Editor directories and files
 .vscode/*

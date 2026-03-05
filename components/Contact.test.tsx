@@ -20,4 +20,12 @@ describe('Contact Component', () => {
     expect(getByText('+30 697 385 8321')).toBeInTheDocument();
     expect(getByText('info@impacttech.gr')).toBeInTheDocument();
   });
+
+  it('uses clickable tel and mailto links', () => {
+    const { getByRole } = renderContact();
+
+    expect(getByRole('link', { name: '+30 211 006 8114' })).toHaveAttribute('href', 'tel:+302110068114');
+    expect(getByRole('link', { name: '+30 697 385 8321' })).toHaveAttribute('href', 'tel:+306973858321');
+    expect(getByRole('link', { name: 'info@impacttech.gr' })).toHaveAttribute('href', 'mailto:info@impacttech.gr');
+  });
 });

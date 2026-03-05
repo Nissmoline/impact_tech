@@ -147,7 +147,7 @@ const PrivacyPolicy: React.FC = () => {
               </p>
               <p>
                 <strong className="text-white dark:text-white light:text-slate-900">{contactInfo.labels.phone}:</strong>{' '}
-                <a href="tel:+306949214461" className="text-cyan-400 hover:underline">{contactInfo.phoneValue}</a>
+                <a href="tel:+306973858321" className="text-cyan-400 hover:underline">{contactInfo.phoneValue}</a>
               </p>
               <p>
                 <strong className="text-white dark:text-white light:text-slate-900">{contactInfo.labels.website}:</strong>{' '}
