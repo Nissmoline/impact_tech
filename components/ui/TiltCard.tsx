@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, type HTMLMotionProps } from 'framer-motion';
 
-type TiltCardProps = React.HTMLAttributes<HTMLDivElement> & {
+type TiltCardProps = Omit<HTMLMotionProps<'div'>, 'children'> & {
   children: React.ReactNode;
-  className?: string;
   rotationFactor?: number;
 };
 

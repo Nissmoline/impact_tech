@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Mail, MapPin, Phone, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { useAccentTheme } from '../contexts/AccentThemeContext';
 
+const CONTACT_HASH = '#contact';
+const GOOGLE_ADS_CONTACT_EVENT = 'conversion_event_contact_2';
+
+type GtagWindow = Window & {
+  gtag?: (...args: unknown[]) => void;
+};
+
 const Contact: React.FC = () => {
+  const location = useLocation();
   const { t } = useTranslation();
   const { accentTheme } = useAccentTheme();
   const accentStyles = {
@@ -56,6 +65,15 @@ const Contact: React.FC = () => {
       href: 'mailto:info@impacttech.gr',
     },
   ];
+
+  useEffect(() => {
+    if (location.hash !== CONTACT_HASH) return;
+
+    const gtag = (window as GtagWindow).gtag;
+    if (typeof gtag !== 'function') return;
+
+    gtag('event', GOOGLE_ADS_CONTACT_EVENT, {});
+  }, [location.pathname, location.hash]);
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
