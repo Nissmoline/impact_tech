@@ -8,8 +8,12 @@ export type SeoContent = {
 
 export const SITE_NAME = 'Impact Tech';
 export const SITE_URL = 'https://impacttech.gr';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
-export const DEFAULT_TWITTER_IMAGE = `${SITE_URL}/twitter-image.jpg`;
+export const SITE_DESCRIPTION =
+  'Impact Tech builds high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide.';
+export const SITE_LAST_MODIFIED = '2026-04-16';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_TWITTER_IMAGE = DEFAULT_OG_IMAGE;
+export const LOGO_IMAGE = `${SITE_URL}/icons/android-chrome-512x512.png`;
 
 const LANGUAGE_TAGS: Record<Locale, string> = {
   en: 'en-GB',
@@ -43,6 +47,18 @@ export const SERVICE_AREAS = [
   { '@type': 'City', name: 'Piraeus' },
   { '@type': 'City', name: 'Thessaloniki' },
   { '@type': 'Place', name: 'European Union' },
+];
+
+export const SERVICE_EXPERTISE = [
+  'Web development',
+  '3D web experiences',
+  'WebGL development',
+  'Custom software development',
+  'Mobile app development',
+  'UX/UI design',
+  'Backend API development',
+  'DevOps and cloud infrastructure',
+  'Technical SEO',
 ];
 
 export const getLanguageTag = (locale: Locale) => LANGUAGE_TAGS[locale];
@@ -354,6 +370,14 @@ export const buildWebPageSchema = (params: {
   description: params.description,
   url: params.url,
   inLanguage: getLanguageTag(params.locale),
+  dateModified: SITE_LAST_MODIFIED,
+  isAccessibleForFree: true,
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: DEFAULT_OG_IMAGE,
+    width: 1200,
+    height: 630,
+  },
   isPartOf: {
     '@id': `${SITE_URL}/#website`,
   },
@@ -376,9 +400,12 @@ export const buildServiceSchema = (params: {
   '@id': `${params.url}#service`,
   name: params.name,
   serviceType: params.name,
+  category: 'Digital services',
   description: params.description,
   url: params.url,
   inLanguage: getLanguageTag(params.locale),
+  image: DEFAULT_OG_IMAGE,
+  mainEntityOfPage: params.url,
   provider: {
     '@id': `${SITE_URL}/#organization`,
   },
@@ -398,9 +425,11 @@ export const buildOrganizationSchema = (locale: Locale) => ({
   '@type': 'ProfessionalService',
   '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
+  alternateName: ['Impact Tech Greece', 'Impact Tech Web Development Agency'],
+  description: SITE_DESCRIPTION,
   url: SITE_URL,
   image: DEFAULT_OG_IMAGE,
-  logo: `${SITE_URL}/logo.png`,
+  logo: LOGO_IMAGE,
   email: BUSINESS_CONTACT.email,
   telephone: BUSINESS_CONTACT.telephone,
   address: BUSINESS_ADDRESS,
@@ -436,6 +465,17 @@ export const buildOrganizationSchema = (locale: Locale) => ({
       areaServed: ['GR', 'EU'],
     },
   ],
+  knowsAbout: SERVICE_EXPERTISE,
+  makesOffer: SERVICE_EXPERTISE.map((serviceName) => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: serviceName,
+      provider: {
+        '@id': `${SITE_URL}/#organization`,
+      },
+    },
+  })),
   inLanguage: getLanguageTag(locale),
 });
 
@@ -445,6 +485,7 @@ export const buildWebsiteSchema = (locale: Locale) => ({
   '@id': `${SITE_URL}/#website`,
   url: SITE_URL,
   name: SITE_NAME,
+  description: SITE_DESCRIPTION,
   inLanguage: getLanguageTag(locale),
   publisher: {
     '@id': `${SITE_URL}/#organization`,
@@ -459,11 +500,17 @@ export const buildServiceCatalogSchema = (params: {
   '@type': 'OfferCatalog',
   '@id': `${SITE_URL}/#service-catalog`,
   name: params.locale === 'el' ? 'Υπηρεσίες Impact Tech' : 'Impact Tech Services',
+  url: SITE_URL,
+  numberOfItems: params.services.length,
+  provider: {
+    '@id': `${SITE_URL}/#organization`,
+  },
   itemListElement: params.services.map((service, index) => ({
     '@type': 'ListItem',
     position: index + 1,
     item: {
       '@type': 'Service',
+      '@id': `${service.url}#service`,
       name: service.name,
       description: service.description,
       url: service.url,

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -9,7 +10,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Impact Tech | Web, 3D &amp; Software Studio in Greece &amp; EU</image:title>
+      <image:caption>Impact Tech - We build high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,7 +24,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Impact Tech | Web, 3D &amp; Λογισμικό στην Ελλάδα &amp; ΕΕ</image:title>
+      <image:caption>Impact Tech - Δημιουργούμε high-performance websites, 3D web εμπειρίες, mobile apps και custom λογισμικό για ομάδες στην Ελλάδα, την ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,7 +38,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/portfolio" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/portfolio" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/portfolio" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Portfolio | Web, 3D &amp; Software Case Studies | Impact Tech</image:title>
+      <image:caption>Impact Tech - Explore websites, SaaS, mobile, and 3D projects delivered for teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +52,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/portfolio" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/portfolio" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/portfolio" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Portfolio | Έργα Web, 3D &amp; Software | Impact Tech</image:title>
+      <image:caption>Impact Tech - Δείτε έργα web, SaaS, mobile και 3D που υλοποιήσαμε για Ελλάδα, ΕΕ και διεθνείς ομάδες.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,7 +66,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/about" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/about" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>About Impact Tech | Engineering &amp; Design Studio in Greece</image:title>
+      <image:caption>Impact Tech - Meet the team delivering 3D, web, and software products for Greece, the EU, and global clients.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -54,7 +80,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/about" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/about" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Σχετικά με την Impact Tech | Engineering &amp; Design Studio</image:title>
+      <image:caption>Impact Tech - Γνωρίστε την ομάδα που παραδίδει 3D, web και software προϊόντα για Ελλάδα, ΕΕ και διεθνείς πελάτες.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -63,7 +94,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/careers" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/careers" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/careers" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Careers | Join Impact Tech (Remote, Greece &amp; EU)</image:title>
+      <image:caption>Impact Tech - Open roles for engineers and designers in a remote-first team serving Greece, the EU, and global clients.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -72,7 +108,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/careers" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/careers" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/careers" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Καριέρα | Γίνε μέλος της Impact Tech (Remote)</image:title>
+      <image:caption>Impact Tech - Ανοιχτές θέσεις για μηχανικούς και designers σε remote-first ομάδα με πελάτες Ελλάδα, ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -81,7 +122,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/impressum" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/impressum" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/impressum" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Impressum | Impact Tech</image:title>
+      <image:caption>Impact Tech - Legal notice, registered address, and company information for Impact Tech.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -90,7 +136,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/impressum" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/impressum" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/impressum" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Νομικές Πληροφορίες | Impact Tech</image:title>
+      <image:caption>Impact Tech - Νομική δήλωση, έδρα και στοιχεία εταιρείας της Impact Tech.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -99,7 +150,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/privacy" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/privacy" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Privacy Policy | Impact Tech</image:title>
+      <image:caption>Impact Tech - Learn how Impact Tech collects, uses, and protects personal data under GDPR.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -108,7 +164,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/privacy" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/privacy" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Πολιτική Απορρήτου | Impact Tech</image:title>
+      <image:caption>Impact Tech - Δείτε πώς η Impact Tech συλλέγει, χρησιμοποιεί και προστατεύει δεδομένα σύμφωνα με το GDPR.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -117,7 +178,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/3d-interactive" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/3d-interactive" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/3d-interactive" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>3D Web Experiences &amp; WebGL Development | Impact Tech</image:title>
+      <image:caption>Impact Tech - WebGL/Three.js configurators, virtual showrooms, and 3D visualizations built for speed. Serving teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -126,7 +192,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/3d-interactive" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/3d-interactive" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/3d-interactive" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>3D &amp; Διαδραστικές Εμπειρίες Web | Impact Tech</image:title>
+      <image:caption>Impact Tech - WebGL/Three.js configurators, virtual showrooms και 3D visualizations με έμφαση στην απόδοση για ομάδες σε Ελλάδα, ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -135,7 +206,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/web-development" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/web-development" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/web-development" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Web Development &amp; SaaS Builds | React/Next.js | Impact Tech</image:title>
+      <image:caption>Impact Tech - High-performance marketing sites, SaaS portals, and dashboards built with React/Next.js for teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -144,7 +220,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/web-development" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/web-development" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/web-development" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Web Development &amp; SaaS | Impact Tech</image:title>
+      <image:caption>Impact Tech - High-performance websites, portals και web apps με React/Next.js για ομάδες σε Ελλάδα, ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -153,7 +234,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/ux-ui-design" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/ux-ui-design" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/ux-ui-design" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>UX/UI Design &amp; Design Systems | Impact Tech</image:title>
+      <image:caption>Impact Tech - User research, conversion-focused interfaces, and scalable design systems for products in Greece, the EU, and global markets.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -162,7 +248,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/ux-ui-design" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/ux-ui-design" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/ux-ui-design" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>UX/UI Design &amp; Design Systems | Impact Tech</image:title>
+      <image:caption>Impact Tech - UX/UI σχεδιασμός, user research και design systems που αυξάνουν τη μετατροπή για Ελλάδα, ΕΕ και διεθνείς αγορές.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -171,7 +262,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/mobile-apps" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/mobile-apps" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/mobile-apps" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Mobile App Development | React Native &amp; Flutter | Impact Tech</image:title>
+      <image:caption>Impact Tech - Cross-platform iOS/Android apps with React Native or Flutter. Product design, build, and launch for Greece, the EU, and global teams.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -180,7 +276,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/mobile-apps" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/mobile-apps" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/mobile-apps" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Mobile Apps με React Native/Flutter | Impact Tech</image:title>
+      <image:caption>Impact Tech - Cross-platform εφαρμογές iOS/Android με React Native ή Flutter για Ελλάδα, ΕΕ και παγκόσμιες ομάδες.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -189,7 +290,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/backend-apis" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/backend-apis" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/backend-apis" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Backend &amp; API Development | Node.js &amp; GraphQL | Impact Tech</image:title>
+      <image:caption>Impact Tech - Secure REST/GraphQL APIs, Node.js services, and scalable data platforms for teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -198,7 +304,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/backend-apis" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/backend-apis" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/backend-apis" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Backend &amp; API Ανάπτυξη | Impact Tech</image:title>
+      <image:caption>Impact Tech - Ασφαλή REST/GraphQL APIs, Node.js services και cloud-ready υποδομές για Ελλάδα, ΕΕ και διεθνείς ομάδες.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,7 +318,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/devops" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/devops" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/devops" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>DevOps &amp; Cloud Infrastructure | AWS &amp; Kubernetes | Impact Tech</image:title>
+      <image:caption>Impact Tech - CI/CD, cloud architecture, monitoring, and security hardening for reliable delivery across Greece, the EU, and global teams.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -216,7 +332,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/devops" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/devops" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/devops" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>DevOps &amp; Cloud Υποδομές | Impact Tech</image:title>
+      <image:caption>Impact Tech - CI/CD, Kubernetes, monitoring και cloud αρχιτεκτονική για ομάδες σε Ελλάδα, ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -225,7 +346,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/custom-software" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/custom-software" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/custom-software" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Custom Software &amp; Business Apps | Impact Tech</image:title>
+      <image:caption>Impact Tech - Bespoke web, mobile, and internal software that streamlines operations for teams in Greece, the EU, and worldwide.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -234,7 +360,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/custom-software" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/custom-software" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/custom-software" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>Custom Software &amp; Επιχειρησιακές Λύσεις | Impact Tech</image:title>
+      <image:caption>Impact Tech - Προσαρμοσμένες εφαρμογές που αυτοματοποιούν διαδικασίες για Ελλάδα, ΕΕ και διεθνείς οργανισμούς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -243,7 +374,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/seo-strategy" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/seo-strategy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/seo-strategy" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>SEO Strategy &amp; Technical SEO | Impact Tech</image:title>
+      <image:caption>Impact Tech - Technical audits, Core Web Vitals optimization, and content strategy for higher rankings in Greece, the EU, and global markets.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -252,7 +388,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://impacttech.gr/services/seo-strategy" />
     <xhtml:link rel="alternate" hreflang="el" href="https://impacttech.gr/el/services/seo-strategy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://impacttech.gr/services/seo-strategy" />
-    <lastmod>2026-02-24</lastmod>
+    <image:image>
+      <image:loc>https://impacttech.gr/og-image.png</image:loc>
+      <image:title>SEO Strategy &amp; Optimization | Impact Tech</image:title>
+      <image:caption>Impact Tech - Τεχνικό SEO, Core Web Vitals και στρατηγική περιεχομένου για καλύτερα rankings σε Ελλάδα, ΕΕ και διεθνώς.</image:caption>
+    </image:image>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

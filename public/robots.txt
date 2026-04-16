@@ -1,12 +1,11 @@
-# robots.txt for Impact Tech
-
 User-agent: *
 Allow: /
 
-# Disallow paths (if needed in future)
-# Disallow: /admin/
-# Disallow: /api/
+# Keep render-critical and brand assets crawlable for Google rendering, image
+# discovery, and rich previews.
+Allow: /assets/
+Allow: /icons/
+Allow: /team/
+Allow: /.well-known/
 
-# Sitemap location
 Sitemap: https://impacttech.gr/sitemap.xml
-Host: impacttech.gr

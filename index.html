@@ -41,12 +41,14 @@
     </script>
 
     <!-- Primary Meta Tags -->
-    <title>Impact Tech | Web Development & 3D Experiences in Greece</title>
-    <meta name="title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
-    <meta name="description" content="Impact Tech builds high-performance web platforms, 3D experiences, mobile apps, and custom software for ambitious teams worldwide." />
-    <meta name="keywords" content="web development Greece, 3D web experiences, custom software, mobile app development, UI UX design, SEO strategy, Piraeus" />
+    <title>Impact Tech | Web, 3D & Software Studio in Greece & EU</title>
+    <meta name="title" content="Impact Tech | Web, 3D & Software Studio in Greece & EU" />
+    <meta name="description" content="We build high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide." />
+    <meta name="keywords" content="web development Greece, 3D web experiences, WebGL development, custom software Greece, SaaS development, mobile app development, UI UX design, DevOps services, software studio EU" />
     <meta name="author" content="Impact Tech" />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="application-name" content="Impact Tech" />
     <meta name="language" content="English, Greek" />
     <meta name="geo.region" content="GR-I3" />
     <meta name="geo.placename" content="Piraeus" />
@@ -55,21 +57,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://impacttech.gr/" />
-    <meta property="og:title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
-    <meta property="og:description" content="Impact Tech builds high-performance web platforms, 3D experiences, mobile apps, and custom software for ambitious teams worldwide." />
-    <meta property="og:image" content="https://impacttech.gr/og-image.jpg" />
+    <meta property="og:title" content="Impact Tech | Web, 3D & Software Studio in Greece & EU" />
+    <meta property="og:description" content="We build high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide." />
+    <meta property="og:image" content="https://impacttech.gr/og-image.png" />
+    <meta property="og:image:secure_url" content="https://impacttech.gr/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:alt" content="Impact Tech | Web, 3D & Software Studio in Greece & EU" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:locale:alternate" content="el_GR" />
     <meta property="og:site_name" content="Impact Tech" />
+    <meta property="og:updated_time" content="2026-04-16" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://impacttech.gr/" />
-    <meta name="twitter:title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
-    <meta name="twitter:description" content="Impact Tech builds high-performance web platforms, 3D experiences, mobile apps, and custom software for ambitious teams worldwide." />
-    <meta name="twitter:image" content="https://impacttech.gr/twitter-image.jpg" />
+    <meta name="twitter:title" content="Impact Tech | Web, 3D & Software Studio in Greece & EU" />
+    <meta name="twitter:description" content="We build high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide." />
+    <meta name="twitter:image" content="https://impacttech.gr/og-image.png" />
+    <meta name="twitter:image:alt" content="Impact Tech | Web, 3D & Software Studio in Greece & EU" />
+    <meta name="twitter:domain" content="impacttech.gr" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://impacttech.gr/" />
@@ -104,14 +111,16 @@
       "@type": "ProfessionalService",
       "@id": "https://impacttech.gr/#organization",
       "name": "Impact Tech",
-      "alternateName": "Impact Tech - Web Development Agency",
+      "alternateName": ["Impact Tech Greece", "Impact Tech Web Development Agency"],
       "url": "https://impacttech.gr",
-      "logo": "https://impacttech.gr/logo.png",
-      "description": "Professional web development agency specializing in websites, web applications, mobile apps and custom software solutions",
+      "image": "https://impacttech.gr/og-image.png",
+      "logo": "https://impacttech.gr/icons/android-chrome-512x512.png",
+      "description": "Impact Tech builds high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Plateia Ippodameias 8",
+        "streetAddress": "Pl. Ippodameias 8, Office D8",
         "addressLocality": "Piraeus",
+        "addressRegion": "Attica",
         "postalCode": "18531",
         "addressCountry": "GR"
       },
@@ -120,14 +129,24 @@
         "latitude": "37.942",
         "longitude": "23.647"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "email": "info@impacttech.gr",
-        "telephone": "+30 697 385 8321",
-        "availableLanguage": ["English", "Greek"],
-        "areaServed": ["GR", "EU"]
-      },
+      "areaServed": [
+        { "@type": "Country", "name": "Greece" },
+        { "@type": "AdministrativeArea", "name": "Attica" },
+        { "@type": "City", "name": "Athens" },
+        { "@type": "City", "name": "Piraeus" },
+        { "@type": "City", "name": "Thessaloniki" },
+        { "@type": "Place", "name": "European Union" }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@impacttech.gr",
+          "telephone": "+30 697 385 8321",
+          "availableLanguage": ["en", "el"],
+          "areaServed": ["GR", "EU"]
+        }
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -148,76 +167,76 @@
           "closes": "15:00"
         }
       ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "offerCount": "8",
-        "offers": [
+      "knowsAbout": [
+        "Web development",
+        "3D web experiences",
+        "WebGL development",
+        "Custom software development",
+        "Mobile app development",
+        "UX/UI design",
+        "Backend API development",
+        "DevOps and cloud infrastructure",
+        "Technical SEO"
+      ],
+      "makesOffer": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Web Development",
-              "description": "Landing pages and corporate websites development"
+              "name": "Web Development"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Web Applications",
-              "description": "CRM systems, portals, SaaS solutions"
+              "name": "3D Web Experiences"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Custom Software Development",
-              "description": "Tailored software solutions for your business"
+              "name": "Custom Software Development"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Website Modernization",
-              "description": "Upgrade and improve existing websites"
+              "name": "Mobile App Development"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Mobile Applications",
-              "description": "iOS and Android app development"
+              "name": "UX/UI Design"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Backend Development",
-              "description": "Server-side development and API integration"
+              "name": "Backend API Development"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "SEO Optimization",
-              "description": "Search engine optimization services"
+              "name": "DevOps and Cloud Infrastructure"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Technical Support",
-              "description": "Ongoing maintenance and support"
+              "name": "Technical SEO"
             }
           }
-        ]
-      }
+      ],
+      "inLanguage": "en-GB"
     }
     </script>
   </head>

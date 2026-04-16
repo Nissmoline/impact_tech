@@ -5,6 +5,7 @@ import {
   DEFAULT_OG_IMAGE,
   DEFAULT_TWITTER_IMAGE,
   SITE_NAME,
+  SITE_LAST_MODIFIED,
   SITE_URL,
   buildOrganizationSchema,
   buildWebsiteSchema,
@@ -70,8 +71,8 @@ const Seo: React.FC<SeoProps> = ({
   const canonicalUrl = canonical ?? `${SITE_URL}${localizedPath}`;
   const ogImage = image ?? DEFAULT_OG_IMAGE;
   const twitterImage = image ?? DEFAULT_TWITTER_IMAGE;
-  const ogLocale = locale === 'el' ? 'el_GR' : 'en_US';
-  const ogAlternateLocale = locale === 'el' ? 'en_US' : 'el_GR';
+  const ogLocale = locale === 'el' ? 'el_GR' : 'en_GB';
+  const ogAlternateLocale = locale === 'el' ? 'en_GB' : 'el_GR';
   const robots = noIndex ? 'noindex, follow' : 'index, follow';
   const structuredDataArray = useMemo(() => {
     const pageData = !structuredData
@@ -113,6 +114,7 @@ const Seo: React.FC<SeoProps> = ({
     upsertMeta('property', 'og:image:height', '630');
     upsertMeta('property', 'og:image:alt', title);
     upsertMeta('property', 'og:locale', ogLocale);
+    upsertMeta('property', 'og:updated_time', SITE_LAST_MODIFIED);
 
     document
       .querySelectorAll('meta[property="og:locale:alternate"]')
@@ -122,10 +124,13 @@ const Seo: React.FC<SeoProps> = ({
     upsertMeta('name', 'twitter:card', 'summary_large_image');
     upsertMeta('name', 'twitter:url', canonicalUrl);
     upsertMeta('name', 'twitter:image', twitterImage);
+    upsertMeta('name', 'twitter:image:alt', title);
+    upsertMeta('name', 'twitter:domain', 'impacttech.gr');
     upsertMeta('name', 'robots', robots);
     upsertMeta('name', 'googlebot', robots);
     upsertMeta('name', 'author', SITE_NAME);
     upsertMeta('name', 'publisher', SITE_NAME);
+    upsertMeta('name', 'application-name', SITE_NAME);
 
     document
       .querySelectorAll('link[rel="alternate"][hreflang]')
