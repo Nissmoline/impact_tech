@@ -21,6 +21,25 @@
     </script>
     <!-- End Google tag (gtag.js) -->
 
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+      // Helper function to delay opening a URL until a gtag event is sent.
+      // Call it in response to an action that should navigate to a URL.
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_contact_6', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+        return false;
+      }
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>Impact Tech | Web Development & 3D Experiences in Greece</title>
     <meta name="title" content="Impact Tech | Web Development & 3D Experiences in Greece" />
