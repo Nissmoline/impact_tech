@@ -888,6 +888,15 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 15,
+    title: "Kidsshop - Tiny Wonders CMS",
+    category: "E-Commerce",
+    image: "/portfolio/kidsshop.png",
+    stack: ["React", "Vite", "Supabase", "CMS"],
+    github: "https://github.com/Nissmoline/kids_shop",
+    live: "https://kidsshop-iota.vercel.app/"
+  },
+  {
     id: 1,
     title: "E-Commerce Platform",
     category: "Web Application",
