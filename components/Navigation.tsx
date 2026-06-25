@@ -203,7 +203,7 @@ const Navigation: React.FC = () => {
           <Link
             to={withLocale('/portfolio')}
             className="text-slate-400 dark:text-slate-400 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 transition-colors text-sm font-medium"
-            aria-label="View our portfolio"
+            aria-label="View our work"
           >
             {t('nav.portfolio')}
           </Link>

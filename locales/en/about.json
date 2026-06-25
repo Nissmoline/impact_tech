@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "About Impact Tech",
-    "title": "We build immersive products that feel inevitable.",
-    "description": "From complex web apps to cinematic 3D experiences, our team blends engineering rigor with design precision. We're the partner teams call when they need reliability, speed, and a little bit of awe.",
+    "title": "Small senior team. Serious product delivery.",
+    "description": "We help companies turn ideas, workflows, and technical problems into usable digital products: websites, CMS platforms, SaaS tools, AI systems, mobile apps, APIs, and internal software.",
     "primaryCta": "View our work",
     "secondaryCta": "Talk to us"
   },
@@ -31,24 +31,24 @@
   },
   "stats": [
     {
-      "label": "Projects shipped",
-      "value": "75+",
-      "detail": "Web, mobile & 3D experiences"
+      "label": "Founder-led",
+      "value": "1",
+      "detail": "Direct technical ownership"
     },
     {
-      "label": "Avg ROI uplift",
-      "value": "38%",
-      "detail": "Post-launch conversion improvement"
+      "label": "Focus areas",
+      "value": "6",
+      "detail": "Web, SaaS, AI, CMS, apps, software"
     },
     {
-      "label": "Core specialists",
-      "value": "12",
-      "detail": "Engineers, designers, 3D artists"
+      "label": "Delivery model",
+      "value": "Lean",
+      "detail": "Small team plus specialist network"
     },
     {
-      "label": "Client NPS",
-      "value": "71",
-      "detail": "Long-term partnerships we keep"
+      "label": "Build standard",
+      "value": "QA",
+      "detail": "Performance, security, maintainability"
     }
   ],
   "pillars": {

@@ -1,81 +1,81 @@
 {
-  "title": "SEO - Έρευνα & Στρατηγική",
-  "description": "Workshops με έμφαση στο αποτέλεσμα, οδικοί χάρτες, KPIs και αποτίμηση ρίσκου πριν γράψουμε κώδικα.",
+  "title": "IT Consulting & Product Strategy",
+  "description": "Technical audits, MVP planning, architecture reviews, workflow mapping, automation opportunities, cloud/QA planning, performance και SEO roadmaps.",
   "hero": {
-    "headline": "SEO στρατηγική που οδηγεί οργανική ανάπτυξη",
-    "subheadline": "Τεχνικά SEO audits, στρατηγική περιεχομένου και βελτιστοποίηση Core Web Vitals για καλύτερες θέσεις και μετατροπή.",
-    "cta": "Ανεβάστε το SEO σας"
+    "headline": "Practical IT Consulting πριν χτίσετε",
+    "subheadline": "Technical audits, MVP scope, product roadmaps, architecture reviews, workflow automation planning και cloud/QA strategy για ομάδες που χρειάζονται καθαρά next steps.",
+    "cta": "Σχεδιάστε το προϊόν σας"
   },
   "benefits": [
     {
-      "title": "Τεχνικά SEO audits",
-      "description": "Ανάλυση crawl, αξιολόγηση αρχιτεκτονικής site και έλεγχος structured data για διόρθωση βασικών ζητημάτων."
+      "title": "Technical Audits",
+      "description": "Ελέγχουμε architecture, performance, security, SEO foundations, integrations και delivery risks πριν γίνουν ακριβά προβλήματα."
     },
     {
-      "title": "Βελτιστοποίηση Core Web Vitals",
-      "description": "Βελτιώσεις σε LCP, FID, CLS μέσω performance engineering και rendering strategies."
+      "title": "MVP & Product Roadmaps",
+      "description": "Μετατρέπουμε ακατέργαστες ιδέες σε prioritized scopes, release plans, KPIs και ρεαλιστικά build phases."
     },
     {
-      "title": "Στρατηγική περιεχομένου & χαρτογράφηση",
-      "description": "Έρευνα λέξεων-κλειδιών, topic clustering και roadmaps περιεχομένου ευθυγραμμισμένα με το search intent."
+      "title": "Architecture Reviews",
+      "description": "Επικυρώνουμε frontend, backend, data, integration και cloud choices σε σχέση με τους στόχους του προϊόντος."
     },
     {
-      "title": "On-Page SEO",
-      "description": "Meta tags, semantic HTML, εσωτερικές συνδέσεις και schema markup για καλύτερο indexing."
+      "title": "Workflow Mapping",
+      "description": "Χαρτογραφούμε πραγματικές επιχειρησιακές διαδικασίες και βρίσκουμε πού μπορούν να βοηθήσουν CMS, SaaS tools, internal software ή automation."
     },
     {
-      "title": "Link building & outreach",
-      "description": "White-hat στρατηγικές backlinks, digital PR και ευκαιρίες συνεργασιών για αύξηση authority."
+      "title": "Cloud & QA Planning",
+      "description": "Ορίζουμε delivery pipelines, test strategy, observability, release checks και operational readiness."
     },
     {
-      "title": "Analytics & reporting",
-      "description": "Dashboards GA4/Search Console, rank tracking και μέτρηση ROI για συνεχή βελτιστοποίηση."
+      "title": "Performance & SEO Roadmaps",
+      "description": "Ιεραρχούμε Core Web Vitals, technical SEO, analytics και conversion improvements γύρω από business outcomes."
     }
   ],
   "process": [
     {
-      "title": "SEO audit & έρευνα",
-      "description": "Crawl του site, ανάλυση ανταγωνισμού, έλεγχος analytics και εντοπισμός quick wins και long-term ευκαιριών."
+      "title": "Discovery & Audit",
+      "description": "Κατανοούμε στόχους, περιορισμούς, υπάρχοντα συστήματα, χρήστες, risks και το πραγματικό business workflow."
     },
     {
-      "title": "Στρατηγική & roadmap",
-      "description": "Ιεράρχηση ενεργειών, ορισμός KPIs και δημιουργία τριμηνιαίου SEO roadmap ευθυγραμμισμένου με επιχειρηματικούς στόχους."
+      "title": "Strategy & Scope",
+      "description": "Ορίζουμε MVP, architecture direction, KPIs, roadmap και implementation priorities."
     },
     {
-      "title": "Υλοποίηση & βελτιστοποίηση",
-      "description": "Διόρθωση τεχνικών θεμάτων, βελτιστοποίηση περιεχομένου, βελτίωση Core Web Vitals και υλοποίηση tracking."
+      "title": "Technical Plan",
+      "description": "Τεκμηριώνουμε system flows, integrations, cloud/QA requirements, automation opportunities και delivery milestones."
     },
     {
-      "title": "Monitoring & iteration",
-      "description": "Παρακολούθηση rankings, οργανικής επισκεψιμότητας και μετατροπών· προσαρμογή στρατηγικής βάσει δεδομένων απόδοσης."
+      "title": "Execution Support",
+      "description": "Υποστηρίζουμε την υλοποίηση με reviews, checkpoints, performance tracking και iteration βάσει πραγματικών δεδομένων."
     }
   ],
   "technologies": [
     {
-      "category": "Εργαλεία SEO",
+      "category": "Discovery & Planning",
       "items": [
-        { "name": "Google Search Console", "description": "Παρακολούθηση απόδοσης site" },
-        { "name": "Screaming Frog", "description": "Technical SEO crawler" },
-        { "name": "Ahrefs/SEMrush", "description": "Ανάλυση ανταγωνισμού" },
-        { "name": "Google Analytics 4", "description": "Παρακολούθηση συμπεριφοράς & μετατροπών" }
+        { "name": "Miro / FigJam", "description": "Workflow mapping" },
+        { "name": "Notion / Confluence", "description": "Documentation" },
+        { "name": "Jira / Linear", "description": "Delivery planning" },
+        { "name": "Analytics Review", "description": "Data-backed decisions" }
       ]
     },
     {
-      "category": "Τεχνικό SEO",
+      "category": "Architecture & QA",
       "items": [
-        { "name": "Schema Markup", "description": "Structured data (JSON-LD)" },
-        { "name": "Core Web Vitals", "description": "Metrics απόδοσης" },
-        { "name": "Robots.txt/Sitemaps", "description": "Βελτιστοποίηση crawl" },
-        { "name": "Canonical Tags", "description": "Διαχείριση διπλού περιεχομένου" }
+        { "name": "System Architecture", "description": "Frontend, backend, data, cloud" },
+        { "name": "API & Integration Mapping", "description": "Data and service flows" },
+        { "name": "QA Strategy", "description": "Manual and automated checks" },
+        { "name": "Security Review", "description": "Access, data, and release risks" }
       ]
     },
     {
-      "category": "Περιεχόμενο & ανάλυση",
+      "category": "Performance & SEO",
       "items": [
-        { "name": "Surfer SEO", "description": "Βελτιστοποίηση περιεχομένου" },
-        { "name": "Google Trends", "description": "Ανάλυση τάσεων αναζήτησης" },
-        { "name": "AnswerThePublic", "description": "Έρευνα ερωτήσεων" },
-        { "name": "Hotjar/Clarity", "description": "Insights συμπεριφοράς χρηστών" }
+        { "name": "Core Web Vitals", "description": "Performance metrics" },
+        { "name": "Google Search Console", "description": "Indexing and search health" },
+        { "name": "GA4 / Clarity", "description": "Behavior and conversion insights" },
+        { "name": "Technical SEO", "description": "Structure, metadata, crawlability" }
       ]
     }
   ],

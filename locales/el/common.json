@@ -4,7 +4,7 @@
     "projects": "Έργα",
     "process": "Διαδικασία",
     "about": "Σχετικά",
-    "portfolio": "Portfolio",
+    "portfolio": "Works",
     "contact": "Επικοινωνία",
     "careers": "Καριέρα",
     "impressum": "Impressum",
@@ -18,12 +18,23 @@
   },
   "home": {
     "hero": {
-      "badge": "Web Engineering Επόμενης Γενιάς",
-      "title": "Δημιουργούμε τολμηρές web εμπειρίες σε <highlight>3D</highlight>.",
-      "description": "Σχεδιάζουμε και υλοποιούμε ολοκληρωμένα ψηφιακά προϊόντα: 3D web εμπειρίες, high-performance ιστοσελίδες, SaaS πλατφόρμες, mobile apps, ασφαλή APIs και cloud/QA, ώστε το προϊόν σας να ξεχωρίζει και να κλιμακώνεται.",
-      "ctaPrimary": "Ξεκινήστε το έργο σας",
-      "ctaSecondary": "Δείτε τη δουλειά μας",
-      "portfolioAria": "Δείτε το portfolio μας",
+      "badge": "Digital Product Studio & IT Consulting",
+      "title": "Χτίζουμε Web, SaaS, AI & Business Software <highlight>Products</highlight>.",
+      "description": "Η Impact Tech είναι founder-led digital product και IT consulting studio στην Ελλάδα. Χτίζουμε high-performance ιστοσελίδες, custom CMS platforms, SaaS products, AI-powered systems, mobile apps, ασφαλή APIs, εσωτερικό business software, cloud/QA pipelines και workflow automations για εταιρείες που χρειάζονται πρακτική τεχνολογία, γρήγορη παράδοση και χώρο για ανάπτυξη.",
+      "focusAreas": [
+        "Websites",
+        "CMS",
+        "SaaS",
+        "AI Products",
+        "Mobile Apps",
+        "Smart Home Software",
+        "APIs",
+        "Cloud & QA",
+        "IT Consulting"
+      ],
+      "ctaPrimary": "Κλείστε τεχνική κλήση",
+      "ctaSecondary": "Δείτε επιλεγμένη δουλειά",
+      "portfolioAria": "Δείτε επιλεγμένη δουλειά",
       "scrollHint": "Κάντε scroll για εξερεύνηση",
       "componentsLabel": "Στοιχεία",
       "code": {
@@ -34,7 +45,9 @@
       }
     },
     "services": {
+      "badge": "What we build",
       "title": "Υπηρεσίες",
+      "description": "Focused delivery σε websites, CMS platforms, SaaS products, AI systems, mobile apps, APIs, cloud/QA και product consulting.",
       "items": {
         "3d-interactive": {
           "title": "3D & Διαδραστικές Εμπειρίες",
@@ -65,15 +78,15 @@
           "description": "Εξατομικευμένο λογισμικό για web, mobile και εσωτερικά συστήματα, που απλοποιεί τις διαδικασίες και κλιμακώνεται μαζί με την επιχείρησή σας."
         },
         "seo-strategy": {
-          "title": "SEO - Έρευνα & Στρατηγική",
-          "description": "Workshops στρατηγικής, οδικοί χάρτες, KPIs και αποτίμηση ρίσκου πριν ξεκινήσουμε τον κώδικα."
+          "title": "IT Consulting & Product Strategy",
+          "description": "Technical audits, MVP planning, architecture reviews, workflow mapping, automation opportunities, cloud/QA planning, performance και SEO roadmaps."
         }
       }
     },
     "projects": {
-      "badge": "Επιλεγμένα έργα",
-      "title": "Επιλεγμένα έργα",
-      "description": "Κάντε swipe στη συλλογή ή χρησιμοποιήστε τα βέλη για να μεταβείτε στα έργα.",
+      "badge": "Selected Work",
+      "title": "Selected Product Work",
+      "description": "Πραγματικά προϊόντα, internal platforms, SaaS ideas, AI systems και client software που χτίζουμε ή έχουμε παραδώσει.",
       "progress": "Πρόοδος",
       "aria": {
         "previous": "Προβολή προηγούμενου έργου",
@@ -84,33 +97,60 @@
     "audience": {
       "badge": "Τρέχουσα εστίαση",
       "title": "Ικανότητες & Έργα Μεγάλης Κλίμακας",
-      "description": "Εστιάζουμε σε λύσεις AI, Big Data και προϊόντα που λειτουργούν σε πραγματικά περιβάλλοντα παραγωγής (production) και κυβερνητικά συστήματα",
+      "description": "Μια καθαρή εικόνα των product directions που χτίζουμε τώρα: AI systems, SaaS tools, CMS platforms, smart-home software και custom web/app delivery.",
       "cards": {
         "aiGames": {
           "title": "AI για Games",
-          "description": "Έξυπνοι πράκτορες, προσαρμοστικό gameplay και διαδικαστικά παραγόμενοι κόσμοι για μεγάλες παραγωγές παιχνιδιών.",
+          "description": "AI systems για game environments: intelligent NPC behavior, adaptive difficulty, procedural content logic, simulations και gameplay automation tools.",
           "points": [
-            "Συμπεριφορά NPC και RL simulations για live-ops",
-            "Δυναμική ισορροπία και ρύθμιση δυσκολίας σε πραγματικό χρόνο",
-            "Pipelines παραγωγής περιεχομένου και telemetry παικτών"
+            "NPC behavior και simulation logic",
+            "Adaptive difficulty και gameplay automation",
+            "Procedural content και telemetry-ready systems"
           ]
         },
         "enterpriseSecurity": {
-          "title": "Ασφάλεια AI για Enterprise",
-          "description": "Το προϊόν μας: video analytics και monitoring για βιομηχανικούς χώρους, με αυτοματοποίηση πρόσβασης και αποτροπή συμβάντων.",
+          "title": "AI Security Monitoring Platform",
+          "description": "Computer vision platform για βιομηχανικούς και ιδιωτικούς χώρους: camera-based monitoring, access-control automation, anomaly detection, incident alerts και operational dashboards.",
           "points": [
             "Computer vision για περίμετρο και έλεγχο πρόσβασης",
-            "Anomaly detection και playbooks ειδοποιήσεων",
-            "Διασύνδεση με υποδομές και SOC reporting"
+            "Anomaly detection και incident alerts",
+            "Operational dashboards και reporting flows"
           ]
         },
-        "govBigData": {
-          "title": "Gov Big Data (Ελλάδα)",
-          "description": "Δεδομένα εθνικής κλίμακας για ελληνικούς κρατικούς φορείς: ingestion, cleansing και analytics.",
+        "localBusinessCms": {
+          "title": "CMS for a Local Business",
+          "description": "Custom CMS και booking-ready business platform για local hairstyle business, σχεδιασμένο για διαχείριση υπηρεσιών, προσωπικού, περιεχομένου, galleries, client requests, offers και μελλοντικής online ανάπτυξης από ένα ελεγχόμενο admin system.",
           "points": [
-            "ETL/ELT pipelines και ποιότητα δεδομένων (data quality)",
-            "Risk scoring και αναλυτικά data marts",
-            "Ασφάλεια, έλεγχος (audit) και κανονιστική συμμόρφωση"
+            "Admin-managed services, staff, content και galleries",
+            "Client requests, offers και booking-oriented workflows",
+            "Scalable CMS foundation για μελλοντική online ανάπτυξη"
+          ]
+        },
+        "reviewBooster": {
+          "title": "SaaS Startup ReviewBooster AI",
+          "description": "Startup SaaS product που βοηθά επιχειρήσεις να συλλέγουν, να διαχειρίζονται και να βελτιώνουν customer reviews με AI-assisted messaging, automated review request flows, reputation insights και performance dashboards.",
+          "points": [
+            "AI-assisted review request messaging",
+            "Reputation insights και business dashboards",
+            "Multi-business SaaS flows χτισμένα για scale"
+          ]
+        },
+        "smartHomeSoftware": {
+          "title": "Smart Home Company Software",
+          "description": "Internal software για smart-home technology company, με υποστήριξη για project workflows, device και service management, client operations, technical documentation και business process automation.",
+          "points": [
+            "Project και installation workflow management",
+            "Device, service και client operation tracking",
+            "Technical documentation και process automation"
+          ]
+        },
+        "customBuilds": {
+          "title": "Custom Web, App & SaaS Builds",
+          "description": "High-performance websites, SaaS dashboards, mobile apps, APIs και cloud/QA pipelines για εταιρείες που χρειάζονται αξιόπιστα digital products, όχι απλώς οπτικά websites.",
+          "points": [
+            "Websites, dashboards, portals και mobile apps",
+            "Secure APIs, integrations και automation flows",
+            "Cloud, QA, performance και launch support"
           ]
         }
       }

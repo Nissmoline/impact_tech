@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Σχετικά με την Impact Tech",
-    "title": "Χτίζουμε καθηλωτικά προϊόντα που μοιάζουν αναπόφευκτα.",
-    "description": "Από σύνθετες web εφαρμογές μέχρι κινηματογραφικές 3D εμπειρίες, η ομάδα μας συνδυάζει μηχανική αυστηρότητα με σχεδιαστική ακρίβεια. Είμαστε ο συνεργάτης που καλούν οι ομάδες όταν χρειάζονται αξιοπιστία, ταχύτητα και μια δόση δέους.",
+    "title": "Small senior team. Serious product delivery.",
+    "description": "Βοηθάμε εταιρείες να μετατρέπουν ιδέες, workflows και τεχνικά προβλήματα σε usable digital products: websites, CMS platforms, SaaS tools, AI systems, mobile apps, APIs και internal software.",
     "primaryCta": "Δείτε το έργο μας",
     "secondaryCta": "Μιλήστε μαζί μας"
   },
@@ -31,24 +31,24 @@
   },
   "stats": [
     {
-      "label": "Έργα που παραδώσαμε",
-      "value": "75+",
-      "detail": "Web, mobile & 3D εμπειρίες"
+      "label": "Founder-led",
+      "value": "1",
+      "detail": "Direct technical ownership"
     },
     {
-      "label": "Μέση αύξηση ROI",
-      "value": "38%",
-      "detail": "Βελτίωση μετατροπών μετά το λανσάρισμα"
+      "label": "Focus areas",
+      "value": "6",
+      "detail": "Web, SaaS, AI, CMS, apps, software"
     },
     {
-      "label": "Βασικοί ειδικοί",
-      "value": "12",
-      "detail": "Μηχανικοί, σχεδιαστές, 3D artists"
+      "label": "Delivery model",
+      "value": "Lean",
+      "detail": "Small team plus specialist network"
     },
     {
-      "label": "NPS πελατών",
-      "value": "71",
-      "detail": "Μακροχρόνιες συνεργασίες που διατηρούμε"
+      "label": "Build standard",
+      "value": "QA",
+      "detail": "Performance, security, maintainability"
     }
   ],
   "pillars": {

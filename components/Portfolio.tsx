@@ -349,10 +349,10 @@ const Portfolio: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto"
         >
           {[
-            { label: t('stats.totalProjects'), value: 85/* PROJECTS.length */ },
-            { label: t('stats.categories'), value: categoryIds.length },
-            { label: t('stats.technologies'), value: new Set(PROJECTS.flatMap(p => p.stack)).size },
-            { label: t('stats.happyClients'), value: 85/* PROJECTS.length */ },
+            { label: t('stats.selectedBuilds'), value: String(PROJECTS.length) },
+            { label: t('stats.productCategories'), value: String(categoryIds.length) },
+            { label: t('stats.technologiesUsed'), value: String(new Set(PROJECTS.flatMap(p => p.stack)).size) },
+            { label: t('stats.deliveryModel'), value: t('stats.founderLedValue') },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -362,7 +362,7 @@ const Portfolio: React.FC = () => {
               className="text-center p-6 bg-slate-900/50 dark:bg-slate-900/50 light:bg-white border border-slate-800/50 dark:border-slate-800/50 light:border-slate-200 rounded-2xl"
             >
               <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 mb-2">
-                {stat.value}+
+                {stat.value}
               </div>
               <div className="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm font-medium">
                 {stat.label}

@@ -4,7 +4,7 @@
     "projects": "Projects",
     "process": "Process",
     "about": "About",
-    "portfolio": "Portfolio",
+    "portfolio": "Works",
     "contact": "Contact",
     "careers": "Careers",
     "impressum": "Impressum",
@@ -18,12 +18,23 @@
   },
   "home": {
     "hero": {
-      "badge": "Next-Gen Web Engineering",
-      "title": "We Craft Bold Web Experiences in <highlight>3D</highlight>.",
-      "description": "We design and build end-to-end digital products: 3D web experiences, high-performance websites, SaaS platforms, mobile apps, secure APIs, and cloud/QA pipelines, so your product stands out and scales.",
-      "ctaPrimary": "Start Your Project",
-      "ctaSecondary": "View Our Work",
-      "portfolioAria": "View our portfolio",
+      "badge": "Digital Product Studio & IT Consulting",
+      "title": "We Build Web, SaaS, AI & Business Software <highlight>Products</highlight>.",
+      "description": "Impact Tech is a founder-led digital product and IT consulting studio in Greece. We build high-performance websites, custom CMS platforms, SaaS products, AI-powered systems, mobile apps, secure APIs, internal business software, cloud/QA pipelines, and workflow automations for companies that need practical technology, fast delivery, and room to scale.",
+      "focusAreas": [
+        "Websites",
+        "CMS",
+        "SaaS",
+        "AI Products",
+        "Mobile Apps",
+        "Smart Home Software",
+        "APIs",
+        "Cloud & QA",
+        "IT Consulting"
+      ],
+      "ctaPrimary": "Book a Technical Call",
+      "ctaSecondary": "See Selected Work",
+      "portfolioAria": "View selected work",
       "scrollHint": "Scroll to Explore",
       "componentsLabel": "Components",
       "code": {
@@ -34,7 +45,9 @@
       }
     },
     "services": {
+      "badge": "What we build",
       "title": "Services",
+      "description": "Focused delivery across websites, CMS platforms, SaaS products, AI systems, mobile apps, APIs, cloud/QA, and product consulting.",
       "items": {
         "3d-interactive": {
           "title": "3D & Interactive Experiences",
@@ -65,15 +78,15 @@
           "description": "Tailor-made web, mobile, and internal software that streamlines operations and scales with your business."
         },
         "seo-strategy": {
-          "title": "SEO - Discovery & Strategy",
-          "description": "Outcome-focused workshops, roadmaps, KPIs, and risk framing before we write code."
+          "title": "IT Consulting & Product Strategy",
+          "description": "Technical audits, MVP planning, architecture reviews, workflow mapping, automation opportunities, cloud/QA planning, performance and SEO roadmaps."
         }
       }
     },
     "projects": {
-      "badge": "Featured Works",
-      "title": "Featured Works",
-      "description": "Swipe through the gallery or use the arrows to jump between projects.",
+      "badge": "Selected Work",
+      "title": "Selected Product Work",
+      "description": "Real products, internal platforms, SaaS ideas, AI systems, and client software we are building or have shipped.",
       "progress": "Progress",
       "aria": {
         "previous": "View previous project",
@@ -84,33 +97,60 @@
     "audience": {
       "badge": "Current Focus",
       "title": "Competencies & Large-Scale Projects",
-      "description": "We focus on AI, Big Data, and products that run in real production environments and government systems.",
+      "description": "A focused look at the product directions we are building now: AI systems, SaaS tools, CMS platforms, smart-home software, and custom web/app delivery.",
       "cards": {
         "aiGames": {
           "title": "AI for Games",
-          "description": "Intelligent agents, adaptive gameplay, and procedural worlds for major game productions.",
+          "description": "AI systems for game environments: intelligent NPC behavior, adaptive difficulty, procedural content logic, simulations, and gameplay automation tools.",
           "points": [
-            "NPC behavior and RL simulations for live-ops",
-            "Dynamic balance and real-time difficulty tuning",
-            "Content generation pipelines and player telemetry"
+            "NPC behavior and simulation logic",
+            "Adaptive difficulty and gameplay automation",
+            "Procedural content and telemetry-ready systems"
           ]
         },
         "enterpriseSecurity": {
-          "title": "Enterprise AI Security",
-          "description": "Our product: video analytics and monitoring for industrial sites. Automating access control and preventing incidents.",
+          "title": "AI Security Monitoring Platform",
+          "description": "Computer vision platform for industrial and private facilities: camera-based monitoring, access-control automation, anomaly detection, incident alerts, and operational dashboards.",
           "points": [
             "Computer vision for perimeter and access control",
-            "Anomaly detection and alert playbooks",
-            "Integration with infrastructure and SOC reporting"
+            "Anomaly detection and incident alerts",
+            "Operational dashboards and reporting flows"
           ]
         },
-        "govBigData": {
-          "title": "Gov Big Data (Greece)",
-          "description": "National-scale datasets for Greek governmental inspectorates: ingestion, cleansing, and analytics.",
+        "localBusinessCms": {
+          "title": "CMS for a Local Business",
+          "description": "A custom CMS and booking-ready business platform for a local hairstyle business, built to manage services, staff, content, galleries, client requests, offers, and future online growth from one controlled admin system.",
           "points": [
-            "ETL/ELT pipelines and data quality",
-            "Risk scoring and analytical data marts",
-            "Security, audit, and regulatory compliance"
+            "Admin-managed services, staff, content, and galleries",
+            "Client requests, offers, and booking-oriented workflows",
+            "Scalable CMS foundation for future online growth"
+          ]
+        },
+        "reviewBooster": {
+          "title": "SaaS Startup ReviewBooster AI",
+          "description": "A startup SaaS product that helps businesses collect, manage, and improve customer reviews with AI-assisted messaging, automated review request flows, reputation insights, and performance dashboards.",
+          "points": [
+            "AI-assisted review request messaging",
+            "Reputation insights and business dashboards",
+            "Multi-business SaaS flows built for scale"
+          ]
+        },
+        "smartHomeSoftware": {
+          "title": "Smart Home Company Software",
+          "description": "Internal software for a smart-home technology company, supporting project workflows, device and service management, client operations, technical documentation, and business process automation.",
+          "points": [
+            "Project and installation workflow management",
+            "Device, service, and client operation tracking",
+            "Technical documentation and process automation"
+          ]
+        },
+        "customBuilds": {
+          "title": "Custom Web, App & SaaS Builds",
+          "description": "High-performance websites, SaaS dashboards, mobile apps, APIs, and cloud/QA pipelines built for companies that need reliable digital products, not just visual websites.",
+          "points": [
+            "Websites, dashboards, portals, and mobile apps",
+            "Secure APIs, integrations, and automation flows",
+            "Cloud, QA, performance, and launch support"
           ]
         }
       }

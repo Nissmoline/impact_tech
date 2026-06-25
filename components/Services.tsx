@@ -12,13 +12,18 @@ const Services: React.FC = () => {
   const withLocale = (href: string) => withLocalePrefix(href, locale);
 
   return (
-    <section className="py-24 bg-slate-950 relative overflow-hidden">
+    <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-slate-950 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+        <div className="space-y-3 text-center mb-12">
+          <p className="text-cyan-400 font-semibold tracking-[0.16em] uppercase text-xs">
+            {t('home.services.badge')}
+          </p>
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500 inline-block">
             {t('home.services.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
+          <p className="text-slate-400 max-w-3xl mx-auto">
+            {t('home.services.description')}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

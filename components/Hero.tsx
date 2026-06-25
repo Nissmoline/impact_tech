@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Code, Layout, ChevronDown, Zap, Play, Check, MousePointer2 } from 'lucide-react';
+import { Check, ChevronDown, Code, Layout, MousePointer2, Play, Zap } from 'lucide-react';
+import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import Scene3D from './Scene3D';
-import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
+import { Link, useLocation } from 'react-router-dom';
 import { AccentTheme, useAccentTheme } from '../contexts/AccentThemeContext';
+import { getLocaleFromPath, withLocalePrefix } from '../utils/locale';
+import Scene3D from './Scene3D';
 
 const THEMES: Record<AccentTheme, {
   id: AccentTheme;
@@ -57,7 +57,8 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
   const locale = getLocaleFromPath(location.pathname);
   const withLocale = (href: string) => withLocalePrefix(href, locale);
-  
+  const focusAreas = t('home.hero.focusAreas', { returnObjects: true }) as string[];
+
   // Interactive States
   const { accentTheme: activeTheme, setAccentTheme } = useAccentTheme();
   const [codeStatus, setCodeStatus] = useState<'idle' | 'running' | 'success'>('idle');
@@ -69,7 +70,7 @@ const Hero: React.FC = () => {
     // stopPropagation to prevent dragging when clicking the button
     e.stopPropagation();
     if (codeStatus !== 'idle') return;
-    
+
     setCodeStatus('running');
     setTimeout(() => {
       setCodeStatus('success');
@@ -88,31 +89,31 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="hero-floating-shifts relative min-h-[100svh] flex items-center justify-center overflow-hidden perspective-2000">
+    <section className="hero-floating-shifts relative min-h-[100svh] flex items-center justify-center overflow-hidden perspective-2000 pt-28 pb-14 lg:pt-32 lg:pb-20">
       {/* Background Mesh */}
       <div className="absolute inset-0 bg-slate-950 z-0 transition-colors duration-700">
         <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_50%)] transition-opacity duration-700 ${activeTheme === 'purple' ? 'opacity-0' : 'opacity-100'}`} />
         <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.15),transparent_50%)] transition-opacity duration-700 ${activeTheme === 'purple' ? 'opacity-100' : 'opacity-0'}`} />
         <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.15),transparent_50%)] transition-opacity duration-700 ${activeTheme === 'emerald' ? 'opacity-100' : 'opacity-0'}`} />
-        
+
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-        
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+
         {/* Text Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left order-2 lg:order-1 relative z-30"
         >
-          <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-6 transition-colors duration-300 lg:mt-4 ${theme.badge}`}>
+          <div className={`inline-flex max-w-full items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-5 transition-colors duration-300 ${theme.badge}`}>
             <Zap size={14} className="animate-pulse" />
-            <span>{t('home.hero.badge')}</span>
+            <span className="truncate">{t('home.hero.badge')}</span>
           </div>
-          
-          <h1 className={`text-5xl lg:text-7xl font-display font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-6 transition-all duration-500 ${theme.glow}`}>
+
+          <h1 className={`max-w-3xl text-4xl sm:text-5xl lg:text-[3.375rem] xl:text-[3.6rem] font-display font-bold leading-[1.06] bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-6 transition-all duration-500 ${theme.glow}`}>
             <Trans
               i18nKey="home.hero.title"
               components={{
@@ -120,11 +121,24 @@ const Hero: React.FC = () => {
               }}
             />
           </h1>
-          
-          <p className="text-lg lg:text-xl text-slate-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+
+          <p className="text-base lg:text-base text-slate-400 mb-7 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             {t('home.hero.description')}
           </p>
-          
+
+          {Array.isArray(focusAreas) && focusAreas.length > 0 && (
+            <div className="mb-8 flex flex-wrap gap-2 justify-center lg:justify-start max-w-2xl mx-auto lg:mx-0">
+              {focusAreas.map((area) => (
+                <span
+                  key={area}
+                  className="px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.04] text-xs font-medium text-slate-300 backdrop-blur-sm"
+                >
+                  {area}
+                </span>
+              ))}
+            </div>
+          )}
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
               to={withLocale('/#contact')}
@@ -140,7 +154,7 @@ const Hero: React.FC = () => {
               aria-label={t('home.hero.portfolioAria')}
             >
               {t('home.hero.ctaSecondary')}
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-1 transition-transform">-&gt;</span>
             </Link>
           </div>
         </motion.div>
@@ -161,7 +175,7 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.1 }}
               className={`absolute inset-0 bg-gradient-to-br rounded-3xl opacity-20 blur-3xl animate-pulse cursor-pointer transition-colors duration-500 ${theme.coreGradient}`}
             />
-            
+
             {/* Floating Window 1: Code */}
             <motion.div
               drag
@@ -172,7 +186,7 @@ const Hero: React.FC = () => {
               className="absolute -top-10 -left-10 lg:-left-20 z-20"
             >
               <div className="hero-code-window-mobile-m">
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -20, 0], rotateZ: [0, 2, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                   className="bg-slate-900/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-2xl w-60 select-none group"
@@ -184,7 +198,7 @@ const Hero: React.FC = () => {
                           <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
                       </div>
                       {/* Run Button */}
-                      <button 
+                      <button
                           onPointerDown={handleRunCode}
                           className={`p-1.5 rounded-md transition-colors ${codeStatus === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white'}`}
                       >
@@ -197,7 +211,7 @@ const Hero: React.FC = () => {
                           )}
                       </button>
                   </div>
-                  
+
                   <div className="space-y-2 font-mono text-xs">
                     {codeStatus === 'running' ? (
                         <div className="py-4 text-slate-400 animate-pulse">
@@ -308,7 +322,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             {/* Floating Element 3: Palette (Theme Switcher) */}
-            <motion.div 
+            <motion.div
               drag
               dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
               dragElastic={0.2}
@@ -317,36 +331,36 @@ const Hero: React.FC = () => {
               className="absolute top-1/2 -right-20 lg:-right-32 z-20"
             >
               <div className="hero-palette-mobile-m">
-                <motion.div 
+                <motion.div
                   animate={{ x: [0, 15, 0], y: [0, 10, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   className="bg-slate-800/80 backdrop-blur-md p-3 rounded-2xl border border-white/5 flex flex-col gap-3 select-none"
                 >
-                   <div 
+                   <div
                       onPointerDown={(e) => handleThemeChange(e, 'cyan')}
-                      className={`w-8 h-8 rounded-full bg-cyan-400 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(34,211,238,0.5)] ring-2 ${activeTheme === 'cyan' ? 'ring-white' : 'ring-transparent'}`} 
+                      className={`w-8 h-8 rounded-full bg-cyan-400 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(34,211,238,0.5)] ring-2 ${activeTheme === 'cyan' ? 'ring-white' : 'ring-transparent'}`}
                    />
-                   <div 
+                   <div
                       onPointerDown={(e) => handleThemeChange(e, 'purple')}
-                      className={`w-8 h-8 rounded-full bg-purple-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(168,85,247,0.5)] ring-2 ${activeTheme === 'purple' ? 'ring-white' : 'ring-transparent'}`} 
+                      className={`w-8 h-8 rounded-full bg-purple-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(168,85,247,0.5)] ring-2 ${activeTheme === 'purple' ? 'ring-white' : 'ring-transparent'}`}
                    />
-                   <div 
+                   <div
                       onPointerDown={(e) => handleThemeChange(e, 'emerald')}
-                      className={`w-8 h-8 rounded-full bg-emerald-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(16,185,129,0.5)] ring-2 ${activeTheme === 'emerald' ? 'ring-white' : 'ring-transparent'}`} 
+                      className={`w-8 h-8 rounded-full bg-emerald-500 cursor-pointer transition-transform hover:scale-125 shadow-[0_0_10px_rgba(16,185,129,0.5)] ring-2 ${activeTheme === 'emerald' ? 'ring-white' : 'ring-transparent'}`}
                    />
                 </motion.div>
               </div>
             </motion.div>
 
              {/* Central Logo Abstract */}
-             <motion.div 
+             <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none"
              >
                 <div className={`w-48 h-48 rounded-full border border-dashed transition-colors duration-500 ${activeTheme === 'cyan' ? 'border-cyan-500/30' : activeTheme === 'purple' ? 'border-purple-500/30' : 'border-emerald-500/30'}`} />
              </motion.div>
-             <motion.div 
+             <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-4 flex items-center justify-center -z-10 pointer-events-none"
@@ -358,7 +372,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         style={{ opacity: useTransform(scrollY, [0, 200], [1, 0]) }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 pointer-events-none"
       >

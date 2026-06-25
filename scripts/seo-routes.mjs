@@ -1,7 +1,7 @@
 export const SITE_NAME = 'Impact Tech';
 export const SITE_URL = 'https://impacttech.gr';
 export const SITE_DESCRIPTION =
-  'Impact Tech builds high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide.';
+  'Impact Tech builds websites, custom CMS platforms, SaaS products, AI systems, mobile apps, business software, secure APIs, and cloud/QA pipelines for teams in Greece and the EU.';
 export const SITE_LAST_MODIFIED = '2026-04-16';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 export const DEFAULT_TWITTER_IMAGE = DEFAULT_OG_IMAGE;
@@ -11,18 +11,18 @@ const home = {
   changefreq: 'weekly',
   priority: '1.0',
   en: {
-    title: 'Impact Tech | Web, 3D & Software Studio in Greece & EU',
+    title: 'Impact Tech | Web, SaaS, AI & IT Consulting Studio in Greece',
     description:
-      'We build high-performance websites, 3D web experiences, mobile apps, and custom software for teams in Greece, the EU, and worldwide.',
+      'Founder-led digital product studio building websites, custom CMS platforms, SaaS products, AI systems, mobile apps, business software, APIs, and cloud/QA pipelines.',
     keywords:
-      'web development Greece, 3D web experiences, WebGL development, custom software Greece, SaaS development, mobile app development, UI UX design, DevOps services, software studio EU',
+      'web development Greece, SaaS development Greece, AI product development, custom CMS development, IT consulting Greece, business software, mobile app development, API development, cloud QA pipelines, workflow automation',
   },
   el: {
-    title: 'Impact Tech | Web, 3D & Λογισμικό στην Ελλάδα & ΕΕ',
+    title: 'Impact Tech | Web, SaaS, AI & IT Consulting στην Ελλάδα',
     description:
-      'Δημιουργούμε high-performance websites, 3D web εμπειρίες, mobile apps και custom λογισμικό για ομάδες στην Ελλάδα, την ΕΕ και διεθνώς.',
+      'Founder-led digital product studio που χτίζει websites, custom CMS platforms, SaaS products, AI systems, mobile apps, business software, APIs και cloud/QA pipelines.',
     keywords:
-      'ανάπτυξη ιστοσελίδων, 3D εμπειρίες web, WebGL development, custom λογισμικό, ανάπτυξη SaaS, ανάπτυξη mobile apps, UI UX design, DevOps υπηρεσίες, digital studio Ελλάδα',
+      'ανάπτυξη ιστοσελίδων Ελλάδα, SaaS development Ελλάδα, AI product development, custom CMS development, IT consulting Ελλάδα, business software, mobile app development, API development, cloud QA pipelines, workflow automation',
   },
 };
 
@@ -33,16 +33,16 @@ const pages = [
     changefreq: 'weekly',
     priority: '0.9',
     en: {
-      title: 'Portfolio | Web, 3D & Software Case Studies | Impact Tech',
+      title: 'Works | Selected Web, App, SaaS & AI Work | Impact Tech',
       description:
-        'Explore websites, SaaS, mobile, and 3D projects delivered for teams in Greece, the EU, and worldwide.',
-      keywords: 'web development portfolio, 3D portfolio, SaaS case studies, mobile app case studies, software projects, EU clients',
+        'Explore selected client work, internal products, SaaS platforms, AI systems, CMS builds, and business software from Impact Tech.',
+      keywords: 'selected web work, SaaS projects, AI systems, CMS platforms, mobile app projects, custom software Greece, smart home software',
     },
     el: {
-      title: 'Portfolio | Έργα Web, 3D & Software | Impact Tech',
+      title: 'Works | Selected Web, App, SaaS & AI Work | Impact Tech',
       description:
-        'Δείτε έργα web, SaaS, mobile και 3D που υλοποιήσαμε για Ελλάδα, ΕΕ και διεθνείς ομάδες.',
-      keywords: 'portfolio web, έργα 3D, case studies, έργα SaaS, mobile apps, projects Ελλάδα',
+        'Επιλεγμένη δουλειά σε client projects, internal products, SaaS platforms, AI systems, CMS builds και business software από την Impact Tech.',
+      keywords: 'selected web work, SaaS projects, AI systems, CMS platforms, mobile app projects, custom software Ελλάδα, smart home software',
     },
   },
   {
@@ -50,16 +50,16 @@ const pages = [
     changefreq: 'yearly',
     priority: '0.7',
     en: {
-      title: 'About Impact Tech | Engineering & Design Studio in Greece',
+      title: 'About Impact Tech | Founder-Led Digital Product Studio',
       description:
-        'Meet the team delivering 3D, web, and software products for Greece, the EU, and global clients.',
-      keywords: 'about Impact Tech, digital studio Greece, engineering studio, product design team, web agency Greece, 3D studio',
+        'Small senior team turning ideas, workflows, and technical problems into websites, CMS platforms, SaaS tools, AI systems, mobile apps, APIs, and internal software.',
+      keywords: 'about Impact Tech, founder-led digital studio, digital product studio Greece, IT consulting team, SaaS development team, AI systems team, custom software Greece',
     },
     el: {
-      title: 'Σχετικά με την Impact Tech | Engineering & Design Studio',
+      title: 'Σχετικά με την Impact Tech | Founder-Led Digital Product Studio',
       description:
-        'Γνωρίστε την ομάδα που παραδίδει 3D, web και software προϊόντα για Ελλάδα, ΕΕ και διεθνείς πελάτες.',
-      keywords: 'σχετικά με Impact Tech, digital studio Ελλάδα, engineering team, web agency Ελλάδα, design systems, 3D studio',
+        'Small senior team που μετατρέπει ιδέες, workflows και τεχνικά προβλήματα σε websites, CMS platforms, SaaS tools, AI systems, mobile apps, APIs και internal software.',
+      keywords: 'σχετικά με Impact Tech, founder-led digital studio, digital product studio Ελλάδα, IT consulting team, SaaS development team, AI systems team, custom software Ελλάδα',
     },
   },
   {
@@ -229,17 +229,17 @@ const services = [
   {
     path: '/services/seo-strategy',
     en: {
-      title: 'SEO Strategy & Technical SEO | Impact Tech',
+      title: 'IT Consulting & Product Strategy | Impact Tech',
       description:
-        'Technical audits, Core Web Vitals optimization, and content strategy for higher rankings in Greece, the EU, and global markets.',
+        'Technical audits, MVP planning, architecture reviews, workflow mapping, cloud/QA planning, and performance roadmaps for teams in Greece and the EU.',
       keywords:
-        'SEO services, technical SEO, SEO strategy, Core Web Vitals, SEO audit, content strategy, SEO consulting, SEO Greece',
+        'IT consulting, product strategy, technical audit, MVP planning, architecture review, workflow automation, cloud strategy, QA planning, Greece IT consulting',
     },
     el: {
-      title: 'SEO Strategy & Optimization | Impact Tech',
+      title: 'IT Consulting & Product Strategy | Impact Tech',
       description:
-        'Τεχνικό SEO, Core Web Vitals και στρατηγική περιεχομένου για καλύτερα rankings σε Ελλάδα, ΕΕ και διεθνώς.',
-      keywords: 'SEO, τεχνικό SEO, content strategy, Core Web Vitals, SEO audit, Ελλάδα',
+        'Technical audits, MVP planning, architecture reviews, workflow mapping, cloud/QA planning και performance roadmaps για ομάδες στην Ελλάδα και την ΕΕ.',
+      keywords: 'IT consulting, product strategy, technical audit, MVP planning, architecture review, workflow automation, cloud strategy, QA planning, Ελλάδα',
     },
   },
 ];

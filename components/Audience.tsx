@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, ShieldCheck, Database } from 'lucide-react';
+import { Brain, Code2, Home, LayoutDashboard, Rocket, ShieldCheck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import TiltCard from './ui/TiltCard';
 
@@ -17,9 +17,24 @@ const Audience: React.FC = () => {
       accent: 'from-emerald-500 to-teal-500',
     },
     {
-      key: 'govBigData',
-      icon: Database,
+      key: 'localBusinessCms',
+      icon: LayoutDashboard,
       accent: 'from-indigo-500 to-purple-500',
+    },
+    {
+      key: 'reviewBooster',
+      icon: Rocket,
+      accent: 'from-orange-500 to-amber-500',
+    },
+    {
+      key: 'smartHomeSoftware',
+      icon: Home,
+      accent: 'from-teal-500 to-cyan-500',
+    },
+    {
+      key: 'customBuilds',
+      icon: Code2,
+      accent: 'from-fuchsia-500 to-pink-500',
     },
   ];
 

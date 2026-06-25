@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Το Portfolio μας",
-    "subtitle": "Ανακαλύψτε τη συλλογή μας από καινοτόμα έργα και επιτυχημένες συνεργασίες με πελάτες"
+    "title": "Selected Web, App, SaaS & AI Work",
+    "subtitle": "Ένα focused mix από client work, internal products, SaaS platforms, AI systems, CMS builds και business software."
   },
   "filters": {
     "label": "Φίλτρο:",
@@ -19,10 +19,11 @@
     "sourceCode": "Πηγαίος Κώδικας"
   },
   "stats": {
-    "totalProjects": "Σύνολο έργων",
-    "categories": "Κατηγορίες",
-    "technologies": "Τεχνολογίες",
-    "happyClients": "Ικανοποιημένοι πελάτες"
+    "selectedBuilds": "Selected builds",
+    "productCategories": "Product categories",
+    "technologiesUsed": "Technologies used",
+    "deliveryModel": "Delivery model",
+    "founderLedValue": "Founder-led"
   },
   "categories": {
     "Web Application": "Εφαρμογή Web",

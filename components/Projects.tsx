@@ -53,20 +53,20 @@ const Projects: React.FC = () => {
   const totalLabel = String(totalSlides).padStart(2, '0');
 
   return (
-    <section className="relative overflow-hidden bg-transparent py-24 md:py-32">
+    <section className="relative overflow-hidden bg-transparent pt-12 pb-24 md:pt-16 md:pb-32">
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-8">
-          <div className="max-w-xl">
+        <div className="space-y-8 text-center">
+          <div className="max-w-3xl mx-auto">
             <span className="text-xs uppercase tracking-[0.35em] text-cyan-300">{t('home.projects.badge')}</span>
             <h2 className="mt-4 text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
               {t('home.projects.title')}
             </h2>
-            <p className="text-slate-400 mt-4">
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
               {t('home.projects.description')}
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             <div className="text-sm text-slate-400">
               <span className="text-white font-semibold">{currentLabel}</span>
               <span className="mx-2 text-slate-500">/</span>

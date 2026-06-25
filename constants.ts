@@ -777,46 +777,46 @@ export const SERVICES: Service[] = [
   },
   {
     id: 8,
-    title: "SEO - Discovery & Strategy",
-    description: "Outcome-focused workshops, roadmaps, KPIs, and risk framing before we write code.",
-    icon: Globe,
+    title: "IT Consulting & Product Strategy",
+    description: "Technical audits, MVP planning, architecture reviews, workflow mapping, automation opportunities, cloud/QA planning, performance and SEO roadmaps.",
+    icon: Compass,
     slug: "seo-strategy",
 
     hero: {
-      headline: "SEO Strategy That Drives Organic Growth",
-      subheadline: "Technical SEO audits, content strategy, and Core Web Vitals optimization to rank higher and convert better.",
-      cta: "Boost Your SEO"
+      headline: "Practical IT Consulting Before You Build",
+      subheadline: "Technical audits, MVP scope, product roadmaps, architecture reviews, workflow automation planning, and cloud/QA strategy for teams that need clear next steps.",
+      cta: "Plan Your Product"
     },
 
     benefits: [
       {
-        title: "Technical SEO Audits",
-        description: "Crawl analysis, site architecture review, and structured data validation to fix foundational issues.",
+        title: "Technical Audits",
+        description: "Review architecture, performance, security, SEO foundations, integrations, and delivery risks before they become expensive.",
         icon: Search
       },
       {
-        title: "Core Web Vitals Optimization",
-        description: "LCP, FID, CLS improvements through performance engineering and rendering strategies.",
+        title: "MVP & Product Roadmaps",
+        description: "Turn rough ideas into prioritized scopes, release plans, KPIs, and realistic build phases.",
         icon: Zap
       },
       {
-        title: "Content Strategy & Mapping",
-        description: "Keyword research, topic clustering, and content roadmaps aligned with search intent.",
+        title: "Architecture Reviews",
+        description: "Validate frontend, backend, data, integration, and cloud choices against your product goals.",
         icon: FileText
       },
       {
-        title: "On-Page SEO",
-        description: "Meta tags, semantic HTML, internal linking, and schema markup for better indexing.",
+        title: "Workflow Mapping",
+        description: "Map real business processes and identify where CMS, SaaS tools, internal software, or automation can help.",
         icon: Layout
       },
       {
-        title: "Link Building & Outreach",
-        description: "White-hat backlink strategies, digital PR, and partnership opportunities to build authority.",
+        title: "Cloud & QA Planning",
+        description: "Define delivery pipelines, test strategy, observability, release checks, and operational readiness.",
         icon: Link
       },
       {
-        title: "Analytics & Reporting",
-        description: "GA4/Search Console dashboards, rank tracking, and ROI measurement for continuous optimization.",
+        title: "Performance & SEO Roadmaps",
+        description: "Prioritize Core Web Vitals, technical SEO, analytics, and conversion improvements around business outcomes.",
         icon: BarChart3
       }
     ],
@@ -824,64 +824,64 @@ export const SERVICES: Service[] = [
     process: [
       {
         step: 1,
-        title: "SEO Audit & Discovery",
-        description: "Crawl site, analyze competitors, review analytics, and identify quick wins + long-term opportunities.",
+        title: "Discovery & Audit",
+        description: "Understand goals, constraints, current systems, users, risks, and the real business workflow.",
         icon: Compass
       },
       {
         step: 2,
-        title: "Strategy & Roadmap",
-        description: "Prioritize fixes, define KPIs, and build quarterly SEO roadmap aligned with business goals.",
+        title: "Strategy & Scope",
+        description: "Define the MVP, architecture direction, KPIs, roadmap, and implementation priorities.",
         icon: Map
       },
       {
         step: 3,
-        title: "Implementation & Optimization",
-        description: "Fix technical issues, optimize content, improve Core Web Vitals, and implement tracking.",
+        title: "Technical Plan",
+        description: "Document system flows, integrations, cloud/QA requirements, automation opportunities, and delivery milestones.",
         icon: Wrench
       },
       {
         step: 4,
-        title: "Monitoring & Iteration",
-        description: "Track rankings, organic traffic, and conversions; adjust strategy based on performance data.",
+        title: "Execution Support",
+        description: "Support implementation with reviews, checkpoints, performance tracking, and iteration based on real data.",
         icon: TrendingUp
       }
     ],
 
     technologies: [
       {
-        category: "SEO Tools",
+        category: "Discovery & Planning",
         items: [
-          { name: "Google Search Console", description: "Site performance monitoring" },
-          { name: "Screaming Frog", description: "Technical SEO crawler" },
-          { name: "Ahrefs/SEMrush", description: "Competitive analysis" },
-          { name: "Google Analytics 4", description: "Behavior & conversion tracking" }
+          { name: "Miro / FigJam", description: "Workflow mapping" },
+          { name: "Notion / Confluence", description: "Documentation" },
+          { name: "Jira / Linear", description: "Delivery planning" },
+          { name: "Analytics Review", description: "Data-backed decisions" }
         ]
       },
       {
-        category: "Technical SEO",
+        category: "Architecture & QA",
         items: [
-          { name: "Schema Markup", description: "Structured data (JSON-LD)" },
+          { name: "System Architecture", description: "Frontend, backend, data, cloud" },
+          { name: "API & Integration Mapping", description: "Data and service flows" },
+          { name: "QA Strategy", description: "Manual and automated checks" },
+          { name: "Security Review", description: "Access, data, and release risks" }
+        ]
+      },
+      {
+        category: "Performance & SEO",
+        items: [
           { name: "Core Web Vitals", description: "Performance metrics" },
-          { name: "Robots.txt/Sitemaps", description: "Crawl optimization" },
-          { name: "Canonical Tags", description: "Duplicate content handling" }
-        ]
-      },
-      {
-        category: "Content & Analysis",
-        items: [
-          { name: "Surfer SEO", description: "Content optimization" },
-          { name: "Google Trends", description: "Search trends analysis" },
-          { name: "AnswerThePublic", description: "Question research" },
-          { name: "Hotjar/Clarity", description: "User behavior insights" }
+          { name: "Google Search Console", description: "Indexing and search health" },
+          { name: "GA4 / Clarity", description: "Behavior and conversion insights" },
+          { name: "Technical SEO", description: "Structure, metadata, crawlability" }
         ]
       }
     ],
 
     seo: {
-      metaTitle: "SEO Strategy & Technical SEO | Impact Tech",
-      metaDescription: "Technical audits, Core Web Vitals optimization, and content strategy for higher rankings in Greece, the EU, and global markets.",
-      keywords: ["SEO services", "technical SEO", "SEO strategy", "Core Web Vitals", "SEO audit", "content strategy", "SEO consulting", "search engine optimization", "organic growth", "SEO Greece", "EU SEO agency"]
+      metaTitle: "IT Consulting & Product Strategy | Impact Tech",
+      metaDescription: "Technical audits, MVP planning, architecture reviews, workflow mapping, cloud/QA planning, and performance roadmaps for teams in Greece and the EU.",
+      keywords: ["IT consulting", "product strategy", "technical audit", "MVP planning", "architecture review", "workflow automation", "cloud strategy", "QA planning", "technical SEO", "Greece IT consulting", "EU software consulting"]
     }
   }
 ];

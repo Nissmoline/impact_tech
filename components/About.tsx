@@ -99,6 +99,7 @@ const teamMeta: TeamMemberMeta[] = [
 ];
 
 const About: React.FC = () => {
+  const showTeam = false;
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
@@ -138,17 +139,19 @@ const About: React.FC = () => {
     icon: capabilityIcons[index] ?? Handshake,
   }));
 
-  const team = teamMeta.map((member) => {
-    const details = t(`team.members.${member.key}`, { returnObjects: true }) as Omit<
-      TeamMember,
-      keyof TeamMemberMeta
-    >;
+  const team = showTeam
+    ? teamMeta.map((member) => {
+        const details = t(`team.members.${member.key}`, { returnObjects: true }) as Omit<
+          TeamMember,
+          keyof TeamMemberMeta
+        >;
 
-    return {
-      ...member,
-      ...details,
-    };
-  });
+        return {
+          ...member,
+          ...details,
+        };
+      })
+    : [];
 
   useEffect(() => {
     if (!activeMember) return;
@@ -357,50 +360,52 @@ const About: React.FC = () => {
         </div>
 
         {/* Team */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-3">
-            <Star className="text-cyan-400" size={24} />
-            <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
-              {t('team.title')}
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member) => (
-              <TiltCard
-                key={member.key}
-                className="cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
-                role="button"
-                tabIndex={0}
-                onClick={() => setActiveMember(member)}
-                onKeyDown={(event) => handleCardKeyDown(event, member)}
-                aria-label={`${member.name} - ${member.role}`}
-              >
-                <div className="h-full p-6 rounded-2xl bg-slate-900/60 border border-white/10 flex flex-col gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-white/10">
-                      <img
-                        src={member.photo}
-                        alt={member.name}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover"
-                      />
+        {showTeam && (
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <Star className="text-cyan-400" size={24} />
+              <h2 className="text-3xl font-display font-bold text-white dark:text-white light:text-slate-900">
+                {t('team.title')}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {team.map((member) => (
+                <TiltCard
+                  key={member.key}
+                  className="cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setActiveMember(member)}
+                  onKeyDown={(event) => handleCardKeyDown(event, member)}
+                  aria-label={`${member.name} - ${member.role}`}
+                >
+                  <div className="h-full p-6 rounded-2xl bg-slate-900/60 border border-white/10 flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-white/10">
+                        <img
+                          src={member.photo}
+                          alt={member.name}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-xs uppercase tracking-[0.14em] text-cyan-300">{member.badge}</p>
+                        <h3 className="text-lg font-semibold text-white">{member.name}</h3>
+                        <p className="text-sm text-slate-400">{member.role}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.14em] text-cyan-300">{member.badge}</p>
-                      <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-                      <p className="text-sm text-slate-400">{member.role}</p>
-                    </div>
+                    <p className="text-sm text-slate-400 leading-relaxed">{member.focus}</p>
+                    <div className={`h-1 w-full rounded-full bg-gradient-to-r ${member.accent}`} />
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">{member.focus}</p>
-                  <div className={`h-1 w-full rounded-full bg-gradient-to-r ${member.accent}`} />
-                </div>
-              </TiltCard>
-            ))}
+                </TiltCard>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      {activeMember && (
+      {showTeam && activeMember && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-10">
           <div
             className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"

@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Our Portfolio",
-    "subtitle": "Explore our collection of innovative projects and successful client collaborations"
+    "title": "Selected Web, App, SaaS & AI Work",
+    "subtitle": "A focused mix of client work, internal products, SaaS platforms, AI systems, CMS builds, and business software."
   },
   "filters": {
     "label": "Filter:",
@@ -19,10 +19,11 @@
     "sourceCode": "Source Code"
   },
   "stats": {
-    "totalProjects": "Total Projects",
-    "categories": "Categories",
-    "technologies": "Technologies",
-    "happyClients": "Happy Clients"
+    "selectedBuilds": "Selected builds",
+    "productCategories": "Product categories",
+    "technologiesUsed": "Technologies used",
+    "deliveryModel": "Delivery model",
+    "founderLedValue": "Founder-led"
   },
   "categories": {
     "Web Application": "Web Application",
