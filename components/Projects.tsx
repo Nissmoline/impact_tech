@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalSlides = PROJECTS.length;
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'portfolio']);
 
   const scrollToSlide = (index: number) => {
     const clampedIndex = Math.max(0, Math.min(index, totalSlides - 1));
@@ -100,7 +100,15 @@ const Projects: React.FC = () => {
             ref={carouselRef}
             className="flex gap-6 sm:gap-8 lg:gap-10 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {PROJECTS.map((project, index) => (
+            {PROJECTS.map((project, index) => {
+              const projectTitle = t(`portfolio:projects.${project.id}.title`, {
+                defaultValue: project.title,
+              });
+              const projectDescription = t(`portfolio:projects.${project.id}.description`, {
+                defaultValue: project.description ?? '',
+              });
+
+              return (
               <div
                 key={project.id}
                 ref={(element) => {
@@ -112,7 +120,7 @@ const Projects: React.FC = () => {
                   <div className="absolute inset-0">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={projectTitle}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover opacity-70 transition duration-700 group-hover:scale-105 group-hover:opacity-50"
@@ -128,8 +136,13 @@ const Projects: React.FC = () => {
                             {project.category}
                           </span>
                           <h3 className="text-2xl sm:text-3xl font-bold text-white mt-3">
-                            {project.title}
+                            {projectTitle}
                           </h3>
+                          {projectDescription && (
+                            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+                              {projectDescription}
+                            </p>
+                          )}
                           <div className="flex flex-wrap gap-2 mt-4">
                             {project.stack.map((tech) => (
                               <span
@@ -169,7 +182,8 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

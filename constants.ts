@@ -888,6 +888,16 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 16,
+    title: "Konstantopoulos Hair",
+    category: "Website",
+    image: "/portfolio/konstantopoulos-hair.webp",
+    description: "A production salon website with a CMS and online booking, deployed as a Docker Compose stack with a background worker.",
+    stack: ["Next.js", "Node.js", "PostgreSQL", "Redis", "Docker Compose", "Nginx"],
+    github: "https://github.com/Nissmoline/hairstyle_konstantopoulos",
+    live: "https://konstantopouloshair.gr/"
+  },
+  {
     id: 15,
     title: "Kidsshop - Tiny Wonders CMS",
     category: "E-Commerce",

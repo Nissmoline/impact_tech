@@ -80,6 +80,10 @@
     },
     "15": {
       "title": "Kidsshop - Tiny Wonders CMS"
+    },
+    "16": {
+      "title": "Konstantopoulos Hair",
+      "description": "A production salon website with a CMS and online booking. The project runs with Docker Compose and includes Next.js/Node.js, PostgreSQL, Redis, Nginx, and a background worker."
     }
   }
 }

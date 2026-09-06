@@ -5,6 +5,7 @@ export interface Project {
   title: string;
   category: string;
   image: string;
+  description?: string;
   stack: string[];
   github?: string;
   live?: string;

@@ -80,6 +80,10 @@
     },
     "15": {
       "title": "Kidsshop - Tiny Wonders CMS"
+    },
+    "16": {
+      "title": "Konstantopoulos Hair",
+      "description": "Production website κομμωτηρίου με CMS και online booking. Το project τρέχει με Docker Compose και περιλαμβάνει Next.js/Node.js, PostgreSQL, Redis, Nginx και background worker."
     }
   }
 }

@@ -160,6 +160,9 @@ const Portfolio: React.FC = () => {
           >
             {projects.map((project, index) => {
               const projectTitle = t(`projects.${project.id}.title`, { defaultValue: project.title });
+              const projectDescription = t(`projects.${project.id}.description`, {
+                defaultValue: project.description ?? '',
+              });
               const projectCategory = t(`categories.${project.category}`, { defaultValue: project.category });
               return (
               <div
@@ -212,11 +215,22 @@ const Portfolio: React.FC = () => {
                           {projectTitle}
                         </motion.h2>
 
+                        {projectDescription && (
+                          <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.35 }}
+                            className="mb-5 max-w-3xl text-sm leading-6 text-slate-300 dark:text-slate-300 light:text-slate-700 sm:text-base"
+                          >
+                            {projectDescription}
+                          </motion.p>
+                        )}
+
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4 }}
-                          className="flex flex-wrap gap-2 mb-8"
+                          className="flex flex-wrap gap-2 mb-6"
                         >
                           {project.stack.map((tech) => (
                             <span
